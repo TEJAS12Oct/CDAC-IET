@@ -16,18 +16,18 @@ int main()
 	printf("Enter the year = ");
 	scanf("%d",&year);
 	
-	if(31>=date>=1 &&  month == 1 ||  month == 3 ||  month == 5  ||  month == 7 ||  month == 8 ||  month == 10 ||  month == 12)
+	if( date>=1 &&  month == 1 &&  month == 3 &&  month == 5  &&  month == 7 &&  month == 8 &&  month == 10 && month == 12 && 31>=date )
 	{
 		LeapYear(year);
 		printf("Date = %d-%d-%d",date,month,year);
 	
 	}
-	else if ( 28>=date>=1  && month == 2 || 29 == date)
+	else if ( 1>=date>=228  && month == 2 || 29 == date)
 	{
 		LeapYear(year);
 		printf("Date = %d-%d-%d",date,month,year);
 	}
-	else if(30>=date>=1 &&  month == 4 ||  month == 6 ||  month == 9  ||  month == 11 ) 
+	else if(date>=1 && month == 4 &&  month == 6 &&  month == 9  &&  month == 11 && 30>=date ) 
 	{
 		LeapYear(year);
 		printf("Date = %d-%d-%d",date,month,year);
