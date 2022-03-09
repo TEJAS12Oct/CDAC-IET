@@ -55,5 +55,7 @@ int main()
 	else {
 			printf("Invalid  date\n");
 		}
+		
+	return 0;
 	
 }
