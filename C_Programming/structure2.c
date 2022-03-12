@@ -22,13 +22,13 @@ void display_info(struct student stud)
 
  int main()
  {
-	struct student ram,shyam;
+	struct student s1,s2;
 	struct student age;
 	 
-	get_info(&ram);
-	display_info(ram);
-	get_info(&shyam);
-	display_info(shyam);
+	get_info(&s1);
+	display_info(s1);
+	get_info(&s2);
+	display_info(s2);
 	 
 	return 0;
 }
