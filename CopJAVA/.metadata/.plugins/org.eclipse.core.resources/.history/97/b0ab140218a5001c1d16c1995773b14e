@@ -1,7 +1,3 @@
-/*
-Q3.Create a class Rectangle(width,length) which have constructor,getter setter
-methods ,toString() also area()function to calculate area of rectangle
-*/
 package Q3;
 
 public class Rectangle {
