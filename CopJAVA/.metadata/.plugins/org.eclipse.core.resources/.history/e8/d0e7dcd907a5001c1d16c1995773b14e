@@ -1,0 +1,13 @@
+/*
+Q1.Create a class Book(bookId,bookName,bookPrice)
+1.Write no argument constructor 
+2.Write parameterized constructor.
+3.Write display function to display all the book information.
+4.Write getter and setter functions.and toString() method.
+create two objects of book class to call the functions.
+*/
+package Asignment2;
+
+public class Book {
+
+}

@@ -1,0 +1,22 @@
+package Circle;
+
+public class Circle {
+	int radius;
+
+	public Circle() {
+		radius = 3;
+
+	}
+	
+	public Circle (int x) {
+		radius =  x;
+		
+	}
+	public void setRadius(int r) {
+		radius = r;
+	}
+	public void getRadius() {
+		return radius;
+	}
+
+}

@@ -1,0 +1,9 @@
+package Q2;
+
+public class main {
+
+	public static void main(String[] args) {
+		Employee e = new Employee(1,tejas,45000);
+	}
+
+}

@@ -1,0 +1,35 @@
+package CircleLab;
+
+public class Point {
+	int CenterX, CenterY;
+
+	public Point() {
+		CenterX = 0;
+		;
+		CenterY = 0;
+
+	}
+
+	public Point(int ax, int ay) {
+		CenterX = ax;
+		CenterY = ay;
+	}
+
+	public int getX() {
+		return x;
+	}
+
+	public void setY(int bb) {
+		X = bb;
+
+	}
+
+	public int getY() {
+		return y;
+	}
+
+	public String toString() {
+		String str = "("+ x+","+y+")";
+				return str;
+
+}
