@@ -1,0 +1,138 @@
+package Students;
+
+public class student {
+	String name;
+	int age;
+	char gender;
+
+	student() {
+
+	}
+
+	student(String name, int age, char gender) {
+		this.name = name;
+		this.age = age;
+		this.gender = gender;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public char getGender() {
+		return gender;
+	}
+
+	public void setGender(char gender) {
+		this.gender = gender;
+	}
+
+	public String toString() {
+		String str = name + "," + age + "," + gender;
+		return str;
+
+	}
+
+	public void checkMale(student[] arr) {
+		int count = 0;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i].getGender() == 'm') {
+				count++;
+				System.out.println("Male = " + arr[i]);
+			}
+
+		}
+		System.out.println("Total Male = " + count);
+	}
+
+	public void checkFemale(student[] arr) {
+		int count = 0;
+		for (int i = 0; i < arr.length; i++) {
+
+			if (arr[i].getGender() == 'f') {
+
+				count++;
+				System.out.println("Female = " + arr[i]);
+			}
+		}
+		System.out.println("Total Female = " + count);
+	}
+
+	public void CheckElder(student arr[]) {
+		int age = 0;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i].age > age) {
+				age = arr[i].age;
+			}
+
+		}
+		System.out.println("Elder = " + age);
+	}
+
+	public void CheckYounger(student[] arr) {
+		int age = arr[0].age;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i].age < age) {
+				age = arr[i].age;
+			}
+
+		}
+		System.out.println("Younger = " + age);
+	}
+
+	public static float avgAge(student[] arr) {
+		int sum = 0;
+		for (int i = 0; i < arr.length; i++) {
+			sum = sum  + arr[i].getAge();
+
+		}
+            float avgAge = (sum/arr.length);
+            System.out.println("avgAge = " + avgAge);
+            return avgAge;
+	}
+
+	public static float avgMale(student[] arr) {
+		int sum = 0;
+		int count =0;
+		for (int i = 0; i < arr.length; i++) {
+			if(arr[i].getGender() =='m' || arr[i].getGender() == 'm') {
+				sum = sum + arr[i].getAge();
+				count++;
+			}
+
+		}
+            float  avgMale = (sum/count);
+            System.out.println("avgAge = " + avgMale);
+            return avgMale;
+
+	}
+
+	public static float avgFemale(student[] arr) {
+		int sum = 0;
+		int count =0;
+		for (int i = 0; i < arr.length; i++) {
+			if(arr[i].getGender() =='f' || arr[i].getGender() == 'f') {
+				sum = sum + arr[i].getAge();
+				count++;
+			}
+
+		}
+            float  avgFemale = (sum/count);
+            System.out.println("avgAge = " + avgFemale);
+            return avgFemale;
+
+	}
+
+}

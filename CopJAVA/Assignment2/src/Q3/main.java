@@ -13,12 +13,13 @@ public class main {
 		l = sc.nextInt();
 		System.out.println("Enter the Width = ");
 		w = sc.nextInt();
-		System.out.println(l);
+		//System.out.println(l);
 
 		Rectangle r = new Rectangle(l,w);
 		System.out.println(r.getl());
 		System.out.println(r.getW());
 		System.out.println(r);
+		r.area();
 
 		r.setl(5);
 		r.setW(4);

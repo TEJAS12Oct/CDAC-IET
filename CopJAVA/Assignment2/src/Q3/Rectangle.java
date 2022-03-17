@@ -5,8 +5,8 @@ methods ,toString() also area()function to calculate area of rectangle
 package Q3;
 
 public class Rectangle {
-	int l;
-	int w;
+	private int l;
+	private int w;
 
 	public Rectangle(int x, int y) {
 		l = x;

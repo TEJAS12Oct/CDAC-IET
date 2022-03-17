@@ -1,6 +1,7 @@
 package student;
 
-      //*****************using print  method *************
+//*****************using print  method *************
+
 //public class student {
 //	String name;
 //	int age;
@@ -30,13 +31,11 @@ package student;
 //	}
 //}
 
-
 //********************using  toString*********************
 public class student {
 	String name;
 	int age;
 	char gender;
-
 
 	student(String n, int a, char g) {
 		name = n;
@@ -44,10 +43,9 @@ public class student {
 		gender = 'm';
 	}
 
-	
-	public  String toString() {
-		String str = name +"," + age + "," + gender;
-		return  str;
-		
+	public String toString() {
+		String str = name + "," + age + "," + gender;
+		return str;
+
 	}
 }

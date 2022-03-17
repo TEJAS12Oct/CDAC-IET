@@ -9,9 +9,9 @@ create two objects of book class to call the functions.
 package Q1;
 
 public class Book {
-	int id;
-	int price;
-	String name;
+	private  int id;
+	private int price;
+	private String name;
 
 	Book() {
 
