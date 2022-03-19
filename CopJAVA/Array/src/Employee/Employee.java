@@ -12,7 +12,7 @@ public class Employee {
 	private int basicSalary;
 
 	public Employee(int id, String name, int bSalary) {
-		this.empid = id;
+		empid = id;
 		empname = name;
 		basicSalary = bSalary;
 
