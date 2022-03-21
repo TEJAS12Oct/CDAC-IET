@@ -1,9 +1,0 @@
-package Q2;
-
-
-
-public class MathOperation1 {
-	static int n1;
-	static int n2;
-}
-}
