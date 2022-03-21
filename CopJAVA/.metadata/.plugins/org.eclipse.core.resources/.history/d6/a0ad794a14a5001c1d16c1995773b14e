@@ -1,0 +1,36 @@
+package Q3;
+
+public class Retangle {
+	int l;
+	int w;
+
+	public Retangle(int x, int y) {
+		l = x;
+		w = y;
+	}
+
+	void setl(int setl) {
+		l = setl;
+	}
+
+	public int getl() {
+		return l;
+	}
+
+	void setW(int setW) {
+		l = setW;
+	}
+
+	public int getW() {
+		return w;
+	}
+	
+	void area() {
+		int area = l*w;
+	}
+
+	void display() {
+		System.out.println("Length = " + l + "  Width = " + w + "   Area = " + area);
+
+	}
+}

@@ -1,0 +1,35 @@
+package Q2;
+
+import Q1.MathOperation;
+import Q1.Number;
+
+public class main1 {
+
+	public static void main(String[] args) {
+		Number1 n = new Number1();
+		int n1 = Integer.parseInt(args[0]);
+		int n2 = Integer.parseInt(args[1]);
+		System.out.println(n1);
+		System.out.println(n2);
+
+		Number1 n5 = MathOperation1.addition(n1, n2);
+		System.out.println("Addition of " + n1 + " and " + n2 + " is : " + n5);
+
+		Number1 n6 = MathOperation1.multiply(n1, n2);
+		System.out.println("Multiplication of " + args[0] + " and " + args[1] + " is : " + n6);
+
+		Number1 n3 = MathOperation1.subtraction(n1, n2);
+		System.out.println("Addition of " + args[0] + " and " + args[1] + " is : " + n3);
+
+		Number1 n4 = MathOperation1.division(n1, n2);
+		System.out.println("Multiplication of " + args[0] + " and " + args[1] + " is : " + n4);
+
+		n3 = MathOperation.addition(n1, n2);
+		System.out.println("Addition of " + n1 + " and " + n2 + " is : " + n3);
+
+		Number n4 = MathOperation.multiply(n3, n2);
+		System.out.println("Multiplication of " + n3 + " and " + n2 + " is : " + n4);
+
+	}
+
+}

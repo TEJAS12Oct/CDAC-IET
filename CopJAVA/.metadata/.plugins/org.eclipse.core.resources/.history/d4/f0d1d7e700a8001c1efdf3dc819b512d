@@ -1,0 +1,67 @@
+package MenuDriven;
+
+public class Employee {
+	
+	private int Id;
+	private String Name;
+	private String Role;
+	private int baseSalary;
+
+	public float getTotalSalary() {
+		float totalSalary = 0;
+		if ((getRole() == ("Manager")) || (getRole() == ("manager"))) {
+			return (totalSalary = ((baseSalary) + (((50 * baseSalary) / 100)) - (baseSalary / 4.25f)));
+		}
+		if ((getRole().equals("Tester")) || (getRole().equals("tester"))) {
+			return (totalSalary = (baseSalary + (((45 * baseSalary) / 100)) - (baseSalary / 150.f)));
+		}
+
+		
+		return 0;
+	}
+
+	public Employee(int Id, String Name, String Role, int Salary) {
+		this.Id = Id;
+		this.Name = Name;
+		this.baseSalary = Salary;
+		this.Role = Role;
+	}
+
+	public String getRole() {
+		return Role;
+	}
+
+	public void setRole(String role) {
+		Role = role;
+	}
+
+	public int getId() {
+		return Id;
+	}
+
+	public void setId(int id) {
+		Id = id;
+	}
+
+	public String getName() {
+		return Name;
+	}
+
+	public void setName(String name) {
+		Name = name;
+	}
+
+	public void setSalary(int salary) {
+		baseSalary = salary;
+	}
+
+	public int getSalary() {
+		return baseSalary;
+	}
+
+	public String toString() {
+		return new String("Employee ID\t: " + Id + "\nEmployee Name:   " + Name + " \nEmployee Basic  Salary: "
+				+ (baseSalary) + " Rs\n" + "Total Salary: " + getTotalSalary());
+	}
+
+}

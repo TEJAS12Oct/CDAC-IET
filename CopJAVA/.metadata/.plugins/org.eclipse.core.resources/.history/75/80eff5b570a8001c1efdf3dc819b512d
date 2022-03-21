@@ -1,0 +1,24 @@
+package Q2;
+
+public class main1 {
+
+	public static void main(String[] args) {
+		Number1 n = new Number1();
+		int n1 = Integer.parseInt(args[0]);
+		int n2 = Integer.parseInt(args[1]);
+
+		Number1 n5 = MathOperation1.addition(args[0], args[1]);
+		System.out.println("Addition of " + args[0] + " and " + args[1] + " is : " + n5);
+
+		Number1 n6 = MathOperation1.multiply(args[0], args[1]);
+		System.out.println("Multiplication of " + args[0] + " and " + args[1] + " is : " + n6);
+
+		Number1 n3 = MathOperation1.subtraction(args[0], args[1]);
+		System.out.println("Addition of " + args[0] + " and " + args[1] + " is : " + n3);
+
+		Number1 n4 = MathOperation1.division(args[0], args[1]);
+		System.out.println("Multiplication of " + args[0] + " and " + args[1] + " is : " + n4);
+
+	}
+
+}

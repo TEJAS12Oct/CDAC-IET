@@ -1,0 +1,28 @@
+package Q1;
+
+public class Number {
+
+	public Number(int i) {
+		
+	}
+
+	public Number() {
+		
+	}
+
+	public boolean greaterThan(Number n1) {
+		
+		return false;
+	}
+
+	public Object getNumber() {
+		
+		return null;
+	}
+
+	public void setNumber(Object number) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

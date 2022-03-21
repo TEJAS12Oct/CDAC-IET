@@ -1,0 +1,10 @@
+package Q1;
+
+public class Number {
+
+	public Number(int n1, int n2) {
+		this.n1 = n1;
+		this.n2 = n2;
+	}
+
+}

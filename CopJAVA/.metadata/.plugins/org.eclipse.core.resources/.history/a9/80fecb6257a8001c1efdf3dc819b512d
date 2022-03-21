@@ -1,0 +1,14 @@
+package Q1;
+
+public class MathOperation {
+
+	public Number addititon(Number n1, Number n2) {
+		System.out.println(n1 + n2);
+		return;
+	}
+
+	public int multiply(int n1, int n2) {
+		return n1 * n2;
+	}
+
+}

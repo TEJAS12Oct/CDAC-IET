@@ -1,0 +1,15 @@
+package Q1;
+
+public class MathOperation {
+
+	public static Number addition(Number n1, Number n2) {
+		
+		return null;
+	}
+
+	public static Number multiply(Number n3, Number n2) {
+		return null;
+		
+	}
+
+}

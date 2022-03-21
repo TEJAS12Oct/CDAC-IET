@@ -1,0 +1,21 @@
+/* write a menu driven  program for display of following menu
+  1.addition
+  2.subtraction
+  3.multiplication
+  4.division
+  5.sum of digits
+  6.reverse of number
+  7.exit
+  
+  Enter your Choice (1-7)
+*/
+
+package MenuDriven;
+
+public class MenuDriven {
+
+	public static void main(String[] args) {
+
+	}
+
+}

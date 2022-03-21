@@ -1,0 +1,11 @@
+package Q3;
+
+public class Retangle {
+	int l;
+	int w;
+
+	Rectangle(int x , int y){
+		l = x;
+		w = y;
+	}
+}
