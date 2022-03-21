@@ -1,0 +1,70 @@
+/* 
+write a menu driven  program for display of following menu
+  1.addition
+  2.subtraction
+  3.multiplication
+  4.division
+  5.sum of digits
+  6.reverse of number
+  7.exit
+  Enter your Choice (1-7)
+write appropriate function and call those function based on user's choice
+*/
+
+package MenuDriven;
+
+public class MenuDriven {
+
+	public static void main(String[] args) {
+		int ch, num1, num2, res;
+		do {
+
+			System.out.println("1.addition");
+			System.out.println("2.subtraction");
+			System.out.println("3.multiplication");
+			System.out.println("4.division");
+			System.out.println("5.sum of digits");
+			System.out.println("6reverse of number");
+			System.out.println("7.exit");
+			System.out.println("Enter your choice (1-7");
+
+		} while (ch != 7);
+
+	}
+
+static int addtion (int num1,int num2) {
+	return num1 + num 2;
+}
+
+static int subtraction (int num1,int num2) {
+	return num1 - num 2;
+}
+
+static int multiplication (int num1,int num2) {
+	return num1 * num 2;
+}
+
+static int division (int num1,int num2) {
+	return num1 / num 2;
+}
+
+	static int reverse(int num) {
+		int rem, rev_num = 0;
+		while (num > 0) {
+			rem = num % 10;
+			rev_num = rev_num * 10 + rem;
+			num =num/10;
+		}
+	}return rev_num;
+
+	static int sum_of_digits(int num) {
+		int rem, sum = 0;
+		while (num > 0) {
+			rem = num % 10;
+			sum = sum + rem;
+			num = num / 10;
+		}
+	}
+
+	return sum;
+}

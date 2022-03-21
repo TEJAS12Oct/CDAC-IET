@@ -1,0 +1,16 @@
+package Q1;
+
+public class Number {
+
+	private int n;
+
+	public Number(int n1) {
+		n = n1;
+
+	}
+
+	public Number() {
+
+	}
+
+}

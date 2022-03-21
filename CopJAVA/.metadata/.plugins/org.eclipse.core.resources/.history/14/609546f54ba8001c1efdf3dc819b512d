@@ -1,0 +1,13 @@
+package Q1;
+
+public class Number {
+
+	public Number(int n1) {
+		this.n1 = n1;
+	}
+
+	public number(int n2) {
+		this.n2=n2;
+	} 
+
+}

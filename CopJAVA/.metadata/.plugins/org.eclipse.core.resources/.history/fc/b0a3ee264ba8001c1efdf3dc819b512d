@@ -1,0 +1,10 @@
+package Q1;
+
+public class MathOperation {
+
+	public static Number addition(Number n1, Number n2) {
+		
+		return n1+n2;
+	}
+
+}

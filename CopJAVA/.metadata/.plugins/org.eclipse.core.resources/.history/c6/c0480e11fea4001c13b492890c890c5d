@@ -1,0 +1,34 @@
+package CircleLab;
+
+public class Point {
+	int x, y;
+
+	public Point() {
+		x = 0;
+		y = 0;
+
+	}
+
+	public Point(int aa, int bb) {
+		x = aa;
+		y = bb;
+	}
+
+	public int getX() {
+		return x;
+	}
+
+	public void setY(int bb) {
+		X = bb;
+
+	}
+
+	public int getY() {
+		return y;
+	}
+
+	public String toString() {
+		String str = "("+ x+","+y+")";
+				return str;
+
+}

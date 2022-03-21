@@ -1,0 +1,27 @@
+package Q2;
+
+public class MathOperation {
+	static int args[0];
+	static int args[1];
+
+	public static Number multiply(Number args[0], Number args[1]) {
+		Number n = new Number((n1).getNumber() * n2.getNumber());
+		return n;
+	}
+
+	public static Number addition(Number args[0], Number args[1]) {
+		Number n = new Number((n1).getNumber() + n2.getNumber());
+		return n;
+	}
+	
+	public static Number subtraction(Number args[0], Number args[1]) {
+		Number n = new Number((n1).getNumber() - n2.getNumber());
+		return n;
+	}
+	
+	public static Number division(Number args[0], Number args[1]) {
+		Number n = new Number((n1).getNumber() / n2.getNumber());
+		return n;
+	}
+
+}

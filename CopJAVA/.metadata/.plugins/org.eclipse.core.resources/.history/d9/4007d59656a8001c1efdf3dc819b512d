@@ -1,0 +1,21 @@
+package Q1;
+
+public class Number {
+
+	private int n;
+
+	public Number(int n) {
+		this.n = n;
+
+	}
+
+	public Number() {
+
+	}
+	
+	public String toString() {
+		String str = "n1 = " + n;
+		return str;
+	}
+
+}

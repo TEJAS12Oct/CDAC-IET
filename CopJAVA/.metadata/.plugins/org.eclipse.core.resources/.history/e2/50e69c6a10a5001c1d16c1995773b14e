@@ -1,0 +1,28 @@
+package Q2;
+
+public class Employee {
+	int empid;
+	String empname;
+	float basicSalary;
+
+	public Employee(int id, String name, int bSalary) {
+		empid = id;
+		empname = name;
+		basicSalary = bSalary;
+
+	}
+
+	void setid(int setid) {
+		empid = setid;
+	}
+
+	public int getid() {
+		return empid;
+	}
+
+	public String toString() {
+		String str = ("Empid = " + empid + " EmpName = " + empname + "   BasicSalary = " + basicSalary);
+		return str;
+
+	}
+}

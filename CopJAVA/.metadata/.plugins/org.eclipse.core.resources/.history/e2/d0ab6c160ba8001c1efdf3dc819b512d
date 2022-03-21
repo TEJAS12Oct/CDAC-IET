@@ -1,0 +1,13 @@
+package Cricket;
+
+public class player {
+
+	private String namme;
+	private String type;
+	private int typeData;
+
+	public player(String name, String type, int typeData) {
+
+	}
+
+}

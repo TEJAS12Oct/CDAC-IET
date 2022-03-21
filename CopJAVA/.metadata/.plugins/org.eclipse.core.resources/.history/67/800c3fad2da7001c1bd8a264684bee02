@@ -1,0 +1,16 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Employee e1=new Employee(12, "Pooja", "Manager", 12000);
+		System.out.println(e1);
+		System.out.println("---------------------------------------------------");
+		Employee e2=new Employee(1, "Pranita", "Tester", 10000);
+		System.out.println(e2);
+		
+		
+    
+	}
+
+}

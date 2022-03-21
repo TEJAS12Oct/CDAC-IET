@@ -1,0 +1,27 @@
+package Cricket;
+
+public class player {
+
+	private String name;
+	private String type;
+	private int typeData;
+
+	public player(String name, String type, int typeData) {
+		this.name = name;
+		this.type = type;
+		this.typeData = typeData;
+
+	}
+
+	public int getRuns() {
+		if (this.type.equals("Bat"))
+			return typeData;
+		else
+			return 0;
+	}
+
+	public String toString() {
+		System.out.println("NAme : " + this.name + " ,");
+	}
+
+}

@@ -1,0 +1,26 @@
+package Q2;
+
+public class MathOperation1 {
+	static int n1;
+	static int n2;
+
+	public static Number1 multiply(Number1 n1, Number1 n2) {
+		Number1 n = new Number1((n1).getNumber() * n2.getNumber());
+		return n;
+	}
+
+	public static Number addition(Number1 n1, Number1 n2) {
+		Number1 n = new Number1((n1).getNumber() + n2.getNumber());
+		return n;
+	}
+
+	public static Number subtraction(Number1 n1, Number1 n2) {
+		Number1 n = new Number1((n1).getNumber() - n2.getNumber());
+		return n;
+	}
+
+	public static Number division(Number1 n1, Number1 n2) {
+		Number1 n = new Number1((n1).getNumber() / n2.getNumber());
+		return n;
+	}
+}

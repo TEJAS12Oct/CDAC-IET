@@ -1,0 +1,16 @@
+package Q1;
+
+public class MathOperation {
+	static int n3;
+	static int n4;
+
+	public static int addititon(Number n1, Number n2) {
+		n3 =  Number.getNumber() + Number.getNumber();
+		return n3;
+	}
+
+	public int multiply(int n1, int n2) {
+		return n1 * n2;
+	}
+
+}
