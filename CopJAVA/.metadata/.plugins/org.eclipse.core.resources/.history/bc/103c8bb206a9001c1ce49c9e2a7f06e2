@@ -1,0 +1,62 @@
+//4. Write a menu driven Java program to print histogram of vowels for an user input string.
+
+package Q4;
+
+import java.util.Scanner;
+
+import Q2.Number1;
+
+public class Vowel_Histogram {
+
+	public static void print_histogram(int n, char T) {
+		System.out.print(T + ":");
+		for (int i = 0; i < n; i++) {
+			System.out.print("*");
+		}
+		System.out.println();
+	}
+
+	public static void main(String[] args) {
+
+		System.out.println(args[0]);
+
+//		Scanner sc = new Scanner(System.in);
+//		System.out.print("Enter  String Name : ");
+//		String name = sc.next();
+		int i = 0;
+		char ch = args[0].charAt(i);
+		int a = 0, e = 0, ii = 0, o = 0, u = 0;
+		for (i = 0; i < args[0].length(); i++) {
+			if ((args[0].charAt(i) == 'A') || args[0].charAt(i) == 'a') {
+				a++;
+			}
+
+			if ((args[0].charAt(i) == 'E') || args[0].charAt(i) == 'e') {
+				e++;
+			}
+
+			if ((args[0].charAt(i) == 'I') || args[0].charAt(i) == 'i') {
+				ii++;
+			}
+
+			if ((args[0].charAt(i) == 'O') || args[0].charAt(i) == 'o') {
+				o++;
+			}
+
+			if ((args[0].charAt(i) == 'U') || args[0].charAt(i) == 'u') {
+				u++;
+			}
+
+		}
+		System.out.println("----------Histogram Vowel--------------------");
+		print_histogram(a, 'a');
+		print_histogram(e, 'e');
+		print_histogram(ii, 'i');
+		print_histogram(o, 'o');
+		print_histogram(u, 'u');
+
+		F
+
+	}
+
+}

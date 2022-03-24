@@ -1,0 +1,99 @@
+//4. Write a menu driven Java program to print histogram of vowels for an user input string.
+
+package Q4;
+
+import java.util.Scanner;
+
+import Q2.MathOperation1;
+import Q2.Number1;
+
+public class Vowel_Histogram {
+
+	public static void print_histogram(int n, char T) {
+		System.out.print(T + ":");
+		for (int i = 0; i < n; i++) {
+			System.out.print("*");
+		}
+		System.out.println();
+	}
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter  String Name : ");
+		String name = sc.nextLine();
+		int i = 0;
+
+		System.out.println("Enter the Choice = ");
+		int choice;
+		do {
+			choice = sc.nextInt();
+			System.out.println("1.A");
+			System.out.println("2.B");
+			System.out.println("3.c");
+			System.out.println("4.D");
+			System.out.println("5.Exits");
+
+			char ch = name.charAt(i);
+			int a = 0, e = 0, ii = 0, o = 0, u = 0;
+
+			switch (choice) {
+			case 1: {
+				for (i = 0; i < name.length(); i++) {
+					if ((name.charAt(i) == 'A') || name.charAt(i) == 'a') {
+						a++;
+					}
+					break;
+				}
+			}
+
+			case 2: {
+				if ((name.charAt(i) == 'E') || name.charAt(i) == 'e') {
+					e++;
+				}
+
+				break;
+			}
+			case 3: {
+				if ((name.charAt(i) == 'I') || name.charAt(i) == 'i') {
+					ii++;
+				}
+
+				break;
+			}
+			case 4: {
+				if ((name.charAt(i) == 'O') || name.charAt(i) == 'o') {
+					o++;
+				}
+
+				break;
+			}
+			case 5: {
+				if ((name.charAt(i) == 'U') || name.charAt(i) == 'u') {
+					u++;
+				}
+				break;
+			}
+			default: {
+				System.out.println("Invalid Choice  Enter Choice (1-4)");
+			}
+			}
+
+		} while (choice != 5);
+		{
+			System.out.println("End");
+		}
+
+	}System.out.println("----------Histogram Vowel--------------------");
+
+	print_histogram(a, 'a');
+		print_histogram(e, 'e');
+		print_histogram(ii, 'i');
+		print_histogram(o, 'o');
+		print_histogram(u, 'u');
+
+		sc.close();
+
+	}
+
+}
