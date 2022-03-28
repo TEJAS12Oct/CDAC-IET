@@ -1,0 +1,21 @@
+package book;
+
+public class book {
+	private  int id;
+	private int price;
+	private String name;
+
+	
+
+	Book(int id, int price, String name) {
+		this.id = id;
+		this.price = price;
+		this.name = name;
+
+	}
+	
+	public String toString() {
+		String str = ("ID = " + id + " price = " + price + "   name = " + name);
+		return str;
+}
+}

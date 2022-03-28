@@ -1,0 +1,32 @@
+package CircleLab;
+
+public class Point {
+	int CenterX, CenterY;
+
+	public Point() {
+		CenterX = 0;
+		;
+		CenterY = 0;
+
+	}
+
+	public Point(int ax, int ay) {
+		CenterX = ax;
+		CenterY = ay;
+	}
+
+	public void setCenter(int ax, int ay) {
+		ax = 45;
+
+	}
+
+	public void setCenter(int ay) {
+		ay = 50;
+
+	}
+
+	public int getCenter() {
+		return CenterX;
+	}
+
+}

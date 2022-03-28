@@ -1,0 +1,95 @@
+package Students;
+
+public class student {
+	String name;
+	int age;
+	char gender;
+
+	student() {
+
+	}
+
+	student(String name, int age, char gender) {
+		this.name = name;
+		this.age = age;
+		this.gender = gender;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public char getGender() {
+		return gender;
+	}
+
+	public void setGender(char gender) {
+		this.gender = gender;
+	}
+
+	public String toString() {
+		String str = name + "," + age + "," + gender;
+		return str;
+
+	}
+
+	public void checkMale(student[] arr) {
+		int count = 0;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i].getGender() == 'm') {
+				count++;
+				System.out.println("Male = " + arr[i] + "  " + count);
+			}
+
+		}
+		System.out.println(count);
+	}
+
+	public void checkFemale(student[] arr) {
+		int count = 0;
+		for (int i = 0; i < arr.length; i++) {
+
+			if (arr[i].getGender() == 'f') {
+
+				count++;
+				System.out.println("Female = " + arr[i] + "  " + count);
+			}
+		}
+		System.out.println(count);
+	}
+
+	public void CheckElder(student arr[]) {
+		int age = 0;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i].age > age) {
+				age = arr[i].age;
+			}
+
+		}
+		System.out.println("name = " + name + "  Elder = " + age);
+	}
+
+	public void CheckYounger(student[] arr) {
+		int age = arr[0].age;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i].age < age) {
+				age = arr[i].age;
+			}
+
+		}
+		System.out.println("name = " + name + " Younger = " + age);
+	}
+
+}

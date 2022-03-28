@@ -1,0 +1,11 @@
+package Circle;
+
+public class Circle {
+	int radius;
+
+	public Circle() {
+		radius = 3;
+
+	}
+
+}

@@ -1,0 +1,39 @@
+package Students;
+
+import java.util.*;
+
+public class main {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter no of student = ");
+		int Student_size = sc.nextInt();
+
+		student[] arr = new student[Student_size];
+		for (int i = 0; i < arr.length; i++) {
+
+			System.out.println("Enter student name  = ");
+			String name = sc.next();
+			System.out.println("Enter student age  = ");
+			int age = sc.nextInt();
+			System.out.println("Enter student gender  = ");
+			char gender = sc.next().charAt(0);
+
+			arr[i] = new student(name, age, gender);
+		}
+
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i].getGender() == 'm')
+				System.out.println("Male = "+arr[i]);
+//			else if (arr[i].getGender() == 'f') {
+//				System.out.println("Female = "+arr[i]);
+//			}
+			student s = new student();
+			s.find_eldest(null);
+		}
+	}
+
+	
+
+}
