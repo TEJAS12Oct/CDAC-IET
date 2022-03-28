@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Assignment1.Matrix&apos; to &apos;Mtrix&apos;&#x0D;&#x0A;- Original project: &apos;Assignment1&apos;&#x0D;&#x0A;- Original element: &apos;Assignment1.Matrix&apos;&#x0D;&#x0A;- Renamed element: &apos;Assignment1.Mtrix&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Matrix&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;Assignment1{Matrix.java[Matrix" matchStrategy="1" name="Mtrix" qualified="false" references="true" similarDeclarations="false" stamp="1648457944560" textual="false" version="1.0"/>
+</session>
