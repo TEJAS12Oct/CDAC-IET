@@ -1,0 +1,16 @@
+package Assignment1;
+
+public class Q4 {
+
+	public static void main(String[] args) {
+
+		int i = 6;
+		fun(i);
+		fun1(i)
+	}
+
+	private static void fun(int x) {
+		
+	}
+
+}

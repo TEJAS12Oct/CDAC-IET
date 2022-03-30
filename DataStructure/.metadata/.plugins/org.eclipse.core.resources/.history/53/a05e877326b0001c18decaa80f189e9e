@@ -1,0 +1,25 @@
+package Assignment1;
+
+public class Q3 {
+
+	public static void main(String[] args) {
+
+		int i = 5;
+		fun(i);
+	}
+
+	private static void fun(int x) {
+		if (x < 6) {
+			for (int p = 0; p < x; p++) {
+				System.out.print("*");
+			}
+			x = x - 1;
+
+			System.out.println();
+			fun(x);
+
+		}
+
+	}
+
+}

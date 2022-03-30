@@ -1,0 +1,38 @@
+package Assignment1;
+
+public class Q2 {
+
+	public static void main(String[] args) {
+
+		int i = 1;
+		fun(i);
+		fun2();
+
+	}
+
+	private static void fun2() {
+           // 4 3 2 1
+		int i =4;
+		System.out.print(i + ", ");
+
+		if (i < 5) {
+			i = i - 1;
+			fun2();
+		}
+
+	}
+
+	private static void fun(int x) {
+
+		// 1,2,3,4,5
+
+		System.out.print(x + ", ");
+
+		if (x < 5) {
+			x = x + 1;
+			fun(x);
+		}
+
+	}
+
+}

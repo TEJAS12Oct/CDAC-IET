@@ -1,0 +1,30 @@
+package Assignment1;
+
+public class Q5 {
+
+	static void mul_table(int N, int i) {
+		// Base Case
+		if (i > 10)
+			return;
+
+		// Print the table for
+		// current iteration
+		System.out.println(N + " * " + i + " = " + N * i);
+
+		// Recursive call to next
+		// iteration
+		fun(N, i + 1);
+	}
+
+	// Driver Code
+	public static void main(String[] args) {
+
+		int N = 2;
+		fun(N, 1);
+	}
+
+//			for (int i = 1; i < x; i++) {
+//				System.out.println(2 * i);
+//			}
+
+}
