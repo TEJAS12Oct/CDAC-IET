@@ -1,0 +1,47 @@
+package Student1;
+
+public class Stack1 {
+
+	private Student1[] arr;
+	private int top;
+
+	public Stack1(int size) {
+		this.arr = new Student1[size];
+		this.top = -1;
+	}
+
+	public void push(Student1 S) {
+		// overflow condition
+
+		if (this.top < this.arr.length - 1) {
+			this.top++;
+			this.arr[this.top] = s[i];
+		} else
+			System.out.println("Overflow...");
+
+	}
+
+	public Student1 pop(Student1 S) {
+		if (this.top != -1) {
+			Student1 value = this.arr[this.top];
+			this.top--;
+			return value;
+		} else
+			System.out.println("Underflow...");
+		return null;
+	}
+
+	public String toString() {
+
+		String str = "";
+		if (this.top == -1)
+			str = "Stack is empty";
+		else {
+			for (int i = this.top; i >= 0; i--)
+				str = str + (this.arr[i] + ", ");
+		}
+
+		return str;
+	}
+
+}

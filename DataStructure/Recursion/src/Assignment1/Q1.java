@@ -14,7 +14,7 @@ public class Q1 {
 
 		// 1,2,3,4,5
 
-		System.out.print(x + ", ");
+		System.out.print(x + " ");
 
 		if (x < 5) {
 			x = x + 1;
@@ -25,7 +25,7 @@ public class Q1 {
 	private static void fun2(int j) {
 		// 4 3 2 1
 
-		System.out.print(j + ", ");
+		System.out.print(j + " ");
 
 		if (j > 1) {
 			j = j - 1;

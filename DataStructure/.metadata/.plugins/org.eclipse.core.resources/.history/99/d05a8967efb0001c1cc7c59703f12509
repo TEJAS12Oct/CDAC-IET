@@ -1,0 +1,21 @@
+package Student1;
+
+public class Student {
+
+	String name;
+	int age;
+	char gender;
+
+	Student() {
+		this.name = this.name;
+		this.age = this.age;
+		this.gender = this.gender;
+	}
+
+	public String toString() {
+
+		String str = name + ":" + age + ":" + gender;
+		return str;
+	}
+
+}

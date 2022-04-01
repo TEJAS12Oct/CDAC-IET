@@ -1,0 +1,82 @@
+package StackMD;
+
+public class Stack {
+
+	private int[] arr;
+	private int top;
+
+	public Stack(int size) {
+		this.setArr(new int[size]);
+		this.top = -1;
+	}
+
+	public Stack() {
+		this.setArr(arr);
+		this.top = top;
+	}
+
+	public int[] getArr() {
+		return arr;
+	}
+
+	public void setArr(int[] arr) {
+		this.arr = arr;
+	}
+
+	public void push(int value) {
+		// overflow condition
+		if (this.top < arr.length - 1) {
+			this.top++;
+			this.arr[this.top] = value;
+		} else
+			System.out.println("Overflow...");
+	}
+
+	public int pop(int n) {
+		if (this.top != -1) {
+			int value = this.arr[this.top];
+			this.top--;
+			return value;
+		} else
+			System.out.println("Underflow...");
+		return 0;
+	}
+
+	public int concat(Stack s2) {
+		Stack res = new Stack(this.arr.length + s2.getArr().length);
+		for (int i = 0; i <= this.top; i++) {
+			res.push(this.arr[i]);
+		}
+		for (int i = 0; i <= s2.top; i++) {
+			res.push(s2.getArr()[i]);
+		}
+		return res;
+
+	}
+	
+	public boolean equals(Stack s2) {
+		// s1.equals(s2)
+		// s1 ==> this
+		// s2 ==> x
+		System.out.println("s1 length  = " + this.arr.length);
+		System.out.println("s2 Length  = " + s2.getArr().length);
+		if (this.arr.length != s2.getArr().length)
+			return false;
+
+		System.out.println(this.top);
+		System.out.println(s2.top);
+		if (this.top != s2.top)
+			return false;
+
+		// iterate on both arr and check each element
+		for (int i = 0; i < this.top; i++) {
+
+			if (this.arr[i] != s2.getArr()[i]) {
+				return false;
+			}
+		}
+
+		return true;
+	}
+
+}

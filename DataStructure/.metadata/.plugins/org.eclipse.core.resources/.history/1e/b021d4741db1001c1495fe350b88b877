@@ -1,0 +1,15 @@
+package Assignment1;
+
+public class StringPalindrome {
+
+	public static void main(java.lang.String[] args) {
+		
+		String str = "WOW";
+		
+		for(int i=3;i>str.length;i--) {
+			
+		}
+		
+	}
+
+}

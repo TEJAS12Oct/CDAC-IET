@@ -1,0 +1,59 @@
+package Student1;
+
+import java.util.Scanner;
+
+import Student.Stack;
+
+public class Main1 {
+
+	public static void main(String[] args) {
+
+		String name = "";
+		int i = 0, age = 0;
+		char gender = 0;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Your Size = ");
+		int size = sc.nextInt();
+
+		Student1[] s = new Student1[size];
+		
+		Stack1 S1 = new Stack1(size);
+
+		for (i = 0; i < size; i++) {
+
+			System.out.println("ENTER NAME = ");
+			name = sc.next();
+			
+
+			System.out.println("ENTER AGE = ");
+			age = sc.nextInt();
+			
+
+			System.out.println("ENTER GENDER = ");
+			gender = sc.next().charAt(0);
+			
+			s[i]=new Student1();
+			s[i].setname(name);
+			s[i].setage(age);
+			s[i].setgender(gender);
+		}
+
+//		S.setname(name);
+//		S.setage(age);
+//		S.setgender(gender);
+
+		Stack1 StuStack = new Stack1(size);
+
+		StuStack.push(s[0]);
+		StuStack.push(s[1]);
+		// StuStack.push(S);
+		// StuStack.push(S);
+
+		System.out.println(" after push " + StuStack);
+
+		 StuStack.pop(s[0]);
+		 System.out.println(" after pop " + StuStack);
+
+	}
+
+}

@@ -1,0 +1,60 @@
+package StackMD;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		int choice, N;
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Your Size = ");
+		int size = sc.nextInt();
+		Stack s = new Stack(size);
+
+		Stack s2 = new Stack(size);
+
+		do {
+			System.out.println("1.PUSH");
+			System.out.println("2.POP");
+			System.out.println("3.CONCAT");
+			System.out.println("4.EQUALS");
+			System.out.println("5.EXIT");
+			System.out.println("ENTER YOUR CHOICE");
+			choice = sc.nextInt();
+			N = sc.nextInt();
+			switch (choice) {
+
+			case 1: {
+				System.out.println("PUSH ELEMENT = ");
+				s2.push(N);
+
+				break;
+			}
+
+			case 2: {
+				s2.pop(N);
+				break;
+			}
+
+			case 3: {
+				s.concat(s2);
+				break;
+			}
+
+			case 4: {
+				s.equals(s2);
+				break;
+			}
+
+			default: {
+				System.out.println("Invalid");
+			}
+
+			}
+
+		} while (choice != 5);
+	}
+
+}

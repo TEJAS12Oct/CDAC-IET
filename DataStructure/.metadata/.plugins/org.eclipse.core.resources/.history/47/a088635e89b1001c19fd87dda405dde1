@@ -1,0 +1,39 @@
+package QueueMD;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner sc =new Scanner(System.in);
+		System.out.println("Enter Size Of  Q1 = ");
+		int  size = sc.nextInt();
+		Queue q1 = new Queue(size);
+		
+		int  choice;
+		
+		do
+		{
+			System.out.println("1.INSERT");
+			System.out.println("2.REMOVE");
+			System.out.println("3.DISPLAY");
+			System.out.println("4.EXIT");
+			System.out.println("Enter Your Choice = ");
+			
+			switch(choice) {
+			
+			case 1 : insert();
+			break;
+			}
+		}
+		q1.insert(20);
+		q1.insert(200);
+		q1.insert(2000);
+		q1.insert(50);
+		q1.remove();
+		q1.remove();
+		System.out.println(q1);
+
+	}
+}
