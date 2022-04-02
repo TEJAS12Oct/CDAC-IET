@@ -1,0 +1,27 @@
+package CircularQMD;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Enter size");
+		int size = sc.nextInt();
+
+		CircularQ CQ = new CircularQ();
+		CQ.insert(10);
+		CQ.insert(20);
+		CQ.insert(30);
+		CQ.remove();
+		// CQ.remove();
+		CQ.insert(40);
+		CQ.insert(50);
+		CQ.remove();
+		CQ.remove();
+		System.out.println(CQ);
+	}
+
+}

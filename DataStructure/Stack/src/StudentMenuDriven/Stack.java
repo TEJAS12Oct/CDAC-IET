@@ -1,6 +1,7 @@
 package StudentMenuDriven;
 public class Stack {
-	 	private Student []arr;
+	 
+	 private Student []arr;
 	 private int top=-1;
 	
 	Stack(int size)
@@ -19,7 +20,7 @@ public class Stack {
 		}
 		else
 		{
-			System.out.println("stack overflow");
+			System.out.println("overflow...........");
 		}
 			
 	}
@@ -27,12 +28,12 @@ public class Stack {
 	{
 		if(this.top>-1)
 		{
-			System.out.println("Deleted element is "+ arr[this.top]);
+			System.out.println("pop element is "+ arr[this.top]);
 			this.top--;
 		}
 		else
 		{
-			System.out.println("stack underflow");
+			System.out.println("underflow.........");
 		}
 	}
 	public String toString()

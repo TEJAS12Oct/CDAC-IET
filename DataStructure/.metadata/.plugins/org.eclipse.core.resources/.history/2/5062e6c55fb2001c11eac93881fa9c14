@@ -1,0 +1,23 @@
+
+public class CMain {
+
+	public static void main(String[] args) {
+
+			CQueue q1=new CQueue();
+			q1.insert(10);
+			q1.insert(200);
+			q1.remove();
+			q1.insert(220);
+			q1.insert(230);
+			q1.remove();
+			q1.insert(2270);
+			q1.remove();
+			q1.remove();
+			q1.remove();
+			
+		System.out.println(q1);
+	}
+	
+	
+	
+}

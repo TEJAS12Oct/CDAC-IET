@@ -23,7 +23,7 @@ public class Stack1 {
 	public void pop() {
 
 		if (this.top != -1) {
-			System.out.println(this.arr[this.top]);
+			System.out.println("Remove Element = " +this.arr[this.top]);
 			this.top--;
 
 		} else
