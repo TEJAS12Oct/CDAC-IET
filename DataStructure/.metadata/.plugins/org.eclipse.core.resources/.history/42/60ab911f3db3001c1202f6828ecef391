@@ -1,0 +1,15 @@
+package DQueue;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		DQeue  DQ = new DQeue();
+		
+		DQ.insertR(10);
+		DQ.insertR(10);
+		DQ.insertF(10);
+		DQ.insertR(10);
+	}
+
+}

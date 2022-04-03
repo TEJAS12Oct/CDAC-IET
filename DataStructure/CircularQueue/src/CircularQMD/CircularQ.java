@@ -27,11 +27,12 @@ public class CircularQ {
 				this.R++;
 			else
 				this.R = 0;
+			this.arr[R] = value;
 		}
 		if (this.F == -1) {
 			this.F = 0;
 		}
-		this.arr[R] = value;
+		
 
 	}
 

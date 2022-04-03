@@ -1,0 +1,23 @@
+package SelectionSort;
+
+public class Sort {
+	
+	public void selection(int [] arr) {
+		
+		for(int t =  0;  t < arr.length -1 ; t++) {
+			int i = t;
+			int x = arr[i];
+			while(i<n)
+			{
+				if (arr[i] < x)
+				{
+					int tmp = arr[i];
+					arr[i] = x;
+					x = tmp;
+					
+				}i++;
+			}arr[t]=x;
+		}}
+			}}}
+
+}

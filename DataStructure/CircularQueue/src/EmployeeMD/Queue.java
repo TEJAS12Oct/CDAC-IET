@@ -22,11 +22,12 @@ public class Queue {
 				this.R++;
 			else
 				this.R = 0;
+			this.arr[R] = e1;
 		}
 		if (this.F == -1) {
 			this.F = 0;
 		}
-		this.arr[R] = e1;
+		
 
 	}
 
