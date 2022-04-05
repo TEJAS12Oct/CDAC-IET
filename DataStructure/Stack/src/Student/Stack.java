@@ -1,7 +1,5 @@
 package Student;
 
-import Student1.Student1;
-
 public class Stack {
 
 	private Student[] arr;

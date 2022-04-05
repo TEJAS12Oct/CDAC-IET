@@ -1,0 +1,135 @@
+package Student3;
+
+import Student.Student;
+
+public class Sort {
+
+	public static void NameAscending(Student[] arr) {
+		System.out.println("************Ascending Name Sorting *************");
+		for (int t = 0; t < arr.length - 1; t++) {
+			int i = t;
+			Student x = arr[i];
+			while (i < arr.length) {
+				if (arr[i].name.compareTo(x.name) < 0) {
+					Student tmp = arr[i];
+					arr[i] = x;
+					x = tmp;
+
+				}
+				i++;
+
+			}
+			arr[t] = x;
+		}
+
+	}
+
+	public static void NameDecending(Student[] arr) {
+		System.out.println("************Decending Name Sorting *************");
+		for (int t = 0; t < arr.length - 1; t++) {
+			int i = t;
+			Student x = arr[i];
+			while (i < arr.length) {
+				if (arr[i].name.compareTo(x.name) > 0) {
+					Student tmp = arr[i];
+					arr[i] = x;
+					x = tmp;
+
+				}
+				i++;
+
+			}
+			arr[t] = x;
+		}
+
+	}
+
+	public static void AgeAscending(Student[] arr) {
+		System.out.println("************Ascending Age Sorting *************");
+
+		for (int t = 0; t < arr.length - 1; t++) {
+			int i = t;
+			Student x = arr[i];
+
+			while (i < arr.length) {
+				if (arr[i].age < x.age) {
+					Student tmp = arr[i];
+					arr[i] = x;
+					x = tmp;
+				}
+				i++;
+			}
+			arr[t] = x;
+		}
+
+	}
+
+	public static void AgeDecending(Student[] arr) {
+		System.out.println("************Decending Age Sorting *************");
+		for (int t = 0; t < arr.length - 1; t++) {
+			int i = t;
+			Student x = arr[i];
+			while (i < arr.length) {
+				if (arr[i].age > x.age) {
+					Student tmp = arr[i];
+					arr[i] = x;
+					x = tmp;
+
+				}
+				i++;
+
+			}
+			arr[t] = x;
+		}
+
+	}
+
+	public static void MarksAscending(Student[] arr) {
+		System.out.println("************Ascending Marks Sorting *************");
+		for (int t = 0; t < arr.length - 1; t++) {
+			int i = t;
+			Student x = arr[i];
+			while (i < arr.length) {
+				if (arr[i].marks < x.marks) {
+					Student tmp = arr[i];
+					arr[i] = x;
+					x = tmp;
+
+				}
+				i++;
+
+			}
+			arr[t] = x;
+		}
+
+	}
+
+	public static void MarksDecending(Student[] students) {
+		System.out.println("************Decending Age Sorting *************");
+		for (int t = 0; t < students.length - 1; t++) {
+			int i = t;
+			Student x = students[i];
+			while (i < students.length) {
+				if (students[i].getMarks > x.getMarks) {
+					Student tmp = students[i];
+					students[i] = x;
+					x = tmp;
+
+				}
+				i++;
+
+			}
+			students[t] = x;
+		}
+
+	}
+
+	public static void print(Student[] arr) {
+		for (int i = 0; i < arr.length; i++) {
+			System.out.println(arr[i] + " ,");
+		}
+		System.out.println();
+	}
+
+	
+}

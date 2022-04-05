@@ -1,0 +1,19 @@
+package Student3;
+
+public class Student {
+	
+	public class Student {
+		private String name;
+		private int age;
+		private char gender;
+		private int marks;
+
+		Student(String name, int age, char gender, int marks) {
+
+			this.name = name;
+			this.age = age;
+			this.gender = gender;
+			this.marks = marks;
+		}
+
+}
