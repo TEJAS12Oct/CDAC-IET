@@ -1,0 +1,54 @@
+package Student;
+
+public class Student {
+	String name;
+	int age;
+	char gender;
+	int marks;
+
+	Student(String name, int age, char gender, int marks) {
+
+		this.name = name;
+		this.age = age;
+		this.gender = gender;
+		this.marks = marks;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public String toString() {
+		String str = "Student [name=" + name + ", age=" + age + ", gender=" + gender + ", marks=" + marks + "]";
+		return str;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public char getGender() {
+		return gender;
+	}
+
+	public void setGender(char gender) {
+		this.gender = gender;
+	}
+
+	public int getMarks() {
+		return marks;
+	}
+
+	public void setMarks(int marks) {
+		this.marks = marks;
+	}
+
+}

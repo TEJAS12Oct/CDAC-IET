@@ -12,6 +12,7 @@ public class main {
 
 		System.out.println("Enter age = ");
 		int age = sc.nextInt();
+		
 		System.out.println("Enter gender = ");
 		char gender = sc.next().charAt(0);
 

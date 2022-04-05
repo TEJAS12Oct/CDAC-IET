@@ -1,0 +1,28 @@
+package RoughWork;
+
+public class Employee {
+
+	private int id;
+	private int Salary;
+	private String Name;
+
+	Employee(int id, int Salary, String name) {
+
+		this.id = id;
+		this.Salary = Salary;
+		this.Name = Name;
+
+	}
+	
+	public void setid(int id) {
+		this.id = id;
+	}
+	
+	public int getid() {
+		this.id =  id;
+		return id;
+	}
+	
+	
+
+}

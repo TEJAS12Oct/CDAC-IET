@@ -1,0 +1,144 @@
+package Student;
+
+public class Student {
+	String name;
+	int age;
+	char gender;
+	int marks;
+
+	Student(String name, int age, char gender, int marks) {
+
+		this.name = name;
+		this.age = age;
+		this.gender = gender;
+		this.marks = marks;
+	}
+
+	public static void NameAscending(Student[] arr) {
+		for (int t = 0; t < arr.length - 1; t++) {
+			int i = t;
+			Student x = arr[i];
+			while (i < arr.length) {
+				if (arr[i].name.compareTo(x.name) > 0) {
+					Student tmp = arr[i];
+					arr[i] = x;
+					x = tmp;
+
+				}
+				i++;
+
+			}
+			arr[t] = x;
+		}
+
+	}
+
+	public static void NameDecending(Student[] arr) {
+		for (int t = 0; t < arr.length - 1; t++) {
+			int i = t;
+			Student x = arr[i];
+			while (i < arr.length) {
+				if (arr[i].name.compareTo(x.name) < 0) {
+					Student tmp = arr[i];
+					arr[i] = x;
+					x = tmp;
+
+				}
+				i++;
+
+			}
+			arr[t] = x;
+		}
+
+	}
+
+	public static void AgeAscending(Student[] arr) {
+
+		for (int t = 0; t < arr.length - 1; t++) {
+			int i = t;
+			Student x = arr[i];
+			while (i < arr.length) {
+				if (arr[i].age < x.age) {
+					Student tmp = arr[i];
+					arr[i] = x;
+					x = tmp;
+
+				}
+				i++;
+
+			}
+			arr[t] = x;
+		}
+
+	}
+
+	public static void AgeDecending(Student[] arr) {
+		for (int t = 0; t < arr.length - 1; t++) {
+			int i = t;
+			Student x = arr[i];
+			while (i < arr.length) {
+				if (arr[i].age > x.age) {
+					Student tmp = arr[i];
+					arr[i] = x;
+					x = tmp;
+
+				}
+				i++;
+
+			}
+			arr[t] = x;
+		}
+
+	}
+
+	public static void MarksAscending(Student[] arr) {
+		for (int t = 0; t < arr.length - 1; t++) {
+			int i = t;
+			Student x = arr[i];
+			while (i < arr.length) {
+				if (arr[i].marks < x.marks) {
+					Student tmp = arr[i];
+					arr[i] = x;
+					x = tmp;
+
+				}
+				i++;
+
+			}
+			arr[t] = x;
+		}
+
+	}
+
+	public static void MarksDecending(Student[] arr) {
+		for (int t = 0; t < arr.length - 1; t++) {
+			int i = t;
+			Student x = arr[i];
+			while (i < arr.length) {
+				if (arr[i].marks > x.marks) {
+					Student tmp = arr[i];
+					arr[i] = x;
+					x = tmp;
+
+				}
+				i++;
+
+			}
+			arr[t] = x;
+		}
+
+	}
+
+	public static void print(Student[] arr) {
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + " ,");
+		}
+		System.out.println();
+	}
+
+	public String toString() {
+		String str = "Student [name=" + name + ", age=" + age + ", gender=" + gender + ", marks=" + marks + "]";
+		return str;
+	}
+
+}

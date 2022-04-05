@@ -9,9 +9,9 @@ public class Main {
 		
 		Circle c1 = new Circle(30,3,5);
 		System.out.println(c1.getRadius());
-		c1.setRadius(12);
+		c1.setradius(12);
 		
-		System.out.println(c.toString());
+		System.out.println(c);
 		System.out.println(c1);
 
 	}

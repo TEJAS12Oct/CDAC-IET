@@ -9,6 +9,7 @@ public class palindrome {
 		System.out.println("Enter the No = ");
 		int num = sc.nextInt();
 		System.out.println("num = " + num);
+		
 		int n = num;
 		int rev = 0;
 		int rem;

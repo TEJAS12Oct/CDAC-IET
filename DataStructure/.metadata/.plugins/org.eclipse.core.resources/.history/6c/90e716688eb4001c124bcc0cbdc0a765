@@ -1,0 +1,18 @@
+package InsertionSort;
+
+import SelectionSort.Sort;
+
+public class Main {
+
+	public static void main(String[] args) {
+		int [] arr =  new  int[] { 12 , 75 , 30 , 93 , 48 , 3 };
+		 
+		 Sort S = new Sort();
+		 
+		 S.print(arr);
+		 S.selection(arr);
+		 S.print(arr);
+
+	}
+
+}

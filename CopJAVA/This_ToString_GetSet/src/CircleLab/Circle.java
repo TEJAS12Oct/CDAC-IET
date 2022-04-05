@@ -16,7 +16,7 @@ public class Circle {
 
 	}
 
-	public void setRadius(int r) {
+	public void setradius(int r) {
 		radius = r;
 	}
 

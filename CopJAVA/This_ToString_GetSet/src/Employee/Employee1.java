@@ -20,23 +20,6 @@ public class Employee1 {
 	private String Role;
 	private int baseSalary;
 
-	public float getTotalSalary() {
-		float totalSalary = 0;
-		System.out.println(getRole());
-		if ((getRole().toUpperCase().equals("Manager".toUpperCase()))) {
-			//System.out.println();
-			return (totalSalary = ((baseSalary) + (((50 * baseSalary) / 100)) - (baseSalary / 4.25f)));
-		}
-		if ((getRole().equals("Tester")) || (getRole().equals("tester"))) {
-			return (totalSalary = (baseSalary + (((45 * baseSalary) / 100)) - (baseSalary / 150.f)));
-		}
-
-		if ((getRole().equals("Developer")) || (getRole().equals("developer"))) {
-			return (totalSalary = (baseSalary + ((40 / 100) * baseSalary) - (baseSalary / 100.f)));
-		}
-		return 0;
-	}
-
 	public Employee1(int Id, String Name, String Role, int Salary) {
 		this.Id = Id;
 		this.Name = Name;
@@ -77,8 +60,26 @@ public class Employee1 {
 	}
 
 	public String toString() {
-		return new String("Employee ID\t: " + Id + "\nEmployee Name:   " + Name + " \nEmployee Basic  Salary: "
-				+ (baseSalary) + " Rs\n" + "Total Salary: " + getTotalSalary());
+		return ("Employee ID\t: " + Id + "\nEmployee Name:   " + Name + " \nEmployee Basic  Salary: " + (baseSalary)
+				+ " Rs\n" + "Total Salary: " + getTotalSalary());
+	}
+
+	public float getTotalSalary() {
+		float totalSalary = 0;
+		System.out.println(getRole());
+		if ((getRole().toUpperCase().equals("Manager".toUpperCase()))) {
+	//  if ((getRole().equals("Manager")) || (getRole().equals("manager"))) {
+			// System.out.println();
+			return (totalSalary = ((baseSalary) + (((50 * baseSalary) / 100)) - (baseSalary / 4.25f)));
+		}
+		if ((getRole().equals("Tester")) || (getRole().equals("tester"))) {
+			return (totalSalary = (baseSalary + (((45 * baseSalary) / 100)) - (baseSalary / 150.f)));
+		}
+
+		if ((getRole().equals("Developer")) || (getRole().equals("developer"))) {
+			return (totalSalary = (baseSalary + ((40 / 100) * baseSalary) - (baseSalary / 100.f)));
+		}
+		return 0;
 	}
 
 }

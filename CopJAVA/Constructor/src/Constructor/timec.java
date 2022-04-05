@@ -17,10 +17,17 @@ public class timec {
 		ss = 20;
 	}
 
-	timec(int hrs, int min, int sec) {
-		hh = hrs;
-		mm = min;
-		ss = sec;
+//	timec(int hrs, int min, int sec) {
+//		hh = hrs;
+//		mm = min;
+//		ss = sec;
+//	}
+	
+	
+	timec(int hh, int mm, int ss) {
+		this.hh = hh;
+		this.mm = mm;
+		this.ss = ss;
 	}
 
 	void display() {

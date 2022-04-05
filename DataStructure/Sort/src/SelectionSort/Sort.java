@@ -2,8 +2,8 @@ package SelectionSort;
 
 public class Sort {
 
-	public void selection(int[] arr) {
-		int n = 0;
+	public void selectionAscending(int[] arr) {
+		int counter = 0;
 		for (int t = 0; t < arr.length - 1; t++) {
 			int i = t;
 			int x = arr[i];
@@ -15,9 +15,32 @@ public class Sort {
 
 				}
 				i++;
+				counter++;
 			}
 			arr[t] = x;
 		}
+		System.out.println(counter);
+	}
+	
+	
+	public void selectionDecending(int[] arr) {
+		//int counter = 0;
+		for (int t = 0; t < arr.length - 1; t++) {
+			int i = t;
+			int x = arr[i];
+			while (i < arr.length) {
+				if (arr[i] > x) {
+					int tmp = arr[i];
+					arr[i] = x;
+					x = tmp;
+
+				}
+				i++;
+				//counter++;
+			}
+			arr[t] = x;
+		}
+		//System.out.println(counter);
 	}
 
 	public static void print(int[] arr) {

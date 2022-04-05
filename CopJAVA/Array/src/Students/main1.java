@@ -19,8 +19,9 @@ public class main1 {
 		}
 		
 		arr[1].setAge(45);
-		int a = arr[3].getAge();
+		arr[3].getAge();
 		System.out.println(arr[1]);
+		System.out.println(arr[3].getAge());
 
 	}
 

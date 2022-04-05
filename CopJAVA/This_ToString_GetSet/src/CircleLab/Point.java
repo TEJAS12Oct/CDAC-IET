@@ -4,7 +4,7 @@ public class Point {
 	int x, y;
 
 	public Point() {
-		x = 0;
+		x = 7;
 		y = 0;
 
 	}

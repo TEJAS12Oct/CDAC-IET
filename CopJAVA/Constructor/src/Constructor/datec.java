@@ -6,7 +6,9 @@ public class datec {
 	int yy;
 
 	datec() {
-		System.out.println("Date = " + dd + "-" + mm + "-" + yy + "\n");
+		dd = 0;
+		mm = 0;
+		yy = 0;
 
 	}
 
@@ -31,7 +33,7 @@ public class datec {
 		datec d2 = new datec(15, 3);
 		datec d3 = new datec(12, 10, 1999);
 
-		// d1.display();
+	    d1.display();
 		d2.display();
 		d3.display();
 
