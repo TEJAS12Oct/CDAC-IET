@@ -1,0 +1,83 @@
+package QueueLL;
+
+public class QueueLL {
+
+	private Node top;
+
+	public QueueLL() {
+		top = null;
+	}
+
+	public QueueLL(Node top) {
+		this.top = top;
+	}
+
+	public void push(int data) { // Insert Time Complexity = o(1)
+		Node tmp = new Node(data);
+
+		if (top == null) {
+			top = tmp;
+		} else {
+			Node it = top;
+			while (it.next != null) {
+				it = it.next;
+			}
+
+			// it reaches at last Node
+			it.next = tmp;
+			tmp.next = null;
+		}
+	}
+
+	public void pop() {
+
+		if (top == null) {
+			if (top == null) {
+				System.out.println("LinkList  Is Empty ");
+			} else {
+				Node t = null;
+				Node it = top;
+				while (it.next != null) {
+					t = it;
+					it = it.next;
+				}
+				t.next = null;
+				it = null;
+
+			}
+
+		}
+	}
+
+	public boolean isEmpty() {
+		if (top == null)
+			return true;
+		else
+			return false;
+
+	}
+
+	public int peek() {
+		if (top != null)
+			return top.data;
+		else
+			return -999;
+	}
+
+	public String toString() {
+		String str = "";
+
+		if (top == null) {
+			str = "LinkList  Is Empty";
+		} else {
+			Node it = top;
+//			while (it.next != null) {  // this is without last  node
+			while (it != null) { // with last node
+
+				str += it.data + " , ";
+				it = it.next;
+			}
+		}
+		return str;
+	}
+}

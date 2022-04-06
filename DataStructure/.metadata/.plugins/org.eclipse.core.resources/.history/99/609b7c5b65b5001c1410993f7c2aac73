@@ -1,0 +1,39 @@
+package Int;
+
+public class LinkList {
+
+	Node head;
+
+	public LinkList() {
+		head = null;
+	}
+
+	public LinkList(Node head) {
+		this.head = head;
+	}
+
+	public void insert(int data) {
+		Node tmp = new Node(data);
+
+		if (head == null) {
+			head = tmp;
+		} else {
+			tmp.next = head; // head content copy in temp.next
+			head = tmp;
+		}
+	}
+	
+	public void append(int data) {
+		Node tmp = new Node(data);
+
+		if (head == null) {
+			head = tmp;
+		} else {
+			Node it = head; 
+			while() {
+			it  = it.next;	
+			}
+			
+		}
+	}
+}

@@ -1,0 +1,24 @@
+package Employee;
+
+public class Main {
+
+	public static void main(String[] args) {
+	//	Employee E = new Employee();
+		EmpLinklist list = new EmpLinklist();
+
+		list.append("Tejas", 4, 45000);
+		list.insert("Ram", 1, 45000);
+		list.append("Shyam", 5, 45000);
+		list.insert("sahil", 2, 45000);
+		list.append("yash", 6, 45000);
+		list.insert("zzz", 3, 45000);
+
+		System.out.println(list);
+
+		list.deleteFirst();
+		list.deleteLast();
+
+		System.out.println(list);
+	}
+
+}

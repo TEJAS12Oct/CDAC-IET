@@ -1,0 +1,16 @@
+package Employee;
+
+import Int.Node;
+
+public class EmpLinklist {
+	private Node head;
+
+	public LinkList() {
+		head = null;
+	}
+
+	public LinkList(Node head) {
+		this.head = head;
+	}
+
+}

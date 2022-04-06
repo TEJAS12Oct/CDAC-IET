@@ -1,0 +1,19 @@
+package StackLL;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		StackLL list = new StackLL();
+
+		list.push(20);
+		list.push(200);
+		list.push(2000);
+
+		System.out.println(list);
+
+		list.pop();
+		System.out.println(list);
+	}
+
+}

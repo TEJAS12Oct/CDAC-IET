@@ -1,0 +1,11 @@
+package Int;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Node head = new Node(11);
+		Node n2 = new Node(22);
+	}
+
+}
