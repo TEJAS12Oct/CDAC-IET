@@ -17,19 +17,34 @@ public class Main {
 //				           head.next.next.data);
 
 		LinkList list = new LinkList();
-		list.append(10);
+
 		list.insert(20);
-		list.append(100);
 		list.insert(200);
-		list.append(1000);
 		list.insert(2000);
-		
-		System.out.println(list);
-		
+		System.out.println("Insert = " + list + "\n");
+
+		list.insertByPosition(333, 1);
+		System.out.println("Insert By Position = " + list + "\n");
+
+		list.append(10);
+		list.append(100);
+		list.append(1000);
+        System.out.println("Append  = " + list + "\n");
+
 		list.deleteFirst();
+        System.out.println("DeleteFirst = " + list + "\n");
+
 		list.deleteLast();
+        System.out.println("Delete Last = " + list + "\n");	
+
+		list.deleteByPosition(2);
+		System.out.println("Delete By Position  = " + list + "\n");
+
+		list.reverse();
+		System.out.println("Reverse  = " + list + " \n");
 		
-		System.out.println(list);
+		list.reversePrint();
+
 	}
 
 }

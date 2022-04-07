@@ -1,0 +1,27 @@
+package EmployeeQueueLLMD;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		String Name = sc.next();
+		int id = sc.nextInt();
+		char gender = sc.next().charAt(0);
+		Employee E = new Employee(Name, id, gender);
+
+		QueueLL Qll = new QueueLL();
+
+		Qll.insert(E);
+		Qll.insert(E);
+		Qll.insert(E);
+		Qll.insert(E);
+		System.out.println(Qll);
+
+		Qll.Remove();
+		System.out.println(Qll);
+	}
+
+}
