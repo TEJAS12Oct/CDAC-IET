@@ -3,7 +3,7 @@ package Int;
 public class Node {
 
 	int data;
-	Node next;
+	Node next;  //next is variable store address
 
 	public Node() {
 		data = 0;

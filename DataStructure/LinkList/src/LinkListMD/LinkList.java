@@ -174,10 +174,31 @@ public class LinkList {
 	}
 
 	public void SmallestNo() {
+		Node it = this.head;
+		Node min = new Node();
+		min.data = 9999999;
+		while (it != null) {
+			if (it.data < min.data) {
+				min.data = it.data;
 
+			}
+			it = it.next;
+		}
+		System.out.println("Smallest No = " + min.data);
 	}
 
 	public void biggestNo() {
+		Node it = this.head;
+		Node min = new Node();
+		min.data = 0;
+		while (it != null) {
+			if (it.data > min.data) {
+				min.data = it.data;
+
+			}
+			it = it.next;
+		}
+		System.out.println("Smallest No = " + min.data);
 
 	}
 
@@ -191,7 +212,7 @@ public class LinkList {
 				if (it.data % 2 == 0) {
 					System.out.print(it.data + ",");
 				}
-				
+
 				it = it.next;
 			}
 		}
@@ -209,7 +230,7 @@ public class LinkList {
 				if (it.data % 2 != 0) {
 					System.out.print(it.data + ",");
 				}
-				
+
 				it = it.next;
 			}
 		}

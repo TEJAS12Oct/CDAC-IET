@@ -11,8 +11,9 @@ public class LinkList {
 	public LinkList(Node head) {
 		this.head = head;
 	}
-
-	public void insert(int data) { // Insert Time Complexity = o(1)
+	// Insert Time Complexity = o(1)  
+	//insert = add front side
+	public void insert(int data) {  
 		Node tmp = new Node(data);
 
 		if (head == null) {
@@ -22,13 +23,14 @@ public class LinkList {
 			head = tmp;
 		}
 	}
-
-	public void append(int data) { // Append Time Complexity = o(1)
+	// Append Time Complexity = o(1)
+	// Append = add last  side
+	public void append(int data) { 
 		Node tmp = new Node(data);
 
 		if (head == null) {
 			head = tmp;
-		} else {
+		} else {  //it = iterator // help to move
 			Node it = head;
 			while (it.next != null) {
 				it = it.next;
