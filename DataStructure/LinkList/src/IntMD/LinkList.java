@@ -1,4 +1,4 @@
-package Int;
+package IntMD;
 
 public class LinkList {
 
@@ -12,9 +12,7 @@ public class LinkList {
 		this.head = head;
 	}
 
-	// Insert Time Complexity = o(1)
-	// insert = add front side
-	public void insert(int data) {
+	public void insert(int data) { // Insert Time Complexity = o(1)
 		Node tmp = new Node(data);
 
 		if (head == null) {
@@ -25,14 +23,12 @@ public class LinkList {
 		}
 	}
 
-	// Append Time Complexity = o(1)
-	// Append = add last side
-	public void append(int data) {
+	public void append(int data) { // Append Time Complexity = o(1)
 		Node tmp = new Node(data);
 
 		if (head == null) {
 			head = tmp;
-		} else { // it = iterator // help to move
+		} else {
 			Node it = head;
 			while (it.next != null) {
 				it = it.next;
@@ -95,7 +91,6 @@ public class LinkList {
 					Node t = head;
 					head = t.next;
 					t.next = null;
-					// had = head.next;
 				}
 
 			}
@@ -119,10 +114,6 @@ public class LinkList {
 //			it = null;
 //
 //		}
-
-		else if (head.next == null) {
-			head = null;
-		}
 
 		else {
 			Node t = head;
@@ -155,7 +146,7 @@ public class LinkList {
 		}
 	}
 
-	public void reverse() {
+	public void reverseLL() {
 		Node it = head;
 		Node itp = null;
 		Node itn = head;
@@ -169,16 +160,118 @@ public class LinkList {
 		head = itp;
 	}
 
+	public void forwardPrint() {
+		if (head == null) {
+			System.out.println(" Link list is empty");
+
+		} else {
+
+			Node it = head;
+			while (it != null) {
+				System.out.print(it.data + " ");
+				it = it.next;
+			}
+		}
+
+	}
+
 	public void reversePrint() {
 		System.out.println("Reverse Print = ");
 		reversePrintRec(head);
 		System.out.println();
 	}
 
-	private void reversePrintRec(Node it) { // Recursion
+	public void reversePrintRec(Node it) { // Recursion
 		if (it.next != null)
 			reversePrintRec(it.next);
 		System.out.print(it.data + " ,"); // Reverse Recursion
+
+	}
+
+//	public void reversePrint() // without recursion
+//	{
+//		System.out.println("\n---------Reverse Direction Linklist Elements-----------");
+//		if (head == null) {
+//			System.out.println("empty linkedlist");
+//		} else {
+//			Node it = head;
+//			reverse(it);
+//		}
+//		System.out.println();
+//	}
+
+	public void SmallestNo() {
+		Node it = this.head;
+		Node min = new Node();
+		min.data = 9999999;
+		while (it != null) {
+			if (it.data < min.data) {
+				min.data = it.data;
+
+			}
+			it = it.next;
+		}
+		System.out.println("Smallest No = " + min.data);
+	}
+
+	public void biggestNo() {
+		Node it = this.head;
+		Node max = new Node();
+		max.data = 0;
+		while (it != null) {
+			if (it.data > max.data) {
+				max.data = it.data;
+
+			}
+			it = it.next;
+		}
+		System.out.println("Smallest No = " + max.data);
+
+	}
+
+	public void even() {
+		System.out.println("Even No = ");
+		if (head == null) {
+			System.out.println("LinkList  Is Empty ");
+		} else {
+			Node it = head;
+			while (it != null) {
+				if (it.data % 2 == 0) {
+					System.out.print(it.data + ",");
+				}
+
+				it = it.next;
+			}
+		}
+
+	}
+
+	public void odd() {
+
+		System.out.println("Odd No = ");
+		if (head == null) {
+			System.out.println("LinkList  Is Empty ");
+		} else {
+			Node it = head;
+			while (it != null) {
+				if (it.data % 2 != 0) {
+					System.out.print(it.data + ",");
+				}
+
+				it = it.next;
+			}
+		}
+
+	}
+
+	public void insertByNum(int n, int num) {
+		Node it = head;
+		int pos = 1;
+		while (it.data != n) {
+			pos++;
+			it = it.next;
+		}
+		insertByPosition(num, pos + 1);
 
 	}
 
@@ -198,4 +291,5 @@ public class LinkList {
 		}
 		return str;
 	}
+
 }
