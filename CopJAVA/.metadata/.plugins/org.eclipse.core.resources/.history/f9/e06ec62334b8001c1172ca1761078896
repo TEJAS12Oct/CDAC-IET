@@ -1,0 +1,55 @@
+package ArrayRevision;
+
+public class Student1 {
+	private String name;
+	private int age;
+	private int marks;
+
+	public Student1(String name, int age, int marks) {
+		this.name = name;
+		this.age = age;
+		this.marks = marks;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public int getmarks() {
+		return marks;
+	}
+
+	public void setmarks(int marks) {
+		this.marks = marks;
+	}
+
+	public String toString() {
+		System.out.println();
+		return "Student [name=" + name + ", age=" + age + ", marks=" + marks + "]";
+	}
+
+	public static void Display(Student1[] arr) {
+		System.out.println("Display Information of Student by static method");
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print("Display data = " + arr[i]);
+		}
+	}
+
+	public void print(Student1[] arr, int index) {
+		System.out.println("print Information of Student by Non-static method");
+		System.out.println("Print data = " + arr[index]);
+
+	}
+}

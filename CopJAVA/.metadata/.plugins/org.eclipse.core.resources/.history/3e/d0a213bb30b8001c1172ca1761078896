@@ -1,0 +1,11 @@
+package ArrayRevision;
+
+import java.util.Scanner;
+
+public class StudentMain1 {
+
+	public static void main(String[] args) {
+
+	}
+
+}

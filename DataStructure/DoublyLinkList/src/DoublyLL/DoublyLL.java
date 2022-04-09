@@ -58,17 +58,17 @@ public class DoublyLL {
 			} else {
 				// more than 1 Node
 				Node tmp = head;
-				head = head.next;
-			//	head.next = null;
+				head = head.prev;
+				tmp.next = null;
 				head.prev = null;
-				// tmp = null;
+				tmp = null;
 			}
 		}
 
 	}
 
 	public void deleteLast() {
-		/// check for empty
+		// check for empty
 		if (tail == null) {
 			System.out.println("DoublyLL is Empty");
 		} else {
@@ -81,9 +81,9 @@ public class DoublyLL {
 				Node tmp = tail;
 				tail = tail.prev;
 				tail.next = null;
-			//	tail.prev = null;
+				tmp.prev = null;
 
-				// tmp = null;
+				tmp = null;
 			}
 		}
 	}
