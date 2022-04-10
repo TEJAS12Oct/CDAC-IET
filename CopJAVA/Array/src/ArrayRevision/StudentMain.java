@@ -27,10 +27,12 @@ public class StudentMain {
 			arr[i] = s;
 //			System.out.println("In Loop Print  = " + s); // all size getting value one by one
 		}
-
 		for (i = 0; i < arr.length; i++) {
 			System.out.println("Student Data = " + arr[i]);
 		}
+
+		arr[1].setAge(45);
+		System.out.println("\nSet Age = " + arr[1]);
 
 		Student.Display(arr); // Class Calling Method = static method
 
@@ -42,9 +44,8 @@ public class StudentMain {
 		} else {
 			arr[1].print(arr, 1);
 		}
-
-		arr[1].setAge(45);
-		System.out.println("\nSet Age = "+arr[1]);
+		
+		
 
 	}
 

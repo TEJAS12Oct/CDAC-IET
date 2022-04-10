@@ -15,6 +15,6 @@ public class Q2 {
 				smax = arr[i];
 			}
 		}
-		System.out.println("Largest = " + max + " \nSecond largest =" + smax);
+		System.out.println("Largest = " + max + " \nSecond largest = " + smax);
 	}// end of main
 }// end of class
