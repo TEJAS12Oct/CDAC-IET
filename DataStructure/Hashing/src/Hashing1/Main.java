@@ -21,7 +21,7 @@ public class Main {
 
 		System.out.println("************************* Remove Linear Porbing *************************");
 		// hash.removeL("XYT");
-		// hash.removeL("DEr");
+		hash.removeL("DEr");
 		hash.removeL("ABL");
 		System.out.println("Remove Linear =  " + hash + "\n");
 
@@ -31,6 +31,7 @@ public class Main {
 
 		System.out.println("************************** Remove Qudratic Porbing ********************** ");
 		hash.removeQ("NO");
+		hash.removeQ("TA");
 		System.out.println("Remove Quadratic =  " + hash + "\n");
 
 	}

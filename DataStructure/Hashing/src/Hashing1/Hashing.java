@@ -78,17 +78,27 @@ public class Hashing {
 	public void removeL(String inputStr) {
 //		System.out.println("Remove Linear = ");
 		int index = searchL(inputStr);
-		StrArr[index] = null;
-		System.out.println("  and it is removed from " + index);
-		System.out.println("\n");
+		if (index < 0) {
+			System.out.println("  " + inputStr + " is not Found");
+			System.out.println();
+		} else {
+			StrArr[index] = null;
+			System.out.println("  and it is removed from " + index);
+			System.out.println("\n");
+		}
 	}
 
 	public void removeQ(String inputStr) {
 //		System.out.println("Remove Quadratic");
 		int index = searchQ(inputStr);
-		StrArr[index] = null;
-		System.out.println(" and it is removed from " + index);
-		System.out.println("\n");
+		if (index < 0) {
+			System.out.println("  " + inputStr + " is not Found");
+			System.out.println();
+		} else {
+			StrArr[index] = null;
+			System.out.println(" and it is removed from " + index);
+			System.out.println("\n");
+		}
 	}
 
 	public int searchL(String inputStr) {
@@ -99,47 +109,65 @@ public class Hashing {
 		if (StrArr[index] != null && StrArr[index].equals(inputStr)) {
 			return index;
 		} else {
-// ********************** Collision **********************
-			while (true) {
-				if (index > StrArr.length - 1) {
-					index++;
-				} else {
-					index = 0;
-
-					if (StrArr[index] != null && StrArr[index].equals(inputStr)) {
-						return index;
-					}
-				}
-			}
+			return -1;
 		}
+// ********************** Collision **********************
+//			// while (StrArr[index] != null && StrArr[index].equals(inputStr)) {
+//				if (index > StrArr.length - 1) {
+//					index++;
+//				} else {
+//					index = 0;
+//
+//					if (StrArr[index] != null && StrArr[index].equals(inputStr))
+//						return index;
+////					else if (inputStr != toString()) {
+////						System.out.println(inputStr + " Not Found");
+////					}
+//				}
+//			}
+
+//		}
 
 	}
 
 	public int searchQ(String inputStr) {
+
 //		System.out.println("Searching Quadratic = ");
 		int index = HashFunction(inputStr);
 		System.out.print(inputStr + " key from HashFunction = " + index);
-
+		
 		if (StrArr[index] != null && StrArr[index].equals(inputStr)) {
 			return index;
-		} else {
-// ********************** Collision **********************
+		} else if (index > StrArr.length - 1) {
 			int i = 1;
-			while (true) {
-				index += (i * i);
-				if (index > StrArr.length - 1) {
-					index = 0;
-					i = 0;
-				}
+			index += (i * i);
+			index = 0;
+			i = 0;
 
-				if (StrArr[index] != null && StrArr[index].equals(inputStr)) {
-					return index;
-				}
-				i++;
+			if (StrArr[index] != null && StrArr[index].equals(inputStr)) {
+			//	return index;
 			}
-		}
+			i++;
+		}else 
+		return -1;
+		return index;
 
 	}
+// ********************** Collision **********************
+//			int i = 1;
+//			while (true) {
+//				index += (i * i);
+//				if (index > StrArr.length - 1) {
+//					index = 0;
+//					i = 0;
+//				}
+//
+//				if (StrArr[index] != null && StrArr[index].equals(inputStr)) {
+//					return index;
+//				}
+//				i++;
+//			}
+//		}
 
 	public String toString() {
 		String str = " ";
