@@ -16,9 +16,12 @@ public class Main {
 		Dll.append(77);
 		Dll.append(80);
 		System.out.println("Append  = " + Dll + "\n");
+		
+		Dll.print_forward();
+		Dll.print_reverse();
 
 		Dll.deleteFirst();
-		System.out.println("Delete First = " + Dll + "\n");
+		System.out.println("\nDelete First = " + Dll + "\n");
 
 		Dll.deleteLast();
 		System.out.println("Delete Last = " + Dll + "\n");

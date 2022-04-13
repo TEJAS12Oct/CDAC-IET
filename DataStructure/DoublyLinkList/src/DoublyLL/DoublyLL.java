@@ -135,7 +135,7 @@ public class DoublyLL {
 			}
 			Node tmp = it.next;
 			it.next = it.next.next;
-
+			it.next.prev = it;
 			tmp.next = null;
 			tmp.prev = null;
 
@@ -150,7 +150,7 @@ public class DoublyLL {
 		System.out.print("Forward Print = ");
 		Node it = head;
 		if (head == null) {
-			System.out.println(" Doubly Queue is empty");
+			System.out.println(" Doubly LL is empty");
 		} else {
 			while (it != null) {
 				System.out.print(it.data + " ");
@@ -163,20 +163,21 @@ public class DoublyLL {
 	public void print_reverse() {
 		System.out.print("\nReverse Print = ");
 		if (tail == null) {
-			System.out.println(" Queue is null");
+			System.out.println(" Dll is null");
 		} else {
 			Node it = tail;
 			while (it != null) {
 				System.out.print(it + " ");
 				it = it.prev;
 			}
-		}System.out.println();
+		}
+		System.out.println();
 	}
 
 	public void even_no() {
 		System.out.print("\neven no = ");
 		if (head == null) {
-			System.out.println("Doubly Queue is empty");
+			System.out.println("Doubly LL is empty");
 		} else {
 			Node it = head;
 			while (it != null) {
@@ -185,13 +186,14 @@ public class DoublyLL {
 				}
 				it = it.next;
 			}
-		}System.out.println();
+		}
+		System.out.println();
 	}
 
 	public void odd_no() {
 		System.out.print("\nodd no = ");
 		if (head == null) {
-			System.out.println("Doubly Queue is empty");
+			System.out.println("Doubly LL is empty");
 		} else {
 			Node it = head;
 			while (it != null) {
@@ -200,7 +202,8 @@ public class DoublyLL {
 				}
 				it = it.next;
 			}
-		}System.out.println();
+		}
+		System.out.println();
 	}
 
 	public String toString() {

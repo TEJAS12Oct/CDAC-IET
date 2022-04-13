@@ -72,8 +72,8 @@ public class EmployeeDLL {
 				it = it.get_Next();
 			}
 			/*
-			  Node tmp=it.next; it.next=newnode; newnode.pre=it; newnode.next=tmp;
-			  tmp.pre=newnode;
+			 * Node tmp=it.next; it.next=newnode; newnode.pre=it; newnode.next=tmp;
+			 * tmp.pre=newnode;
 			 */
 
 			newnode.set_Next(it.get_Next());
@@ -90,7 +90,7 @@ public class EmployeeDLL {
 
 		} else {
 			int c = getNodeCount() / 2;
-			System.out.println(c);
+			// System.out.println(c);
 			insert_by_position(c + 1, e);
 
 		}
@@ -165,10 +165,13 @@ public class EmployeeDLL {
 		if (head == null) {
 			System.out.println(" Linked list is empty");
 		} else {
+
 			if (head.get_Next() == null) {
+
 				head = null;
 				tail = null;
 			} else {
+
 				EmpNode it = head;
 				head = it.get_Next();
 				head.set_Pre(null);
@@ -202,6 +205,7 @@ public class EmployeeDLL {
 		} else {
 
 			for (int i = 1; i < pos - 1; i++) {
+
 				it = it.get_Next();
 			}
 			EmpNode t = it.get_Next();
@@ -214,13 +218,16 @@ public class EmployeeDLL {
 
 	public void deleteOlderThan31Age() {
 		EmpNode it = head;
-		int i = 0;
+		int i = 1;
 		while (it != null) {
+
 			if (it.get_Data().getAge() > 31) {
-				i++;
+				it = it.get_Next();
 				delete_by_position(i);
+				continue;
 			}
 			it = it.get_Next();
+			i++;
 		}
 	}
 
@@ -247,7 +254,7 @@ public class EmployeeDLL {
 
 		e2.head.set_Pre(e1.tail);
 		e1.tail.set_Next(e2.head);
-		e1.tail = e2.tail;
+		// e1.tail = e2.tail;
 		// list3.head=e1.head;
 		// list3.tail=e2.tail;
 
