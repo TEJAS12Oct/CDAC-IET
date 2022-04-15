@@ -25,10 +25,6 @@ public class Main {
 		hash.removeL("ABL");
 		System.out.println("Remove Linear =  " + hash + "\n");
 
-		System.out.println("***********************  Linear Porbing  ********************************");
-		hash.insertL("ED");
-		System.out.println("Insert Linear =  " + hash + "\n");
-
 		System.out.println("************************** Remove Qudratic Porbing ********************** ");
 		hash.removeQ("NO");
 		hash.removeQ("TA");
