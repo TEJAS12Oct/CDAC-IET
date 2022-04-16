@@ -17,15 +17,15 @@ public class Main {
 		MergeSort.print(brr);
 
 		MergeSort.Merge(arr, brr, crr);
-		System.out.print("Merger Crr =");
+		System.out.print("Merge Crr =");
 		MergeSort.print(crr);
 
 //		System.out.print("Crr =");
 //		MergeSort.print(crr);
 
-		MergeSort.MSort(crr, 0, 1, 4);
-		System.out.print("Sort By Index =  ");
-		MergeSort.print(crr);
+//		MergeSort.MSort(crr, 0, 1, 4);
+//		System.out.print("Sort By Index =  ");
+//		MergeSort.print(crr);
 
 		MergeSort.MergeS(crr, 0, crr.length - 1);
 		System.out.print("Merge Sorting = ");

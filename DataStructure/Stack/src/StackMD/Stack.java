@@ -52,7 +52,7 @@ public class Stack {
 			for (int i = this.top; i >= 0; i--)
 				str = str + (this.arr[i] + ", ");
 		}
-		System.out.println("DISPLAY ELEMENT AFTER POP = " + str);
+		System.out.println("DISPLAY ELEMENT  = " + str);
 
 		return str;
 	}
@@ -65,7 +65,7 @@ public class Stack {
 			for (int i = this.top; i >= 0; i--)
 				str = str + (this.arr[i] + " ");
 		}
-		System.out.println("DISPLAY ELEMENT AFTER POP = " + str);
+		System.out.println("DISPLAY ELEMENT  = " + str);
 
 	}
 

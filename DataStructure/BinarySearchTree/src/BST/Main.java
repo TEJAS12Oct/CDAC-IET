@@ -13,21 +13,24 @@ public class Main {
 		bst.insert(19);
 		bst.insert(20);
 		bst.insert(56);
-		
+
 		bst.preOrder();
 		bst.inOrder();
 		bst.postOrder();
 
+		bst.SmallestNo();
+		bst.LargestNo();
+
+		bst.delete(17);
+		System.out.println("Delete No = " + bst);
+		bst.inOrder();
 	}
 
 }
 
-
-/*                              14
-                     
-                        7              28
-                    3      12       17      56
-                                       19
-                                         20
-
-*/
+//                              14
+//                     
+//                     7               28
+//                 3      12       17       56
+//                                    19
+//                                       20
