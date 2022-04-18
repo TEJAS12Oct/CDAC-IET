@@ -3,7 +3,7 @@ package Stack;
 public class Stack {
 
 	static int[] arr;
-	// this will point to last incoming number
+//	 this will point to last incoming number
 	static int topIndex = -1;
 
 	public static void main(String[] args) {
@@ -14,16 +14,18 @@ public class Stack {
 		push(30);
 		push(10);
 		push(50);
-		push(60);
-		push(70);
+//		push(60);
+//		push(70);
+		System.out.println();
 
-		pop();
-		pop();
-		pop();
+		pop();      // 50
+//		pop();      // 10
+//		pop();      // 30
 
 		print();
+		
+		System.out.println();
 		push(80);
-	
 		print();
 
 	}
@@ -50,7 +52,7 @@ public class Stack {
 
 	private static void push(int value) {
 
-		// overflow condition
+//		 overflow condition
 		if (topIndex < arr.length - 1) {
 			topIndex++;
 			arr[topIndex] = value;
