@@ -11,7 +11,7 @@ public class timec {
 		ss = 37;
 	}
 
-	timec(int hrs, int min) {
+	timec(int hrs, int min) {  // one parameter passed in constructor		
 		hh = hrs;
 		mm = min;
 		ss = 20;
@@ -39,8 +39,11 @@ public class timec {
 		timec t2 = new timec(12, 10);
 		timec t3 = new timec(12, 10, 1999);
 
+		System.out.println("Default Constructor = ");
 		t1.display();
+		System.out.println("Parameterized Comstructor  = ");
 		t2.display();
+		System.out.println("Parameterized Comstructor  = ");
 		t3.display();
 
 	}

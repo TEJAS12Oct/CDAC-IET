@@ -157,31 +157,17 @@ public class BST {
 		return it.data;
 	}
 
-	public int height(Node r_ref) {
+	public int height(Node it) {
 		int h_left, h_right;
-		if (r_ref == null)
+		if (it == null)
 			return 0;
-		h_left = height(r_ref.left);
-		h_right = height(r_ref.right);
+		h_left = height(it.left);
+		h_right = height(it.right);
 
 		if (h_left > h_right)
 			return 1 + h_left;
 		else
 			return 1 + h_right;
 	}
-
-//	public int height(int i) {
-//		int h_left, h_right;
-//		if (r_ref == null)
-//			return 0;
-//		h_left = height(r_ref.left);
-//		h_right = height(r_ref.right);
-//
-//		if (h_left > h_right)
-//			return 1 + h_left;
-//		else
-//			return 1 + h_right;
-//		
-//	}
 
 }

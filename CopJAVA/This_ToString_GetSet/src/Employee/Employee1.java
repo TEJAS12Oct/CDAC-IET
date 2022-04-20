@@ -60,8 +60,8 @@ public class Employee1 {
 	}
 
 	public String toString() {
-		return ("Employee ID\t: " + Id + "\nEmployee Name:   " + Name + " \nEmployee Basic  Salary: " + (baseSalary)
-				+ " Rs\n" + "Total Salary: " + getTotalSalary());
+		return ("Employee ID : " + Id + "\nEmployee Name : " + Name + " \nEmployee Basic Salary : " + (baseSalary)
+				+ " Rs\n" + "Total Salary : " + getTotalSalary());
 	}
 
 	public float getTotalSalary() {

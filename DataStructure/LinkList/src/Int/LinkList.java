@@ -182,6 +182,66 @@ public class LinkList {
 
 	}
 
+// ************************ Palindrome ********************************
+	public static boolean isPalindrome(LinkList List) {
+		Node SlowP, FastP, sec_start, prev_slowP;
+		boolean result = false;
+
+		if ((List.head == null) || (List.head == null))
+			result = true;
+		else {
+			prev_slowP = SlowP = FastP = List.head;
+			while (FastP.next != null && FastP.next.next != null) {
+				prev_slowP = SlowP;
+				SlowP = SlowP.next;
+				FastP = FastP.next.next;
+			}
+			System.out.println("\nMiddle Node = " + SlowP.data);
+			sec_start = SlowP.next;
+
+			if (FastP.next == null) { // off number of nodes in list
+				sec_start = reverseRec(sec_start);
+				prev_slowP.next = null;
+				result = isIdentical(List.head, sec_start);
+				sec_start = reverseRec(sec_start);
+				prev_slowP.next = sec_start;
+			} else {
+				sec_start = reverseRec(sec_start);
+				SlowP.next = null;
+				result = isIdentical(List.head, sec_start);
+				sec_start = reverseRec(sec_start);
+				SlowP.next = sec_start;
+			}
+		} // End Of Else
+		return result;
+	}
+
+	static Node reverseRec(Node head) {
+		if ((head == null) || (head.next == null)) {
+			return head;
+		}
+
+		Node newNode = reverseRec(head.next);
+
+		head.next.next = head;
+		head.next = null;
+		return newNode;
+	}
+
+	private static boolean isIdentical(Node s1, Node s2) {
+		while (true) {
+			if (s1 == null && s2 == null)
+				return true;
+			if (s1 == null || s2 == null)
+				return false;
+			if (s1.data != s2.data)
+				return false;
+			s1 = s1.next;
+			s2 = s2.next;
+
+		}
+	}
+
 	public String toString() {
 		String str = "";
 

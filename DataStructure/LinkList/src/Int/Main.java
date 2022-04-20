@@ -4,18 +4,6 @@ public class Main {
 
 	public static void main(String[] args) {
 
-//		Node head = new Node(11);
-////		Node n2 = new Node(22);
-////		head.next = n2;
-//
-//		head.next = new Node(22);
-//		head.next.next = new Node(33);
-//		head.next.next.next = new Node(44);
-//		
-//		System.out.println(head.data + " ," +
-//						   head.next.data + " , " + 
-//				           head.next.next.data);
-
 		LinkList list = new LinkList();
 
 		list.insert(20);
@@ -29,21 +17,24 @@ public class Main {
 		list.append(10);
 		list.append(100);
 		list.append(1000);
-        System.out.println("Append  = " + list + "\n");
+		System.out.println("Append  = " + list + "\n");
 
 		list.deleteFirst();
-        System.out.println("DeleteFirst = " + list + "\n");
+		System.out.println("DeleteFirst = " + list + "\n");
 
 		list.deleteLast();
-        System.out.println("Delete Last = " + list + "\n");	
+		System.out.println("Delete Last = " + list + "\n");
 
 		list.deleteByPosition(2);
 		System.out.println("Delete By Position  = " + list + "\n");
 
 		list.reverse();
 		System.out.println("Reverse  = " + list + " \n");
-		
+
 		list.reversePrint();
+		
+		list.isPalindrome(list);
+		
 
 	}
 

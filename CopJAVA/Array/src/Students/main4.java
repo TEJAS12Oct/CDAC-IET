@@ -4,52 +4,6 @@ import java.util.Scanner;
 
 public class main4 {
 
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter size of an array: ");
-		int size = sc.nextInt();
-		student4[] s1 = new student4[size];
-
-		for (int i = 0; i < s1.length; i++) {
-			System.out.println();
-
-			System.out.print("Enter name:");
-			sc.nextLine();
-			String name = sc.nextLine();
-
-			System.out.print("Enter age:  ");
-			int age = sc.nextInt();
-
-			System.out.print("Enter Gender: ");
-			char gender = sc.next().charAt(0);
-
-			s1[i] = new student4(name, age, gender);
-		}
-
-		int young = find_youngest(s1);
-		System.out.println("Youngest Student:  " + s1[young]);
-
-		int eldest = find_eldest(s1);
-		System.out.println("Eldest Student:  " + s1[eldest]);
-
-		print_all_female(s1);
-		print_all_male(s1);
-
-		float avg = find_avg_age(s1);
-		System.out.println("Average age of students: " + avg);
-
-		find_avgAge_male(s1);
-		System.out.println("Average age of Male: " + avg);
-		int c = 0, j = 0;
-		int count = Female_count(s1, c);
-		System.out.println("Female count: " + count);
-
-		int num = Female_count(s1, j);
-		System.out.println("Male count: " + num);
-
-		sc.close();
-	}
-
 	public static int Male_count(student4[] arr, int count) {
 		count = 0;
 		System.out.println("--------------------------------------------------------");
@@ -144,6 +98,54 @@ public class main4 {
 			}
 		}
 		return j;
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter size of an array: ");
+		int size = sc.nextInt();
+		student4[] s1 = new student4[size];
+
+		for (int i = 0; i < s1.length; i++) {
+			System.out.println();
+
+			System.out.print("Enter name:");
+			sc.nextLine();
+			String name = sc.nextLine();
+
+			System.out.print("Enter age:  ");
+			int age = sc.nextInt();
+
+			System.out.print("Enter Gender: ");
+			char gender = sc.next().charAt(0);
+
+			s1[i] = new student4(name, age, gender);
+		}
+
+//		s1[0].find_youngest();
+
+		int young = find_youngest(s1);
+		System.out.println("Youngest Student:  " + s1[young]);
+
+		int eldest = find_eldest(s1);
+		System.out.println("Eldest Student:  " + s1[eldest]);
+
+		print_all_female(s1);
+		print_all_male(s1);
+
+		float avg = find_avg_age(s1);
+		System.out.println("Average age of students: " + avg);
+
+		find_avgAge_male(s1);
+		System.out.println("Average age of Male: " + avg);
+		int c = 0, j = 0;
+		int count = Female_count(s1, c);
+		System.out.println("Female count: " + count);
+
+		int num = Female_count(s1, j);
+		System.out.println("Male count: " + num);
+
+		sc.close();
 	}
 
 }

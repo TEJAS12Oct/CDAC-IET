@@ -24,8 +24,9 @@ public class Main {
 		bst.delete(17);
 		System.out.println("Delete No = " + bst);
 		bst.inOrder();
-		
-//		bst.height(20);
+
+		System.out.println("Height OF Root = " + bst.height(bst.root));
+
 	}
 
 }
