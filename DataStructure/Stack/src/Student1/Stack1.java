@@ -14,7 +14,7 @@ public class Stack1 {
 
 		if (this.top < this.arr.length - 1) {
 			this.top++;
-			this.arr[this.top] = S;
+			this.arr[this.top] = S;  //Student Data Store
 		} else
 			System.out.println("Overflow...");
 

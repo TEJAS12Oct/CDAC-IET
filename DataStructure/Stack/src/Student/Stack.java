@@ -2,16 +2,16 @@ package Student;
 
 public class Stack {
 
-	private Student[] arr;
+	private Student[] arr;    
 	private int top;
 
 	public Stack() {
-		this.arr = new Student[5];
+		this.arr = new Student[5];  // Create Student Array
 		this.top = -1;
 	}
 
 	public Stack(int size) {
-		this.arr = new Student[size];
+		this.arr = new Student[size];  // Create Student Array
 		this.top = -1;
 	}
 

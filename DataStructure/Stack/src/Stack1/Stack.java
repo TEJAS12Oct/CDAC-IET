@@ -6,14 +6,14 @@ public class Stack {
 	private int[] arr;
 	private int top;
 
-	public Stack() {
-		this.arr = new int[5];
-		this.top = -1;
+	public Stack() { // Parameterless Constructor
+		this.arr = new int[5]; // Create Array And give Size
+		this.top = -1; // Top value Assign
 	}
 
-	public Stack(int size) {
-		this.arr = new int[size];
-		this.top = -1;
+	public Stack(int size) { // Parameterized Constructor
+		this.arr = new int[size]; // Create Array , Size Pass in Object Creation
+		this.top = -1; // Top value Assign
 	}
 
 	public void push(int value) {
@@ -56,10 +56,10 @@ public class Stack {
 		System.out.println("s2 Length  = " + s2.arr.length);
 		if (this.arr.length != s2.arr.length) // (5!=4) = true //(5!=5) =false
 			return false; // khali jana nahi // khali jail
-		
+
 		System.out.println(this.top);
 		System.out.println(s2.top);
-		if (this.top != s2.top)   //(3!=3)  khali gela
+		if (this.top != s2.top) // (3!=3) khali gela
 			return false;
 
 		// iterate on both arr and check each element
@@ -74,7 +74,7 @@ public class Stack {
 	}
 
 	public Stack concat(Stack s2) {
-		Stack res = new Stack(this.arr.length + s2.arr.length);
+		Stack res = new Stack(this.arr.length + s2.arr.length);  // in Res Store Size Of (S1 and S2) Array
 		for (int i = 0; i <= this.top; i++) {
 			res.push(this.arr[i]);
 		}
