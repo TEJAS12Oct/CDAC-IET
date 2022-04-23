@@ -1,0 +1,261 @@
+package Int;
+
+public class LinkList {
+
+	private Node head;
+
+	public LinkList() {
+		head = null;
+	}
+
+	public LinkList(Node head) {
+		this.head = head;
+	}
+
+	// Insert Time Complexity = o(1)
+	// insert = add front side
+	public void insert(int data) {
+		Node tmp = new Node(data);
+
+		if (head == null) {
+			head = tmp;
+		} else {
+			tmp.next = head; // head content copy in temp.next
+			head = tmp;
+		}
+	}
+
+	// Append Time Complexity = o(1)
+	// Append = add last side
+	public void append(int data) {
+		Node tmp = new Node(data);
+
+		if (head == null) {
+			head = tmp;
+		} else { // it = iterator // help to move
+			Node it = head;
+			while (it.next != null) {
+				it = it.next;
+			}
+
+			// it reaches at last Node
+			it.next = tmp;
+			tmp.next = null;
+		}
+	}
+
+	public int getLLLength() {
+
+		int noOfNodes = 0;
+		Node it = head;
+		while (it != null) {
+			noOfNodes++;
+			it = it.next;
+		}
+		return noOfNodes;
+	}
+
+	public void insertByPosition(int value, int pos) {
+		int noOfNodes = getLLLength();
+
+		if (pos == 1) {
+			insert(value);
+		} else if (pos == noOfNodes + 1) {
+			append(value);
+
+		} else if (pos > 1 && pos < noOfNodes + 1) {
+			Node tmp = new Node(value);
+			// we are sure ... inserting in middle
+			Node it = head;
+			for (int i = 1; i < pos - 1; i++) {
+				it = it.next;
+			}
+			tmp.next = it.next;
+			it.next = tmp;
+		} else {
+			System.out.println("Invalid  Position");
+		}
+	}
+
+	public void deleteFirst() {
+
+		if (head == null) {
+			System.out.println("LinkList  Is Empty ");
+		} else {
+
+			// Check if only i node is LL
+			if (head.next == null) {
+				head = null;
+
+			} else {
+				if (head.next == null) {
+					head = null;
+				} else {
+					// More Than 1 Node
+					Node t = head;
+					head = t.next;
+					t.next = null;
+					// had = head.next;
+				}
+
+			}
+
+		}
+	}
+
+	public void deleteLast() {
+
+		if (head == null) {
+			System.out.println("LinkList  Is Empty ");
+		}
+//			else {
+//			Node t = null;
+//			Node it = head;
+//			while (it.next != null) {
+//				t = it;
+//				it = it.next;
+//			}
+//			t.next = null;
+//			it = null;
+//
+//		}
+
+		else if (head.next == null) {
+			head = null;
+		}
+
+		else {
+			Node t = head;
+			while (t.next.next != null)
+				t = t.next;
+			t.next = null;
+		}
+
+	}
+
+	public void deleteByPosition(int pos) {
+		int noOfNodes = getLLLength();
+
+		if (pos == 1) {
+			deleteFirst();
+		} else if (pos == noOfNodes) {
+			deleteLast();
+
+		} else if (pos > 1 && pos < noOfNodes) {
+
+			Node it = head;
+			for (int i = 1; i < pos - 1; i++) {
+				it = it.next;
+			}
+			Node t = it.next;
+			it.next = t.next;
+			t.next = null;
+		} else {
+			System.out.println("Invalid  Position");
+		}
+	}
+
+	public void reverse() {
+		Node it = head;
+		Node itp = null;
+		Node itn = head;
+
+		while (it != null) {
+			itn = it.next;
+			it.next = itp;
+			itp = it;
+			it = itn;
+		}
+		head = itp;
+	}
+
+	public void reversePrint() {
+		System.out.println("Reverse Print = ");
+		reversePrintRec(head);
+		System.out.println();
+	}
+
+	private void reversePrintRec(Node it) { // Recursion
+		if (it.next != null)
+			reversePrintRec(it.next);
+		System.out.print(it.data + " ,"); // Reverse Recursion
+
+	}
+
+// ************************ Palindrome ********************************
+	public static boolean isPalindrome(LinkList List) {
+		Node SlowP, FastP, sec_start, prev_slowP;
+		boolean result = false;
+
+		if ((List.head == null) || (List.head == null))
+			result = true;
+		else {
+			prev_slowP = SlowP = FastP = List.head;
+			while (FastP.next != null && FastP.next.next != null) {
+				prev_slowP = SlowP;
+				SlowP = SlowP.next;
+				FastP = FastP.next.next;
+			}
+			System.out.println("\nMiddle Node = " + SlowP.data);
+			sec_start = SlowP.next;
+
+			if (FastP.next == null) { // off number of nodes in list
+				sec_start = reverseRec(sec_start);
+				prev_slowP.next = null;
+				result = isIdentical(List.head, sec_start);
+				sec_start = reverseRec(sec_start);
+				prev_slowP.next = sec_start;
+			} else {
+				sec_start = reverseRec(sec_start);
+				SlowP.next = null;
+				result = isIdentical(List.head, sec_start);
+				sec_start = reverseRec(sec_start);
+				SlowP.next = sec_start;
+			}
+		} // End Of Else
+		return result;
+	}
+
+	static Node reverseRec(Node head) {
+		if ((head == null) || (head.next == null)) {
+			return head;
+		}
+
+		Node newNode = reverseRec(head.next);
+
+		head.next.next = head;
+		head.next = null;
+		return newNode;
+	}
+
+	private static boolean isIdentical(Node s1, Node s2) {
+		while (true) {
+			if (s1 == null && s2 == null)
+				return true;
+			if (s1 == null || s2 == null)
+				return false;
+			if (s1.data != s2.data)
+				return false;
+			s1 = s1.next;
+			s2 = s2.next;
+
+		}
+	}
+
+	public String toString() {
+		String str = "";
+
+		if (head == null) {
+			str = "LinkList  Is Empty";
+		} else {
+			Node it = head;
+			// while (it.next != null) { // this is without last node
+			while (it != null) { // with last node
+
+				str += it.data + " , ";
+				it = it.next;
+			}
+		}
+		return str;
+	}
+}
