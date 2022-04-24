@@ -48,12 +48,13 @@ public class User2 {
 		}
 
 		for (TechnicalBook TB : books) { // For each Technical Book TB in Books
-			System.out.println("\nBook Name = " + TB.getBookName() + " , Cost = " + TB.getCost() + " , Year = "
-					+ TB.getDateOfPublication().getYear());
+//			System.out.println("\nBook Name = " + TB.getBookName() + " , Cost = " + TB.getCost() + " , Year = "
+//					+ TB.getDateOfPublication().getYear());
+			System.out.println(TB);
 			System.out.print("Authors Name : ");
 			for (String s : TB.getAuthors()) {
-				System.out.print(s + " , ");
-
+//				System.out.print(s + " , ");
+System.out.println(s);
 			}
 			System.out.println();
 		}

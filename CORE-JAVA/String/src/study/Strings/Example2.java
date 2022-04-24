@@ -5,16 +5,17 @@ public class Example2 {
 
 	public static void main(String[] args) {
 
-		String S1 = "tejas";
+		String S1 = "teJas";
 		String UpperString = S1.toUpperCase();
 		System.out.println(S1 + " <= Convert UpperCase=> " + UpperString + "\n");
+	
 
 		String S2 = "TEJAS";
 		String LowerString = S2.toLowerCase();
 		System.out.println(S2 + " <= Convert LowerCase => " + LowerString + "\n");
 
-		String C1 = "Tejas";
-		String C2 = " Jawale";
+		String C1 = "Tejas"; 
+		String C2 = " Jawale"; 
 		String C3 = C1.concat(C2);
 		System.out.println(C3 + "\n");
 // In Constant pool Value are Not Added,

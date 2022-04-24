@@ -1,5 +1,7 @@
 package Study.HasA;
 
+import java.util.Arrays;
+
 public class TechnicalBook {
 
 	private String BookName;
@@ -13,6 +15,12 @@ public class TechnicalBook {
 
 	public String getBookName() {
 		return BookName;
+	}
+
+	@Override
+	public String toString() {
+		return "TechnicalBook [BookName=" + BookName + ", Cost=" + Cost + ", DateOfPublication=" + DateOfPublication
+				+ ", Authors=" + Arrays.toString(Authors) + "]";
 	}
 
 	public void setBookName(String bookName) {

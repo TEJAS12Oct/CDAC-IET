@@ -12,8 +12,8 @@ public class Example1 {
 
 // Wrapper  Class = Integer , CHracter <Float , Long , Boolean		
 		
-		Integer obj = new Integer(34); // Wrap 34 into obj , Boxing
-		Integer obj2 = 44; // AutoBoxing
+		Integer obj = new Integer(34); // Wrap 34 into obj , Boxing , //explicitly
+		Integer obj2 = 44; // AutoBoxing  //Implicitly
 		int I = obj; // UnBoxing , Value in Object Is Assigned To x
 
 		Character Chobj = new Character('T'); // Boxing

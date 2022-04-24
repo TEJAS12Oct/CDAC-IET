@@ -2,6 +2,11 @@ package Study.HasA;
 
 public class MyDate {
 
+	@Override
+	public String toString() {
+		return "MyDate [Date=" + Date + ", Month=" + Month + ", Year=" + Year + "]";
+	}
+
 	private int Date, Month, Year;
 
 	public MyDate() {

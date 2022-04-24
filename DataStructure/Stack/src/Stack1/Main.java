@@ -11,7 +11,7 @@ public class Main {
 		s1.push(10);
 		s1.push(20);
 		s1.push(30);
-		s1.pop();
+//		s1.pop();
 		s1.push(40);
 
 		System.out.println("S1 = "+s1);

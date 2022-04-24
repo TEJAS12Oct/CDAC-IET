@@ -15,6 +15,8 @@ public class DelimiterExample {
 		System.out.println("Enter Your Name = ");
 		String S1 = sc.next();
 		System.out.println(S1);
+		
+		sc.close();
 	}
 
 }

@@ -16,9 +16,9 @@ public class Example3 {
 
 		// String Is Immutable => dose not change value
 		String S1 = new String("Good");
-		// S1.concat(" AfterNoon");
-		String S2 = S1.concat(" AfterNoon");
-		System.out.println(S2);
+		 S1.concat(" AfterNoon");
+		//String S2 = S1.concat(" AfterNoon");
+		System.out.println(S1);
 	}
 
 }

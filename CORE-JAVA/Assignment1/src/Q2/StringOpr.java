@@ -36,7 +36,8 @@ public class StringOpr {
 	}
 	public static void count(String name)
 	{
-		char ch;int nc=0,vc=0,wsc=0;
+		char ch;
+		int nc=0,vc=0,wsc=0;
 		StringBuffer st=new StringBuffer(name);
 		for(int i=0;i<st.length();i++)
 		{
@@ -44,7 +45,7 @@ public class StringOpr {
 			if(Character.isWhitespace(ch))
 			{
 				wsc++;
-			}
+			} 
 			if(ch>=48 && ch<=57)
 			{
 				nc++;
