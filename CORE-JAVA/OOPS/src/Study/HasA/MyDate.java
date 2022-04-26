@@ -2,11 +2,6 @@ package Study.HasA;
 
 public class MyDate {
 
-	@Override
-	public String toString() {
-		return "MyDate [Date=" + Date + ", Month=" + Month + ", Year=" + Year + "]";
-	}
-
 	private int Date, Month, Year;
 
 	public MyDate() {
@@ -17,6 +12,20 @@ public class MyDate {
 		Date = date;
 		Month = month;
 		Year = year;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj instanceof MyDate) {
+			MyDate temp = (MyDate) obj;
+			if (this.Date == temp.Date && this.Year == temp.Year && this.Month == temp.Month) {
+				return true;
+			} else {
+				return false;
+			}
+		} else {
+			return false;
+		}
 	}
 
 	public int getDate() {
@@ -41,5 +50,11 @@ public class MyDate {
 
 	public void setYear(int year) {
 		Year = year;
+	}
+
+	@Override
+	public String toString() {
+		String S = Date + "/" + Month + "/" + Year;
+		return S;
 	}
 }
