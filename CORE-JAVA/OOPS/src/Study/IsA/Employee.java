@@ -1,5 +1,7 @@
 package Study.IsA;
 
+import Study.IsA.MyDate;
+
 // IS-A relationship Employee Is-A sub class of person
 public class Employee extends Person {
 

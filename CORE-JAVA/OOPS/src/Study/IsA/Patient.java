@@ -1,12 +1,15 @@
-package Study.IsA.HW;
+package Study.IsA;
+
+import Study.IsA.MyDate;
+//import Study.HasA.MyDate;
 
 public class Patient extends Person {
 	private String bloodGroup;
 	private String bp;
 	private String heartRate;
 
-	public Patient(String bloodGroup, String bp, String heartRate, String name, MyDate dob) {
-		super(name, dob);// super constructor
+	public Patient(String bloodGroup, String bp, String heartRate, String name, MyDate DOB) {
+		super(name, DOB);// super constructor
 		this.bloodGroup = bloodGroup;
 		this.bp = bp;
 		this.heartRate = heartRate;

@@ -10,11 +10,50 @@ public class TechnicalBook {
 //	HAS-A reference Of MyDAte
 	private MyDate DateOfPublication;
 
-//	HAs-A reference String[] Author
+	// HAs-A reference String[] Author
 	private String[] Authors;
+
+	public TechnicalBook() {
+	}
+
+	public TechnicalBook(String bookName, double cost, MyDate dateOfPublication, String[] authors) {
+		super();
+		BookName = bookName;
+		Cost = cost;
+		DateOfPublication = dateOfPublication;
+		Authors = authors;
+	}
 
 	public String getBookName() {
 		return BookName;
+	}
+
+	public void setBookName(String bookName) {
+		BookName = bookName;
+	}
+
+	public double getCost() {
+		return Cost;
+	}
+
+	public void setCost(double cost) {
+		Cost = cost;
+	}
+
+	public MyDate getDateOfPublication() {
+		return DateOfPublication;
+	}
+
+	public void setDateOfPublication(MyDate dateOfPublication) {
+		DateOfPublication = dateOfPublication;
+	}
+
+	public String[] getAuthors() {
+		return Authors;
+	}
+
+	public void setAuthors(String[] authors) {
+		Authors = authors;
 	}
 
 	@Override
@@ -51,42 +90,4 @@ public class TechnicalBook {
 				+ ", Authors=" + Arrays.toString(Authors) + "]";
 	}
 
-	public void setBookName(String bookName) {
-		BookName = bookName;
-	}
-
-	public double getCost() {
-		return Cost;
-	}
-
-	public void setCost(double cost) {
-		Cost = cost;
-	}
-
-	public MyDate getDateOfPublication() {
-		return DateOfPublication;
-	}
-
-	public void setDateOfPublication(MyDate dateOfPublication) {
-		DateOfPublication = dateOfPublication;
-	}
-
-	public String[] getAuthors() {
-		return Authors;
-	}
-
-	public void setAuthors(String[] authors) {
-		Authors = authors;
-	}
-
-	public TechnicalBook() {
-	}
-
-	public TechnicalBook(String bookName, double cost, MyDate dateOfPublication, String[] authors) {
-		// super();
-		BookName = bookName;
-		Cost = cost;
-		DateOfPublication = dateOfPublication;
-		Authors = authors;
-	}
 }

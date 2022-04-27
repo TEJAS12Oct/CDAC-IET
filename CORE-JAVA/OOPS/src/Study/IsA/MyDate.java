@@ -42,4 +42,19 @@ public class MyDate {
 	public String toString() {
 		return "MyDate [Date=" + Date + ", Month=" + Month + ", Year=" + Year + "]";
 	}
+
+	@Override
+	public boolean equals(Object obj)// runtime obj yeto
+	{
+
+		System.out.println("Mydate equals called");
+		if (obj instanceof MyDate) {
+			MyDate temp = (MyDate) obj;
+			if (this.Date == temp.Date && this.Month == temp.Month && this.Year == temp.Year) {
+				return true;
+			} else
+				return false;
+		}
+		return super.equals(obj);
+	}
 }
