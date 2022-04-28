@@ -6,6 +6,8 @@ public class TestAbstract {
 		// Globe Obj = new Globe(); // abstract class can't be instantiated
 		Globe obj = new Earth();
 		obj.F2();
+		obj.F1();
+		obj.F3();
 	} // EOM
 
 } // EOC
@@ -20,17 +22,22 @@ abstract class Globe {
 		System.out.println("Good Bye");
 	}
 
-	abstract void F2(); // no impl method
-
+	 void F2() { // no impl method
+	 System.out.println("I am From Globe Hello");
+	 }
 	abstract void F4();
 }
 
 class Earth extends Globe {
-	@Override
-	void F2() {
-		System.out.println("Hello");
 
-	}
+	/*
+	 * void F1() { System.out.println("I am from Earth , Good Morning"); }
+	 */
+	/*
+	 * @Override void F2() { System.out.println("Hello");
+	 * 
+	 * }
+	 */
 
 	@Override
 	void F4() {
