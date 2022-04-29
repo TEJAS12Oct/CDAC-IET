@@ -1,0 +1,456 @@
+Java - OOPS
+
+Major pillars-
+
+Abstraction - 
+
+data level abstraction: selection of fields required for solution of given problem, 
+
+Abstract class - 
+
+
+ Person obj = new Student();
+ obj.talk();
+
+ obj = new Patient();
+ obj.talk();
+
+Encapsulation - binding of data and methods + gives the protection to data
+
+Inheritance - acquiring properties from parent
+
+Polymorphism - single entity having many forms (different implementation)
+
+_________________________________________________________________
+
+C - Dev-CPP -
+   2-d array
+
+   pointer - dynamic memory allocation  -   malloc(number of bytes)
+
+C++                  and             Java
+OOP                                  OOP
+Native applications                  Web based application
+Memory mngt is possibles             memory mngt is taken care by Java
+No documentation is available        Java docs (docmentation is available
+
+
+
+__________________________________________________________________
+
+C++ - Inheritance and Polymorphism is done by programmer
+
+Java -  Default Inheritance and Polymorphism is there.
+
+___________________________________________________________________
+
+C  -   int, float, double, char, long, short
+ 
+Extra features C++ 
+#1.
+       bool data type - true / false
+ 
+   if(-3)
+     printf("\n Hello");
+   else
+     printf("\n Hi");
+
+ 1. compile time error      2 unpredictable
+ 3. Hello                   4 Hi
+
+  any non-zero value is true
+          zero is false
+
+
+ In C++ true - any non-zero value is also true
+
+
+
+#2. function overloading
+     same function name with different signature
+
+
+     int sum(int a, int b);
+     int sum(int a, int b, int c);
+     float sum(float a, float b);
+     float sum(int a, float b);
+     
+ Complier does name mangling
+
+ function call is resolved at compile time.
+ compile time binding   -    static polymorphism
+ 
+
+
+
+main()
+{
+    stat
+    stat
+    stat
+    fun();
+    fun();
+    stat
+    stat
+    stat
+
+}
+
+
+void fun()
+{
+   stat
+   stat
+   stat
+}
+
+
+
+
+#3. Operator overloading
+
+   4 + 5i
+
+
+   class complex{
+      int real;
+      int imag;
+   public:
+       complex() { real=0; imag=0;}
+       complex(int i, int j) { real = i; imag=j;}
+     
+       complex operator+(complex c)
+       {
+          complex temp;
+          temp.real=real+c.real;
+          temp.imag=imag+c.imag;
+          return temp; 
+
+       }
+
+       void display()     // void display(complex *this,int a)
+       {
+       
+          cout<<this->real<<" + "<<this->imag<< "i\n";
+       }
+
+   }; //end of class
+   
+
+   int main()
+   {
+     complex c1(4,5), c2(2,3);
+     complex c3;
+
+     c1.display(i);      //display(complex &c1,i)
+     
+     c3 = c1 + c2; //   c3 = c1.operator+(c2)
+     c3.display();
+     
+   }
+
+
+Which operators you can not overload (., new, ::, sizeof(), ? :)
+
+We can overload these operators
+[ ], <<, >>, +,-,*,%,/,<,>,<=,>=,==, =, ++, --, +=, -=, *=, /= ,%=
+
+_____________________________________________________________________
+
+#4. Reference variable
+
+C++  -  supports pointer and reference varaible both
+
+int num=10;
+int *ptr;
+
+ptr=&num;
+
+cout<<num;    //10
+cout<<*ptr;   //10
+
+int &ref=num;  // reference variable declaration
+
+   1. you need to give which variable it should refer at the time declaration
+   2. Once ref varaible is set to refer to a varaible it can not change, means cannot refer to any other variable
+   3. you cannot have arary of references
+   
+   4. No seperate memory will be allocated for reference variable
+   5. It is alias for a variable
+
+cout<<ref;
+ref=ref+50;
+cout<<num;
+
+refernces are used for parameter passing into function
+
+c++ supports pass by value, pass by address, pass by reference
+
+
+Demo
+to swap function using call by value , call by address and call by reference
+
+
+#include<iostream>
+using namespace std;
+
+void swap_val(int,int);
+void swap_add(int *,int *);
+void swap_ref(int &,int &);
+
+int main()
+{
+   int num1=10, num2=20;
+   swap_val(num1,num2);
+   cout<<"After swap by value num1 = "<<num1<<" num2 = "<<num2;   // not swapped
+
+   swap_add(&num1,&num2);
+   cout<<"After swap by address num1 = "<<num1<<" num2 = "<<num2;  //swapped
+
+   swap_ref(num1,num2);
+   cout<<"After swap by reference num1 = "<<num1<<" num2 = "<<num2;  //swapped
+   return 0;
+}
+
+void swap_val(int n1,int n2)
+{
+  int temp;
+  temp=n1;
+  n1=n2;
+  n2=temp;
+}
+ 
+void swap_add(int *n1,int *n2)
+{
+  int temp;
+  temp= *n1;
+  *n1=*n2;
+  *n2=temp;
+}
+
+void swap_ref(const int &n1,int &n2) //int &n1=num1
+{
+  int temp;
+  temp=n1;
+  n1=n2;
+  n2=temp;
+}
+
+_________________________________________________
+
+C++ - you create an object on stack as well on heap
+
+complex c1(4,5),c2;
+
+c2=c1;     c2.operator=(c1)
+
+c1.set_real(7);
+
+complex c3(c2);
+
+Java - you can constructors, if you are not writing Java will provide parameterless (default) constructor
+
+C++ - you can write constructors, if you are not writing C++ will provide parameterless constructor
+
+C++ will provide 
+ - default destructor, 
+ - copy constructor and 
+ - assignment operator also
+
+
+*****  In case class variables are primitive, then default assignment operator, copy constructor and destructor are good enough. *******
+  But is very rear..
+
+
+
+_________________________________________
+***************
+Often the class contains pointer variables and resource allocated for pointer.
+
+resource like File, RAM, network connection etc.
+
+Then we must write our own constructor (which allocates resource), copy constructor, = operator and destructor.. *********
+
+
+______________________________________________
+
+class Array{
+  int *arr;
+  int size;
+
+  public:
+
+  Array() { arr=NULL; }
+
+  Array(int s)
+  {
+    size=s;
+    arr=new int[size];
+  }
+  void accept_values()
+  {
+    int i;
+    cout<<"Enter "<<size<<" numbers";
+    for(i=0;i<size;i++)
+      cin>>arr[i];
+  }
+  void set_ele(int n_ele,int pos)
+  {
+     arr[pos]=n_ele;
+  } 
+
+  void display()
+  {
+    int i;
+    for(i=0;i<size;i++)
+       cout<<arr[i]<<"  ";
+
+    cout<<"\n";
+  }
+};
+
+
+int main()
+{
+   Array obj(5),obj2(obj);
+   Array obj3;
+   obj.accept_values();   //{3,4,5,6,8}
+   obj.display();
+   obj2.display();
+ 
+
+   obj3=obj;
+   obj3.display();
+   obj3.set_ele(500,3);
+   obj3.display();
+
+   obj.display();
+   obj2.display();
+   return 0;
+}
+
+___________________________________________________
+
+
+
+copy constructor
+
+string class
+
+matrix class -   2-d array.
+ 
+__________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
