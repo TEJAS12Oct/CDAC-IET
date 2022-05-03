@@ -1,4 +1,4 @@
-package Study.HasA;
+package Study.errors.Customs;
 
 public class MyDate {
 
