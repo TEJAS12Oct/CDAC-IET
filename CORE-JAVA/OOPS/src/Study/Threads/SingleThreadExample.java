@@ -2,7 +2,7 @@ package Study.Threads;
 
 public class SingleThreadExample {
 
-	public static void main(String[] args) {//beginning of main thread
+	public static void main(String[] args) {//  Beginning of main thread
 		
 		chat();
 		video();

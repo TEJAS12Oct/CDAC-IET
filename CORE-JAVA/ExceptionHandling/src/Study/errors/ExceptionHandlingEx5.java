@@ -4,16 +4,16 @@ import java.io.IOException;
 
 public class ExceptionHandlingEx5 {
 	public static void main(String[] args) throws Exception {
-	//	F1();
-		showSquareNumber("20");
+		F1();
+		 showSquareNumber("20");
 		System.out.println("Programs  Ends Properly");
 	}
 
 	public static void F1() {
 		try {
-			showHeight(77);
+			showHeight(-77);
 		} catch (Exception e) {
-			// e.printStackTrace();
+			 e.printStackTrace();
 			System.out.println("the height cannot be negative");
 		}
 	}

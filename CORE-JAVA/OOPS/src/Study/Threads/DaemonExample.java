@@ -11,7 +11,7 @@ public class DaemonExample {
 		TH.start();
 		for (int i = 0; i < 10; i++) {
 			System.out.println("Main Thread : " + i * i);
-			Thread.sleep(100);
+			Thread.sleep(1000);
 		}
 
 	}

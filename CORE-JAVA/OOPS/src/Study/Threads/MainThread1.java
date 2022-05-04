@@ -8,6 +8,7 @@ public class MainThread1 {
 		Thread Thread1 = new Thread(Task1);
 		Thread1.start();
 		
+		
 		FactorialTask FT = new FactorialTask();
 		Thread Thread2 = new Thread(FT);
 		Thread2.start();

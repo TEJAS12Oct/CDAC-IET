@@ -10,6 +10,7 @@ public class ExampleWaitNotify {
 		th2.start();
 
 	}
+	
 
 }//end of class
 

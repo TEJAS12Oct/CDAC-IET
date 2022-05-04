@@ -8,7 +8,20 @@ public class ExceptionHandlingEx4 {
 	}
 
 	public static void F1() throws Exception {
-		showHeight(-7);
+		// showHeight(7);
+		showHt(8);
+	}
+
+	private static void showHt(int i) {
+		try {
+			if (i > 0)
+				System.out.println("Ht Of Building : " + i);
+
+		} catch (Exception E) {
+			E.printStackTrace();
+		}
+		System.out.println("Hi");
+
 	}
 
 	public static void showHeight(int x) throws Exception {
