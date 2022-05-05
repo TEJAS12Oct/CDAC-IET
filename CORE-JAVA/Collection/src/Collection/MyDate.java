@@ -1,14 +1,14 @@
-package study;
+package Collection;
 
-public class MyDate implements Comparable<MyDate> {
+public class MyDate {
 
 	private int Day, Month, Year;
 
 	public MyDate() {
 	}
 
-	public MyDate(int Day, int month, int year) {
-		this.Day = Day;
+	public MyDate(int day, int month, int year) {
+		Day = day;
 		Month = month;
 		Year = year;
 	}
@@ -17,8 +17,8 @@ public class MyDate implements Comparable<MyDate> {
 		return Day;
 	}
 
-	public void setDay(int Day) {
-		this.Day = Day;
+	public void setDay(int day) {
+		Day = day;
 	}
 
 	public int getMonth() {
@@ -42,7 +42,6 @@ public class MyDate implements Comparable<MyDate> {
 		return Day + "," + Month + "," + Year;
 	}
 
-	@Override
 	public int compareTo(MyDate o) {
 		if (this.Year > o.Year)
 			return 1;

@@ -22,7 +22,7 @@ public class SplitDemo {
 		MyDate MD = new MyDate(Integer.parseInt(DateArr[0]), Integer.parseInt(DateArr[1]),
 				Integer.parseInt(DateArr[2]));
 
-		System.out.println(MD.getDate() + "-" + MD.getMonth() + "-" + MD.getYear());
+		System.out.println(MD.getDay() + "-" + MD.getMonth() + "-" + MD.getYear());
 
 	}
 
