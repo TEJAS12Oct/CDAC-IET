@@ -19,18 +19,18 @@ public class SaveObjects {
 		Data obj = new Data();
 		obj.Value = 100;
 		obj.Desc = " century";
-		Oout.writeObject(obj);
-	
+		Oout.writeObject(obj); // Serialize
+
 		obj = new Data();
 		obj.Value = 200;
 		obj.Desc = " double century";
 		Oout.writeObject(obj);
 
-		FileInputStream FIN = new FileInputStream("F:\\IET\\CODING\\data.Tejas");
+		FileInputStream FIN = new FileInputStream("F:\\IET\\CODING\\CORE-JAVA\\data.Tejas");
 		ObjectInputStream Oin = new ObjectInputStream(FIN);
 		while (true) {
 			try {
-				Object OBJ = Oin.readObject();
+				Object OBJ = Oin.readObject(); // Deserialize
 				System.out.println(OBJ);
 			} catch (EOFException EOF) {
 				System.out.println("File Reading Completed");
@@ -41,8 +41,18 @@ public class SaveObjects {
 }
 
 class Data implements Serializable {
-	int Value;
-	String Desc;
+	private static final long SerialVersionUID = 9l;
+	transient int Value = 0;
+//  transient int Value = 30000;	
+//  transient int Value;	
+	String Desc = "";
+	int y = 0;
+	int z = 99;
+
+//	Data() {
+//		Value = 30000;
+//		System.out.println("Data Constructore Called");
+//	}
 
 	@Override
 	public String toString() {
