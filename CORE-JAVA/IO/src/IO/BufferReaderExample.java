@@ -8,7 +8,7 @@ public class BufferReaderExample {
 
 	public static void main(String[] args) throws IOException {
 
-		FileReader FR = new FileReader("F:\\IET\\TEJAS.txt");
+		FileReader FR = new FileReader("F:\\IET\\CODING\\CORE-JAVA\\TEJAS.txt");
 		BufferedReader Reader = new BufferedReader(FR);
 
 		while (true) {

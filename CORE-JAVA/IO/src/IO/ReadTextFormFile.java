@@ -8,7 +8,7 @@ public class ReadTextFormFile {
 
 	public static void main(String[] args) throws FileNotFoundException {
 
-		FileInputStream FIN = new FileInputStream("F:\\IET\\TEJAS.txt");
+		FileInputStream FIN = new FileInputStream("F:\\IET\\CODING\\CORE-JAVA\\TEJAS.txt");
 
 		Scanner SC = new Scanner(FIN);
 

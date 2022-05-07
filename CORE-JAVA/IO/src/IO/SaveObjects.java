@@ -11,21 +11,22 @@ import java.io.Serializable;
 public class SaveObjects {
 
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
-		FileOutputStream FOUT = new FileOutputStream("F:\\IET\\data.Tejas");
+		FileOutputStream FOUT = new FileOutputStream("F:\\IET\\CODING\\CORE-JAVA\\data.Tejas");
 		ObjectOutputStream Oout = new ObjectOutputStream(FOUT);
 
 //		Object obj = new Object();
 
 		Data obj = new Data();
 		obj.Value = 100;
-		obj.Desc = "century";
+		obj.Desc = " century";
 		Oout.writeObject(obj);
+	
 		obj = new Data();
 		obj.Value = 200;
-		obj.Desc = "double century";
+		obj.Desc = " double century";
 		Oout.writeObject(obj);
 
-		FileInputStream FIN = new FileInputStream("F:\\IET\\data.Tejas");
+		FileInputStream FIN = new FileInputStream("F:\\IET\\CODING\\data.Tejas");
 		ObjectInputStream Oin = new ObjectInputStream(FIN);
 		while (true) {
 			try {

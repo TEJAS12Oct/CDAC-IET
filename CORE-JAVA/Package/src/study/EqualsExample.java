@@ -5,8 +5,8 @@ public class EqualsExample {
 	public static void main(String[] args) {
 
 		Dummy2 Obj1 = new Dummy2(12, "Tejas");
-		Dummy2 Obj2 = Obj1;
-//		Dummy2 Obj2 = new Dummy2(12, "Tejas");
+//		Dummy2 Obj2 = Obj1;
+		Dummy2 Obj2 = new Dummy2(12, "Tejas");
 
 		System.out.println("Equals Result :" + Obj1.equals(Obj2));
 		System.out.println("Hashcode Of Obj1 :" + Obj1.hashCode());

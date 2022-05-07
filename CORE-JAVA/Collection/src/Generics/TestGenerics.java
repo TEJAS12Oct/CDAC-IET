@@ -8,7 +8,7 @@ public class TestGenerics {
 		arr[1] = 20;
 		arr[2] = 30;
 		arr[3] = 40;
-		arr[4] = "HELLO";
+//		arr[4] = "HELLO";
 
 		int Sum = 0;
 		for (int i = 0; i < 5; i++) {

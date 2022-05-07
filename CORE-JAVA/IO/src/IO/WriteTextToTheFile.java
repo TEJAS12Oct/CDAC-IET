@@ -9,10 +9,10 @@ public class WriteTextToTheFile {
 
 	public static void main(String[] args) throws FileNotFoundException {
 //      The file open in OverWrite Mode
-//		FileOutputStream FOUT = new FileOutputStream("F:\\IET\\TEJAS.txt");
+//		FileOutputStream FOUT = new FileOutputStream("F:\\IET\\CODING\\CORE-JAVA\\TEJAS.txt");
 
 		boolean append = true;
-		FileOutputStream FOUT = new FileOutputStream("F:\\IET\\TEJAS.txt", append);
+		FileOutputStream FOUT = new FileOutputStream("F:\\IET\\CODING\\CORE-JAVA\\TEJAS.txt", append);
 
 		PrintWriter PW = new PrintWriter(FOUT);
 
