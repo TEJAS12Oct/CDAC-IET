@@ -1,0 +1,44 @@
+Q1.Write a class study.Test.CollectionsUtility
+	1. create an ArrayList of Employee
+		sort it in ascending order
+	2. use binarySearch of Collections class
+		and check whether a given number is in the ArrayList.
+Use the Employee class created earlier.
+
+Q2.Write a Student class with following attributes.
+String studentName,double Percentage,int rollNo,String address
+1.Write No-args constructor
+2.Constructor with studentName and percentage.
+3.Constructor with studentName,double Percentage,int rollNo,String all attributes.
+4.Write toString()
+5.Other method on your own if needed.
+Write a Menu driven program to demonstrate following options using ArrayList of Students.
+1.Add Student to list.
+2.Remove Student from List
+3.Show all Students.
+4.Show all students on the basis of percentage.
+5.Find a student with student name.
+6.save all students details into file.
+7.Quit.
+
+Q3.Write a program that accepts numbers from command line 
+show the following
+1.Sum of all numbers.
+2.all numbers in sorted order.
+3.Maximum number from all numbers .
+4.Minimum value from all numbers.
+Handle non-number input exception using exception handling code. and skip it.
+
+Q4.Write a program that accepts different poem lines from user 
+and append them to a text file.
+Write another program that will read the text file of poems and 
+create a ArrayList of all the Quotes.Iterate through ArrayList and 
+Print each poem on console.
+
+Q5.Write a program that creates a HashMap of RollNumbers and name.
+Accept 5 rollNumber and names pairs from user and add to hashmap Use iterator.
+show all names in the hashmap[Use loop without index].
+
+Q6.Create Shape class which have area() method which is abstract .Create classes 
+Square ,Triangle,Rectanglec which are inherited from Shape class.
+overried Area() method in all classes and call them using Base class reference.
