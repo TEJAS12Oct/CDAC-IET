@@ -15,17 +15,17 @@ public class TryManyNames {
 
 		Collections.addAll(AL, arrnames);
 		for (String S : AL)
-			System.out.println(S);
+			System.out.println(S + "\n");
 
 		// Collections.reverse(AL);
 		Collections.sort(AL);
 		String max = Collections.max(AL);
-		System.out.println("Max : " + max);
+		System.out.println("Max : " + max + "\n");
 
 		Collections.shuffle(AL);
 		System.out.println("After Shuffling :");
 		for (String S : AL)
-			System.out.println(S);
+			System.out.println(S );
 	}
 
 }

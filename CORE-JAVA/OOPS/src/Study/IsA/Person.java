@@ -1,7 +1,7 @@
 package Study.IsA;
 
 //import Study.HasA.MyDate;
-import Study.IsA.MyDate;
+//import Study.IsA.MyDate;
 
 public class Person {
 	private String name;
