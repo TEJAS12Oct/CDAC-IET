@@ -1,0 +1,286 @@
+1.
+C:\> mysql -hlocalhost -P3307 -uroot -p
+C:\> mysql -h127.0.0.1 -P3307 -uroot -p [database_name]
+C:\> mysql -h192.168.100.14 -P3307 -uroot -psaleel [database_name]
+C:\> mysql --host localhost --port 3306 --user root --password=ROOT [database_name]
+C:\> mysql --host=localhost --port=3306 --user=root --password=ROOT [database_name]
+
+2.  show  databases;
+3.  select database();
+4.  create database [database Name];
+5.  show databases;
+6.  use [database Name];
+
+7. source [path];
+8. show tables;
+
+9. create table Emp (empID int , empName varchar(10) , empSalary int/bigint , empGender char , empCommission float (6,2) );
+10. show tables;
+11. show full tables;
+12. desc Emp;
+13. insert into Emp values ( 1 , "Tejas" , 30000 , 'M' , 1234.56 );
+
+14. insert into Emp (empID int , empName varchar(10) , empSalary int/bigint , empGender char , empCommission float (6,2) ) values 
+    ( 1 , "Tejas" , 30000 , 'M' , 1234.56 ) , ( 2 , "Ram" , 50000 , 'M' , 5432.56 ) , ( 3 , "Sneha" , 70000 , 'F' , 5432.56 );
+	
+14. update Emp set EmpSalary=20000  , Commission=3241.87; = update all table
+15. update Emp set EmpSalary=20000  , Commission=3241.87 where EmpID=2; = update specific row
+16. select * from Emp;
+
+17. delete from Emp where id=1; = specific row delete
+18. delete from Emp; = whole data delete in table
+19. drop table Emp; = delete  Table
+20. drop table Emp, Dept; = Multiple Table Delete
+
+21. create table Emp ( ID int primary key auto_increment , EmpName varchar(10) not null , Job varchar(10) , 
+    city varchar(10) default "Pune" , Salary int check (Salary > 5000) ) ;
+
+22. create table Mathop1 ( X  int , Y int, Sum int generated always as ( X  + Y ) virtual );
+23. insert into Mathop values(5,5,default);
+
+24. create table MathOp1 (X int , Y int , Sum int generated always as (X+Y) virtual ,DiFF int generated always as (X-Y) virtual ,
+    Multiply int generated always as (X*Y) virtual , DIVISION float generated always as (X/Y) virtual ,
+	Percentage float generated always as (DIVISION * 100) virtual );
+25. insert into MAthop1 (X,Y) values (10,20),(30,40),(40,90);
+
+26. create table login (loginID int, loginName varchar(20), password varchar(20) invisible);
+27. desc login;
+28. insert into login(loginID, loginName, password) values(1,'saleel','saleel');  => password not showing
+29. select * from login;
+30. select loginID, loginName, password from login;  => password show;
+
+31. create table login2(loginId int, loginName varchar(20), password varbinary(20));
+32. insert into login2(loginID, loginName, password) values(1,'saleel','saleel');
+33. desc login2;
+34. select * from login2; => password show in binary
+35. select loginName, cast(password as char) from login2; => password show beacuse of TypeCasting
+
+36. alter table Emp add column [column Name] [data Type]; => add column
+37. select * from Emp;
+38. alter table Emp  drop column[ column Name] [data type]; => delete column
+39. select * from Emp;
+40. alter table emp modify ename varchar(20); => size modify
+41. alter table emp modify city varchar(20) default 'Baroda'; 
+42. alter table emp modify id bigint;
+43. alter table emp change c1 srno; => column name change
+44. alter table emp add c2 int, modify ename varchar(10), change job `job type` varchar(20),  drop c1;
+45. alter table table_name rename column old_column_name to new_column_name;
+
+46. rollback;
+
+47. show engines;
+48. show storage engines; 
+
+49. commit;
+50. exit; or \q;
+51. \! = Execite a system shell command
+52. \r = Reconnect
+
+-------------------------------------------------------------------------
+
+******************  Primary key ******************
+1. create table a (id int primary key, ename varchar(20));
+
+2. create table a2 (id int, ename varchar(20));
+3. alter table a2 add primary key(id);
+4. alter table a2 drop primary key;
+5. alter table a2 modify id int null; // after primary key drop  in Null column No mofify to Yess
+
+5. create table b (id int, ename varchar(20), primary key(id
+6. create table b1 (id int, ename varchar(20), primary key(id, ename));
+
+
+-------------------------------------------------------------------------
+
+******************* Unique Key **********************
+
+1. create table u(id int primary key, ename varchar(20), phone varchar(10) unique);
+2. create table u1(id int primary key, ename varchar(20), phone varchar(10), unique key(phone));
+3. create table u2(id int primary key, ename varchar(20), phone varchar(10), constraint uni_phone unique key(phone));
+4. alter table u1 drop index phone;  // Unique key drop
+5. alter table u2 drop index uni_phone; // Unique key drop
+6. alter table u2 add constraint _user_defined_uni_phone unique key(phone);
+-------------------------------------------------------------------------
+
+1. select table_name, constraint_name, constraint_type from information_schema.table_constraints where table_schema='[database_name]';
+// Display  TABLE_NAME | CONSTRAINT_NAME | CONSTRAINT_TYPE
+
+-------------------------------------------------------------------------
+
+****************** Foreign Key ***********************
+
+1. create table dept(deptid int primary key, dname varchar(10));
+2. create table address(empid int, city varchar(20), foreign key(empid) references emp(empid));
+3. create table emp(empid int primary key, ename varchar(10), dno int, constraint fk_deptno foreign key(dno) references dept(deptid));
+
+4. create table phone(empid int, phone varchar(20));
+5. alter table phone add foreign key(empid) references emp(empid);
+6. alter table address drop foreign key address_ibfk_1;
+
+-------------------------------------------------------------------------
+
+1. select  * from emp;
+2. select ename, job from emp;
+3. select ename,ENAME, job from emp;
+4. select ename,job, sal from emp;
+5. select ename EmployeeName ,job, sal Salary from emp;
+6. select ename "Employee Name" ,job, sal Salary from emp;
+7. select ename "Employee Name" ,job, sal AS Salary from emp;
+8. select ename "Employee Name" ,job, sal "Primary" from emp;
+
+
+-------------------------------------------------------------------------
+
+1.  select 1 + 1;
+2.  select 1 + '1';
+3.  select 1 + null;
+4.  select 1 + 'A1';
+5.  select 1 + '1A';
+6.  select 1 + '12A';
+7.  select 1 + 'A12A';
+8.  SELECT '2435Saleel' / 1;
+9.  select * from numberstring;
+10. desc numberstring;
+11. select c1, c1 / 1 R1 from numberstring;
+
+-------------------------------------------------------------------------
+1.  select ename, job, sal from emp;
+2.  select ename, job, sal, sal + 1000 from emp;
+3.  select ename, job, sal, sal + 1000 Total from emp;
+4.  select ename , job , sal , sal+1000 "Total Salary" from emp;
+5.  select ename , job , sal ,comm  , sal+1000 "Increased Salary" from emp;
+6.  select ename , job , sal,comm , sal+comm Total  from emp;
+7.  select ename , job , sal,comm ,ifnull(null , -1) Total  from emp;
+8.  select ename , job , sal,comm ,ifnull(comm ,"N/A") Total  from emp;
+9.  select ename , job , sal,comm ,ifnull(comm ,"Can Be a String") Toatl  from emp;
+10.  select ename , job , sal,comm ,sal + ifnull(comm ,0) Total from emp;
+11.  select ename , job , sal,comm ,sal + ifnull(comm ,1000) Total from emp;
+12.  select ename , job , sal ,sal + Sal*.20 Total from emp;
+13. select ename , job , sal,Sal*.20 ,sal + Sal*.20 Total from emp; 
+14. select hiredate from emp;
+15. select now();
+16. select now() , curdate();
+17. select now() , curtime();
+18. select now() , curdate() ,  curtime();
+19. select now(), now() + interval '1 1:20' day_minute;
+20. select now(), now() + interval '1 0:20' day_minute;
+21. select now(), now() + interval 1 day;
+22. select now(), now() - interval 1 day;
+23. select now() "Issue Date";
+24. select now() "FD Date" , now() + interval 1 year "Return Date";
+25. select now() "FD Date" , now() + interval 365 day "Return Date";
+27. select now() "FD Date" , now() + interval '1 2' year_month "Return Date";
+28. select now(), date_add(now() , interval 1 week);
+29. select now(), date_sub(now() , interval 1 week);
+30. select hiredate , extract(month from hiredate) Month from emp;
+31. select hiredate , extract(year_month from hiredate) year_month from emp;
+32. select hiredate, extract(day from hiredate) day from emp;
+33. select hiredate, extract(day from hiredate) day, extract(month from hiredate) month, extract(year from hiredate) year from emp;
+34. select hiredate, extract(day from hiredate), extract(month from hiredate), extract(year from hiredate) from emp;
+35. select hiredate, extract(day from hiredate) Day, extract(month from hiredate), extract(year from hiredate) from emp;
+36. select hiredate, concat(extract(day from hiredate) , extract(month from hiredate), extract(year from hiredate)) from emp;
+37. select hiredate, concat(extract(day from hiredate) , extract(month from hiredate), extract(year from hiredate)) Date from emp;
+38. select hiredate, concat(extract(day from hiredate)," " , extract(month from hiredate)," ", extract(year from hiredate)) Date from emp;
+39. select hiredate , month(hiredate) , monthName(hiredate) from emp;
+40. select concat("String one", " ", "Second String");
+41. select  "string One" +  "Second string";
+
+42. select startedon from dept;
+43. select startedon, str_to_date(STARTEDON, '%d/%m/%Y') from dept;
+44. select startedon, str_to_date(STARTEDON, '%d/%m/%Y') New from dept;
+45. select hiredate from emp;
+46. select hiredate, date_format(hiredate, '%a %b') from emp;
+47. select hiredate, date_format(hiredate, '%a %b, %M') from emp;
+48. select concat("Mr.", ename, " was hired in the month of ", monthname(hiredate)) from emp;
+49. select concat("Mr.", ename, " was hired in the month of ", date_format(hiredate, '%M' ))  R1 from emp;
+50.  select hiredate, date_format(hiredate, '%b') R1, date_format(hiredate, '%M') from emp;
+
+51. select 24/03/1989 ,'24/03/1989';
+
+51. select ascii('A') , ascii('a');
+52. select char(65);
+53. select cast(char(65) as char);
+53. select elt(1  , "Tejas", "Mayur" ,"Pankaj" ,"Ruchita");
+54. select elt(3  , "Tejas", "Mayur" ,"Pankaj" ,"Ruchita");
+55. select elt(20, 'saleel', 'sharmin', 'ruhan', 'natasha');
+56. select * from a1;
+57. select  elt(c1,'summer', 'winter', 'autom', 'rainy') from a;
+58. select c1, elt(3  , "Tejaas", "Mayur" ,"Pankaj" ,"Ruchita") from a;
+59. select elt(4, ename, job, sal, hiredate) from emp;
+60. select elt(1, ename, job, sal, hiredate) from emp;
+61. select elt(2, ename, job, sal, hiredate) from emp;
+62. select elt(3, ename, job, sal, hiredate) from emp;
+63. select ename, lcase(ename) from emp;
+64. select ename, lcase(ename),length(ename) from emp;
+65. select ename, lcase(ename),length(ename), length(sal) from emp;
+66. select ename, lcase(ename),length(ename), sal, length(sal) from emp;
+67. select  '     saleel';
+68. select  '     saleel', ltrim('     saleel');
+69. select  '     saleel', rtrim('     saleel');
+70. select  '     saleel', length('     saleel');
+71. select  '     saleel', length(ltrim('     saleel'));
+72. select  '     saleel', length('     saleel      ');
+73. select  '     saleel', length(trim('     saleel      '));
+74. select 'saleel.gabde@gmail.com', instr('saleel.gabde@gmail.com','@');
+75. select 'saleel.gabde@gmail.com', instr('saleel.gabdegmail.com','@');
+76. select ename, replace(ename,'I','  ') from emp;
+77. select ename, replace(ename,'I','...') from emp;
+78. select ename, left(ename,3)   from emp;
+79. select ename, left(ename,5)   from emp;
+80. select ename, left(ename,5), right(ename,5)   from emp;
+81. select ename, left(ename,2), right(ename,2)   from emp;
+82. select ename, left(ename,2), right(ename,2),substr(ename,2)   from emp;
+83. select ename, left(ename,2), right(ename,2),substr(ename,2), substr(ename,2, 2)   from emp;
+84. select c1, c1/1 R1 from stringnumber;
+85. select c1, c1/1 R1 from numberstring;
+86. select c1, c1/1 R1, length(c1/1) from stringnumber;
+87. select c1, c1/1 R1, length(c1/1) from numberstring;
+88. select c1, c1/1 R1, substr(c1,length(c1/1)) from numberstring;
+89. select c1, c1/1 R1, substr(c1,length(c1/1)+1) from numberstring;
+
+----------------------------------------------------------------------
+
+1.  select rand();
+2.  select 1234.456, round(1234.456), round(1234.456,2);
+3.  select 1234.456, round(1234.456), round(1234.456,2), ceil(10.56) R1, ceil(10.05) R2;
+4.  select 1234.456, round(1234.456), round(1234.456,2), ceil(10.56) R1, ceil(10.05) R2, floor(10.56) R3, floor(10.05) R4;
+5.  select rand(), round(rand());
+6.  select rand(), round(rand()* 10);
+7.  select rand() * 10;
+8.  select round(rand() * 10);
+9.  select round(rand() * 10, 2);
+10. select round(rand() * 100);
+11. select round(rand());
+12. select (rand() * 100) / 100;
+13. select rand() * 100;
+14. select round((rand() * 100) + 100);
+
+-------------------------------------------------------------------------
+
+1. select -100;
+2. select -100 ,abs(-100);
+3. select -100 * -1;
+4. select -100, -(-100);
+5. select -100, - -100;
+6. select -100 ,abs(-100);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
