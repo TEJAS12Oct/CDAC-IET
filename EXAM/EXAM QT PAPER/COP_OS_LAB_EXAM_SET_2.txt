@@ -1,0 +1,39 @@
+
+Note:
+Question 1 is compulsory, attempt any 2 questions from remaining 3
+
+1). Write a shell script which will do below operations:
+	- Accept username and password string from the user
+	- If user enters username as "prudent" and password as "123" then print "Welcome User prudent" and exit
+	- If user enters username and password both as "prudent" then print "Welcome Admin prudent" and exit
+	- Else print "Wrong Login" and exit. 
+	(14 Marks)
+
+2). Write a C program to create a thread that prints hello world 50 times. 
+	The main thread should wait for the thread to finish and display 'bye bye'. (13 Marks)
+
+3). Write a Java program to print following pattern: (13 Marks)
+	 5											
+	 454
+	 34543
+	 2345432
+	 123454321
+
+4). Get below Main compile and run correctly by writing Player class (13 Marks)
+	public class Main {
+		public static void main(String [] args)
+		{
+			//Every player has name, total_runs and role attributes
+			Player dhoni = new Player("Dhoni", 10324, "Witcket-Keeper");
+			Player virat = new Player("Virat", 9236, "Batsman");
+			
+			//If below line un-commented, it should be compile time error 
+			//Player p3 = new Player();
+			
+			if ( dhoni.getTotalRuns() > virat.getTotalRuns() )
+				System.out.println(dhoni);
+			else
+				System.out.println(virat);
+		}
+	}
+
