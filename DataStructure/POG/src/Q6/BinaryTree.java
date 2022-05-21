@@ -4,7 +4,15 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class BinaryTree {
-	BTNode root;
+	public BTNode root;
+
+	public BTNode getRoot() {
+		return root;
+	}
+
+	public void setRoot(BTNode root) {
+		this.root = root;
+	}
 
 	public void insert(int key) {
 		BTNode newNode = new BTNode(key);
