@@ -1,0 +1,1160 @@
+1.
+C:\> mysql -hlocalhost -P3307 -uroot -p
+C:\> mysql -h127.0.0.1 -P3307 -uroot -p [database_name]
+C:\> mysql -h192.168.100.14 -P3307 -uroot -psaleel [database_name]
+C:\> mysql --host localhost --port 3306 --user root --password=ROOT [database_name]
+C:\> mysql --host=localhost --port=3306 --user=root --password=ROOT [database_name]
+
+2.  show  databases; 
+3.  select database();
+4.  create database [database Name];
+5.  show databases;
+6.  use [database Name];
+7.  DROP DATABASE name;
+
+7.  source [path];
+8.  show tables;
+
+9.  create table Emp (empID int , empName varchar(10) , empSalary int/bigint , empGender char , empCommission float (6,2) );
+10. show tables;
+11. show full tables;
+12. desc Emp;
+13. insert into Emp values ( 1 , "Tejas" , 30000 , 'M' , 1234.56 );
+
+14. insert into Emp (empID int , empName varchar(10) , empSalary int/bigint , empGender char , empCommission float (6,2) ) values 
+    ( 1 , "Tejas" , 30000 , 'M' , 1234.56 ) , ( 2 , "Ram" , 50000 , 'M' , 5432.56 ) , ( 3 , "Sneha" , 70000 , 'F' , 5432.56 );
+	
+14. update Emp set EmpSalary=20000  , Commission=3241.87; = update all table
+15. update Emp set EmpSalary=20000  , Commission=3241.87 where EmpID=2; = update specific row
+16. select * from Emp;
+
+17. delete from Emp where id=1; = specific row delete
+18. delete from Emp; = whole data delete in table
+19. drop table Emp; = delete  Table
+20. drop table Emp, Dept; = Multiple Table Delete
+
+21. create table Emp ( ID int primary key auto_increment , EmpName varchar(10) not null , Job varchar(10) , 
+    city varchar(10) default "Pune" , Salary int check (Salary > 5000) ) ;
+
+22. create table Mathop1 ( X  int , Y int, Sum int generated always as ( X  + Y ) virtual );
+23. insert into Mathop values(5,5,default);
+
+24. create table MathOp1 (X int , Y int , Sum int generated always as (X+Y) virtual ,DiFF int generated always as (X-Y) virtual ,
+    Multiply int generated always as (X*Y) virtual , DIVISION float generated always as (X/Y) virtual ,
+	Percentage float generated always as (DIVISION * 100) virtual );
+25. insert into MAthop1 (X,Y) values (10,20),(30,40),(40,90);
+
+26. create table login (loginID int, loginName varchar(20), password varchar(20) invisible);
+27. desc login;
+28. insert into login(loginID, loginName, password) values(1,'saleel','saleel');  => password not showing
+29. select * from login;
+30. select loginID, loginName, password from login;  => password show;
+
+31. create table login2(loginId int, loginName varchar(20), password varbinary(20));
+32. insert into login2(loginID, loginName, password) values(1,'saleel','saleel');
+33. desc login2;
+34. select * from login2; => password show in binary
+35. select loginName, cast(password as char) from login2; => password show beacuse of TypeCasting
+
+36. alter table Emp add column [column Name] [data Type]; => add column
+37. select * from Emp;
+38. alter table Emp  drop column[ column Name] [data type]; => delete column
+39. select * from Emp;
+40. alter table emp modify ename varchar(20); => size modify
+41. alter table emp modify city varchar(20) default 'Baroda'; 
+42. alter table emp modify id bigint;
+43. alter table emp change c1 srno; => column name change
+44. alter table emp add c2 int, modify ename varchar(10), change job `job type` varchar(20),  drop c1;
+45. alter table table_name rename column old_column_name to new_column_name;
+
+46. rollback;
+
+47. show engines;
+48. show storage engines; 
+
+49. commit;
+50. exit; or \q;
+51. \! = Execite a system shell command
+52. \r = Reconnect
+53. select user();
+
+-------------------------------------------------------------------------
+
+******************  Primary key ******************
+1. create table a (id int primary key, ename varchar(20));
+
+2. create table a2 (id int, ename varchar(20));
+3. alter table a2 add primary key(id);
+4. alter table a2 drop primary key;
+5. alter table a2 modify id int null; // after primary key drop  in Null column No mofify to Yess
+
+5. create table b (id int, ename varchar(20), primary key(id);
+6. create table b1 (id int, ename varchar(20), primary key(id, ename));
+
+
+-------------------------------------------------------------------------
+
+******************* Unique Key **********************
+
+1. create table u(id int primary key, ename varchar(20), phone varchar(10) unique);
+2. create table u1(id int primary key, ename varchar(20), phone varchar(10), unique key(phone));
+3. create table u2(id int primary key, ename varchar(20), phone varchar(10), constraint uni_phone unique key(phone));
+
+4. alter table u1 drop index phone;  // Unique key drop
+5. alter table u2 drop index uni_phone; // Unique key drop
+6. alter table u2 add constraint _user_defined_uni_phone unique key(phone);
+-------------------------------------------------------------------------
+
+1. select table_name, constraint_name, constraint_type from information_schema.table_constraints where table_schema='[database_name]';
+// Display  TABLE_NAME | CONSTRAINT_NAME | CONSTRAINT_TYPE
+
+-------------------------------------------------------------------------
+
+****************** Foreign Key ***********************
+
+1. create table dept(deptid int primary key, dname varchar(10));
+2. create table address(empid int, city varchar(20), foreign key(empid) references emp(empid));
+3. create table emp(empid int primary key, ename varchar(10), dno int, constraint fk_deptno foreign key(dno) references dept(deptid));
+
+4. create table phone(empid int, phone varchar(20));
+5. alter table phone add foreign key(empid) references emp(empid);
+6. alter table address drop foreign key address_ibfk_1;
+
+-------------------------------------------------------------------------
+
+1. select  * from emp;
+2. select ename, job from emp;
+3. select ename,ENAME, job from emp;
+4. select ename,job, sal from emp;
+5. select ename EmployeeName ,job, sal Salary from emp;
+6. select ename "Employee Name" ,job, sal Salary from emp;
+7. select ename "Employee Name" ,job, sal AS Salary from emp;
+8. select ename "Employee Name" ,job, sal "Primary" from emp;
+
+
+-------------------------------------------------------------------------
+
+1.  select 1 + 1;
+2.  select 1 + '1';
+3.  select 1 + null;
+4.  select 1 + 'A1';
+5.  select 1 + '1A';
+6.  select 1 + '12A';
+7.  select 1 + 'A12A';
+8.  SELECT '2435Saleel' / 1;
+9.  select * from numberstring;
+10. desc numberstring;
+11. select c1, c1 / 1 R1 from numberstring;
+
+-------------------------------------------------------------------------
+
+1.  select ename, job, sal from emp;
+2.  select ename, job, sal, sal + 1000 from emp;
+3.  select ename, job, sal, sal + 1000 Total from emp;
+4.  select ename , job , sal , sal+1000 "Total Salary" from emp;
+5.  select ename , job , sal ,comm  , sal+1000 "Increased Salary" from emp;
+6.  select ename , job , sal,comm , sal+comm Total  from emp;
+
+7.  select ename , job , sal,comm ,ifnull(null , -1) Total  from emp;
+8.  select ename , job , sal,comm ,ifnull(comm ,"N/A") Total  from emp;
+9.  select ename , job , sal,comm ,ifnull(comm ,"Can Be a String") Toatl  from emp;
+
+10. select ename , job , sal,comm ,sal + ifnull(comm ,0) Total from emp;
+11. select ename , job , sal,comm ,sal + ifnull(comm ,1000) Total from emp;
+12. select ename , job , sal ,sal + Sal*.20 Total from emp;
+13. select ename , job , sal,Sal*.20 ,sal + Sal*.20 Total from emp; 
+14. select hiredate from emp;
+
+15. select now();  //cuurent date and time
+16. select now() , curdate();
+17. select now() , curtime();
+18. select now() , curdate() ,  curtime();
+19. select now(), now() + interval '1 1:20' day_minute;
+20. select now(), now() + interval '1 0:20' day_minute;
+21. select now(), now() + interval 1 day;
+22. select now(), now() - interval 1 day;
+23. select now() "Issue Date";
+24. select now() "FD Date" , now() + interval 1 year "Return Date";
+25. select now() "FD Date" , now() + interval 365 day "Return Date";
+27. select now() "FD Date" , now() + interval '1 2' year_month "Return Date";
+28. select now(), date_add(now() , interval 1 week);
+29. select now(), date_sub(now() , interval 1 week);
+
+30. select hiredate , extract(month from hiredate) Month from emp;
+31. select hiredate, extract(year_month from hiredate) R1 from emp;
+32. select hiredate, extract(day from hiredate) day from emp;
+33. select hiredate, extract(day from hiredate) day, extract(month from hiredate) month, extract(year from hiredate) year from emp;
+34. select hiredate, extract(day from hiredate), extract(month from hiredate), extract(year from hiredate) from emp;
+35. select hiredate, extract(day from hiredate) Day, extract(month from hiredate), extract(year from hiredate) from emp;
+36. select hiredate, concat(extract(day from hiredate) , extract(month from hiredate), extract(year from hiredate)) from emp;
+37. select hiredate, concat(extract(day from hiredate) , extract(month from hiredate), extract(year from hiredate)) Date from emp;
+38. select hiredate, concat(extract(day from hiredate)," " , extract(month from hiredate)," ", extract(year from hiredate)) Date from emp;
+
+39. select year(hiredate), (year(hiredate)%4=0) and (year(hiredate)%100 != 0) or (year(hiredate)%400=0) from emp;
+40. select year(hiredate), (year(hiredate)%4=0) and (year(hiredate)%100 != 0) or (year(hiredate)%400=0) Leap from emp;
+41. select hiredate from emp where extract(year from hiredate)%4=0;
+42. select year(hiredate), if((year(hiredate)%4=0) and (year(hiredate)%100 != 0) or (year(hiredate)%400=0),'It is leap year', 'it is not leap year') Leap from emp;
+
+43. select hiredate , month(hiredate) , monthName(hiredate) from emp;
+
+44. select concat("String one", " ", "Second String");
+45. select  "string One" +  "Second string";
+
+46. select startedon from dept;  // table dept;
+47. select startedon, str_to_date(STARTEDON, '%d/%m/%Y') from dept;
+48. select startedon, str_to_date(STARTEDON, '%d/%m/%Y') New from dept;
+49. select hiredate from emp;
+50. select hiredate, date_format(hiredate, '%a, %b') from emp;
+51. select hiredate, date_format(hiredate, '%a, %b, %M') from emp;
+52. select concat("Mr.", ename, " was hired in the month of ", monthname(hiredate)) from emp;
+53. select concat("Mr.", ename, " was hired in the month of ", date_format(hiredate, '%M' ))  R1 from emp;
+54. select hiredate, date_format(hiredate, '%b') R1, date_format(hiredate, '%M') from emp;
+
+55. select 24/03/1989 ,'24/03/1989';
+
+56. select ascii('A') , ascii('a');
+57. select char(65);
+58. select cast(char(65) as char);
+59. select elt(1  , "Tejas", "Mayur" ,"Pankaj" ,"Ruchita");
+60. select elt(3  , "Tejas", "Mayur" ,"Pankaj" ,"Ruchita");
+61. select elt(20, 'saleel', 'sharmin', 'ruhan', 'natasha'); // null
+62. select * from a1;
+63. select  elt(c1,'summer', 'winter', 'autom', 'rainy') from a;
+64. select c1, elt(3  , "Tejaas", "Mayur" ,"Pankaj" ,"Ruchita") from a;
+65. select elt(4, ename, job, sal, hiredate) from emp;
+66. select elt(1, ename, job, sal, hiredate) from emp;
+67. select elt(2, ename, job, sal, hiredate) from emp;
+68. select elt(3, ename, job, sal, hiredate) from emp;
+69. select ename, lcase(ename) from emp;
+70. select ename, lcase(ename),length(ename) from emp;
+71. select ename, lcase(ename),length(ename), length(sal) from emp;
+72. select ename, lcase(ename),length(ename), sal, length(sal) from emp;
+
+73. select  '     saleel';
+74. select  '     saleel', ltrim('     saleel');
+75. select  '     saleel', rtrim('     saleel');
+76. select  '     saleel', length('     saleel');
+77. select  '     saleel', length(ltrim('     saleel'));
+78. select  '     saleel', length('     saleel      ');
+79. select  '     saleel', length(trim('     saleel      '));
+80. select 'saleel.gabde@gmail.com', instr('saleel.gabde@gmail.com','@');
+81. select 'saleel.gabde@gmail.com', instr('saleel.gabdegmail.com','@');
+
+82. select ename, replace(ename,'I','  ') from emp;
+83. select ename, replace(ename,'I','...') from emp;
+84. select ename, left(ename,3)   from emp;
+85. select ename, left(ename,5)   from emp;
+86. select ename, left(ename,5), right(ename,5)   from emp;
+87. select ename, left(ename,2), right(ename,2)   from emp;
+88. select ename, left(ename,2), right(ename,2),substr(ename,2)   from emp;
+89. select ename, left(ename,2), right(ename,2),substr(ename,2), substr(ename,2, 4)   from emp;
+
+90. select c1, c1/1 R1 from stringnumber;
+91. select c1, c1/1 R1 from numberstring;
+92. select c1, c1/1 R1, length(c1/1) from stringnumber;
+93. select c1, c1/1 R1, length(c1/1) from numberstring;
+94. select c1, c1/1 R1, substr(c1,length(c1/1)) from numberstring;
+95. select c1, c1/1 R1, substr(c1,length(c1/1)+1) from numberstring;
+
+----------------------------------------------------------------------
+
+1.  select rand();
+2.  select 1234.456, round(1234.456), round(1234.456,2);
+3.  select 1234.456, round(1234.456), round(1234.456,2), ceil(10.56) R1, ceil(10.05) R2;
+4.  select 1234.456, round(1234.456), round(1234.456,2), ceil(10.56) R1, ceil(10.05) R2, floor(10.56) R3, floor(10.05) R4;
+
+5.  select rand();
+6.  select rand(), round(rand());
+7.  select rand(), round(rand()* 10);
+8.  select rand() * 10;
+9.  select round(rand() * 10);
+10. select round(rand() * 10, 2);
+11. select round(rand() * 100);
+12. select round(rand());
+13. select (rand() * 100) / 100;
+14. select rand() * 100;
+15. select round((rand() * 100) + 100);
+
+16. select weight,  round(weight) kgs  from mass_table;
+17. select weight,  floor(weight) kgs  from mass_table;
+18. select weight,  floor(weight) kgs, weight%1 gms  from mass_table;
+19. select weight,  floor(weight) kgs, round((weight%1)*1000) gms  from mass_table;
+20. select weight,  floor(weight) kgs, round((weight%1)*100) gms  from mass_table;
+21. select round(rand()*1000000) OTP;
+
+22. select concat('******' , substr(phone,4)) from emp;
+23. select phone, concat('******' , substr(phone,7)) R1 from emp;
+24. select phone, concat('******' , substr(phone,7)) R1, ifnull(phone,'this person is not having phone') 'ifnull' from emp;
+25. select phone, concat('******' , substr(phone,7)) R1, ifnull(concat('******' , substr(phone,7)),'this person is not having phone') 'ifnull' from emp;
+26. select `user name` from emp;
+27. select `user name` , trim(substr(`user name`, instr(`user name`," "))) W2 from emp;
+
+-------------------------------------------------------------------------
+
+1. select -100;
+2. select -100 ,abs(-100);
+3. select -100 * -1;
+4. select -100, -(-100);
+5. select -100, - -100;
+6. select -100 ,abs(-100);
+
+----------------------------------------------------------------------------
+
+
+1.  select * from emp;
+2.  table emp;
+3.  select job from emp;
+4.  select distinct job from emp;  //  No Duplicate
+5.  select distinctrow job from emp;
+6.  table duplicate;
+7.  select distinctrow * from duplicate;
+
+8.  select all * from emp;
+9.  select all * from emp limit 5;
+10. select all * from emp limit 0, 5;
+11. select all * from emp limit 2, 5;
+
+12. select rand() R1, emp.* from emp; //********************************
+13. select round(rand(),2) R1, emp.* from emp;
+14. select round(rand(),2) R1, emp.* from emp limit 5;
+
+
+15. select  emp.* from emp;
+16. select  emp.* from emp order by ename;  //ascending
+17. select  emp.* from emp order by ename desc;
+18. select  emp.* from emp order by sal desc;
+19. select  emp.* from emp order by hiredate asc;
+20. select  emp.* from emp order by hiredate desc;
+21. select  emp.*, sal+1000 R1 from emp;
+22. select  emp.*, sal+1000 R1 from emp order by sal+1000;
+23. select  emp.*, sal+1000 R1 from emp order by sal+1000 desc;
+24. select  emp.* from emp order by 2;
+25. select  emp.* from emp order by 2 desc;
+
+26. select empno,job, ename,sal from emp;
+27. select empno,job, ename,sal from emp order by 2;
+
+28. select  emp.* from emp;
+29. select  emp.* from emp order by comm;
+30. select  emp.* from emp order by comm desc;
+31. select  emp.* from emp order by job;
+32. select  emp.* from emp order by job, ename;
+33. select  emp.* from emp order by job, ename desc;
+34. select  emp.* from emp order by job desc, ename asc;
+
+35. select round(rand(),2) R1, emp.* from emp limit 5;
+36. select round(rand(),2) R1, emp.* from emp;
+
+37. select  emp.* from emp order by rand();
+38. select  emp.* from emp order by rand() limit 1;
+39. select  emp.* from emp order by rand() limit 3;
+
+40. select if(10>11, "Good", "Bad");
+41. select if(910>11, "Good", "Bad");
+
+42. select comm, ifnull(comm , 0) R1 from emp;
+43. select comm, ifnull(comm , 0) R1, isnull(comm) R2 from emp;
+44. select true, false;
+45. select comm, ifnull(comm , 0) R1, if(isnull(comm) = 1, 500, comm + 1000 ) R2 from emp;
+
+47. select ename, length(ename) from emp;
+48. select ename, length(ename) R1 from emp;
+49. select ename, length(ename) R1 from emp order by length(ename);
+50. select ename, length(ename) R1 from emp order by 2;
+51. select ename, length(ename) R1 from emp order by R1;
+52. select ename, length(ename) R1 from emp order by R1 , 1;
+53. select ename, length(ename) R1 from emp order by 1;
+
+54. select job, job = 'manager' R1 from emp;
+55. select job, job = 'manager' R1 from emp where job = 'manager';
+56. select * from emp where job = 'manager';
+
+57. select sal, sal >= 3000 from emp;
+58. select sal, sal >= 3000 from emp where sal >= 3000;
+59. select * from emp where sal >= 3000;
+60. select * from emp where sal >= 2000 and sal <=3000;
+61. select * from emp where sal >= 1200 and sal <=3000;
+62. select * from emp where sal >= 1200 and sal <=3000 order by ename;
+63. select * from emp where sal between 1200 and 3000;
+64. select * from emp where ename=0;
+65. update emp set ename=0 where empno=6001;
+66. select * from emp order by comm desc;
+67. select * from emp where comm=true;
+68. select * from emp where comm=1;
+69. select * from emp where comm = 0;
+
+70. select * from tasks;
+71. select * from tasks where completed;
+72. select * from tasks where completed=true;
+73. select * from tasks where completed=false;
+74. select * from tasks where completed=0;
+75. select * from tasks where not completed;
+
+76. select * from emp where job='manager' or job='salesman';
+77. select * from emp where job='manager' or job='salesman' and sal >1500;
+78. select * from emp where (job='manager' or job='salesman') and sal >1500;
+79. select * from emp where job='manager' or job='salesman' or job='CLERK';
+80. select * from emp where job in('manager', 'salesman','CLERK');
+
+81. select * from emp where comm is null;
+82. select * from emp where comm is not null;
+83. select * from emp where comm is UNKNOWN;
+84. select * from emp where comm is null;
+85. select * from emp where comm is not UNKNOWN;
+
+86. select * from emp where deptno in (10);
+87. select * from emp where deptno = (10);
+88. select * from emp where False in (10, 20);
+89. select * from emp where False in (10, 20, 0);
+90. select * from emp where False= 10 or false=20 or false=0;
+
+91. select * from emp where ename like 'A%';  //start A
+92. select * from emp where ename like '%n';  // End N
+93. select * from emp where ename like '__A%';
+94. select * from emp where ename like '____';
+95. select * from emp where length(ename) = 4;
+96. select * from emp where year(hiredate) = 1981;
+97. select * from emp where year(hiredate) = 1980;
+98. select * from emp where date_format(hiredate, '%Y') = 1980;
+99. select date_format(now(), '%Y');
+100. select * from emp where 'saleel' like 's%';
+
+
+----------------------------------------------------------------------
+
+1.  table emp;
+2.  select sum(sal) , sum(comm) from emp;
+3.  select sum(sal) , sum(comm),min(sal),max(sal) from emp;
+4.  select sum(sal) , sum(comm),min(sal),max(sal), count(*) from emp;
+5.  select sum(sal) , sum(comm),min(sal),max(sal), count(*),count(sal) from emp;
+6.  select sum(sal) , sum(comm),min(sal),max(sal), count(*),count(sal),count(comm) from emp;
+7.  select sum(sal) , sum(comm),avg(sal),min(sal),max(sal), count(*),count(sal),count(comm) from emp;
+
+8.  select job from emp group by job;
+
+9.  select job,count(*) from emp group by job;
+10. select job,count(*),sum(sal) from emp group by job;
+11. select ename , count(*), sum(sal) from emp group by ename;
+12. select gender , count(*) from emp group by gender;
+13. select job , count(*) from emp group by job;
+14. select job,count(*) from emp group by job having count(*) > 5;
+15. select job,count(*) from emp group by job having count(*) >= 5;
+16. select job,count(*) from emp having count(*) >= 5;
+17. select job,count(*) from emp group by job having job='SALESMAN';
+18. select job,count(*) from emp where job="SALESMAN" group by job;
+19. select job,count(*) from emp where job="SALESMAN";
+
+20. select max(sal) from emp;
+21. select ename, max(sal) from emp;
+22. select job, max(sal) from emp group by job;
+
+
+--------------------------------------------------------------------
+
+window_function ==> cannot be given in where cluase just like aggrigate  functions
+. row_number() over([ partition by column_name oder by column_name ])
+. rank() over([ partition by column_name oder by column_name]). 
+. dense_rank() over([ partition by column_name oder by column_name]).
+
+1.  select *  from emp;
+
+2.  select row_number() over() R1,emp.* from  emp;
+3.  select row_number() over(partition  by job) R1,emp.* from  emp; 
+4.  select row_number() over(order by  job) R1,emp.* from  emp;
+5.  select row_number() over(partition by job order by  job) R1,emp.* from  emp;
+6.  select row_number() over(partition by job order by  job desc) R1,emp.* from  emp;
+7.  select row_number() over(partition  by job) R1,emp.* from  emp order by job;
+8.  select row_number() over(partition  by job) R1,emp.* from  emp order by job desc;
+
+9.  select rank() over() R1, emp.* from emp;
+10. select rank() over(order by job) R1, emp.* from emp;
+11. select rank() over(order by sal) R1, sal from emp;
+12. select rank() over(order by sal) R1, dense_rank() over(order by sal) R2 , sal from emp;
+
+
+------------------------------------------------------------------------
+
+ USER DEFINED VARIABLES
+ 
+ 1.  set  @a := 10 , @b = 'manager';
+ 2.  select * from emp where deptno = @a;
+ 3.  select * from emp where job = @b;
+
+
+-------------------------------------------------------------------------
+
+ Scaler Subquery
+
+.  select ename , job , (select---> single value of single row ) from emp;
+
+1.  select ename , job, (select 1+1 ) from emp;
+2.  select ename , job, (select 1+1 ) R1 from emp;
+
+---------------------------------------------------------------------------
+Q. find out difference bertween the salary of employee king and shermin ..?
+Ans =>
+  1.  select sal from emp where ename='king';             #5000
+  2.  select sal from emp where ename='sharmin';          #1750
+  3.  select 5000 - 1750;  								#3250
+
+  4.  select (select sal from emp where ename='king') - (select sal from emp where ename='sharmin');
+  5.  select (select sal from emp where ename='king') R1 , (select sal from emp where ename='sharmin') R2;
+  6.  select (select sal from emp where ename='king') - (select sal from emp where ename='sharmin') R2;
+----------------------------------------------------------------------------
+
+
+7.  select sal from emp where ename='king' group by ename;
+8.  select sum(sal) from emp where ename='king' group by ename;
+9.  select (select sum(sal) from emp where ename='king' group by ename) R1 , (select sal from emp where ename='sharmin') R2;
+10. select (select sum(sal) from emp where ename='king' group by ename) - (select sal from emp where ename='sharmin') R2;
+ 
+-----------------------------------------------------------------------------
+Q. find out difference bertween the total sum of  salary frome department 10 to 20..?
+Ans =>
+1.  select (select sum(sal) from emp where deptno=10) R1 , (select sum(sal) from emp where deptno=20) R2;
+2.  select (select sum(sal) from emp where deptno=10) - (select sum(sal) from emp where deptno=20) R2;
+3.  select abs((select sum(sal) from emp where deptno=10) - (select sum(sal) from emp where deptno=20)) R2;
+-------------------------------------------------------------------------------
+
+
+Scaler Subquery return single value from single row
+select A1 , A2 ,( select........ From table_name) R1  from table_name;
+
+subquery in from cluase => in-line view / Derived Table
+select * from( select........ From table_name) [ AS ] table_name;
+
+1.  select * from (select * from emp) as T1 ;
+2.  select * from (select * from emp) T1 ;
+3.  select * from (select * from emp) ABCDEFGHIJK ;
+4.  select * from (select * from emp) as ABCDEFGHIJK ;
+5.  select row_number() over() R1,row_number() over () mod 2 R2, emp.* from emp;
+6.  select * from (select row_number() over() R1, row_number() over () mod 2 R2, emp.* from emp) T1 where R2=0;
+
+
+1.  select * from (  select 100 R1 ,200 R2 , 100+200) T1;
+2.  select r1+r2 from (  select 100 R1 ,200 R2 , 100+200) T1;
+3.  select r1,r2,100+200 from (  select 100 R1 ,200 R2 , 100+300) T1;
+4.  select r1,r2,r3 from (  select 100 R1 ,200 R2 , 100+300  r3) T1;
+
+
+1.  select * from emp order by sal desc;
+2.  select * from emp order by sal desc limit 1;
+3.  select dense_rank() over (order by sal desc) R1 , emp.* from emp;
+4.  select * from (select dense_rank() over (order by sal desc) R1 , emp.* from emp) T1 where R1 = 1; // first highest salary
+5.  select * from (select dense_rank() over (order by sal desc) R1 , emp.* from emp) T1 where R1 = 2; // second highest  salary
+6.  select * from (select dense_rank() over (order by sal desc) R1 , emp.* from emp) T1 where R1 = 3; // Third Highest Salary
+
+----------------------------------------------------------------------------------
+
+subquery in where/Having Clause  -> single row  subquery(=,<>,>,...)
+.  select * from table_name where column_name =(select....);
+
+1.  select sal from emp where ename='allen';
+2.  select * from emp where sal > (select sal from emp where ename='allen');
+
+------------------------------------------------------------------------------------
+Q.find out Second highest Salary..?
+ans => 
+1.  select * from (select dense_rank() over (order by sal desc) R1 , emp.* from emp) T1 where R1 = 2; // second highest  salary with dense_rank
+2.  select * from emp order by  sal desc limit 2 , 1; // without dense_rank , Using Limit
+3.  select max(sal) from emp where sal < (select max(sal) from emp); // Using Max
+-------------------------------------------------------------------------------------
+
+
+Q.find out Third highest Salary..?
+1.  select sal from  emp order by  sal desc;
+2.  select max(sal) from emp where sal < (select max(sal) from emp where sal < (select max(sal) from emp));
+3.  select *  from emp where sal =(select max(sal) from emp where sal < (select max(sal) from emp where sal < (select max(sal) from emp)));
+
+--------------------------------------------------------------------------------------
+
+LAB 18/5/2022
+
+1. SELECT LENGTH(ENAME) FROM EMP;
+2. SELECT ENAME, LENGTH(ENAME) FROM EMP;
+3. SELECT ENAME, LENGTH(ENAME), REPLACE(ENAME, 'A','')  FROM EMP;
+4. SELECT ENAME, LENGTH(ENAME)- REPLACE(ENAME, 'A','')  FROM EMP;
+5. SELECT ENAME, LENGTH(ENAME)- LENGTH(REPLACE(ENAME, 'A',''))  FROM EMP;
+6. SELECT ENAME, LENGTH(ENAME)- LENGTH(REPLACE(ENAME, 'A','')) A FROM EMP;
+7. SELECT ENAME, LENGTH(ENAME)- LENGTH(REPLACE(ENAME, 'A','')) A , REPLACE(ENAME, 'A', '_') FROM EMP;
+8. SELECT ENAME FROM EMP WHERE ENAME LIKE '%A%';
+9. SELECT ENAME FROM EMP WHERE ENAME LIKE '%A%A%A%';
+10. SELECT ENAME FROM EMP WHERE ENAME LIKE '%A%A%';
+11. SELECT ENAME FROM EMP WHERE ENAME LIKE '%A%A%' AND 2=LENGTH(ENAME)- LENGTH(REPLACE(ENAME, 'A',''));
+12. SELECT ENAME FROM EMP WHERE 2=LENGTH(ENAME)- LENGTH(REPLACE(ENAME, 'A',''));
+13. SELECT  `USER NAME` FROM EMP;
+14. SELECT  `USER NAME`, SUBSTR(`USER NAME`,INSTR(`USER NAME`,' ')) FROM EMP;
+15. SELECT  `USER NAME`, SUBSTR(`USER NAME`,INSTR(`USER NAME`,' ')) SECONDWORD FROM EMP;
+17. SELECT  `USER NAME`, LEFT(`USER NAME`,INSTR(`USER NAME`,' ')-1)  ,SUBSTR(`USER NAME`,INSTR(`USER NAME`,' ')) SECONDWORD FROM EMP;
+18. SELECT  `USER NAME`, LEFT(`USER NAME`,INSTR(`USER NAME`,' ')-1) FIRST ,SUBSTR(`USER NAME`,INSTR(`USER NAME`,' ')) SECONDWORD FROM EMP;
+19. SELECT  `USER NAME`, IF(INSTR(`USER NAME`,' '), LEFT(`USER NAME`,INSTR(`USER NAME`,' ')-1),`USER NAME`)  FIRST ,SUBSTR(`USER NAME`,INSTR(`USER NAME`,' ')) SECONDWORD FROM EMP;
+20. SELECT * FROM VOTE_RESPONSE;
+21. SELECT CANDIDATEID, LENGTH(REPLACE(RESPONSE,'Y',''))  FROM VOTE_RESPONSE;
+22. SELECT CANDIDATEID, LENGTH(RESPONSE), LENGTH(REPLACE(RESPONSE,'Y',''))  FROM VOTE_RESPONSE;
+24. SELECT CANDIDATEID, REPLACE(RESPONSE,'Y,','')  FROM VOTE_RESPONSE;
+25. SELECT LENGTH(RESPONSE) TOTAL, LENGTH(RESPONSE)-LENGTH(REPLACE(RESPONSE, 'Y,',"")) CNT FROM VOTE_RESPONSE;
+26. SELECT LENGTH(RESPONSE) TOTAL, LENGTH(RESPONSE)-LENGTH(REPLACE(RESPONSE, 'y,',"")) CNT FROM VOTE_RESPONSE;
+27. SELECT LENGTH(RESPONSE) TOTAL, LENGTH(RESPONSE)-LENGTH(REPLACE(RESPONSE, 'y',"")) CNT FROM VOTE_RESPONSE;
+28. select * from vote_response;
+29. select sal, sal/100 from emp;
+30. select sal, sal div 100 from emp;
+31. select sal, sal div 100, repeat("$", sal div 100) from emp;
+32. select "abc,,,,pqr,,,,,,,,,a,,xyz";
+33. select "abc,,,,pqr,,,,,,,,,a,,xyz" , replace("abc,,,,pqr,,,,,,,,,a,,xyz",',,,,,,,,,,,,,,',',');
+34. select "abc,,,,pqr,,,,,,,,,a,,xyz" , replace("abc,,,,pqr,,,,,,,,,a,,xyz",',,,,',',');
+35. select "abc,,,,pqr,,,,,,,,,a,,xyz" , trim("abc,,,,pqr,,,,,,,,,a,,xyz");
+36. select "abc,,,,pqr,,,,,,,,,a,,xyz" , trim(replace("abc,,,,pqr,,,,,,,,,a,,xyz",',',' '));
+37. select "abc,,,,pqr,,,,,,,,,a,,xyz" , replace(replace("abc,,,,pqr,,,,,,,,,a,,xyz",',',' '),' ' ,',');
+38. select "abc,,,,pqr,,,,,,,,,a,,xyz" , replace(ltrim(rtrim(replace("abc,,,,pqr,,,,,,,,,a,,xyz",',',' '))),' ' ,',');
+39. select "abc,,,,pqr,,,,,,,,,a,,xyz" , (replace("abc,,,,pqr,,,,,,,,,a,,xyz",',',' '));
+40. select "abc,,,,pqr,,,,,,,,,a,,xyz" , trim((replace("abc,,,,pqr,,,,,,,,,a,,xyz",',',' ')));
+41. select "abc,,,,pqr,,,,,,,,,a,,xyz" , trim(replace(replace("abc,,,,pqr,,,,,,,,,a,,xyz",',',' '),'  ',' '));
+42. select "abc,,,,pqr,,,,,,,,,a,,xyz" , replace(replace("abc,,,,pqr,,,,,,,,,a,,xyz", ',',',.'), '.,' , ',');
+43. select "abc,,,,pqr,,,,,,,,,a,,xyz" , replace(replace("abc,,,,pqr,,,,,,,,,a,,xyz", ',',',.'), '.,' , '');
+44. select "abc,,,,pqr,,,,,,,,,a,,xyz" , replace(replace(replace("abc,,,,pqr,,,,,,,,,a,,xyz", ',',',.'), '.,' , '') , ',.' , ',');
+45. select "abc,,,,pqr,,,,,,,,,,,,a,,xyz" , replace(replace(replace("abc,,,,pqr,,,,,,,,,,,,a,,xyz", ',',',.'), '.,' , '') , ',.' , ',');
+
+------------------------------------------------------------------------------------------------------------
+
+LAB 19/5/2022
+
+1. select ename,concat(upper(left(ename,1)),lower(substr(ename,2))) from emp;
+2. update emp set job=replace(job,'officer','Officer');
+3. table emp;
+4. update emp set job=replace(job,'officers','Officers');
+5. update emp set job=replace(job,'off','Off');
+6. update emp set sal=replace(sal,0,2);
+7. select * from transactions;
+8. select custId,transactionDate,type,amount,if(type='c',amount*-1,amount) r1 from transactions;
+9. select custId,transactionDate,type,amount,if(type='d',amount*-1,amount) r1 from transactions;
+10. select custId,transactionDate,type,amount,if(type='d',-amount,+amount) r1 from transactions;
+11. select custId,transactionDate,type,amount,if(type='d',-amount,amount) r1 from transactions;
+12. select sal,-sal from emp1;
+13. select * from emp where left(ename,1) in ('a','e','i','o','u');
+14. select left(ename,1) from emp;
+15. select * from emp where ename like '%a%' or ename like '%i%';
+
+---------------------------------------------------------------------------------------------------------------
+
+20/5/2022
+
+
+1.  select hiredate from emp where hiredate < (select hiredate from emp where ename='blake');
+2.  select * from emp where hiredate < (select hiredate from emp where ename='blake');
+
+3.  table emp;
+4.  table dept;
+5.  select deptno from dept where dname='ACCOUNTING';
+6.  select * from emp where deptno = (select deptno from dept where dname='ACCOUNTING');
+7.  select deptno from dept where dname in ('ACCOUNTING', 'sales');
+8.  select * from emp where deptno in (select deptno from dept where dname in ('ACCOUNTING', 'sales'));
+
+9.  select sal from emp where ename in ('blake','adams');
+10. select * from emp  where sal > any (select sal from emp where ename in ('blake','adams'));
+11. select sal from emp where ename in ('blake','miller');
+12. select * from emp where sal > any (select sal from emp where ename in ('blake','miller'));  // Minimum se Jyada all value display
+13. select * from emp where sal < any (select sal from emp where ename in ('blake','miller'));  // Maximum se Kam all value display
+14. select * from emp where sal < all (select sal from emp where ename in ('blake','miller'));  // Samller salary value display whose salary  is small(b,m)
+15. select * from emp where sal > all (select sal from emp where ename in ('blake','miller'));  // greater Salary display whose salary  is large (b,M)
+
+16. select deptno from emp;
+17. select deptno from dept;
+18. select deptno from emp union select deptno from dept;
+19. select * from dept union select * from dept;     // not include duplicate
+20. select * from dept union all select * from dept; // duplicate allowed
+21. select * from dept;
+22. select * from dept union select * from dept;
+23. select * from dept union all select * from dept;
+24. select deptno from emp union select deptno from dept;
+25. select deptno from emp union all select deptno from dept;
+26. select deptno R1 from emp union  select dname R2 from dept;
+
+27. select distinct deptno from emp;   // Duplicate value not print
+28. select deptno R1 from dept union  select dname R2 from dept;
+29. create table abc as select * from emp where deptno in (10,20);
+30. select * from abc;
+31. select * from emp union select * from abc;
+32. update emp set ename = 'zzz' where ename = 'ford'; 
+33. select * from emp union select * from abc;
+
+
+1.  select * from r1;
+2.  select * from r2;
+3.  select c1 from r1 union select c1 from r2;
+4.  select c1 from r1 union all select c1 from r2;
+5.  select * from r1;
+6.  select * from r2;
+7.  select c1 from r1 where exists (select c1 from r2 where r1.c1 = r2.c1) ; // exit = commom elemet print
+8.  select c1 from r1 where not exists (select c1 from r2 where r1.c1 = r2.c1) ; // not exit = uncommonn element print
+
+9.  select * from dept where exists(select deptno from emp where dept.deptno = emp.deptno); 
+10. select * from dept where not exists(select deptno from emp where dept.deptno = emp.deptno);
+11. select * from emp where job='manager';
+12. select * from emp where not job='manager';
+13. select * from emp where job<>'manager'; // manager sodun print krto
+
+
+19. select * from emp where gender='f';
+20. select * from emp where gender='m';
+21. select * from emp f where not exists(select * from emp m where f.deptno = m.deptno and m.gender='m');
+22. select * from emp f where  exists(select * from emp m where f.deptno = m.deptno );
+23. select * from emp m where  not exists(select * from emp f where f.deptno = m.deptno and m.gender='f' );
+
+24. desc abc;
+25. delete from abc;
+26. desc emp;
+27. select * from emp;
+28. insert into abc select * from emp;
+29. select * from abc;
+30. rollback;
+31. insert into abc select * from emp where deptno=10;
+32. select * from abc;
+
+33. create table abc1(empno int, employeeName varchar(20), jobType varchar(20));
+34. insert into abc1 select * from emp;
+35. insert into abc1 select empno, ename, job from emp;
+36. select * from  abc1;
+
+
+38. select * from menucard;
+39. select * from softdrink;
+40. select * from menucard,softdrink;
+41. select  menucard.NAME, menucard.rate, softdrink.NAME, softdrink.RATE from menucard,softdrink;
+42. select  menucard.NAME, menucard.rate, softdrink.NAME, softdrink.RATE, menucard.rate + softdrink.RATE Total from menucard,softdrink;
+43. select count(*) from emp;
+44. select * from softdrink;
+45. select count(*), softdrink.name, softdrink.rate from emp, softdrink group by softdrink.name, softdrink.rate;
+46. select count(*), softdrink.name, softdrink.rate, count(*) * softdrink.rate Total from emp, softdrink group by softdrink.name, softdrink.rate;
+47. select  * from menucard,softdrink;
+48. select  * from menucard cross join softdrink;
+
+49. select * from warehouse;
+50. select * from products;
+51. select * from warehouse, products;
+52. select productname, warehouse_name from warehouse, products;
+53. select * from sales_channel;
+54. select productname, sales_channel.* from products, sales_channel;
+55. select productname, sales_channel.* from products cross join sales_channel;
+
+
+
+----------------------------------------------------------------------------------
+
+21/05/2022
+
+1.  desc dept;
+2.  desc emp;
+3.  select * from emp;
+4.  select * from dept;
+5.  select ename , dname from emp , dept where emp.deptno = dept.deptno;
+6.  desc bonus;
+7.  select * from bonus;
+8.  select emp.ename , dept.dname , bonus.rate from emp , dept , bonus where emp.deptno = dept.deptno and emp.bonusID = bonus.id;
+9.  select emp.ename , dept.dname , bonus.rate from emp , dept , bonus where emp.deptno = dept.deptno and emp.bonusID = bonus.id and emp.ename='gita';
+
+10. select emp.ename , dept.dname , bonus.rate from emp , dept , bonus where emp.deptno = dept.deptno and emp.bonusID = bonus.id and bonus.id >=5;
+11. select bonus.id ,emp.ename , dept.dname , bonus.rate from emp , dept , bonus where emp.deptno = dept.deptno and emp.bonusID = bonus.id and bonus.id >=5;
+12. select emp.bonusid ,emp.ename , dept.dname , bonus.rate from emp , dept , bonus where emp.deptno = dept.deptno and emp.bonusID = bonus.id and bonus.id >=5;
+
+13. select emp.bonusid, emp.deptno ,emp.ename , dept.dname , bonus.rate from emp , dept , bonus where emp.deptno = dept.deptno and emp.bonusID = bonus.id ;
+
+// Inner Join 
+14. select * from emp ,dept where emp.deptno = dept.deptno;
+15. select * from emp inner join dept on emp.deptno = dept.deptno;
+16. select * from emp join dept on emp.deptno = dept.deptno; // This is also inner Join
+17. select ename , dname from emp inner join dept on emp.deptno = dept.deptno;
+18. select ename , dname from emp E inner join dept D on E.deptno = D.deptno;
+19. select * from emp inner join dept using(deptno);
+20. select ename , dname from emp inner join dept using(deptno);
+21. select ename, rate from emp inner join bonus on emp.bonusid = bonus.id;
+22. select ename , dname, emp.deptno , dept.deptno , emp.pwd , dept.pwd from emp inner join dept on emp.deptno = dept.deptno and emp.pwd=dept.pwd;
+
+
+// Natural Join
+23. desc emp;
+24. desc dept;
+25. select * from emp order by deptno;
+26. select ename , dname, emp.deptno , dept.deptno , emp.pwd , dept.pwd from emp natural join dept;
+27. select * from emp natural join dept;
+
+// Simple join 
+28. select * from emp simple join dept;
+29. select (select count(*) from emp) ,  (select count(*) from dept);
+30. select (select count(*) from emp) *  (select count(*) from dept);
+31. select *  from emp simple join dept using(deptno);
+
+// left /right outer join
+32. select * from emp left outer join dept on emp.deptno = dept.deptno;
+33. select * from emp right outer join dept on emp.deptno = dept.deptno;
+34. select ename , dname , job ,sal, emp.deptno , dept.deptno from emp right outer join dept on emp.deptno = dept.deptno;
+35. select ename , dname , job ,sal, emp.deptno , dept.deptno from dept left outer join emp on emp.deptno = dept.deptno;
+
+36. select * from r1;
+37. select * from r2;
+38. select * from r1 left outer join r2 on r1.c1=r2.c1;
+39. insert into r2 values(7,7);
+40. select * from r1;
+41. select * from r2;
+42. select * from r1 left outer join r2 on r1.c1=r2.c1;
+43. select * from r1 right outer join r2 on r1.c1=r2.c1;
+44. select * from r1 left outer join r2 on r1.c1=r2.c1 union select * from r1 right outer join r2 on r1.c1=r2.c1;
+45. select * from r1 right outer join r2 on r1.c1=r2.c1 union select * from r1 left outer join r2 on r1.c1=r2.c1;
+46. select * from r1 left outer join r2 on r1.c1 = r2.c1 union select * from r2 right outer join r1 on r1.c1 = r2.c1;
+47. select * from r1 left outer join r2 on r1.c1 = r2.c1 union select * from r1 right outer join r2 on r1.c1 = r2.c1; 
+
+48. table emp;
+49. select e.ename "Emlploy Name", m.ename "Manager Name" from emp e, emp m;
+50. select e.ename "Emlploy Name", m.ename "Manager Name" from emp e, emp m where e.mgr = m.empno;
+
+
+
+51. select user();
+52. select max(sal) from emp;
+53. select max(sal), min(Sal) from emp;
+54. select max(sal), min(Sal) into @a, @b from emp;
+55. select @a;
+56. select @b;
+57. SET @c = 'manager';
+58. set @d := (select count(*) from emp);
+59. select @d;
+60. select max(sal), min(Sal) into @a, @b from emp;
+
+61. select * from emp;
+62. \r
+63. select * from emp into outfile "F:\IET\CODING\DBT\Files\emp.csv";
+64. select * from emp into outfile "F:\IET\CODING\DBT\Files\emp.csv" fields terminated by ",";
+65. select * from emp where job='manager' into dumpfile "F:\\IET\\CODING\\DBT\\Files\\emp2.csv";
+66. select * from emp where ename='Gita' into dumpfile "F:\\IET\\CODING\\DBT\\Files\\emp3.csv";
+
+67. create table AAA(AID int, ADate date , AName varchar(10));
+68. desc AAA;
+69. load data infile "F:\\IET\\CODING\\DBT\\Files\\AAA.csv" into table aaa fields terminated by "," lines terminated by "\n";
+70. select * from AAA;
+71. load data infile "F:\\IET\\CODING\\DBT\\Files\\AAA.csv" into table aaa fields terminated by "," lines terminated by "\n" ignore 1 rows;
+
+72. show full tables;
+73. create temporary table xyz (c1 int, c2 varchar(10));
+74. show full tables;
+75. desc xyz;
+76. insert into xyz values(1,'saleel');
+77. insert into xyz values(2,'sharmin');
+78. select * from xyz;
+79. commit;
+80. select * from xyz;
+
+
+81. select * from emp where job='manager';
+82. explain select * from emp where job='manager';
+83. explain select * from emp;
+84. explain analyze select * from emp where job='manager';
+85. desc emp;
+86. select * from emp where empno=7788;
+87. explain select * from emp where empno=7788;
+88. explain analyze select * from emp where empno=7788;
+89. desc emp;
+
+90. create index ind_job on emp(job);
+91. desc emp;
+92. select * from emp where job='manager';
+93. explain select * from emp where job='manager';
+94. show index from emp;
+95. explain analyze select * from emp where job='manager';
+96. select * from emp where ename='smith';
+97. explain select * from emp where ename='smith';
+98. create index ind_ename on emp(ename);
+99. desc emp;
+100. select * from emp where ename='smith';
+101. explain select * from emp where ename='smith';
+102. show index from emp;
+103. drop index ind_job on emp;
+104. drop index ind_ename on emp;
+105. show index from emp;
+106. explain select * from emp where ename='smith';
+107. explain analyze  select job from emp where job='manager';
+108. create index ind_job on emp(job);
+109. explain analyze  select job from emp where job='manager';
+110. select job from emp where job in ('manager','salesman');
+111. explain select job from emp where job in ('manager','salesman');
+112. explain analyze select job from emp where job in ('manager','salesman');
+113. explain analyze select job from emp where job in ('salesman','manager');
+114. select job from emp where job in ('salesman','manager');
+
+
+
+115. use information_schema;
+116. show tables;
+117. use sys;
+118. show tables;
+119. show databases;
+
+
+120. use performance_schema;
+121. show tables;
+122. use information_schema;
+123. show tables;\
+124. use db1;
+
+125. create table u (c1 int unique, c2 int);
+126. desc u;
+127. insert into u values(1,1);
+128. insert into u values(2,1);
+129. insert into u values(3,1);
+130. select * from u where c1=1;
+131. explain select * from u where c1=1;
+132. select * from u;
+133. insert into u values(30,1);
+134. insert into u values(35,1);
+135. insert into u values(25,1);
+136. select * from u;
+137. desc u;
+138. rollback;
+139. select * from u;
+140. delete from u;
+141. commit;
+142. insert into u values(1,1);
+143. insert into u values(2,1);
+144. insert into u values(3,1);
+145. insert into u values(30,1);
+146. insert into u values(31,10);
+147. insert into u values(32,7);
+148. select * from u;
+149. select * from u where c1 = 1;
+150. explain select * from u where c1 = 1;
+151. select * from u where c2 = 1;
+152. explain select * from u where c2 = 1;
+153. desc u;
+154. show index from u;
+
+
+-------------------------------------------------------------------------
+
+23/05/2022
+
+1.  create database  db4;
+2.  use db4;
+3.  create table dept as select * from  db1.dept;
+4.  select * from dept;
+5.  show tables;
+
+6.  create view V1 as select * from dept; // point to references table dept
+7.  show full tables;
+8.  select * from v1;
+9.  rename table dept to dep;
+10. show full tables;
+11. show create view v1;
+12. select * from v1;  // give error beacuse of  table name change to dept change to dep
+
+13. rename table dep to dept;
+14. select * from v1;
+15. insert into v1 values(1,1,1,1,1);
+16. select *  from dept;
+17. desc dept;
+18. desc v1;
+19. alter table v1 add c1 int; //ERROR 1347 (HY000): 'db4.v1' is not BASE TABLE
+20. drop view v1; // view drop krnysathi
+
+21. rename view v1 to  view1; // view name change
+
+22. select user from mysql.user;  //show all user
+23. select user();
+
+24. create user 'Tejas'@'localhost' identified by 'Tejas'; //  Tejas generated by  localhost
+
+//  check another cmd
+23. mysql --host=localhost --port=3306 --user=Tejas --password=Tejas
+24. select user();
+25. show databases;
+
+//  localhost CMD
+26. grant all privileges on db4.* to 'Tejas'@'localhost';
+27. revoke all privileges on db4.* from 'Tejas'@'localhost';  // remover permission of databases DB4
+
+//  check another cmd
+28. show databases; 
+29. use db4;
+30. show tables;
+31. select *  from dept;
+32. insert into dept values(2,2,2,2,2);
+
+//  localhost cmd
+33. grant select  on db4.dept to 'Tejas'@'localhost';
+34. grant insert  on db4.dept to 'Tejas'@'localhost';
+35. revoke select  on db4.dept from 'Tejas'@'localhost';
+36. revoke insert  on db4.dept from 'Tejas'@'localhost';
+37. select *  from dept;
+38. commit;
+39. select *  from dept;
+
+//  locatlost  CMD
+40. commit;
+41. select *  from dept;
+42. delete from dept where deptno=2;
+
+//  check another cmd
+43. update dept set dname='AAA' where deptno=2; //table lock
+
+//  localhost cmd
+44. commit;
+
+//  check another cmd
+45. update dept set dname='AAA' where deptno=2;
+46. select *  from dept;
+47. update dept set dname='AAA' where deptno=2;
+48. commit;
+49. select *  from dept;
+
+//  check another cmd
+50. show databases;
+51. commit;
+52. exit;
+53. mysql --host=localhost --port=3306 --user=Tejas --password=Tejas
+54. show databases;
+
+
+//  localhost cmd
+55. grant select on db4.dept to 'Tejas'@'localhost';
+56. grant insert on db4.dept to 'Tejas'@'localhost';
+57. revoke select on db4.dept from 'Tejas'@'localhost';
+58. revoke insert on db4.dept from 'Tejas'@'localhost';
+
+//  check another cmd
+59. select * from dept;
+60. commit;
+
+//  localhost cmd
+61. select * from dept;
+62. revoke select , insert on db4.dept from 'Tejas'@'localhost';
+63. select * from v1;
+64. create view v2 as select deptno,dname,loc from dept;
+
+65. grant select , insert on db4.v2 to 'Tejas'@'localhost';
+66. revoke select , insert on db4.v2* from 'Tejas'@'localhost';
+67. grant select , insert on db4.* to 'Tejas'@'localhost';
+68. revoke select , insert on db4.* from 'Tejas'@'localhost';
+69. select * from v2;
+70. commit;
+
+//  check another cmd
+71. select * from v2; 
+72. commit;
+
+//  localhost cmd
+73. use db1;
+74. select * from emp, dept where emp.deptno = dept.deptno;
+75. create view v3 as select * from emp natural join dept;
+76. select * from v3;
+77. show create view v3;
+78. desc v3;
+79. create view dept10 select * from emp where deptno=10;
+80. select * from dept10;
+81. create view dept20 as select * from emp where deptno=20;
+82. update dept10 set ename='ZZZ' where empno=6473;
+83. select * from dept10;
+84. delete from dept10 where empno=6473;
+85. select * from dept20;
+86. commit;
+
+//  Backup file 
+87. mysqldump -hlocalhost -P3306 -uroot -pSajet@1299 db4 > F:\IET\CODING\DBT\BackUp\DB4.sql
+88. use [another DB];
+89. source F:\IET\CODING\DBT\BackUp\db4.sql 
+90. show tables;
+91. select * from emp;
+
+92. delimiter $
+93. select * from dept $
+94. delimiter ;
+
+//  Programming Syntax
+95. source F:\IET\CODING\DBT\Programs\pl.sql
+96. call pro1();
+
+97. source F:\IET\CODING\DBT\Programs\Pro1.sql
+98. call pro1();
+
+99. source F:\IET\CODING\DBT\Programs\Pro2.sql
+100. call Pro2(10,20);
+
+101. source F:\IET\CODING\DBT\Programs\Pro3.sql
+102. set @A :=0;
+103. set @B :=0;
+104. call pro3(7,3,@A,@B);
+105. select @A, @B;
+
+106.  source F:\IET\CODING\DBT\Programs\Pro4.sql
+107. set @C :=10;
+108. call pro4(@C);
+109. select @C;
+
+110. source F:\IET\CODING\DBT\Programs\Pro2_1.sql
+111. call Pro2(6,2);
+
+112. source F:\IET\CODING\DBT\Programs\Pro3_1.sql
+113. set @a := 0;
+114. set @b := 0;
+115. set @c := 0;
+116. set @d := 0;
+117. call Pro3_1(7,3,@a,@b,@c,@d);
+118. select @a,@b,@c,@d;
+
+119. show processlist;
+120. kill [ID No];
+
+---------------------------------------------------------------------
+
+22/05/2022
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
