@@ -1055,6 +1055,7 @@ LAB 19/5/2022
 86. commit;
 
 //  Backup file 
+87. exit;
 87. mysqldump -hlocalhost -P3306 -uroot -pSajet@1299 db4 > F:\IET\CODING\DBT\BackUp\DB4.sql
 88. use [another DB];
 89. source F:\IET\CODING\DBT\BackUp\db4.sql 
@@ -1065,7 +1066,7 @@ LAB 19/5/2022
 93. select * from dept $
 94. delimiter ;
 
-//  Programming Syntax
+//  Programming Syntax  PLSQL
 95. source F:\IET\CODING\DBT\Programs\pl.sql
 96. call pro1();
 
@@ -1104,23 +1105,155 @@ LAB 19/5/2022
 
 22/05/2022
 
+create databases db5;
+use db5;
+create table login(id int primary key auto_increment , username varchar(20) , password varbinary(28));
+desc login;
+
+1.
+source F:\IET\CODING\DBT\Programs\PL24-5.sql
+call insert_login('Teja' ,"TEJAS");
+call insert_login('RAM' ,"RAM");
+call insert_login('SHAM' ,"SHAM");
+select * from login;
+
+2.
+source F:\IET\CODING\DBT\Programs\PL24-5.sql
+call Display_login();
+
+select *  from  login where password="TEJAS";
+select id , username , cast(password as char) password from  login where password="TEJAS";
+
+3. 
+source F:\IET\CODING\DBT\Programs\PL24-5.sql
+call Delete_Login('Admin');
+
+4.
+source F:\IET\CODING\DBT\Programs\PL24-5.sql
+select f1();
+
+5.
+source F:\IET\CODING\DBT\Programs\PL24-5.sql
+select f2( 7 , 3) ;
+select f2( 2 , 4) T1;
+
+
+select * from db1.emp;
+select * from db1.emp where deptno = f2(5,5);
+select ename ,  sal, comm , f2(sal,comm) from db1.emp;
+select ename ,  sal, comm , f2(sal,comm) from db1.emp; //return (ifnull(x,0) + ifnull(y,0));
+
+
+create table login2(id int , name varchar(10));
+insert into Login2 values(1,"Tejas");
+select * from login2;
+
+6. 
+source F:\IET\CODING\DBT\Programs\PL24-5.sql
+insert into login2 values (f3() ,concat('Teja-',f3()));
+insert into login2 values (f3() ,concat('RAM-',f3()));
+insert into login2 values (f3() ,concat('SHAM-',f3()));
+
+
+rollback;
+select * from login2;
+delete from login2;
+commit;
+select * from login2;
+
+insert into login2 values (f3() ,'Teja');
+select * from login2;
+insert into login2 values (f3() ,'Teja2');
+select * from login2;
+
+rollback;
+select * from login2;
+
+7.
+select count(*) from login2;
+source F:\IET\CODING\DBT\Programs\PL24-5.sql
+insert into login2 values(f3() , concat('TEJAS - ', f3()));
+insert into login2 values(f3() , concat('TEJAS - ', f3()));
+insert into login2 values(f3() , concat('TEJAS - ', f3()));
+insert into login2 values(f3() , concat('TEJAS - ', f3()));
+select * from login2;
+
+8. 
+source F:\IET\CODING\DBT\Programs\PL24-5.sql
+call pro5();
+
+9. 
+source F:\IET\CODING\DBT\Programs\PL24-5.sql
+call pro6();
+desc a1;
 
 
 
 
+show tables;
+create table dept as select * from db1.dept;
+select * from dept;
+desc login2;
+select * from login2;
+truncate table a;
+rollback;
+truncate table a;
+
+
+create table log(id int primary key auto_increment, logData varchar(1000));
+select * from dept;
+select * from log;
+desc log;
+source d:\pl.sql
+insert into dept values(1,1,1,1,1);
+select * from dept;
+select * from log;
+rollback;
+select * from log;
+select * from dept;
 
 
 
+create table deptBK as select * from dept where 1=2;
+select * from deptBK;
+desc deptbk;
+source F:\IET\CODING\DBT\Programs\PL24-5.sql
+rollback;
+insert into dept values(1,'PRUCHASE', 'BARODA','xyz', '17/70/2022');
+select * from dept;
+select * from dept
+
+alter table deptBK add insertedBY varchar(20);
+alter table deptBK add inserteON date;
+alter table deptBK add inserteTIME time;
+desc deptbk;
+select user();
+select curDate();
+select curtime();
+source F:\IET\CODING\DBT\Programs\PL24-5.sql
+rollback;
+select * from dept;
+insert into dept values(2,'HR', 'PUNE', 'DEF' ,'07/07/2022');
+select * from dept;
+select * from deptBK;
+
+
+----------------------------------------------
+EmailID Program
+
+create table loginP1(id int , para_userName varchar(20) , para_password varchar(20) , email varchar(20));
+
+source F:\IET\CODING\DBT\Programs\Pro5.sql
+call Insert_login(1,'Tejas','Tej','TE@gmail.com');
+call Insert_login(1,'Tejas','Tej','TEJ@gmail.com');
+call Insert_login(1,'Tejas','Tej','gmail.com');
 
 
 
+----------------------------------------------------------
+DROP TRIGGER trigger_name;
 
-
-
-
-
-
-
+--------------------------------------------------------
 
 
 

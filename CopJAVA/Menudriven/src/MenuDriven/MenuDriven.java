@@ -30,7 +30,9 @@ public class MenuDriven {
 			System.out.println("6.Reverse of number");
 			System.out.println("7.Exit");
 			System.out.println("Enter your choice (1-7) = ");
+		
 			ch = sc.nextInt();
+			
 			if (ch == 7)
 				return;
 			if ((ch >= 1) && (ch <= 4)) {
