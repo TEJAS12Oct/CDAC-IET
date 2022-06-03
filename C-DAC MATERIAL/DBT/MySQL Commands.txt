@@ -1103,7 +1103,10 @@ LAB 19/5/2022
 
 ---------------------------------------------------------------------
 
-22/05/2022
+24/05/2022
+
+select ROUTINE_NAME,ROUTINE_TYPE,ROUTINE_DEFINITION from information_schema.routines where ROUTINE_SCHEMA='db2';
+
 
 create databases db5;
 use db5;
