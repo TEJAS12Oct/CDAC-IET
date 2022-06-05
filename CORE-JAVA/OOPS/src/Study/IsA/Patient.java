@@ -1,7 +1,7 @@
 package Study.IsA;
 
 import Study.IsA.MyDate;
-//import Study.HasA.MyDate;
+// import Study.HasA.MyDate;
 
 public class Patient extends Person {
 	private String bloodGroup;

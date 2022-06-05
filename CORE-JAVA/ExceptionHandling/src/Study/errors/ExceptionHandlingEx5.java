@@ -11,9 +11,9 @@ public class ExceptionHandlingEx5 {
 
 	public static void F1() {
 		try {
-			showHeight(-77);
+			showHeight(-7);
 		} catch (Exception e) {
-			 e.printStackTrace();
+	//		 e.printStackTrace();
 			System.out.println("the height cannot be negative");
 		}
 	}

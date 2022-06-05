@@ -30,6 +30,7 @@ public class User {
 				System.out.println("Enter name you want to add in list : ");
 				String aname = sc.next();
 				BirthdayList.addName(guest, aname);
+				
 				break;
 			}
 			case 'b': {

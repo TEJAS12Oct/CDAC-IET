@@ -8,11 +8,11 @@ public class ExceptionHandlingEx4 {
 	}
 
 	public static void F1() throws Exception {
-		// showHeight(7);
-		showHt(8);
+		showHeight(-3);
+	//	 showHt(-3);
 	}
 
-	private static void showHt(int i) {
+	private static void showHt(int i)  {
 		try {
 			if (i > 0)
 				System.out.println("Ht Of Building : " + i);
@@ -28,9 +28,19 @@ public class ExceptionHandlingEx4 {
 		if (x > 0)
 			System.out.println("Ht Of Building : " + x);
 		else {
+			
 			Exception e = new Exception();
+		
+			System.out.println("Tej");
+		
+			System.out.println(e);
+			
+			System.out.println("JAWALE");
 			throw e;
+		
 		}
+		System.out.println("End");
+		
 	}
 
 }

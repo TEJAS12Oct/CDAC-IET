@@ -51,12 +51,13 @@ public class Person implements Comparable<Person> {
 		return "Person [name=" + name + ", id=" + id + ", dob=" + dob + "]";
 	}
 
-//	@Override
-//	public int compareTo(Person o) {
-////  We Have to Decided the Basics Of Sorting --> By Name OR By DOB
-//		return this.name.compareTo(o.name);
-//	}
+	@Override
+	public int compareTo(Person o) {
+//  We Have to Decided the Basics Of Sorting --> By Name OR By DOB
+		return this.name.compareTo(o.name);
+	}
 
+/*
 	@Override
 	public int compareTo(Person o) {
 
@@ -67,4 +68,5 @@ public class Person implements Comparable<Person> {
 		else
 			return 0;
 	}
+*/	
 }

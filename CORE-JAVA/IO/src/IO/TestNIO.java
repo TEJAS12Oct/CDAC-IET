@@ -12,7 +12,7 @@ public class TestNIO {
 
 	public static void main(String[] args) throws IOException {
 
-		Path T = Paths.get("F:\\IET\\CODING\\CORE-JAVA\\TEJAS.txt");
+		Path T = Paths.get("F:\\IET\\CODING\\CORE-JAVA\\TEJ.txt");
 		
 		Files.createFile(T);
 		
@@ -27,3 +27,7 @@ public class TestNIO {
 	}
 
 }
+
+
+
+

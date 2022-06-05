@@ -34,6 +34,7 @@ public class GroceryStore {
 				new MyDate(3, 8, 2022));
 		
 		Collection<FoodProducts> ints = Arrays.asList(FP1, FP2, FP3, FP4, FP5);
+	
 		AL.addAll(ints);
 		
 		Scanner SC = new Scanner(System.in);

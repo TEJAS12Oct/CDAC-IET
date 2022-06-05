@@ -9,6 +9,7 @@ public class PersonSortExample {
 
 	public static void main(String[] args) {
 		ArrayList<Person> AL = new ArrayList<Person>();
+	
 		AL.add(new Person("Tejas", 1, new MyDate(12, 10, 2022)));
 		AL.add(new Person("RAM", 15, new MyDate(2, 2, 2020)));
 		AL.add(new Person("RAM", 25, new MyDate(3, 1, 2020)));
@@ -46,17 +47,17 @@ class DOBComparator implements Comparator<Person> {
 
 }
 
-//class IDComparator implements Comparator<Person> {
-//
-//	@Override
-//	public int compare(Person o1, Person o2) {
-//
-//		if (o1.getId() > o2.getId())
-//			return 1;
-//		if (o1.getId() < o2.getId())
-//			return -1;
-//		else
-//			return 0;
-//	}
-//
-//}
+class IDComparator implements Comparator<Person> {
+
+	@Override
+	public int compare(Person o1, Person o2) {
+
+		if (o1.getId() > o2.getId())
+			return 1;
+		if (o1.getId() < o2.getId())
+			return -1;
+		else
+			return 0;
+	}
+
+}

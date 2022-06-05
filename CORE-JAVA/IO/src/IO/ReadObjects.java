@@ -7,6 +7,7 @@ import java.io.ObjectInputStream;
 
 public class ReadObjects {
 	public static void main(String[] args) throws ClassNotFoundException, IOException {
+	
 		FileInputStream FIN = new FileInputStream("F:\\IET\\CODING\\CORE-JAVA\\data.Tejas");
 		ObjectInputStream Oin = new ObjectInputStream(FIN);
 		while (true) {

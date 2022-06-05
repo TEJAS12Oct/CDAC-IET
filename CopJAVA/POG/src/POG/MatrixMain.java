@@ -18,7 +18,7 @@ public class MatrixMain {
 		System.out.println("Addition : \n" + res);
 
 		res = m1.multiply(m2);
-		System.out.println(" Multiplication = \n" + res);
+		System.out.println("Multiplication = \n" + res);
 
 	}
 

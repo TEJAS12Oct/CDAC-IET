@@ -8,7 +8,7 @@ public class User {
 		E.setDept("IT");
 
 		try {
-			E.setDOB(new MyDate(12, 10, 1940));
+			E.setDOB(new MyDate(12, 10, 2015));
 		} catch (Under18Exception E1) {
 			System.out.println(E1);
 		} catch (Above70Exception E1) {

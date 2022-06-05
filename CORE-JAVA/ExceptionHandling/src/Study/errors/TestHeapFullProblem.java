@@ -4,12 +4,11 @@ public class TestHeapFullProblem {
 
 	public static void main(String[] args) {
 		BigData[] arr = new BigData[10000];
-		for(int i=0;i<100;i++)
+		for(int i=0;i<1000;i++)
 		{
 			System.out.println(i);
 			arr[i] = new BigData();
-			//
-			//
+			
 			arr[i] = null;
 			System.gc();
 		}

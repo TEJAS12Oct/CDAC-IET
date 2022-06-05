@@ -17,14 +17,15 @@ public class ClacUser {
 			System.out.println("Enter Operator = ");
 			char Operator = sc.next().charAt(0);
 
-			if (Operator == '0')
+			if (Operator == '0') {
+				System.out.println("END...........!!");
 				break;
+			}
 
 			int result = calculator.calculate(num1, num2, Operator);
 			System.out.println("Result = " + result + "\n");
 			System.out.println("0.exit" + " \n");
 
-			
 		} while (true);
 	}
 

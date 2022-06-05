@@ -1,14 +1,16 @@
 package Collection;
 
+import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 import java.util.TreeSet;
 
 public class SetExample2 {
 // Only PreOrder  // TreeHashSet
 	public static void main(String[] args) {
 
-		TreeSet<Dummy> TS = new TreeSet<Dummy>();
-//		TreeSet<Dummy> TS = new TreeSet<Dummy>(new IDOrdering());
+//		TreeSet<Dummy> TS = new TreeSet<Dummy>();
+		TreeSet<Dummy> TS = new TreeSet<Dummy>(new IDOrdering());
 
 		TS.add(new Dummy(1, "AA"));
 		TS.add(new Dummy(12, "BB"));
@@ -17,6 +19,9 @@ public class SetExample2 {
 
 		for (Dummy D : TS)
 			System.out.println(D);
+		
+		
+
 	}
 
 }

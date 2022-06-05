@@ -13,10 +13,10 @@ public class HashSetExample {
 //		HashSet<Integer> HS = new HashSet<Integer>();
 
 //		Enter / Insertion Ordering
-//		LinkedHashSet<Integer> HS = new LinkedHashSet<Integer>();
+		LinkedHashSet<Integer> HS = new LinkedHashSet<Integer>();
 
 //		Sorted
-		TreeSet<Integer> HS = new TreeSet<Integer>();
+//		TreeSet<Integer> HS = new TreeSet<Integer>();
 
 		Collection<Integer> ints = Arrays.asList(45, 3, 12, 1, 99, 65, 78, 2, 21);
 		HS.addAll(ints);

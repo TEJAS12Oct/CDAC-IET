@@ -4,8 +4,11 @@ public class MainThread {
 
 	public static void main(String[] args) {
 		Account a = new Account(5000);
+	
 		DepositeThread TH1 = new DepositeThread(a);
+		
 		WithDrawThread TH2 = new WithDrawThread(a);
+		
 		TH1.start();
 		TH2.start();
 	}

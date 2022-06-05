@@ -7,6 +7,7 @@ public class MainThread1 {
 		TableGenrationTask Task1 = new TableGenrationTask();
 		Thread Thread1 = new Thread(Task1);
 		Thread1.start();
+//		Thread1.run();
 		
 		
 		FactorialTask FT = new FactorialTask();

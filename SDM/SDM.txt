@@ -1,0 +1,116 @@
+1.1 Purpose of this document
+
+The purpose of this document is to outline the requirements for the eCommerce (Business to Customer)
+ Product to be developed for IBEE Solutions (P) Ltd.
+
+Front end (customer storefront)
+
+Products Catalog
+Customer’s registration
+Customer account
+Products Search
+Advanced Search
+Products Comparison
+Price list
+News
+Feedback
+Shopping cart
+Checking out
+Polls
+Back end (administrative tools)
+
+Login
+Managing products catalog
+Adding new categories/subcategories
+Viewing/Editing/deleting  existing categories
+Adding new products
+Viewing/Editing/deleting existing product entry
+Table of products
+Importing products
+Exporting products
+Synchronization tools
+Product custom options
+Special offers
+Discussions
+Defining Polls
+Adding news
+Reports
+
+
+4.2 Functional Requirements
+
+4.2.1 Front end (Store front) Requirements
+
+Connecting to Application with Valid URL
+
+ 1.0            User home page-All features availability
+ 1.1            Registration
+         			Taking Login Name
+      			   Taking Password
+         			Taking confirm Password
+     			    Selecting salute (Any one)
+       			  Taking first name
+      			   Taking middle name
+       	  		 Taking last name
+         			Taking e-mail in the e-mail format
+         			 Selecting profession
+        			  Taking phone number (Mandatory)
+       			Taking Fax number
+    		 	  Taking date of birth
+      			Taking passport number
+       			 Taking address including city, state zip &amp; country
+   			   Submitting the form
+       			Resetting the form
+
+ 1.2            Login
+
+      		   Taking user name
+	              Taking Password
+	          Providing forgot password option
+   		  Submitting e-mail address and getting user info through our mail ID.
+          		Submission of the Login
+
+ 1.3            Products Catalog
+
+		        All entered categories and products availability.
+
+ 1.4            Products search
+
+		       Taking input values and finding
+		        Displaying results in another screen if not found providing message.
+
+ 1.5            Advanced search
+
+		       Selecting category &amp; taking product name, Taking price range, color etc and finding.
+		        Displaying result as per customization of not available providing message.
+
+ 1.6            Products comparison
+
+		        Selecting products for comparison [two or more] and getting comparison.
+
+ 1.7            Shopping Process
+
+		          Browsing through categories, selecting products to buy.
+		          Able to view detailed information in the separate screen.
+		        Choosing quantity and continue buying
+		          Updating quantity and removing requirements.
+
+ 1.8            Checking out (completing transaction by providing payment option)
+
+1.9            Voting for poll
+
+	         Selecting one option, voting and getting the pole results
+		(we can vote one time per session only)
+
+1.10           Viewing news
+
+		        Selecting displayed news item and getting that news.
+
+1.11           Feed back
+
+		        Taking information like product name, name, e-mail, message and submitting.
+		        Input data resetting facility.
+
+ 1.12           Price list
+
+		       Getting existing products price list in detail.

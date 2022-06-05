@@ -16,7 +16,7 @@ public class ThreadAPIExample {
 		TH3.start();
 
 		Thread TH4 = new Thread(new TableGenrationTask());
-		TH4.setName("Fourth");
+//		TH4.setName("Fourth");
 		TH4.start();
 	}
 

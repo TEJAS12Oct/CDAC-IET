@@ -1,6 +1,8 @@
 package Collection;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.TreeSet;
 
 public class HashSetExample2 {
 	public static void main(String[] args) {

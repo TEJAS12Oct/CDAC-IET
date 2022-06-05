@@ -5,10 +5,14 @@ public class JoinExample {
 	public static void main(String[] args) throws InterruptedException {
 		Thread TH1 = new Thread(new Task(10));
 		TH1.start();
-
+		
 		TH1.join(); // Main Thread Pause Till TH1 is Completed
 		System.out.println("JOB DONE THANK YOU.........!!!!!!!!");
-	
+		
+		Thread TH2 = new Thread(new Task(10));
+		TH2.start();
+		TH2.join();
+		System.out.println("JOB DONE THANK YOU.........!!!!!!!!");
 	}
 }// End of Join Class
 

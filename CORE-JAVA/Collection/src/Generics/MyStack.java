@@ -1,6 +1,7 @@
 package Generics;
 // Formal type Parameter => PlaceHolder
 public class MyStack<T> {
+	
 	private T[] arr;
 	private int top = -1;
 

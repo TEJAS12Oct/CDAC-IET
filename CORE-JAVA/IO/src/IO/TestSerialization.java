@@ -15,9 +15,11 @@ public class TestSerialization {
 		obj.x = 888;
 		obj.y = 999;
 		obj.Dep = new Dep();
-		obj.Dep.Z=777;
-		FileOutputStream FOUT = new FileOutputStream("F:\\IET\\CODING\\CORE-JAVA\\test.TEJA",true);
+		obj.Dep.Z = 777;
+
+		FileOutputStream FOUT = new FileOutputStream("F:\\IET\\CODING\\CORE-JAVA\\test.TEJA", true);
 		ObjectOutputStream Oout = new ObjectOutputStream(FOUT);
+
 		Oout.writeObject(obj);
 		Oout.flush();
 		Oout.close();
@@ -29,7 +31,7 @@ public class TestSerialization {
 		while (true) {
 			try {
 				sub obj2 = (sub) Oin.readObject();
-				System.out.println("X = " + obj.x + " , Y = " + obj.y +" , Z = "+ obj.Dep.Z);
+				System.out.println("X = " + obj.x + " , Y = " + obj.y + " , Z = " + obj.Dep.Z);
 			} catch (Exception E) {
 				System.out.println(E);
 				break;
