@@ -1,0 +1,212 @@
+mysql> create database Assignment1;
+Query OK, 1 row affected (0.03 sec)
+
+mysql> use assignment1;
+Database changed
+
+mysql> create table employee(employeeID int primary key, firstName varchar(12),lastName varchar(10),gender enum('m','f'));
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> desc employee;
++------------+---------------+------+-----+---------+-------+
+| Field      | Type          | Null | Key | Default | Extra |
++------------+---------------+------+-----+---------+-------+
+| employeeID | int           | NO   | PRI | NULL    |       |
+| firstName  | varchar(12)   | YES  |     | NULL    |       |
+| lastName   | varchar(10)   | YES  |     | NULL    |       |
+| gender     | enum('m','f') | YES  |     | NULL    |       |
++------------+---------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> alter table employee add hiredate date;
+Query OK, 0 rows affected (0.04 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> insert into employee values(1,'Tejas','Jawale','M',20220516);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into employee values(2,'Ruchita','Patil','M',20220516),(3,'Mayur','Nigade','M',20220517);
+Query OK, 2 rows affected (0.00 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from employee;
++------------+-----------+----------+--------+------------+
+| employeeID | firstName | lastName | gender | hiredate   |
++------------+-----------+----------+--------+------------+
+|          1 | Tejas     | Jawale   | m      | 2022-05-16 |
+|          2 | Ruchita   | Patil    | m      | 2022-05-16 |
+|          3 | Mayur     | Nigade   | m      | 2022-05-17 |
++------------+-----------+----------+--------+------------+
+3 rows in set (0.00 sec)
+
+mysql> desc Employee;
++------------+---------------+------+-----+---------+-------+
+| Field      | Type          | Null | Key | Default | Extra |
++------------+---------------+------+-----+---------+-------+
+| employeeID | int           | NO   | PRI | NULL    |       |
+| firstName  | varchar(12)   | YES  |     | NULL    |       |
+| lastName   | varchar(10)   | YES  |     | NULL    |       |
+| gender     | enum('m','f') | YES  |     | NULL    |       |
+| hiredate   | date          | YES  |     | NULL    |       |
++------------+---------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> create table department(department_id int primary key,name varchar(20),location set('VADODARA', 'SURAT', 'ANAND', 'RAJKOT', 'JAMNAGAR', 'NAVSAR','BHARUCH','VAPI'));
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> desc department;
++---------------+-------------------------------------------------------------------------------+------+-----+---------+-------+
+| Field         | Type                                                                          | Null | Key | Default | Extra |
++---------------+-------------------------------------------------------------------------------+------+-----+---------+-------+
+| department_id | int                                                                           | NO   | PRI | NULL    |       |
+| name          | varchar(20)                                                                   | YES  |     | NULL    |       |
+| location      | set('VADODARA','SURAT','ANAND','RAJKOT','JAMNAGAR','NAVSAR','BHARUCH','VAPI') | YES  |     | NULL    |       |
++---------------+-------------------------------------------------------------------------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> insert into department values(1,'physics',3);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into department values(2,'Maths','VAPI');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into department values(10,'physics',1);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into department values(8,'Maths',5);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from department;
++---------------+---------+----------------+
+| department_id | name    | location       |
++---------------+---------+----------------+
+|             1 | physics | VADODARA,SURAT |
+|             2 | Maths   | VAPI           |
+|             8 | Maths   | VADODARA,ANAND |
+|            10 | physics | VADODARA       |
++---------------+---------+----------------+
+4 rows in set (0.00 sec)
+
+mysql> create table employee_department (id int primary key , department_id int, foreign key(department_id) references department(department_id) , employeeID int, foreign key (employeeID) references employee(employeeID),fromdate date, todate date);
+Query OK, 0 rows affected (0.11 sec)
+
+mysql> desc employee_department;
++---------------+------+------+-----+---------+-------+
+| Field         | Type | Null | Key | Default | Extra |
++---------------+------+------+-----+---------+-------+
+| id            | int  | NO   | PRI | NULL    |       |
+| department_id | int  | YES  | MUL | NULL    |       |
+| employeeID    | int  | YES  | MUL | NULL    |       |
+| fromdate      | date | YES  |     | NULL    |       |
+| todate        | date | YES  |     | NULL    |       |
++---------------+------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> create table salary (id int primary key, employeeid int ,foreign key(employeeid) references employee(employeeID),fromdate date,todate date, salary int);
+Query OK, 0 rows affected (0.11 sec)
+
+mysql> desc salary;
++------------+------+------+-----+---------+-------+
+| Field      | Type | Null | Key | Default | Extra |
++------------+------+------+-----+---------+-------+
+| id         | int  | NO   | PRI | NULL    |       |
+| employeeid | int  | YES  | MUL | NULL    |       |
+| fromdate   | date | YES  |     | NULL    |       |
+| todate     | date | YES  |     | NULL    |       |
+| salary     | int  | YES  |     | NULL    |       |
++------------+------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> create table commission (id int primary key,employeeid int, foreign key(employeeid) references employee(employeeid),fromdate date,todate date,commission int);
+Query OK, 0 rows affected (0.11 sec)
+
+mysql> desc commission;
++------------+------+------+-----+---------+-------+
+| Field      | Type | Null | Key | Default | Extra |
++------------+------+------+-----+---------+-------+
+| id         | int  | NO   | PRI | NULL    |       |
+| employeeid | int  | YES  | MUL | NULL    |       |
+| fromdate   | date | YES  |     | NULL    |       |
+| todate     | date | YES  |     | NULL    |       |
+| commission | int  | YES  |     | NULL    |       |
++------------+------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql>  create table contact (id int primary key, employeeid int , foreign key(employeeid) references employee(employeeid) , phonenumber bigint(12), emailID varchar(40));
+Query OK, 0 rows affected, 1 warning (0.10 sec)
+
+mysql> desc contact;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| id          | int         | NO   | PRI | NULL    |       |
+| employeeid  | int         | YES  | MUL | NULL    |       |
+| phonenumber | bigint      | YES  |     | NULL    |       |
+| emailID     | varchar(40) | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> create table address (id int primary key , employeeid int, foreign key (employeeid) references employee(employeeid),line1 varchar(30), line2 varchar(30), city varchar(20), pin int);
+Query OK, 0 rows affected (0.18 sec)
+
+mysql> desc address;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| id         | int         | NO   | PRI | NULL    |       |
+| employeeid | int         | YES  | MUL | NULL    |       |
+| line1      | varchar(30) | YES  |     | NULL    |       |
+| line2      | varchar(30) | YES  |     | NULL    |       |
+| city       | varchar(20) | YES  |     | NULL    |       |
+| pin        | int         | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> create table qualification (id int primary key,employeeid int , foreign key(employeeid) references employee(employeeid), name varchar(10),stream varchar(18),admissionyear date,institute varchar(15),university varchar(25),yearofpassing int,percentage float(7,2),grade enum('A+','A','B+','B','C+','C'));
+Query OK, 0 rows affected, 1 warning (0.09 sec)
+
+mysql> desc qualification;
++---------------+----------------------------------+------+-----+---------+-------+
+| Field         | Type                             | Null | Key | Default | Extra |
++---------------+----------------------------------+------+-----+---------+-------+
+| id            | int                              | NO   | PRI | NULL    |       |
+| employeeid    | int                              | YES  | MUL | NULL    |       |
+| name          | varchar(10)                      | YES  |     | NULL    |       |
+| stream        | varchar(18)                      | YES  |     | NULL    |       |
+| admissionyear | date                             | YES  |     | NULL    |       |
+| institute     | varchar(15)                      | YES  |     | NULL    |       |
+| university    | varchar(25)                      | YES  |     | NULL    |       |
+| yearofpassing | int                              | YES  |     | NULL    |       |
+| percentage    | float(7,2)                       | YES  |     | NULL    |       |
+| grade         | enum('A+','A','B+','B','C+','C') | YES  |     | NULL    |       |
++---------------+----------------------------------+------+-----+---------+-------+
+10 rows in set (0.00 sec)
+
+mysql> create table hobbies(id int primary key, employeeid int,foreign key(employeeid) references employee(employeeid),name varchar(25));
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> desc hobbies;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| id         | int         | NO   | PRI | NULL    |       |
+| employeeid | int         | YES  | MUL | NULL    |       |
+| name       | varchar(25) | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+3 rows in set (0.01 sec)
+
+mysql> create table jobhistory (id int primary key, employeeid int , foreign key(employeeid) references employee(employeeid), employer varchar(20),fromdate date, todate date, nature_of_job varchar(50));
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> desc jobhistory;
++---------------+-------------+------+-----+---------+-------+
+| Field         | Type        | Null | Key | Default | Extra |
++---------------+-------------+------+-----+---------+-------+
+| id            | int         | NO   | PRI | NULL    |       |
+| employeeid    | int         | YES  | MUL | NULL    |       |
+| employer      | varchar(20) | YES  |     | NULL    |       |
+| fromdate      | date        | YES  |     | NULL    |       |
+| todate        | date        | YES  |     | NULL    |       |
+| nature_of_job | varchar(50) | YES  |     | NULL    |       |
++---------------+-------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
