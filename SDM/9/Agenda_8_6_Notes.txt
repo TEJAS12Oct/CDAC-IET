@@ -132,13 +132,13 @@ Steps for launching simple web site with welcome page using Virtual server launc
 19.you can now install Nodejs and NPM on your system using the command below:
 	$ sudo yum -y install nodejs
 20.Check node js intalled by following command
-	$ nodejs -v
+	$ nodejs -v // node -v
 21.change directory to webapp in Transflower folder
 	cd webapp
 22.Download libraries to run Node JS application using following command
 	npm install 
 23.Run Command  
-	node server.js to start running web server using nodejs and listen on port 8100.
+	node server.js to start running web server using nodejs and listen on port 8100.// (8081)
 24.Configure firewall to accep  alltraffic from anywhere using inbound rule to be set to Security Group of launched instanced.
 25.Check the Public IP address of Launched instance (Virtual Server)/.
 26.Open Browser and access website Url .
