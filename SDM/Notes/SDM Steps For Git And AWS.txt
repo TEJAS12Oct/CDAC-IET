@@ -1,0 +1,47 @@
+Step1:Create a public repository. 
+
+Step2:Git Clone our own repositary link. 
+
+Step3:Git Clone sir repositery. 
+
+Step4:Copy Paste Files From Sir resp folder to our resp folder 
+
+Step5:Change Directory to our repositary folder 
+
+Step6:git add .  (Add all files to our resp) 
+
+Step7:git commit -m "desc" 
+
+Step8:git push (check the files where pushed) 
+
+Step9:Login Aws Account 
+
+Step10:Create New Server 
+
+Step11:Connect to the Server 
+
+Step12:sudo yum update (update your linux package) 
+
+Step13:sudo yum install docker 
+
+Step14:docker --version 
+
+Step15:sudo systemctl status docker (Docker Status) 
+
+Step16:sudo systemctl enable docker 
+
+             sudo systemctl  start docker 
+
+Step17:sudo systemctl status docker (Check Docker Is Running Or Not) 
+
+Step18:change directory to required folder for eg. Cd nodeapp 
+
+Step19:sudo system build -t filename . (to create images) 
+
+Step20:sudo docker run --name servername -d -p 8081:8081 filename 
+
+Step21:sudo docker ps (for container id) 
+
+Step22:Copy public ip (for eg. 123.44.5.6:8081) with port number 
+
+Step23:sudo docker kill containerid (to kill docker) 
