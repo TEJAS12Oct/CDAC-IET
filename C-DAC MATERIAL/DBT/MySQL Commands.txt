@@ -81,6 +81,11 @@ C:\> mysql --host=localhost --port=3306 --user=root --password=ROOT [database_na
 -------------------------------------------------------------------------
 
 ******************  Primary key ******************
+# one table have one primary key
+# primary data will always unique data
+# primary-key value can't be null.
+
+
 1. create table a (id int primary key, ename varchar(20));
 
 2. create table a2 (id int, ename varchar(20));
@@ -95,6 +100,9 @@ C:\> mysql --host=localhost --port=3306 --user=root --password=ROOT [database_na
 -------------------------------------------------------------------------
 
 ******************* Unique Key **********************
+
+# Duplicate Not Allowed
+# null allowed
 
 1. create table u(id int primary key, ename varchar(20), phone varchar(10) unique);
 2. create table u1(id int primary key, ename varchar(20), phone varchar(10), unique key(phone));
@@ -111,6 +119,10 @@ C:\> mysql --host=localhost --port=3306 --user=root --password=ROOT [database_na
 -------------------------------------------------------------------------
 
 ****************** Foreign Key ***********************
+
+# Duplicate Allowed
+# null Allowed
+
 
 1. create table dept(deptid int primary key, dname varchar(10));
 2. create table address(empid int, city varchar(20), foreign key(empid) references emp(empid));

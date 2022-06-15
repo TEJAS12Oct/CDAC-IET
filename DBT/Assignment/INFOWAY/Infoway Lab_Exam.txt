@@ -1,0 +1,69 @@
+Section A : Question no 1 to 10: 2 Marks
+1.	Write a query to fetch ALTERNATE records from a STUDENT table. (EVEN Numbered Record).
+Answer:-
+     Select id, namefirst from student group by Id having mod(ID, 2) =0;
+2.	Display the student detail that has joined the same batch of the student ‘pankaj’.
+Answer:-
+select * from student, batch_student where student.ID = batch_student.studentID and batchID IN(select batchID from student, batch_student where student.ID = batch_student.studentID and namefirst = 'pankaj');
+
+3.	Display all students who have taken admission in more than 2 batches.
+Answer:-
+select student.*, batch_students where student.ID = batch_student.studentID and batchID IN(select studentID from batch_students group by studentID having count(studentID > 2) group by studentID;
+
+4.	Display all courses where least number of students has taken the admission.
+Answer:-
+select * from course_batches where course.ID = courseID and capacity = (select min(capacity) from course_batches) order by name;
+
+
+
+5.	Find the student details that have scored 3rd highest marks in 'BE'.
+Answer:- 
+select max(marks) from students, student_qualifications where student.ID = student_qualifications.studentID and name = 'BE' and ID < ((select max(marks) from student_qualifications where name = 'BE') < (select max(marks) from student_qualifications where name = 'BE'))
+
+6. Write a query to count total student who have done 'BE' and year of passing is 2017.
+Answer:-
+select name,year, count(*) from student_qualifications where name='BE' and year='2017';
+
+
+7. Select all students records whose namefirst starts with 'S' and its length is 6 char.
+Answer:-
+select * from student where length(namefirst)=6 and namefirst like 'S%';
+
+8. Write a query to fetch first 10 records from Student Table, arrange the records in ascending order of namefirst.
+Answer:-
+select *,namefirst from student order by namefirst limit 10;
+
+
+
+
+9. Write a query to display the student details along with their phone number who have more than one phone.
+Answer:-
+select *, studentid , count(number) from student_phone group by studentid having count(number)>2;
+
+10.    Write a query to display all students who are born in the year 1984.
+Answer:-
+select * from student where year(dob)=’1984’;
+
+
+
+Section B:  10 Marks 
+Write studentSearch Stored Procedure. Pass studentID as parameter, if the entered studentID is present in the STUDENT Table display the student details with his qualification details. If the studentID is not present then display the message “Student not found”.       
+Answer:-
+drop procedure if exists studentSearch;
+delimiter $
+create procedure studentSearch(x int)
+begin
+         declare b int;
+         select id into b from student where id = x;
+         
+         if x is not null then
+                   select * from student join student_qualifications where student.ID = student_qualifications.studentID;
+        else
+                   select "Student Not Found" as "Error Message";
+        end if;
+end $
+delimiter ;
+
+
+                
+

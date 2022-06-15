@@ -1,0 +1,122 @@
+Name : Tejas Satish Jawale
+PRN : 220345920049
+
+
+Section 1: (10 marks – each for 1 mark)
+
+1.  Display employee information in ascending order of Month Name of hiredate.
+Ans :  select emp.* , date_formate(hiredate,'%M') as month from emp order by date_formate(hiredate,'%M');
+       select * from emp order by month(hiredate);
+
+2.  Write a query to fetch ALTERNATE records from a EMP table.  (ODD Numbered Record).
+Ans : select * from(select row_number() over() as "rank",emp.* from emp) a1 where a1.rank % 2=1;
+
+3.  Calculate the avg, min and max salary of those groups of employees having the job as CLERK or MANAGER.
+Ans : select job='manager', job='clerk', avg(sal),max(sal),min(sal) from emp group by job having job='manager' or job='clerk';
+
+4.  Display the name of job where least number of persons are working.
+Ans : 1. select job,count(*) from emp group by job;
+      2. select job from emp group by job having count(*)=1;
+
+5.  Write an SQL command that displays 2nd lowest salary paid.
+Ans : select * from emp order by  sal limit 1 , 1;
+
+6.  Write a query to display ename, job, sal and comm, if the comm is null then display “No commission”.
+Ans : select ename,job,sal,comm, if(comm is null, 'No Commission', comm) Commission from emp;
+
+7.  Find department-wise average salary where more than three employees are working.
+Ans :  select avg(sal) from emp group by job having count(job)>3;
+
+8.  Display all employees whose salary is more than 'ADAMS' salary.
+Ans : select * from emp where sal> (select sal from emp where ename='Adams');
+
+9.  Display all employees whose salary > lowest salary and sal < highest salary of all employees.
+Ans :  select * from emp order by sal;
+       select * from emp where  sal>800  or sal<5000;    
+
+10. Display in which year max employee have joined.
+Ans :  select year(hiredate) year ,count(*)"total employee" from emp  group by year(hiredate) order by "total employee" desc limit 1;
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Section 2: (30 marks – each for 15 marks)
+1.  Write a procedure the print all employee details using cursors.
+Ans : 
+
+drop procedure if exists PrintEmp;
+delimiter $
+create procedure PrintEmp()
+begin
+	declare _empno int;
+	declare _ename varchar(20);
+	declare _gender char(1);
+	declare _job varchar(20);
+	declare _mgr int;
+	declare _hiredate date;
+	declare _sal int;
+	declare _comm int;
+	declare _deptno int;
+	declare _bonusid int;
+	declare _username varchar(30);
+	declare _pwd varchar(30);
+	declare _phone varchar(20);
+	declare _isactive int(1);
+	
+	
+	declare c1 cursor   for select * from emp;
+	
+	declare exit handler for 1329 select "NO MORE RECORD TO FETCH";
+	
+	open c1;
+	
+		lbl:loop
+			fetch c1 into _empno, _ename,_gender, _job,_mgr,_hiredate,_sal ,_comm,_deptno,_bonusid,_username ,_pwd,_phone,_isactive ;
+	
+			select _empno ,_ename ,_gender , _job, _mgr ,_hiredate,_sal , _comm, _deptno,_bonusid, _username ,_pwd , _phone , _isactive ;
+			
+		end loop lbl;
+	close c1;
+end $
+delimiter ;
+
+
+2.  Create a new table called STUDENT having following columns (studentID, namefirst, namelast, DOB, and emailID). 
+    Write a function names myAutoNumber to return auto generate number and use that number as studentID 
+    and insert the value in studentID column. Check if namefirst and namelast is already present in the table,     
+    then display a message “Student exists”.
+
+
+Ans : 
+
+create table student(studentID bigint primary  key auto_increment, namefirst varchar(20), namelast varchar(20), DOB varchar(20),emailID varchar(20) );
+
+desc student;
+
+insert into student values(default,"TEJAS","JAWALE","12-10-1999","TEJAS@gmail.com");
+insert into student values(default,"RAM","PATIL","15-3-2001","RAM@gmail.com");
+
+table Student;
+
+drop procedure if exists Display;
+delimiter $
+create procedure Display(in para_Message varchar(2000))
+begin
+	 select para_Message as "Message Box" ;
+end $
+delimiter ;
+
+drop function if exists MyAutoNumber;
+delimiter $
+create function MyAutoNumber() returns bigint
+deterministic
+begin 
+      return (round(rand()*100));
+/*   
+    if (namefirst exits Student && namelast exits Student)
+      then
+    call Display("Student exists");
+*/
+end $
+delimiter ;
