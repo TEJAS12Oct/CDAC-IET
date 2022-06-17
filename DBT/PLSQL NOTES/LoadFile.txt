@@ -1,0 +1,68 @@
+
+
+
+
+mysql> create table aa(id int,jdate date,name varchar(10));
+Query OK, 0 rows affected (0.11 sec)
+
+mysql> load data infile "F\abc.csv" into table aa fields terminated by "," lines terminated by "\n";
+ERROR 29 (HY000): File 'C:\ProgramData\MySQL\MySQL Server 8.0\Data\db2\Fabc.csv' not found (OS errno 2 - No such file or directory)
+
+mysql> load data infile "F:\abc.csv" into table aa fields terminated by "," lines terminated by "\n";
+Query OK, 4 rows affected (0.00 sec)
+Records: 4  Deleted: 0  Skipped: 0  Warnings: 0
+
+mysql> select * from aa;
++------+------------+------+
+| id   | jdate      | name |
++------+------------+------+
+ |   1 | 2014-02-19 | abc
+ |   2 | 2015-04-20 | xyz
+ |   3 | 2016-06-15 | pqr
+|    4 | 1999-05-11 | stu  |
++------+------------+------+
+4 rows in set (0.00 sec)
+
+mysql> load data infile "F:\abc.csv" into table aa fields terminated by "," lines terminated by "\n";
+ERROR 1366 (HY000): Incorrect integer value: 'ID' for column 'id' at row 1
+mysql> load data infile "F:\abc1.csv" into table aa fields terminated by "," lines terminated by "\n" ignore 1 rows;
+ERROR 29 (HY000): File 'F:\abc1.csv' not found (OS errno 2 - No such file or directory)
+mysql> load data infile "F:\abc.csv" into table aa fields terminated by "," lines terminated by "\n" ignore 1 rows;
+Query OK, 4 rows affected (0.00 sec)
+Records: 4  Deleted: 0  Skipped: 0  Warnings: 0
+
+mysql> select * from aa;
++------+------------+------+
+| id   | jdate      | name |
++------+------------+------+
+ |   1 | 2014-02-19 | abc
+ |   2 | 2015-04-20 | xyz
+ |   3 | 2016-06-15 | pqr
+|    4 | 1999-05-11 | stu  |
+ |   1 | 2014-02-19 | abc
+ |   2 | 2015-04-20 | xyz
+ |   3 | 2016-06-15 | pqr
+|    4 | 1999-05-11 | stu  |
++------+------------+------+
+8 rows in set (0.00 sec)
+
+mysql> drop table aa;
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> create table aa(c1 int,c2 date,c3 varchar(10));
+Query OK, 0 rows affected (0.21 sec)
+
+mysql> load data infile "F:\abc.csv" into table aa fields terminated by "," lines terminated by "\n" ignore 1 rows;
+Query OK, 4 rows affected (0.00 sec)
+Records: 4  Deleted: 0  Skipped: 0  Warnings: 0
+
+mysql> select * from aa;
++------+------------+------+
+| c1   | c2         | c3   |
++------+------------+------+
+ |   1 | 2014-02-19 | abc
+ |   2 | 2015-04-20 | xyz
+ |   3 | 2016-06-15 | pqr
+|    4 | 1999-05-11 | stu  |
++------+------------+------+
+4 rows in set (0.00 sec)

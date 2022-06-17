@@ -1,0 +1,440 @@
+A#Q1. Abstract class
+I. A class that cannot be instantiated.
+II. A class that must be inherited.
+III. A class in which all methods are abstract.
+IV. A class in which all methods are public.
+A. Only II
+B. I and II
+C. I, II, III
+D. All
+A#Q1ANS=B
+A#Q2. 
+If several controls on a form bind to the same data source, they 
+share the same ______class.
+A. BindingContext
+B. CurrencyManager
+C. Dataset
+D. DataReader
+A#Q2ANS=A
+A#Q3. Which of the following statements are true?
+A. A running thread goes in waiting state when it waits for another thread to perform 
+   the task. It resumes its running state when specific time interval is complete.
+B. Monitor class provides functionality to perform atomic operations for variables 
+   that are shared by multiple threads.
+C. A deadlock condition occurs when each of the two threads tries to lock a 
+   resource that the other has already locked.
+D.  A and B
+A#Q3ANS=D
+A#Q4. If a method is marked as virtual in a class, then
+A. Classes inheriting from it must override the method.
+B. Classes inheriting from it within the same assembly can override the method.
+C. Classes inheriting from it within or outside the assembly override the method.
+D. The method cannot be inherited.
+A#Q4ANS=C
+A#Q5.
+You develop a Windows-based application by using Visual Studio .NET. The 
+application includes a new student entry form that contains multiple textboxes.
+One of the textbox accepts age of the student. You want to accept only digits 
+in this textbox. Which of the following events will you choose to write your code in?
+A. MouseOver
+B. KeyPress
+C. GetFocus
+D. Both MouseOver, KeyPress.
+A#Q5ANS=B
+
+A#Q6. Which of the following are value types?
+A. Structures
+B. enumerated types.
+C. integers
+D.  ALL
+A#Q6ANS=
+A#Q7. Which of the following are .NET providers?
+i. Connection
+ii. DataSet
+iii. Command
+iv. DataReader
+v. DataTable
+A. i , iii , iv
+B. ii , v
+C. ii , iii ,iv
+D. all are .NET providers
+A#Q7ANS=A
+
+A#Q8.
+You develop a Windows-based application. You plan to use ADO.NET to call 
+a Microsoft SQL Server stored procedure named Emp_ProcEmployeeData. This 
+procedure accepts a parameter for querying the database by an employee's 
+family name. You need to add code to your application to set up the parameter 
+for use with the stored procedure. Which three lines of code should you add?
+A. SqlParameterprm = new SqlParameter( "Name", SqlDbType.VarChar);
+B. SqlParameterprm = new SqlParameter( "@FamilyName", SqlDbType.VarChar);
+C. SqlParameterprm = new SqlParameter( "@FamilyName", SqlDbType.Char);
+D. SqlParameterprm = new SqlParameter( "@FamilyName", SqlType.Char);
+A#Q8ANS=B
+
+A#Q9. The __________ serialization is used to serialize object completely.
+A. XML Serialization
+B. Binary Serialization
+C. BinaryFormatter
+D. BinarySerializer
+A#Q9ANS=B
+
+A#Q10. The ______ class is central to reflection.
+A. Reflector
+B. System.Type
+C. System.Reflection
+D. 2 and 3
+A#Q10ANS=B
+
+A#Q11. If a method is marked as protected internal who can access it?
+A. Classes that are both in the same assembly and derived from the declaring class.
+B. Only methods those are in the same class as the method in question.
+C. Classes within the same assembly and classes derived from the class that 
+   contains this member only within assembly.
+D. Classes within the same assembly and classes derived from the class that 
+   contains this member within assembly or outside the assembly.
+A#Q11ANS=D
+A#Q12. What is correct about Data Reader object -
+A. DataReader is a connected data-access object
+B. DataReader provides read-only , forward-only data
+C. DataReader can be used to store data at client side
+D. A and B
+A#Q12ANS=D
+
+A#Q13. 
+You develop a Windows-based application. Its users will view and edit 
+employee attendance data.The application uses a DataSet object named custom 
+DataSet to maintain the data while users are working with it.After a user 
+edits data, business rule validation must be performed by a middle-tier 
+component named mycomponent.You must ensure that your application sends 
+only edited data rows from customDataSet to mycomponent. Which code 
+segment should you use?
+A. Dim changeDataSet As New DataSet
+  If customDataSet.HasChanges then
+  myComponent.Validate(changeDataSet)
+B. Dim changeDataSet As New DataSet
+  If customDataSet.HasChanges then myComponent.Validate(customDataSet)
+C. Dim changeDataSet As DataSet = customDataSet.GetChanges()
+   myComponent.Validate(changeDataSet)
+D. Dim changeDataSet As DataSet = customDataSet.GetChanges ()
+   myComponent.Validate(customDataSet)
+A#Q13ANS=C
+
+A#Q14.
+You are creating an ASP.NET page that enables users to select a country 
+and view information on tourist attractions in that country. Users select a 
+country from a list box named CK countryList.The list box displays country names.
+The list box also contains hidden country codes. Your code retrieves a 
+cached DataTable object that contains tourist attraction description and 
+a numeric country code named The DataTable object is named attractionsTable.
+You want to extract an array of DataRow objects from the 
+DataTable object. You want to include tourist attractions for only the 
+selected county.Which code segment should you use?
+A. Dim result As DataRow() = attractionsTable.Select( "CountryID = " & CK
+   countryList.SelectedItem.Text)
+B. Dim result As DataRow() = attractionsTable.Select( "CountryID = " & CK
+   countryList.SelectedItem.Value)
+C. Dim result As DataRow = attractionsTable.Rows.Find( "CountryID = " & CK
+    countryList.SelectedItem.Value)
+D. Dim result As DataRow = attractionsTable.Rows.Find
+   (KcountryList.SelectedItem.Value).
+A#Q14ANS=B
+
+A#Q15.
+ You are creating an ASP.NET application for CertKing 's Internet Web site. 
+You want to create a toolbar that will be displayed at the top of each 
+page in the Web site. The toolbar will contain only static HTML code. 
+The toolbar will be used in only your application. You plan to create 
+the toolbar as a reusable component for your application. You need to create 
+the toolbar as quickly as possible. What should you do?
+A. Create a new Web Control Library project.Create the toolbar within a Web custom
+control.
+B. Add a new Web user control to your ASP.NET project. Create the toolbar
+ within the Web user control.
+C. Add a new Web Form to your ASP.NET project. Use HTML server controls to
+Design the toolbar within the Web Form and save the Web Form with an .ascx extension.
+D. Add a new component class to your ASP.NET project. Use HTML server 
+ controls to design the toolbar within the designer of the component class.
+A#Q15ANS=B
+
+A#Q16. Consider a scenario where a user needs to validate an empty input in 
+  a TextBox control using a RequiredFieldValidator. This control ensures that 
+  if the user enters “NA” or does not enter anything, the validation
+  must fail. Which property of the RequiredFieldValidator will serve the purpose?
+A. Text
+B. InitialValue
+C. DisplayMessage
+D. ErrorMessage
+A#Q16ANS=B
+
+A#Q17. Which ISAPI extnesion is used to handle ASP.NET specific extensions?
+A. asp.net.dll
+B. aspnet_isapi.dll
+C. aspx_isapi.dll
+D. None of the above
+A#Q17ANS=B
+
+A#Q18. Your ASP.NET application needs to access data from an Access database 
+named “cdac.mdb” which is on the D:\ drive of your system. Which data
+ source control can be used for the same? 
+A. XMLDataSource
+B. ObjectDataSource
+C. AccessDataSource 
+D. B and D
+A#Q18ANS=D
+A#Q19. Consider a scenario where the user is provided with the list of all 
+  the Music categories on the page named AlbumCategories.aspx. The user may or may 
+  choose single or mutiple categories and then submitsthe page. Once the page is
+  submitted , a page named Albums.aspx with the list of albums that match with the 
+  chosen category is displayed. Note that this data should be available as long 
+  as the session is alive.Which technique should be used by developer to code the
+  page to pass the data between the pages for the session duration?
+A. Use ViewState
+B. Use cookies
+C. Use Session object
+D. Use Application object
+A#Q19ANS=C
+A#Q20. Which of the following files can be used to handle ASP.NET 
+    application-level events?
+A. machine.config
+B. web.config
+C. global.asax
+D. web.asax
+A#Q20ANS=C
+A#Q21. The advanatges offered by LINQ. 
+A. Run-time query syntax checking
+B. Compile-time query syntax checking
+C. A query language as an integrated feature VB.Net or C#.Net
+D. B and C
+A#Q21ANS=D
+A#Q22. Which of the following statements are true about a master page? 
+A. A content page cannot access Master page controls .
+B. A web application can have more than one master page.
+C. Master page is applied to content page using MasterPage attribute 
+of @Page directive.
+D. B and C
+A#Q22ANS=D
+A#Q23. You need t Choose a valid LINQ query expression to expression to list 
+the products in the descending order of product price.
+A. VarmResult= Select Product_Name, Product_Price from Products 
+   OrderByProduct_Pricedesc;
+B. VarmResult= Select Product_Name, Product_Price from Products
+   OrderByProduct_Price descending;
+C. intmResult= Select Product_Name, Product_Price from Products 
+   Order Product_Pricedesc;
+D. int[] mResult= Select Product_Name, Product_Price from Products
+Order Product_Price descending;
+A#Q23ANS=A
+A#Q24. You are developing a web application which contains 50 pages. You have 
+applied a theme named “MyTheme” at the application level. You need to disable 
+theming for 5 pages in the application.
+      What should you do?
+A. SET the value of EnableTheming attribute of the <%@Page%> directive 
+   of the said 5 pages to false.
+B. Set the EnableTheming attribute of the Master directive page 
+   directive to false.
+C. Mention the page names in the web.config file for which theming 
+   needs to be disabled.
+D. Set the DisableTheming attribute of the <%@Page%> directive of the 
+   said 5 pages to false.
+A#Q24ANS=A
+
+A#Q25. Consider a scenario where the page named ListCourses.aspx contains 
+   a CheckBoxList control that needs to be populated with the course name 
+   when the page is displayed to the user. Choose the best event from the 
+   list below to achieve the above scenario.
+A. Page_PreInit
+B. Page_PreLoad
+C. Page_LoadComplete
+D. Page_Load
+A#Q25ANS=D
+
+							
+A#Q26.Which of the following object is used along with an application object 
+in order to ensure that only one process accesses a variable at a time?
+A.Synchronize
+B.Synchronize()
+C.ThreadLock
+D.Lock()
+A#Q26ANS=B
+A#Q27.Which of the following control is used to validate that two 
+fields are equal?
+A.RegularExpressionValidator
+B.CompareValidator
+C.equals() method
+D.RequiredFieldValidator
+A#Q27ANS=B
+
+A#Q28. Web.config file is used 
+A.To configure the time that the server-side code behind module is called
+B.To store the global information and variable definitions for the application
+C.To configure the web server
+D.To configure the web browser
+A#Q28ANS=B
+
+
+A#Q29.Attribute that must be set on a validator control for the
+ validation to work.
+A.ControlToValidate
+B.ControlToBind
+C.ValidateControl
+D.Validate
+A#Q29ANS=A
+A#Q30.How do we create a FileSystemObject?
+A.Server.CreateObject("Scripting.FileSystemObject")
+B.Create("FileSystemObject")
+C.Create Object:"Scripting.FileSystemObject"
+D.Server.CreateObject("FileSystemObject")
+A#Q30ANS=A
+A#Q31.What class does the ASP.NET Web Form class inherit from by default?
+A.System.WeB.UI.Page
+B.System.WeB.UI.Form
+C.System.WeB.GUI.Page
+D.System.WeB.Form
+A#Q31ANS=A
+A#Q32.What is used to validate complex string patterns like 
+an e-mail address?
+A.Extended expressions
+B.Basic expressions
+C. Regular expressions
+D.Irregular expressions
+A#Q32ANS=C
+A#Q33.Which DLL translates XML to SQL in IIS?
+A.SQLISAPI.dll
+B.SQLXML.dll
+C.LISXML.dll
+D.SQLIIS.dll
+A#Q33ANS=A
+A#Q34.Default Session data is stored in ASP.NET 
+A.StateServer
+B.Session Object
+C.InProcess
+D.all of the above
+A#Q34ANS=C
+A#Q35.How do you get information from a form that is submitted 
+using the "post" method?
+A.Request.QueryString
+B.Request.Form
+C.Response.write
+D.Response.writeln
+A#Q35ANS=B
+A#Q36.Which object can help you maintain data across users?
+A.Application object
+B.Session object
+C.Response object
+D.Server object
+A#Q36ANS=A
+A#Q37.Which of the following ASP.NET object encapsulates the state 
+of the client?
+A.Session object
+B.Application object
+C.Response object
+D.Server object
+A#Q37ANS=A
+A#Q38.Which of the following is not the way to maintain state?
+A.View state
+B.Cookies
+C.Hidden fields
+D.Request object 
+A#Q38ANS=D
+A#Q39.______________ element in the web.config file to run code using the 
+permissions of a specific user
+A.< credential> element 
+B.< authentication> element
+C.< authorization> element 
+D.< identity> element
+A#Q39ANS=D
+A#Q40.The global assembly cache:
+ 
+A. Can store two dll files with the same name
+ 
+B.Can store two dll files with the same name, but different version
+ 
+C. Can store two dll files with the same name and same version
+ 
+D. Can not store dll files with the same name
+
+A#Q40ANS=B
+A#Q41.Which of the following statements is correct with regard to .NET
+ framework managed web pages?
+
+ 
+A.They interact directly with the runtime
+ 
+B.They do not execute in the native code language
+ 
+C.They are interpreted and scripted
+ 
+D.All of the above
+A#Q41ANS=D
+
+A#Q42.What are the core components of the .Net framework 
+data provider model?
+
+A.DataAdapter and DataReader
+ 
+B. Connection and Command
+ 
+C.DataAdapter, Connection, and Command
+ 
+D. DataAdapter, DataReader, Connection, and Command
+A#Q42ANS=D
+A#Q43.How can an abstract function be declared?
+
+A.By equating it to 1
+ 
+B.By equating it to zero
+ 
+C.By using the virtual keyword
+ 
+D.By using the abstract keyword
+A#Q43ANS=D
+A#Q44.__________  is the DataType return in IsPostback property.
+A. Bit
+B.Boolean
+C. Int 
+D.object
+A#Q44ANS=B
+A#Q45.  ______________is the first method that is fired during the page load.
+A. PreRender()
+B. Load()
+C. Unload()
+D. Init()
+A#Q45ANS=D
+A#Q46. Which one of the following is the fastest way to concat 
+strings in ASP.NET?
+A.  Concat method of the String object
+B.  Append method of the StringBuilder object
+C. Plus sign operator to concatenate the strings
+D. Substring method of the String object
+A#Q46ANS=B
+A#Q47. When does Garbage collector run?
+A.  When application is running low of memory
+B.   It runs random
+C.  When application is running for more than 15 minutes
+D.  None of the above
+A#Q47ANS=A
+A#Q48. Which one of the following is the type of assembly that contains
+ localized resources?
+A.  Satellite
+B.  Shared 
+C.   Hub
+D.  localized
+A#Q48ANS=A
+A#Q49. Which one of the following is to be implemented for .NET remote
+ server object?
+A. ISerializable
+B. ISingleCall
+C. IUnknown
+D. IMarshalByValue
+A#Q49ANS=A
+A#Q50. ____________ is the Microsoft IIS server running, handling ASP.NET
+ requests among other things
+A. aspnet_isapi.dll
+B. aspnet_wp.exe
+C. inetinfo.exe
+D. aspinfo_wp.dll
+
+  A#Q50ANS=C
+
+

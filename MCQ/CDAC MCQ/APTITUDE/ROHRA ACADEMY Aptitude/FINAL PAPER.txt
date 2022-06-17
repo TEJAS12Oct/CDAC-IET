@@ -1,0 +1,345 @@
+A#Q1.Two ships are sailing in the sea on the two sides of a lighthouse. The angle of elevation of the top of the lighthouse is observed from the ships are 30° and 45° respectively. If the lighthouse is 100 m high, the distance between the two ships is:
+
+A.173 m
+B.200 m
+C.273 m
+D.300 m
+A#Q1ANS=C
+
+A#Q2. A man standing at a point P is watching the top of a tower, which makes an angle of elevation of 30° with the man's eye. The man walks some distance towards the tower to watch its top and the angle of the elevation becomes 60°. What is the distance between the base of the tower and the point P?
+
+A.43 units
+B.8 units
+C.12 units
+D.Data inadequate
+E.None of these
+A#Q2ANS=D
+
+A#Q3.The angle of elevation of a ladder leaning against a wall is 60° and the foot of the ladder is 4.6 m away from the wall. The length of the ladder is:
+
+A.2.3 m
+B.4.6 m
+C.7.8 m
+D.9.2 m
+A#Q3ANS=D
+
+A#Q4. An observer 1.6 m tall is 203 away from a tower. The angle of elevation from his eye to the top of the tower is 30°. The height of the tower is:
+
+A.21.6 m
+B.23.2 m
+C.24.72 m
+D.None of these
+
+A#Q4ANS=A
+
+A#Q5.The average of 20 numbers is zero. Of them, at the most, how many may be greater than zero ?
+
+A.0	
+B.-1
+C.1	
+D.none of these
+A#Q5ANS=A
+
+A#Q6.	
+From a point P on a level ground, the angle of elevation of the top tower is 30°. If the tower is 100 m high, the distance of point P from the foot of the tower is:
+A.149 m
+B.156 m
+C.173 m
+D.200 m
+A#Q6ANS=C
+
+A#Q7.If a person walks at 14 km/hr instead of 10 km/hr, he would have walked 20 km more. The actual distance travelled by him is:
+
+A.50 km
+B.56 km
+C.70 km
+D.80 km
+A#Q7ANS=A
+
+A#Q8.A train can travel 50% faster than a car. Both start from point A at the same time and reach point B 75 kms away from A at the same time. On the way, however, the train lost about 12.5 minutes while stopping at the stations. The speed of the car is:
+
+A.100 kmph
+B.110 kmph
+C.120 kmph
+D.130 kmph
+A#Q8ANS=C
+
+A#Q9.	
+Excluding stoppages, the speed of a bus is 54 kmph and including stoppages, it is 45 kmph. For how many minutes does the bus stop per hour?
+
+A.9
+B.10
+C.12
+D.20
+A#Q9ANS=B
+
+A#Q10.In covering a distance of 30 km, Abhay takes 2 hours more than Sameer. If Abhay doubles his speed, then he would take 1 hour less than Sameer. Abhay's speed is:
+
+A.5 kmph
+B.6 kmph
+C.6.25 kmph
+D.7.5 kmph
+A#Q10ANS=A
+
+A#Q11.Robert is travelling on his cycle and has calculated to reach point A at 2 P.M. if he travels at 10 kmph, he will reach there at 12 noon if he travels at 15 kmph. At what speed must he travel to reach A at 1 P.M.?
+
+A.8 kmph
+B.11 kmph
+C.12 kmph
+D.14 kmph
+A#Q11ANS=C
+
+A#Q12.	
+It takes eight hours for a 600 km journey, if 120 km is done by train and the rest by car. It takes 20 minutes more, if 200 km is done by train and the rest by car. The ratio of the speed of the train to that of the cars is:
+
+A.2 : 3
+B.3 : 2
+C.3 : 4
+D.4 : 3
+A#Q12ANS=C
+
+A#Q13.A farmer travelled a distance of 61 km in 9 hours. He travelled partly on foot @ 4 km/hr and partly on bicycle @ 9 km/hr. The distance travelled on foot is:
+
+A.14 km
+B.15 km
+C.16 km
+D.17 km
+A#Q13ANS=C
+
+A#Q14.	
+A man complete a journey in 10 hours. He travels first half of the journey at the rate of 21 km/hr and second half at the rate of 24 km/hr. Find the total journey in km.
+
+A.220 km
+B.224 km
+C.230 km
+D.234 km
+A#Q14ANS=B
+A#Q15.A train 125 m long passes a man, running at 5 km/hr in the same direction in which the train is going, in 10 seconds. The speed of the train is:
+
+A.45 km/hr
+B.50 km/hr
+C.54 km/hr
+D.55 km/hr
+A#Q15ANS=B
+
+A#Q16.The length of the bridge, which a train 130 metres long and travelling at 45 km/hr can cross in 30 seconds, is:
+
+A.200 m
+B.225 m
+C.245 m
+D.250 m
+A#Q16ANS=C
+
+A#Q17.	
+A train passes a station platform in 36 seconds and a man standing on the platform in 20 seconds. If the speed of the train is 54 km/hr, what is the length of the platform?
+
+A.120 m
+B.240 m
+C.300 m
+D.None of these
+A#Q17ANS=B
+
+A#Q18.Tea worth Rs. 126 per kg and Rs. 135 per kg are mixed with a third variety in the ratio 1 : 1 : 2. If the mixture is worth Rs. 153 per kg, the price of the third variety per kg will be:
+
+A.Rs. 169.50
+B.Rs. 170
+C.Rs. 175.50
+D.Rs. 180
+A#Q18ANS=C
+
+A#Q19.A can contains a mixture of two liquids A and B is the ratio 7 : 5. When 9 litres of mixture are drawn off and the can is filled with B, the ratio of A and B becomes 7 : 9. How many litres of liquid A was contained by the can initially?
+
+A.10
+B.20
+C.21
+D.25
+
+A#Q19ANS=C
+
+A#Q20. 
+A milk vendor has 2 cans of milk. The first contains 25% water and the rest milk. The second contains 50% water. How much milk should he mix from each of the containers so as to get 12 litres of milk such that the ratio of water to milk is 3 : 5?
+
+A.4 litres, 8 litres
+B.6 litres, 6 litres
+C.5 litres, 7 litres
+D.7 litres, 5 litres
+A#Q20ANS=B
+
+A#Q21. 	
+In what ratio must a grocer mix two varieties of pulses costing Rs. 15 and Rs. 20 per kg respectively so as to get a mixture worth Rs. 16.50 kg?
+
+A.3 : 7
+B.5 : 7
+C.7 : 3
+D.7 : 5
+A#Q21ANS=C
+
+A#Q22. The difference between simple and compound interests compounded annually on a certain sum of money for 2 years at 4% per annum is Re. 1. 
+The sum (in Rs.) is:
+
+A.625
+B.630
+C.640
+D.650
+A#Q22ANS=A
+
+A#Q23. What is the difference between the compound interests on Rs. 5000 for 1 years at 4% per annum compounded yearly and half-yearly?
+
+A.	Rs. 2.04
+B.	Rs. 3.06
+C.	Rs. 4.80
+D.	Rs. 8.30
+A#Q23ANS=A
+
+A#Q24. 	
+Simple interest on a certain sum of money for 3 years at 8% per annum is half the compound interest on Rs. 4000 for 2 years at 10% per annum. 
+The sum placed on simple interest is:
+
+A.Rs. 1550
+B.Rs. 1650
+C.Rs. 1750
+D.Rs. 2000
+
+A#Q24ANS=C
+
+A#Q25.5, 10, 13, 26, 29, 58, 61, (....)
+
+A.122
+B.64
+C.125
+D.128
+A#Q25ANS=A
+
+A#Q26.	15, 31, 63, 127, 255, (....)
+
+A.513
+B.511
+C.517
+D.523
+A#Q26ANS=B
+
+A#Q27.	
+3, 7, 6, 5, 9, 3, 12, 1, 15, (....)
+
+A.18
+B.13
+C.-1
+D.3
+A#Q27ANS=C
+
+A#Q28.Find the average of first 20 consecutive natural numbers.
+
+A.12.20
+B.10.78
+C.16.45
+D.10.5
+A#Q28ANS=D
+
+A#Q29. The H.C.F. of two numbers is 23 and the other two factors of their L.C.M. are 13 and 14. The larger of the two numbers is:
+
+A.276
+B.299
+C.322
+D.345
+A#Q29ANS=C
+
+A#Q30. Six bells commence tolling together and toll at intervals of 2, 4, 6, 8 10 and 12 seconds respectively. In 30 minutes, how many times do they toll together ?
+
+A.4
+B.10
+C.15
+D.16
+A#Q30ANS=D
+
+A#Q31. Let N be the greatest number that will divide 1305, 4665 and 6905, leaving the same remainder in each case. Then sum of the digits in N is:
+
+A.4
+B.5
+C.6
+D.8
+A#Q31ANS=A
+
+A#Q32. If the number of quantities in group A is 10 and in group B is 8, and their individual average is 24 and 16 respectively, find the combined average of the two groups.
+
+A.20.44
+B.18.22
+C.16.22
+D.18.66
+A#Q32ANS=A
+
+A#Q33. 	
+How many workers are required for completing the construction work in 10 days?
+
+I. 20% of the work can be completed by 8 workers in 8 days.
+
+II. 20 workers can complete the work in 16 days.
+III. One-eighth of the work can be completed by 8 workers in 5 days.
+
+A.I only
+B.II and III only
+C.III only
+D.Any one of the three
+A#Q33ANS=D
+
+A#Q34.The average age of the committee of 10 members is 40 years. A member of age 52 retires and a new member of age 38 takes his place. What is the average age of the present committee?
+
+A.38.6 years
+B.33.5 years
+C.35.5 years
+D.37.5 years
+
+A#Q34ANS=A
+
+A#Q35.A tank is filled by three pipes with uniform flow. The first two pipes operating simultaneously fill the tank in the same time during which the tank is filled by the third pipe alone. The second pipe fills the tank 5 hours faster than the first pipe and 4 hours slower than the third pipe. The time required by the first pipe is:
+
+A.6 hours
+B.10 hours
+C.15 hours
+D.30 hours
+A#Q35ANS=C
+
+A#Q36.One pipe can fill a tank three times as fast as another pipe. If together the two pipes can fill the tank in 36 minutes, then the slower pipe alone will be able to fill the tank in:
+
+A.81 min.
+B.108 min.
+C.144 min.
+D.192 min.s
+A#Q6ANS=C
+
+A#Q37. A large tanker can be filled by two pipes A and B in 60 minutes and 40 minutes respectively. How many minutes will it take to fill the tanker from empty state if B is used for half the time and A and B fill it together for the other half?
+
+A.15 min
+B.20 min
+C.27.5 min
+D.30 min
+A#Q37ANS= D
+
+A#Q38.A tap can fill a tank in 6 hours. After half the tank is filled, three more similar taps are opened. What is the total time taken to fill the tank completely?
+
+A.3 hrs 15 min
+B.3 hrs 45 min
+C.4 hrs
+D.4 hrs 15 min
+A#Q38ANS=B
+
+A#Q39.	
+How long will it take to empty the tank if both the inlet pipe A and the outlet pipe B are opened simultaneously?
+
+I. A can fill the tank in 16 minutes.
+II. B can empty the full tank in 8 minutes.
+
+A.I alone sufficient while II alone not sufficient to answer
+B.II alone sufficient while I alone not sufficient to answer
+C.Either I or II alone sufficient to answer
+D.Both I and II are necessary to answer
+
+A#Q39ANS=D
+
+A#Q40.	
+A man's speed with the current is 15 km/hr and the speed of the current is 2.5 km/hr. The man's speed against the current is:
+
+A.8.5 km/hr
+B.9 km/hr
+C.10 km/hr
+D.12.5 km/hr
+A#Q40ANS=C

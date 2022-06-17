@@ -1,0 +1,360 @@
+A#Q1.Which module helps to free the heap memory area ?
+A. Delegate
+B. Garbage Selector
+C. Garbage Collector
+D. Garbage Detector
+A#Q1ANS=C
+A#Q2.________ is a logical boundary which separates 
+applications from each other.
+A. Application Area
+B. OS
+C. Application Sector
+D. Application Domain
+A#Q2ANS=D
+A#Q3. _____ is a root namespace and ______ is a SuperBase
+ class in .NET
+A. System.Web and Global
+B. System and Global
+C. System and Object
+D. None of the above
+A#Q3ANS=C
+
+A#Q4. By using ‘using’ keyword at the top we import _______ 
+in our application.
+A. Directory
+B. Namespace
+C. Library File Virtual Path
+D. Library File Physical Path.
+A#Q4ANS=B
+
+A#Q5.Indexers are also called as __________ arrays.
+A. Smart
+B. Dynamic
+C. Both A and B
+D. None of the above. 
+ A#Q5ANS=A
+
+A#Q6. What will be the output of following program ?
+classProgram
+    {
+staticvoidMain(string[] args)
+        {
+MyClassobj=newMyClass();
+int[] arr=newint[] { 6,7,8,9,10,11,12,13};
+obj.myArray=arr;
+obj.Display();
+Console.ReadLine();
+        }
+    }
+classMyClass
+    {
+privateint[] _myArray=newint[] { 1,2,3,4,5};
+publicint[] myArray
+{
+set
+ {
+_myArray=value;
+}
+}
+publicvoidDisplay()
+        {
+foreach (intnoin_myArray)
+            {
+Console.WriteLine(no); 
+            }
+        }
+    }
+
+A. 6,7,8,9,10,11,12,13
+B. 1,2,3,4,5
+C. Run-Time Exception
+D. Compile Time Error
+
+
+A#Q6ANS=A
+
+A#Q7.______: conversionof value type to reference type and _______:
+     conversion of reference type back to value type.
+A. Type casting, up casting
+B. Type casting, down casting
+C. boxing, unboxing
+D. boxing , type casting
+A#Q7ANS=C
+
+A#Q8. In order to invoke a method the signature of that
+ method should match with signature of a delegate .
+ If this statement is true ,which  below statements are 
+ true for a delegate ?
+A. delegates are reference type
+B. delegates are type- safe function pointers
+C. Both A and B
+D. None of the above
+A#Q8ANS=C
+
+A#Q9.In order to invoke a method at runtime reflection
+ provides you ________ method.
+A.CreateInstance()
+B. Assembly.Invoke()
+C.InvokeMember()
+D. All of the above
+A#Q9ANS=C
+
+A#Q10. In Lambada Expression ‘goes to’ operator is expressed as ____
+A. ==
+B. ( => )
+C. =>
+D. { => }
+A#Q10ANS=C
+
+A#Q11.An ___________ is a declarative tag that is used to
+ convey information to runtime about the behaviors of 
+various elements like classes, methods, structures,
+enumerators, assemblies etc., in your program.
+A. Assembly
+B. Attribute
+C. Delegate
+D. Event
+A#Q11ANS=B
+
+A#Q12.In order to deal with collections in .NET one must
+ import following namespaces
+A. System and System. Collection
+B. System.Array and System.Collections
+C. System and System.Collection
+D. System.Collections and System.Collections.Generic
+A#Q12ANS=D
+
+A#Q13. __________ it exposes the enumerator, which
+provides a collection like behavior to user defined classes. 
+A. IEnumerator
+B. IEnumerable
+C. IList
+D. IDictionary
+A#Q13ANS=B
+
+A#Q14._________ allow you to delay the specification of 
+the data type of programming  elements in a class or a 
+method, until it is actually used in the program.
+A. Generics
+B. Delegate
+C. Collection
+D. General collection
+A#Q14ANS=A
+
+A#Q15. __________ occurs at compilr time and _______ occurs at run time
+A. Error, IO exception
+B. Warnings, exception
+C. Error, Exception
+D. None of the above.
+A#Q15ANS=C
+
+A#Q16. If we want to create custom control from scratch ,
+ we must inherit our  class from ___
+A. Forms
+B. Control
+C. UserControl
+D. ControlBase
+A#Q16ANS=C
+
+A#Q17. When you send a request for a Home.aspx page, IIS handovers to 
+    _____________ for processing this particular request.
+A. aspnet_isapi.dll
+B. isapi.dll
+C. aspnet.dll
+D.aspx_isapi.dll
+A#Q17ANS=A
+
+A#Q18. All Browsers can understand __________
+A. only HTML
+B. only JavaScript
+C. HTML and JavaScript
+D. HTML, JavaScript and VBScript
+A#Q18ANS=C
+
+A#Q19._________ property of a Page,gets a value that
+ indicates whether the page is being rendered for the 
+first time or is being loaded in response to a postback.
+A. Page.AutoPostBack
+B. Page.IsAutoPostBack
+C. Page.PostBack
+D. Page.IsPostBack.
+
+A#Q19ANS=D
+
+A#Q20. In Asp.Net when request is given servers looks
+ for a ______ and in MVC server looks for _________ .
+A. Page, Control
+B. Page, Controller
+C. Page Directive , Controller directive
+D. Rendering Engine.
+A#Q20ANS=B
+
+A#Q21.For Asp.Net we have to import ___________ namespace and for 
+      MVC _________
+A. System, System.Web
+B. System.Web, System.Web.Mvc
+C.System.Web.Page, System.Web.Mvc.Controller
+D. None of the above.
+
+A#Q21ANS=B
+
+A#Q22. If one wants to change default route map for a request, 
+e.g. /Employee/Edit, one needs to do changes in _______
+A. Application class
+B. Web.Config 
+C.RouteConfig
+D. Route acions
+A#Q22ANS=C
+
+A#Q23. User control has following directive
+A. Page
+B. Import
+C. Register
+D. Control
+A#Q23ANS=D
+
+A#Q24.In Asp.Net all Asp.Net Web Server Controls
+ belongs to ___________ namespace.
+A. System.Web
+B. System.Web.UI.Webcontrol
+C. System.Web.Controls
+D. System.Web.ControlerBase
+A#Q24ANS=B
+
+A#Q25. In Asp.Net HTML controls can be converted into
+ HTML Server Controls if  we include this property in its tag.
+A. runat=true
+B. runat=sever
+C. runat=false
+D. All of the above
+A#Q25ANS=B
+
+A#Q26.To achieve common look and feel for all the webforms
+ in a website we go for  _____
+A. Theme
+B. Master Page
+C. JavaScript
+D. Common Class
+A#Q26ANS=B
+
+A#Q27.To achieve common look and feel for web server
+controls we go for ______
+A. Theme
+B. Master Page
+C. JavaScript
+D. Common Control Class
+A#Q27ANS=A
+
+A#Q28.To load the Master Page or Theme dynamically 
+we have to override __________ event  of page life cycle.
+A. onPreRender
+B. onLoad
+C.onPreInit
+D. OnInit
+A#Q28ANS=C
+
+A#Q29. In which way one can apply Master Page on a webpage.
+ Select most correct answer.
+A. overriding PreInit event
+B. Through Pages section in Web.Config file
+C. Through Page Directive.
+D. By all above mentioned ways .
+A#Q29ANS=D
+A#Q30. Which of the following are valid .NET CLR JIT
+ performance counters?
+
+1. Total memory used for JIT compilation
+2. Average memory used for JIT compilation
+3. Number of methods that failed to compile with the standard JIT
+4. Percentage of processor time spent performing JIT compilation
+5. Percentage of memory currently dedicated for JIT compilation 
+
+A. 	1, 5
+B. 	3, 4
+C. 	1, 2
+D. 	4, 5
+A#Q30ANS=B
+
+A#Q31.Forms base Authentication is also called as_________
+A. Cookie Authentication
+B. Server Authentication
+C. Both A and B
+D. None of the above
+A#Q31ANS=A
+
+A#Q32. In Asp.Net if one wants to maintain session then which of the 
+      following is used ?
+A. In-process storage
+B. Microsoft SQL server
+C. Session State Server
+D. All of the above.
+A#Q32ANS=D
+
+A#Q33. Which of the following can be used to 
+
+debug .Net application?
+A. System.Diagnostics classes
+B. Runtime Debugger
+C. .Net Visual Studio 
+D. All of the above.
+A#Q33ANS=D
+
+A#Q34. If an error occurs at application level on 
+server, where you can write the particular code 
+to handle it ?
+A. In Code behind file
+B. In Web.Config File
+C. In Global.asax File
+D. None of the above
+A#Q34ANS=C
+
+A#Q35.Which method do you invoke on the DataAdaptor 
+control to load your 
+      generated dataset?
+A. Load()
+B. Fill()
+C. Read()
+D. ExecuteQuery()
+A#Q35ANS=B
+
+A#Q36. Which Asp.Net Server control provides an 
+alternative way of displaying text on a web page ?
+A. label
+B. ListItem
+C. Both A and B
+D. None of the above
+A#Q36ANS=A
+
+A#Q37.The control used in Asp.Net to display information from data set
+      but with better formatting and editing behavior is ___
+A. Panel
+B. Button
+C. DataList
+D. All of the above.
+A#Q37ANS=C
+
+A#Q38. In .Net using Binary Serialization one 
+can transfer data from .Net application to Java
+application and vice versa.
+A. True
+B. False
+C. 
+D.
+A#Q38ANS=B
+
+A#Q39. Default serialization in Asp.Net for 
+data transfer over web is ________
+A. Binary
+B. SOAP
+C. Json
+D. XML
+A#Q39ANS=B
+
+A#Q40. WCF attribute used to serialize DataContract
+ member variables
+A. Serialize
+B. DataMember
+C. DataObject
+D. None of the above.
+A#Q40ANS=B
+

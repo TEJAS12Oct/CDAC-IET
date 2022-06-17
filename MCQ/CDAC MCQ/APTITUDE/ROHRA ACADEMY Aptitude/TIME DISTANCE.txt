@@ -1,0 +1,327 @@
+A#Q1. A person crosses a 600 m long street in 5 minutes, What is his speed in km per hour?
+
+A. 3.6	
+B. 7.2
+C.8.4	
+D. 10
+A#Q1ANS=B
+
+A#Q2. The speed of a car increases by 2 kms after every one hour. If the distance travelling in the first one hour was 35 kms. what was the total distance travelled in 12 hours?
+
+A. 456 kms	
+B. 482 kms
+C. 552 kms	
+D. 556 kms
+A#Q2ANS=C
+
+A#Q3. A thief is noticed by a policeman from a distance of 200 m. The thief starts running and the policeman chases him. The thief and the policeman run at the rate of 10 km and 11 km per hour respectively. What is the distance between them after 6 minutes?
+
+A. 100 m	
+B. 150 m
+C. 190 m	
+D. 200 m
+A#Q3ANS=A
+
+A#Q4. Two trains A and B start simultaneously in the opposite direction from two points P and Q and arrive at their destinations 16 and 9 hours respectively after their meeting each other. At what speed does the second train B travel if the first train travels at 120 km/h
+
+A. 90 km/h	
+B. 160 km/h
+C. 67.5 km/h	
+D. None of these
+
+A#Q4ANS=B
+
+A#Q5.A running man crosses a bridge of length 500 meters in 4 minutes. At what speed he is running?
+
+A. 8.5 km/hr
+B. 7.5 km/hr
+C. 9.5 km/hr
+D. 6.5 km/hr
+A#Q5ANS=B
+
+A#Q6.A car running at a speed of 140 km/hr reached its destination in 2 hours. If the car wants to reach at its destination in 1 hour, at what speed it needs to travel?
+
+A. 300 km/hr
+B. 280 km/hr
+C. 250 km/hr
+D. 240 km/hr
+A#Q6ANS=D
+
+A#Q7.A horse covers a distance of 1500 meters in 1 minute 20 seconds. At what speed the horse is running?
+
+A. 67.2 km/hr
+B. 67.7 km/hr
+C. 67. 5 km/hr
+D. 67.9 km/hr
+A#Q7ANS=C
+
+A#Q8.A cyclist moving at a speed of 20 km/hr crosses a bridge in 2 minutes. What is the length of the bridge?
+
+A.555.5 m
+B.444.4 m
+C.777.7 m
+D.666.6 m
+A#Q8ANS=D
+
+A#Q9.Including stoppages the speed of a bus is 60 km/hr and excluding stoppages its speed is 65 km/hr. For how long the bus stops in an hour?
+
+A.6 minutes
+B.7 minutes
+C.3 minutes
+D.4 minutes
+A#Q9ANS=D
+
+A#Q10.Two buses 200 km apart, start moving from the bus stations at the same time towards each other on parallel roads. If they cross each other at a distance of 120 km from one of the bus stations, find the ratio of their speeds.
+
+A.4/2
+B.5/2
+C.3/2
+D.6/2
+A#Q10ANS=C
+
+A#Q11.If a man runs at 24 km/hr instead of 20 km/hr he could run 40 km more. Find the actual distance travelled by him.
+
+A.100 km
+B.150 km
+C.200 km
+D.250 km
+A#Q11ANS=C
+
+A#Q12. A running man crosses a bridge of length 500 meters in 4 minutes. At what speed he is running?
+
+A.8.5 km/hr
+B.7.5 km/hr
+C.9.5 km/hr
+D.6.5 km/hr
+A#Q12ANS=B
+
+A#Q13. A car running at a speed of 140 km/hr reached its destination in 2 hours. If the car wants to reach at its destination in 1 hour, at what speed it needs to travel?
+
+A.300 km/hr
+B.280 km/hr
+C.250 km/hr
+D.240 km/hr
+A#Q13ANS=B
+
+A#Q14.  horse covers a distance of 1500 meters in 1 minute 20 seconds. At what speed the horse is running?
+
+A.67.2 km/hr
+B.67.7 km/hr
+C.67. 5 km/hr
+D.67.9 km/hr
+A#Q14ANS=C
+
+A#Q15.A man covers a distance of 110 km between two cities in 10 hours. He travelled partly on foot at 9 km/hr and partly on a bicycle at 15 km/hr. Find the distance travelled on foot.
+
+A.60 km
+B.92 km
+C.94 km
+D.96 km
+A#Q15ANS=A
+
+A#Q16.A farmer travelled from his village to city to buy seeds. He went by bicycle at a speed of 20 km/hr and came back at a speed of 5 km/hr. If the farmer took 5 hours and 40 minutes to complete his journey, find the distance between village and city?
+
+A.15 km
+B.19 km
+C.23 km
+D.25 km
+A#Q16ANS=B
+
+A#Q17.The ratio between the speeds of two cars is 5:8. If the first car covers 200 km in 2 hours, find the speed of the second car.
+
+A. 140 km/hr
+B. 150 km/hr
+C. 160 km/hr
+D. 170 km/hr
+A#Q17ANS=C
+
+A#Q18. A man covers first 48 km of his journey in 40 minutes and next 32 km in 30 minutes. Find his average speed.
+
+A. 64 km/hr
+B. 67 km/hr
+C. 70 km/hr
+D. 74 km/hr
+
+A#Q18ANS=A
+
+A#Q19.Two boys start running at the same time in the same direction at a speed of 10 km/hr and 12 km/hr respectively. In what time they will be 8 km apart?
+
+A. 3 hours
+B. 4 hours
+C. 5 hours
+D. 6 hours
+
+A#Q19ANS=B
+
+A#Q20. 
+A man walking at a speed of 8 km/hr covers a certain distance in 1 hour 45 minutes. If he runs at a speed of 10 km/hr, in what time he will cover the same distance?
+
+A. 74 minutes
+B. 70 minutes
+C. 80 minutes
+D. 84 minutes
+A#Q20ANS=D
+
+A#Q21. A car moving at a speed of 75 km/hr covers certain distance in 2 hours. If its speed is reduced by 15 km/hr, in what time it will cover the same distance?
+
+A.135 minutes
+B.140 minutes
+C.150 minutes
+D.155 minutes
+A#Q21ANS=C
+
+A#Q22.At his usual speed a cyclist covers a certain distance in 8 hours. When the speed of cycle is increased by 4 km/hr the same distance can be covered in 6 hours. Find the distance.
+
+A.92 km
+B.94 km
+C.96 km
+D.98 km
+A#Q22ANS=C
+
+A#Q23. Two buses 200 km apart, start moving from the bus stations at the same time towards each other on parallel roads. If they cross each other at a distance of 120 km from one of the bus stations, find the ratio of their speeds.
+
+A.4/2
+B.5/2
+C.3/2
+D.6/2
+A#Q23ANS=C
+
+A#Q24.  If a man runs at 24 km/hr instead of 20 km/hr he could run 40 km more. Find the actual distance travelled by him.
+
+A.100 km
+B.150 km
+C.200 km
+D.250 km
+
+A#Q24ANS=C
+
+A#Q25.A bus travels 50% faster than a car. Both start moving at the same time from station P and reach station Q at the same time. The stations are 100 km apart. If on the way the bus stops at the bus stop for 10 minutes, find the speed of the car.
+
+A.415 km/hr
+B.410 km/hr
+C.315 km/hr
+D.300 km/hr
+A#Q25ANS=D
+
+A#Q26.	A man on tour travels first 160 km at 64 km/hr and the next 160 km at 80 km/hr. The average speed for the first 320 km of the tour is
+
+A. 35.55 km/hr	
+B. 36 km/hr
+C. 71.11 km/hr	
+D.71 km/hr
+A#Q26ANS=C
+
+A#Q27.How long will a boy take to run round a square field of side 35 meters, If he runs at the rate of 9 km/hr?
+
+A. 50 sec	
+B. 52 sec
+C. 54 sec	
+D. 56 sec
+
+A#Q27ANS= D
+
+A#Q28.Find the average of first 20 consecutive natural numbers.
+
+A.12.20
+B.10.78
+C.16.45
+D.10.5
+A#Q28ANS=D
+
+A#Q29. Find the average of the square of first 6 consecutive even numbers starting from 2 to 12, where the last even number is 12.
+
+A.12.20
+B.60.66
+C.16.45
+D.178
+A#Q29ANS=D
+
+A#Q30. Find the average of first 5 consecutive even numbers starting from 2 to 10, where the last even number is 10.
+
+A.1
+B.6
+C.2
+D.8
+A#Q30ANS=B
+
+A#Q31. The average of square of first 6 consecutive even numbers is:
+
+A.12.20
+B.60.66
+C.16.45
+D.178
+A#Q31ANS=C
+
+A#Q32. If the number of quantities in group A is 10 and in group B is 8, and their individual average is 24 and 16 respectively, find the combined average of the two groups.
+
+A.20.44
+B.18.22
+C.16.22
+D.18.66
+A#Q32ANS=A
+
+A#Q33. Four years ago, the average age of A and B was 20 years. If today average age of A, B and C is 25 years, what will be age of C after 7 years?
+
+A.32 years
+B.34 years
+C.36 years
+D.38 years
+A#Q33ANS=B
+
+A#Q34.The average age of the committee of 10 members is 40 years. A member of age 52 retires and a new member of age 38 takes his place. What is the average age of the present committee?
+
+A.38.6 years
+B.33.5 years
+C.35.5 years
+D.37.5 years
+
+A#Q34ANS=A
+
+A#Q35.The average weight of 10 men is decreased by 2 kg when one of them whose weight is 60 kg is replaced by a new man. What is the weight of the new man?
+
+A.35 kg
+B.40 kg
+C.45 kg
+D.50 kg
+A#Q35ANS=B
+
+A#Q36.Average age of a group of 30 boys is 16 years. A boy of age 19 leaves the group and a new boy joins the group. If the new average age of the group is 15.8 years, find the age of the new boy.
+
+A.12 years
+B.13 years
+C.14 years
+D.15 years
+A#Q6ANS=B
+
+A#Q37.The average of Sohan's marks in 6 subjects is 74. If his average in five subjects excluding science is 70, how many marks he obtained in science?
+
+A.94
+B.92
+C.90
+D.88
+A#Q37ANS=A
+
+A#Q38.10 typists can type 600 pages in 8 hours.Find the average number of pages typed by each typist in an hour.
+
+A.7 pages
+B.7.5 pages
+C.8 pages
+D.8.5 pages
+A#Q38ANS=B
+
+A#Q39.Average of five numbers is 20. If each number is multiplied by 2, what will be the new average?
+
+A.30
+B.40
+C.50
+D.60
+
+A#Q39ANS=B
+
+A#Q40.The average marks of 40 students in an examination was 34. It was later found that the marks of one student had been wrongly entered as 62 instead of 26. what is the correct average?
+
+A. 33.1	
+B. 33.3
+C. 33.5	
+D.  33.7
+A#Q40ANS=A

@@ -1,0 +1,677 @@
+A#Q1.Given the following code, which of the following option if inserted after the
+comment //here will allow the code to compile without error?
+interface Remote{
+public void test();
+}
+public class Moodle{
+public static void main(String argv[]){
+Moodle m = new Moodle();
+}
+public void go(){
+//here
+}
+}
+A. Remote r = new Remote(){ public void test(){} };
+B. Remote remote = new Remote();
+C. test();
+D. this.main();
+A#Q1ANS=A
+
+A#Q2. 
+class DAC {
+public static void main(String[] s) {
+String s1 = "A", s2 = " B ", s3 = "C";
+s2.trim(); s3.concat("D");
+System.out.print(s1 + s2 + s3);
+}
+}
+What is the result of attempting to compile and run the program?
+A. Prints: ABC
+B. Prints: A B C
+C. Prints: ABCD
+D. Prints: ABDC
+A#Q2ANS=B
+A#Q3.
+class CDAC {
+
+public static void main (String[] args) {
+StringBuffer sb1 = new StringBuffer("ABC");
+StringBuffer sb2 = new StringBuffer("ABC");
+System.out.print(“Prints:”+(sb1==sb2)+","+sb1.equals(sb2));
+}
+}
+What is the result of attempting to compile and run the program?
+A. Prints: false, true
+B. Prints: false, false
+C. Prints: true, false
+D. Prints: true, true
+A#Q3ANS=B
+
+A#Q4.public class X 
+{
+    public static void main(String [] args) 
+    {
+        X x = new X();
+        X x2 = m1(x); /* Line 6 */
+        X x4 = new X();
+        x2 = x4; /* Line 8 */
+        doComplexStuff();
+    }
+    static X m1(X mx) 
+    {
+        mx = new X();
+        return mx;
+    }
+}
+After line 8 runs. how many objects are eligible for garbage collection?
+ 
+A.	0  
+	 
+B.	1
+
+ 
+C.	2
+	 
+D.	3
+
+
+
+A#Q4ANS=B
+
+A#Q5.
+Which three are valid method signatures in an interface? 
+1.	private int getArea();
+2.	public float getVol(float x);
+3.	public void main(String [] args);
+4.	public static void main(String [] args);
+5.	boolean setFlag(Boolean [] test);
+ 
+A.	1 and 2
+	 
+B.	2, 3 and 5
+
+ 
+C.	3, 4, and 5
+	 
+D.	2 and 4
+
+
+
+A#Q5ANS=B
+
+A#Q6. Which of the following methods is defined by the JSP engine?
+A. jspInit()
+B._jspService()
+C._jspService(HttpServletRequest, HttpServletResponse)
+D._jspDestroy()
+
+A#Q6ANS=C
+
+A#Q7. What will be the output of the following code?
+<% int x = 5; %>
+<%! int x = 10; %>
+<%! int y = 50; %>
+is <%= y * x %>
+
+A.	The code will not compile
+B.	30
+C.	250
+D.	500
+
+A#Q7ANS=D
+
+A#Q8.
+public interface Foo 
+      { 
+         int k = 4; /* Line 3 */
+      }
+Which three piece of codes are equivalent to line 3? 
+1.	final int k = 4;			
+2.             public int k = 4;		
+3.             static int k = 4;
+4.	abstract int k = 4;		
+5.             volatile int k = 4;		
+6.             protected int k = 4;
+A. 1, 2 and 3		 
+B. 2, 3 and 4		
+C. 3, 4 and 5 		
+D. 4, 5 and 6
+
+A#Q8ANS=A
+
+A#Q9. public class Demo{ 
+    public static void main(String[] arr){ 
+        Integer num1 = 100; 
+        Integer num2 = 100; 
+        Integer num3 = 500; 
+        Integer num4 = 500; 
+          
+        if(num1==num2){ 
+            System.out.println("num1 == num2"); 
+        } 
+        else{ 
+            System.out.println("num1 != num2"); 
+        } 
+        if(num3 == num4){ 
+            System.out.println("num3 == num4"); 
+        } 
+        else{ 
+            System.out.println("num3 != num4"); 
+        } 
+    } 
+} 
+Choices:
+
+A. num1 == num2
+    num3 == num4
+B.  num1 == num2
+    num3 != num4
+C. num1 != num2
+    num3 == num4
+D. num1 != num2
+    num3 != num4
+A#Q9ANS=B
+
+A#Q10.public class Demo{ 
+    public static void main(String[] arr){ 
+          
+    } 
+    public static void main(String arr){ 
+          
+    } 
+} 
+
+A.ERROR
+B.NA
+C.NONE
+D.COMPILE ERROR
+A#Q10ANS=A
+
+A#Q11. class Test1 { 
+public
+    static void main(String[] args) 
+    { 
+        int String = 65; 
+        int Runnable = 97; 
+  
+        System.out.print(String + " : " + Runnable); 
+    } 
+} 
+
+A. Error
+B. A : a
+C. 65 : 97
+D. None
+
+A#Q11ANS=A
+
+A#Q12.
+class Test3 { 
+public
+    static void main(String[] args) 
+    { 
+        int x = 1; 
+  
+        if (x) { 
+            System.out.print("GeeksForGeeks"); 
+        } else { 
+            System.out.print("GFG"); 
+        } 
+    } 
+} 
+
+A. GeeksForGeeks
+B. GFG
+C. Error
+D. None
+A#Q12ANS=C
+
+A#Q13. 
+class Test4 { 
+public
+    static void main(String[] args) 
+    { 
+        double d1 = 123.456; 
+        double d2 = 12_3.4_5_6; 
+        double d3 = 12_3.4_56; 
+  
+        System.out.println(d1); 
+        System.out.println(d2); 
+        System.out.println(d3); 
+    } 
+} 
+Option
+A. Error
+B. 123.456
+12_3.4_5_6
+12_3.4_56
+C. 123.456
+123.456
+123.456
+D. None
+A#Q13ANS=C
+
+A#Q14.
+class Test5 { 
+public
+    static void main(String[] args) 
+    { 
+        double d1 = _123 .456; 
+        double d2 = 12_3_.4_5_6; 
+        double d3 = 12_3.4_56_; 
+  
+        System.out.println(d1); 
+        System.out.println(d2); 
+        System.out.println(d3); 
+    } 
+} 
+Option
+A. Error
+B. 123.456
+12_3.4_5_6
+12_3.4_56
+C. 123.456
+123.456
+123.456
+D. None
+A#Q14ANS=A
+
+A#Q15.
+ class Geeks 
+{ 
+    public static void main(String[] args) 
+    { 
+        try
+        { 
+            System.out.println(1/0); 
+        } 
+        catch(ArithmeticException e) 
+        { 
+            System.out.println(e.getMessage()); 
+        } 
+    } 
+} 
+Options:
+A. java.lang.ArithmeticExcetion
+B. / by zero
+C. java.lang.ArithmeticExcetion:/ by zero
+D. ArithmeticExcetion
+A#Q15ANS=B
+
+A#Q16. class Geeks 
+{ 
+    public static void main(String[] args) 
+    { 
+        try
+        { 
+            System.out.println(1/0); 
+        } 
+        catch(ArithmeticException e) 
+        { 
+            System.out.println("Hello Geeks"); 
+        } 
+        catch(Exception e) 
+        { 
+            System.out.println("Welcome"); 
+        } 
+    } 
+} 
+
+A. Hello Geeks
+B. No Output
+C. Compile-time error
+D. welcome
+A#Q16ANS=A
+
+A#Q17. 
+class Test { 
+public final int a; 
+} class Example { 
+public static void main(String args[]) 
+    { 
+        Test obj = new Test(); 
+        System.out.println(obj.a); 
+    } 
+} 
+
+A. 0
+B. Garbage value
+C. Compile time error : variable is not initialized
+D. Run time error : a is the blank variable
+
+A#Q17ANS=C
+
+A#Q18.class Test { 
+public static void main(String args[]) 
+    { 
+        String str1 = new String("Hello World"); 
+        String str2 = new String("Hello World"); 
+  
+        String str3 = "Hello World"; 
+        String str4 = "Hello World"; 
+  
+        int a = 0, b = 0, c = 0; 
+  
+        if (str3 == str4) 
+            a = 1; 
+        else
+            a = 2; 
+  
+        if (str1.equals(str3)) 
+            b = 1; 
+        else
+            b = 2; 
+  
+        if (str1 == str4) 
+            c = 1; 
+        else
+            c = 2; 
+        System.out.println("a= " + a + " b= " + b + " c= " + c); 
+    } 
+} 
+Option
+A. a=2 b=1 c=2
+B. a=2 b=2 c=2
+C. a=1 b=2 c=1
+D. a=1 b=1 c=2
+
+A#Q18ANS=D
+
+A#Q19import java.util.LinkedList; 
+  
+class Demo { 
+public void show() 
+    { 
+        LinkedList<Integer> list = new LinkedList<Integer>(); 
+        list.add(1); 
+        list.add(4); 
+        list.add(7); 
+        list.add(5); 
+        for (int i = 0; i < list.size(); i++) { 
+            System.out.print(list.get(i) + " "); 
+        } 
+    } 
+} public class Main { 
+public static void main(String[] args) 
+    { 
+        Demo demo = new Demo(); 
+        demo.show(); 
+    } 
+} 
+A. Compilation Error
+B. 1 4 7 5
+C. 1 4 5 7
+D. EROR
+A#Q19ANS=C
+
+A#Q20.import java.util.ArrayList; 
+import java.util.Collections; 
+import java.util.Iterator; 
+  
+class Demo { 
+public void show() 
+    { 
+        ArrayList<String> list = new ArrayList<String>(); 
+        list.add("banana"); 
+        list.add("apple"); 
+        Iterator itr = list.iterator(); 
+  
+        Collections.sort(list); 
+        while (itr.hasNext()) { 
+            System.out.print(itr.next() + " "); 
+        } 
+    } 
+} public class Main { 
+public static void main(String[] args) 
+    { 
+        Demo demo = new Demo(); 
+        demo.show(); 
+    } 
+} 
+A. Compilation Error cannot give Collections.sort() after Iterator.
+B. apple banana
+C. banana apple
+D. ERROR
+A#Q20ANS=B
+
+A#Q21.
+ import java.util.LinkedList; 
+  
+class Demo { 
+public void show() 
+    { 
+        LinkedList<String> list = new LinkedList<String>(); 
+  
+        System.out.println(list.getClass()); 
+    } 
+} public class Main { 
+public static void main(String[] args) 
+    { 
+        Demo demo = new Demo(); 
+        demo.show(); 
+    } 
+} 
+A. class java.util.LinkedList
+B. String
+C. Compiler Error
+A#Q21ANS=A
+
+A#Q22.class Test1 { 
+public
+    static void main(String[] args) 
+    { 
+        int arr[] = { 11, 22, 33 }; 
+        for (int i = 0; i < arr.length; i++) 
+            System.out.print(arr[i] + " "); 
+  
+        System.out.println(); 
+  
+        int arr2[] = new int[3]; 
+        arr2[] = { 11, 22, 33 }; 
+        for (int i = 0; i < arr2.length; i++) 
+            System.out.print(arr2[i] + " "); 
+    } 
+} 
+Option
+A. 11 22 33
+     11 22 33
+B. Error
+C. Exception
+D. None
+A#Q22ANS=B
+
+A#Q23. class Super {
+    public int index = 1;
+}
+
+class App extends Super {
+
+    public App(int index) {
+        index = index;
+    }
+
+    public static void main(String args[]) {
+        App myApp = new App(10);
+        System.out.println(myApp.index);
+    }
+}
+A. 0
+B. 10
+C. 1
+D. Compile time error
+A#Q23ANS=C
+
+A#Q24.class TestApp {
+    protected int x, y;
+}
+
+class Main {
+    public static void main(String args[]) {
+        TestApp app = new TestApp();
+        System.out.println(app.x + " " + app.y);
+    }
+}
+A. 0 1
+B. 1 0
+C. 0 0
+D. null null
+A#Q24ANS=C
+
+A#Q25. class TestApp {
+    public static void main(String[] args) {
+        for (int index = 0; 1; index++) {
+            System.out.println("Welcome");
+            break;
+        }
+    }
+}
+A. Welcome
+B. Welcome Welcome
+C. Type mismatch error
+D. Run infinite-times
+A#Q25ANS=C
+
+							
+A#Q26.1. Which of these method of Thread class is used to find out the priority given to a thread?
+A. get()
+B. ThreadPriority()
+C. getPriority()
+D. getThreadPriority()
+A#Q26ANS=C
+
+A#Q27.    class multithreaded_programing
+    {
+        public static void main(String args[])
+        {
+            Thread t = Thread.currentThread();
+            t.setName("New Thread");
+            System.out.println(t.getName());        
+        }
+    }
+A. main
+B. Thread
+C. New Thread
+D. Thread[New Thread,5,main]
+A#Q27ANS=C
+
+A#Q28.class multithreaded_programing
+    {
+        public static void main(String args[])
+        {
+            Thread t = Thread.currentThread();
+            System.out.println(t.getPriority());        
+        }
+    }
+A. 0
+B. 1
+C. 4
+D. 5
+A#Q28ANS=D
+
+
+A#Q29.Which class cannot be subclassed (or extended) in java?
+
+A.abstract class
+B.parent class
+C.Final class
+D.None of above
+A#Q29ANS=C
+
+A#Q30.Which keyword is used while using interface
+A. extend
+B. implements
+C. throw
+D. throws
+A#Q30ANS=B
+
+A#Q31Which of these packages contain all the collection classes?
+A. java.lang
+B. java.util
+C. java.net
+D. java.awt
+A#Q31ANS=B
+
+A#Q32.Which of these classes is not part of Java’s collection framework?
+A. Maps
+B. Array
+C. Stack
+D. Queue
+A#Q32ANS=D
+
+
+A#Q33.Which of these methods deletes all the elements from invoking collection?
+A. clear()
+B. reset()
+C. delete()
+D. refresh()
+A#Q33ANS=A
+
+A#Q34.1. Which statements about JDBC are true?
+a. JDBC is an API to connect to relational-, object- and XML data sources
+b. JDBC stands for Java DataBase Connectivity
+c. JDBC is an API to access relational databases, spreadsheets and flat files
+d. JDBC is an API to bridge the object-relational mismatch between OO programs and relational
+databases
+A. b.c
+B. a
+C. b
+D. c.d
+A#Q34ANS=A
+
+A#Q35.Which type of driver provides JDBC access via one or more ODBC drivers?
+A. Type 1 driver
+B. Type 2 driver
+C. Type 3 driver
+D. Type 4 driver
+
+A#Q35ANS=A
+
+A#Q36.How can you retrieve information from a ResultSet?
+A. By invoking the method get(…, String type) on the ResultSet, where type is the database type
+B. By invoking the method get(…, Type type) on the ResultSet, where Type is an object which represents a database type
+C. By invoking the method getValue(…), and cast the result to the desired Java type.
+D. By invoking the special getter methods on the ResultSet: getString(…), getBoolean (…), getClob(…),…
+A#Q36ANS=D
+
+A#Q37.What is, in terms of JDBC, a DataSource?
+A. A DataSource is the basic service for managing a set of JDBC drivers
+B. A DataSource is the Java representation of a physical data source
+C. A DataSource is a registry point for JNDI-services
+D. A DataSource is a factory of connections to a physical data source
+
+A#Q37ANS=D
+
+A#Q38.Are ResultSets updateable?
+A. Yes, but only if you call the method openCursor() on the ResultSet, and if the driver and database support this option
+B. Yes, but only if you indicate a concurrency strategy when executing the statement, and if the driver and database support this option
+C. Yes, but only if the ResultSet is an object of class UpdateableResultSet, and if the driver and database support thisoption
+D. No, ResultSets are never updateable. You must explicitly execute DML statements (i.e. insert, delete and update) to change the data in the underlying database
+A#Q38ANS=B
+
+A#Q39.What is the meaning of the transaction isolation level TRANSACTION_REPEATABLE_READ
+A. Dirty reads, non-repeatable reads and phantom reads can occur
+B. Dirty reads are prevented; non-repeatable reads and phantom reads can occur
+C. Dirty reads and non-repeatable reads are prevented; phantom reads can occur
+D. Dirty reads, non-repeatable reads and phantom reads are prevented
+
+A#Q39ANS=C
+
+A#Q40.What happens if you call the method close() on a ResultSet object?
+A. the method close() does not exist for a ResultSet. Only Connections can be closed.
+B. the database and JDBC resources are released
+C. you will get a SQLException, because only Statement objects can close ResultSets
+D. the ResultSet, together with the Statement which created it and the Connection from which the Statement was retrieved, will be closed and release all database and JDBC resources
+
+A#Q40ANS=B
+
+A#Q41. In java multi-threading, a thread can be created by
+A. Extending Thread class
+B. Implementing Runnable interface
+C. Using both
+D. None
+A#Q41ANS=C
+
+
+
+
+

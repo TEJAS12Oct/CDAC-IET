@@ -1,0 +1,493 @@
+A#Q1.Build & Fix Model is suitable for programming exercises of ___________ LOC (Line of Code).
+A. 100-200
+B. 200-400
+C. 400-1000
+D. above 1000
+A#Q1ANS=A
+
+A#Q2. 
+RAD stands for
+A. Relative Application Development
+B. Rapid Application Development
+C. Rapid Application Document
+D. None of the mentioned
+A#Q2ANS=B
+
+A#Q3.
+ What is Cyclomatic complexity?
+A. Black box testing
+B. White box testing
+C. Yellow box testing
+D. Green box testing
+A#Q3ANS=B
+
+A#Q4.Maintenance testing is performed using which methodology?
+A. Retesting
+B. Sanity testing
+C. Breadth test and depth test
+D. Confirmation testing
+
+
+A#Q4ANS=C
+
+A#Q5.
+during this enhancement, change and migration cycle is known as maintenance testing.
+5. White Box techniques are also classified as
+a) Design based testing
+b) Structural testing
+c) Error guessing technique
+d) None of the mentioned
+A#Q5ANS=B
+
+A#Q6. Which of the following is not the primary objectives in the analysis model?
+A. describing the customer complaints
+B. establishing a basis for the creation of a software design
+C. defining a set of requirements that can be validated once the software is built
+D. none of the mentioned
+
+A#Q6ANS=D
+
+A#Q7.  The __________ of a relationship is 0 if there is no explicit need for the relationship to occur 
+or the relationship is optional.
+A. modality
+B. cardinality
+C. entity
+D. structured analysis
+A#Q7ANS=A
+
+A#Q8.
+The __________ contains a state transition diagram that is a sequential specification of behavior.
+A. data flow diagram
+B. state transition diagram
+C. control specification
+D. workflow diagram
+A#Q8ANS=C
+
+A#Q9.  In reverse engineering process, what refers to the sophistication of the design information that can be 
+extracted from the source code?
+A. interactivity
+B. completeness
+C. abstraction level
+D. direction level
+A#Q9ANS=C
+
+A#Q10.Forward engineering is also known as
+A. extract abstractions
+B. renovation
+C. reclamation
+D. both renovation and reclamation
+A#Q10ANS=D
+
+A#Q11.Which defect amplification model is used to illustrate the generation and detection of errors 
+during the preliminary steps of a software engineering process?
+A.Design
+B.Detailed design
+C.Coding
+D.All mentioned above
+
+A#Q11ANS=D
+
+A#Q12.
+Which Command is used to show limited number of commits?
+ A. git fetch <remote>
+ B. git log -n <limit>
+ C. git config <limit>
+ D. git status
+A#Q12ANS=B
+
+A#Q13. 
+ Which command creates an empty Git repository in the specified directory?
+A.  git reset <file>
+B.  git log <since>..<until>
+C.  git init <directory>
+D.  git init --bare <directory>
+A#Q13ANS=C
+
+A#Q14.
+Which is not a SQA activity?
+A.Black box testing
+B.White box testing 
+C.Integration testing
+D.Unit testing
+
+A#Q14ANS=B
+
+A#Q15.
+The longer a fault exists in software
+A.the more tedious its removal becomes
+B.the more costly it is to detect and correct
+C.the less likely it is to be properly corrected
+D.All of the mentioned
+A#Q15ANS=D
+
+A#Q16. What is the requirement for using Jenkins?
+A. A source code repository which is accessible, for instance, a Git repository
+B. A working build script, e.g., a Maven script, checked into the repository
+C. Both of these
+D. None
+A#Q16ANS=C
+
+A#Q17. 
+What are the advantages of Jenkins?
+A. At integration stage, build failures are cached
+B. For each code commit changes an automatic build report notification generates
+C. To notify developers about build report success or failure, it is integrated with LDAP mail server
+D. All of the above
+
+A#Q17ANS=D
+
+A#Q18.Which command can be used to check maven version?
+A. mvn -ver
+B. maven -ver
+C. maven -version
+D. mvn -version
+
+A#Q18ANS=D
+
+A#Q19How can we setup Jenkins jobs?
+A. Select new item from the menu
+B. After that enter a name for the job and select free-style job
+C. Then click OK to create new job in Jenkins
+D. ALL THE ABOVE
+
+A#Q19ANS=D
+
+A#Q20. Following Docker command: docker push user_name/repository_name  is used to:
+A. Activate default VM machine
+
+B. Push changes done in an docker image into Docker Hub
+
+C. Build an image
+
+D. Commit changes done in a Docker image
+A#Q20ANS=D
+
+A#Q21.
+Selenium IDE stands for
+A. Selenium Intialization Development Environment
+B. Selenium Interrelated Development Environment
+C. Selenium Integrated Development Environment
+D. Selenium Information Development Environment
+A#Q21ANS=C
+
+A#Q22.The Selenium RC is used
+A. To run your test against different browsers (except HtmlUnit) on different operating systems.
+B. To create tests with little or no prior knowledge in programming.
+C. To test a web application against Firefox only.
+D. To run a huge test suite, that can be executed on multiple machines.
+A#Q22ANS=A
+
+A#Q23.The Selenium can
+A. access controls within the desktop
+B. both web and desktop applications
+C. only test web applications
+D. NONE
+A#Q23ANS=C
+
+A#Q24.Which component of Selenium can create customized test results.
+A. Web driver
+B. Selenium RC
+C. Selenium IDE
+D. Selenium Grid
+A#Q24ANS=A
+
+A#Q25. Select the command which is used to pause execution until the specified element becomes present.
+A. waitForElementPresent
+B. waitForPagePresent
+C. waitForTablePresent
+D. waitForFieldPresent
+A#Q25ANS=A
+
+							
+A#Q26.1. Select the syntax to locate an element using inner text.
+A. css=tag:contains(“inner text”)
+B. css=tag:value(“inner text”)
+C. css=tag:attributes(“inner text”)
+D. css=tag:class(“inner text”)
+A#Q26ANS=A
+
+A#Q27. Select the command which is NOT used in verifying page elements .
+A. verifyElementPresent
+B. verifyElementRight
+C. verifyElementNotPresent
+D. verifyElementPositionLeft
+A#Q27ANS=B
+
+A#Q28.Select the Get command which fetches the inner text of the element that you specify in Web driver Selenium.
+A. getinnerText()
+B. get_in_Text()
+C. get_inner_Text()
+D. getText()
+A#Q28ANS=D
+
+
+A#Q29.What does the term CSS refers to ?
+A. Cascade Style Sheets
+B. Cascading Style Sheets
+C. Clear Style Sheets
+D. Catering Style Sheets
+A#Q29ANS=B
+
+A#Q30._______ manages the assigning nodes to pods depending on resource availability.
+
+A.Etcd
+
+B.Kubectl
+
+C.Scheduler
+
+D.Flanneld
+A#Q30ANS=C
+
+A#Q31___________ runs on each node and ensures containers are running in a pod.
+
+A.Kubelet
+
+B.Etcd
+
+C.Scheduler
+
+D.Pod
+A#Q31ANS=D
+
+A#Q32.As soon a service starts, .......... daemon running on each node add a set of environment variables on the pod for 
+each active service.
+A.Kubectl
+B.Kubelet
+C.Kubeadm
+D.Service discovery
+A#Q32ANS=C
+
+
+A#Q33.Kubernetes uses _______________________ to connect to ouath 2 providers to offload the authentication to 
+external services.
+
+A.Webhook Token Authentication
+
+B.Keystone Password
+
+C.OpenID Connect Tokens
+
+D.Authentication Proxy
+A#Q33ANS=C
+
+A#Q34.To program additional authentication logic besides available authenticator modules, _______________ can be used.
+
+A.WebHook Authentication
+
+B.Authentication Proxy
+
+C.Keystone Password
+
+D.OpenID Connect Tokens
+A#Q34ANS=B
+
+A#Q35.Kube-apiserver on kubernetes master is designed to scale. 
+
+A. Vertically
+
+B. Horizontally
+C. NA
+D. DIAGONALLY
+
+A#Q35ANS=B
+
+A#Q36.The Service Type _____________ works only if your cluster is setup to work with a cloud provider.
+A. ClusterIP
+B. NodePort
+C. LoadBalancer
+D. ExternalName
+A#Q36ANS=C
+
+A#Q37.Cronjobs in kubernetes run in
+
+A.UTC only
+
+B.Server NTP settings
+
+C.Local time zone
+
+D.GMT only
+
+A#Q37ANS=A
+
+A#Q38.Which label is used as prefix pattern to specify a globbing pattern parameter for a Selenese command ?
+A. pattern
+B. glob
+C. regex
+D. None
+A#Q38ANS=B
+
+A#Q39.What does the assertTitle checks ?
+A. Element title
+B. Page title
+C. Block title
+D. Title of element under focus
+
+A#Q39ANS=B
+
+A#Q40.Security methods such as private encryption, VLANs and firewalls comes under __________ subject area.
+A.Accounting Management
+B. Compliance
+C. Data Privacy
+D.All of the mentioned
+
+A#Q40ANS=C
+
+A#Q41. ________ captive requires that the cloud accommodate multiple compliance regimes.
+A. Licensed
+B. Policy-based
+C. Variable
+D. All of the mentioned
+A#Q41ANS=B
+
+ A#Q42.Point out the wrong statement.
+A. Large cloud providers with geographically dispersed sites worldwide, therefore, achieve reliability rates 
+that are hard for private systems to achieve B. Private data centers tend to be located in places where the 
+company or unit was founded or acquired C. A network backbone is a very low-capacity network connection
+D. None of the mentioned
+A#Q42ANS=C
+
+ A#Q43.What does the assertTitle checks ?
+A. Element title
+B. Page title
+C. Block title
+D. Title of element under focus
+A#Q43ANS=B
+
+ A#Q44.Selenium variables are stored in _____________.
+A. storedVars
+B. storedVariables
+C. VariablesStore
+D. None of the above
+A#Q44ANS=A
+
+
+ A#Q45.What is called that scale for large test suites or test suites that must be run in multiple environments?
+A. Selenium-Grid
+B. Selenium RC
+C. Selenium Web driver
+D. Selenium NG
+A#Q45ANS=A
+
+ A#Q46.Where is XPath used in ?
+A. XML documents
+B. MS-Word documents
+C. MS-Excel documents
+D. MS-PowerPoint documents
+A#Q46ANS=A
+
+ A#Q47.The term AJAX expands to ________.
+A. Asynchronous Java and XML
+B. Asynchronous JavaScript and XML
+C. Accumulated Java and XML
+D. None of the above
+A#Q47ANS=B
+
+ A#Q48. Requirement Engineering is not concern with ____________.
+A. Requirement Design
+B. Requirement Elicitation
+C. Requirement Analysis
+D. Requirement Documentation
+A#Q48ANS=A
+
+ A#Q49.  A test technique that involves testing with various ranges of valid and invalid inputs of 
+ particular module or component functionality extensively is ___________.
+A. Gorilla Testing
+B. Monkey Testing
+C. Agile Testing
+D. Baseline Testing
+A#Q49ANS=A
+
+ A#Q50.End result of Software Requirement Analysis is ________.
+A. Functional and Behavioral
+B. Architectural and Structural
+C. Usability and Reliability
+D. Algorithmic and Data Structure
+A#Q50ANS=A
+
+ A#Q51.The expected results of the software is _________________.
+
+A. Only important in system testing
+B. Only used in component testing
+C. Most useful when specified in advance
+D. Derived from the code.
+A#Q51ANS=A
+
+ A#Q52.Which is not true?
+
+A. Condition coverage is also known as Predicate Coverage
+B. 100% condition coverage does not guarantee 100% decision coverage.
+C. Error guessing has rules for testing.
+D. Predicate Coverage uses Boolean values.
+A#Q52ANS=C
+
+ A#Q53.  Which of the following is / are not use for the Usability Improvement of the website?
+A. Card sorting
+B. Focus Groups
+C. Heuristic Evaluation
+D. None of these
+A#Q53ANS=D
+
+ 
+ A#Q54.  A tester is executing a test to evaluate and it complies with the user requirement for a certain field be 
+populated by using a dropdown box containing a list of values, at that time tester is performing __________ .
+A. White-box Testing
+B. Black-box Testing
+C. Load Testing
+D. Regression Testing
+A#Q54ANS=B
+
+ A#Q55.  What is the ratio of effort needed to fixing a defect in Requirement Phase, Design Phase, 
+Coding Phase and Implementing Phase?
+
+A. 1:4:7:10
+B. 1:6:10:1000
+C. 1:8:12:100
+D. 1:10:100:1000
+A#Q55ANS=D
+
+
+ A#Q56. Which testing application security has the purpose to prevent problems which may affect the 
+application integrity and stability?
+
+A. Vulnerability Testing
+B. Ramp Testing
+C. Penetration Testing
+D. Fuzz Testing
+A#Q56ANS=A
+
+ A#Q57.Difference between Retesting and Regression Testing is _________ .
+
+A. Retesting ensures the original fault has been removed where as regression testing looks 
+for unexpected side-effects.
+B. Retesting looks for unexpected side-effects where as regression testing ensures the 
+original fault has been removed.
+C. Retesting is done after faults are fixed where as regression testing is done earlier
+D. Retesting is done by developers whereas regression testing is done by independent testers
+A#Q57ANS=A
+
+
+ A#Q58.First component of the DFD is ______ .
+A. Process
+B. Flow
+C. Entity
+D. Level
+A#Q58ANS=C
+
+
+ A#Q59.What is the order of Priority Testing?
+A. Unit >>Integration >>System Testing.
+B. Unit>> System>>Acceptance Testing.
+C. System>>Integration>> Acceptance Testing.
+D. System>>Acceptance>>Integration
+A#Q59ANS=A
+
+
+ A#Q60. The Cyclomatic number theory in a graph is defined by ________.
+
+A. e - n + 2
+B. e - n + 1
+C. e - n - 2
+D. e - n - 1
+A#Q60ANS=B
