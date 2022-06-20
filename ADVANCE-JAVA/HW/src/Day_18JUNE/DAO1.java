@@ -58,7 +58,7 @@ public class DAO1 {
 				int pid = rs.getInt("id");
 				String pName = rs.getString("name");
 				int cost = rs.getInt(3);
-				System.out.println("row: " + pid + "," + pName + "," + cost);
+				System.out.println(pid + " , " + pName + " , " + cost);
 			}
 
 		} catch (SQLException e) {
@@ -98,7 +98,7 @@ public class DAO1 {
 		}
 	}
 
-	public void updatNameCost(String name, int id, int cost) {
+	public void updatNameCost(int id, String name, int cost) {
 		Connection con = myGetconnection();
 		PreparedStatement ps;
 		{
@@ -131,20 +131,23 @@ public class DAO1 {
 		}
 	}
 
-	public void givenId(int id) {
+	
+	public ResultSet givenID(int id) {
+
+		ResultSet rs = null;
+		PreparedStatement psmt = null;
 		Connection con = myGetconnection();
-		PreparedStatement ps;
-		{
-			try {
-				ps = con.prepareStatement("select * from product where id =?");
 
-				ps.setInt(1, id);
-				ps.execute();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
+		try {
+			psmt = con.prepareStatement("select * from product where id=?");
+			psmt.setInt(1, id);
+			rs = psmt.executeQuery();
+		} catch (SQLException e) {
 
+			e.printStackTrace();
 		}
-	}
 
+		return rs;
+
+	}// End Of Function
 }

@@ -22,37 +22,76 @@ public class Client1 {
 		ResultSet rs = d.getRows("Select * from product");
 		Scanner sc = new Scanner(System.in);
 		int ch = 0;
+		d.ShowResultset(d.getRows("select * from product"));
 		do {
-			System.out.println("Enter your choice:");
+			System.out.println("\nEnter your choice:");
 			System.out.println("\t1. update name of a given id\r\n" + "	2. update cost of give id\r\n"
 					+ "	3. update both name and cost of given id\r\n" + "	4. delete a record of given\r\n"
 					+ "	5. show only the info of row of given id\r\n" + "	6. quit");
 			ch = sc.nextInt();
 			switch (ch) {
-			case 1:
-				d.updateName(2, "bag");
-				d.ShowResultset(d.getRows("select * from product where id=2"));
+			case 1: {
+
+				System.out.println("Enter ID Which you want to  Update :");
+				int id = sc.nextInt();
+
+				System.out.println("Enter Name  Which you want to  Update : ");
+				String Name = sc.next();
+
+				d.updateName(id, Name);
+				d.ShowResultset(d.getRows("select * from product where id=" + id));
+				System.out.println("Update Name  Successfully...!!!");
 				break;
-			case 2:
-				d.updatCost(3, 40000);
-				d.ShowResultset(d.getRows("select * from product where id=3"));
+			}
+			case 2: {
+				System.out.println("Enter ID Which you want to  Update :");
+				int id = sc.nextInt();
+
+				System.out.println("Enter Cost Which you want to  Update :");
+				int Cost = sc.nextInt();
+				d.updatCost(id, Cost);
+				d.ShowResultset(d.getRows("select * from product where id=" + id));
+				System.out.println("Update  COst Successfully...!!!");
 				break;
-			case 3:
-				d.updatNameCost("Extension board", 4, 800);
-				d.ShowResultset(d.getRows("select * from product where cost=800"));
+			}
+			case 3: {
+				System.out.println("Enter ID Which you want to  Update :");
+				int id = sc.nextInt();
+
+				System.out.println("Enter Name  Which you want to  Update : ");
+				String Name = sc.next();
+
+				System.out.println("Enter Cost Which you want to  Update :");
+				int Cost = sc.nextInt();
+
+				d.updatNameCost(id, Name, Cost);
+
+				d.ShowResultset(d.getRows("select * from product where id=" + id));
+				System.out.println("Update Name And COst Successfully...!!!");
 				break;
-			case 4:
-				d.deleteRecord(5);
-				d.ShowResultset(d.getRows("select * from product where id=5"));
+			}
+			case 4: {
+				System.out.println("Enter ID Which you want to  Update :");
+				int id = sc.nextInt();
+
+				d.deleteRecord(id);
+				d.ShowResultset(d.getRows("select * from product where id=" + id));
+				System.out.println("Deleted Succesfully...!!!");
 				break;
-			case 5:
-				d.givenId(3);
-				d.ShowResultset(d.getRows("select * from product where id=3"));
+			}
+			case 5: {
+
+				System.out.println("Enter The Id of Product Whoose Info Want To Display");
+				sc.nextLine();
+				int id = sc.nextInt();
+				d.givenID(id);
+				d.ShowResultset(d.givenID(id));
 				break;
+			}
+
 			case 6:
 				System.exit(0);
 			}
-			sc.close();
 
 		} while (ch != 0);
 	}
