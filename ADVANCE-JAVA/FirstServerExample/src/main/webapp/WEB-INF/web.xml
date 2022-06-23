@@ -33,5 +33,15 @@
 		<servlet-name>ex3</servlet-name>
 		<url-pattern>/Input</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ex4</servlet-name>
+		<servlet-class>Study.Third</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ex4 </servlet-name>
+		<url-pattern>/Third</url-pattern>
+	</servlet-mapping>
 
 </web-app>
