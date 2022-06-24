@@ -42,8 +42,9 @@ public class SignIn extends HttpServlet {
 
 		response.setContentType("text/html");
 		PrintWriter pw = response.getWriter();
-		
-		pw.println("<html><body style=\"background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQam1M-sVtzdYESqJunDahtkqxJJAzpFVYPTg&usqp=CAU');background-repeat:no-repeat;background-attachment: fixed;background-size:cover;\"> "); 
+
+		pw.println(
+				"<html><body style=\"background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQam1M-sVtzdYESqJunDahtkqxJJAzpFVYPTg&usqp=CAU');background-repeat:no-repeat;background-attachment: fixed;background-size:cover;\"> ");
 		pw.println("<form  method='POST'>");
 		pw.println("<center><h1>LOGIN PAGE</h1>");
 		pw.println("<br/>Username : <input type='text' name='name' />");
@@ -62,7 +63,7 @@ public class SignIn extends HttpServlet {
 
 		String name = request.getParameter("name");
 		String pass = request.getParameter("pass");
-		
+
 		pw.println("<html><body>");
 		System.out.println(name);
 		System.out.println(pass);
@@ -72,7 +73,9 @@ public class SignIn extends HttpServlet {
 		} else {
 			pw.println("<h1>Login Failed</h1>");
 		}
-		pw.println("</body></html>");
+		pw.println("<form action= 'Home' method='GET'>");
+		pw.println("<input type=\"submit\" name = \"HOME\" value=\" HOME \" />");
+		pw.println("</form></body></html> ");
 
 		pw.close();
 	}

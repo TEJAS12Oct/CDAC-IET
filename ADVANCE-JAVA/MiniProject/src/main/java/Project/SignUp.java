@@ -25,8 +25,8 @@ public class SignUp extends HttpServlet {
 
 		pw.println("<form method='POST'>");
 
-		pw.println("<table>" + "<tr>" + "<td><b>UserName : </b></td>"
-				+ "<td><input type\"Text\" placeholder=\"UserName\" name  ='Name'></td>" + "</tr>");
+		pw.println("<table>" + "<tr>" + "<td><b>FirstName : </b></td>"
+				+ "<td><input type\"Text\" placeholder=\"FirstName\" name  ='Name'></td>" + "</tr>");
 
 		pw.println("<tr>" + "<td><b>LastName :</b></td>"
 				+ "<td><input type\"Text\" placeholder=\"LastName\" name  ='LName'> </td>" + "</tr>");
@@ -40,11 +40,15 @@ public class SignUp extends HttpServlet {
 		pw.println("<tr>" + "<td> <b>Contact : </b></td>"
 				+ "<td>  <input type\"Contact No\" placeholder=\"*********\" name  ='Contact'> </td>" + "</tr>");
 
-		pw.println("<tr>" + "<td> <b>Password :</b></td>"
-				+ "<td><input type\"Password\" placeholder=\"**********\" name  ='UserName'> </td>" + "</tr>");
+		pw.println("<tr>" + "<td> <b>UserName :</b></td>"
+				+ "<td><input type\"UserName\" placeholder=\"**********\" name  ='UserName'> </td>" + "</tr>");
 
-		pw.println("<tr>" + "<td><b>Re-enterPassword :</b> </td>"
-				+ "<td><input type\"Re-enterPassword\" placeholder=\"**********\" name  ='Password'> </td>" + "</tr> ");
+		pw.println("<tr>" + "<td><b>Password :</b> </td>"
+				+ "<td><input type\"Password\" placeholder=\"**********\" name  ='Password'> </td>" + "</tr> ");
+		
+		pw.println("<tr>" + "<td><b>Re-Enter Password :</b> </td>"
+				+ "<td><input type\"Re-Enter Password\" placeholder=\"**********\" name  ='Re-Enter Password'> </td>" + "</tr> ");
+
 
 		pw.println("</table><br/>" + "<b><u>Submission Confirmation : </u></b><br/>"
 				+ "Are you Sure:<input type=\"checkbox\" name=\"Are you sure\" />"
@@ -74,6 +78,11 @@ public class SignUp extends HttpServlet {
 		DAO dao = new DAO();
 		dao.addUser(Name, LName, DOB, Gender, Contact, UserName, Password);
 		pw.println("<h1>User Add Succesfully...!!!</h1>");
+		
+		pw.println("<html><body> ");
+		pw.println("<form action= 'Home' method='GET'>");
+		pw.println( "<input type=\"submit\" name = \"HOME\" value=\" HOME \" />");
+		pw.println("</form></body></html> ");
 
 		pw.close();
 
