@@ -19,13 +19,15 @@ public class Home extends HttpServlet {
 
 		PrintWriter pw = response.getWriter();
 
-		pw.println("<html><body style=\"background-image:url('https://i.pinimg.com/originals/ca/dc/7a/cadc7aaef2627a75d8744be36ab4275f.jpg')\"><center>");
+		pw.println("<html><body style=\"background-image:url('https://i.pinimg.com/originals/ca"
+				+ "/dc/7a/cadc7aaef2627a75d8744be36ab4275f.jpg')\"><center>");
 		pw.println("<h1>Home Page</h1>");
-		pw.println("<img src=\"https://userguiding.com/wp-content/uploads/2020/10/welcome-page.jpg\" alt=\"Sample Image\" height=\"300\"></img>");
+		pw.println("<img src=\"https://t4.ftcdn.net/jpg/03/41/47/73/360_F_341477352_FPo"
+				+ "RvWnWWqdzVFnIWn3on34gYWaSEX2K.jpg\" alt=\"Sample Image\" height=\"300\"></img>");
 
 		pw.println("<h2>SignUp for new User...!!!</h2>");
 		pw.println("<form action='register' method='GET'>");
-		pw.println("<br/> <input type='Submit' value='Sign  UP'/> </form>");
+		pw.println("<input type='Submit' value='Sign  UP'/> </form>");
 
 		pw.println("<h2>SignIn for old User...!!!</h2>");
 		pw.println("<form action='Login' method='GET'>");
