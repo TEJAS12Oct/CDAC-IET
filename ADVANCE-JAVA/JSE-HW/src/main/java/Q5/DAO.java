@@ -42,9 +42,27 @@ public class DAO {
 		return rs;
 	}
 
-	public void addBirthday(String lname, String fname, String dob) {
-		
-		
-	}
+	public void addBirthday(String fname, String lname, String date) {
+		{
+			// get connection
+			Connection con = myGetConnection();
+			PreparedStatement psmt;
+			System.out.println(date);
+			try {
+				psmt = con.prepareStatement("insert into birthday values(?,?,?)");
+				psmt.setString(1, fname);
+				psmt.setString(2, lname);
+				psmt.setString(3, date);
+				if (psmt.executeUpdate() == 1)
+					System.out.println("Success");
+				else
+					System.out.println("Failed");
 
+			} catch (SQLException e) {
+
+				e.printStackTrace();
+			}
+
+		}
+	}
 }

@@ -19,49 +19,57 @@ public class Birthday extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+
 		response.setContentType("text/html");
 		PrintWriter pw = response.getWriter();
-		pw.println("<html><body>");
-		pw.println("<form method ='post'>");
-		pw.println("<br><br>Enter First Name<input type='text' placeholder='first Name' name=fname />");
-		pw.println("<br><br>Enter Last Name<input type='text' placeholder='last Name' name=lname />");
-		pw.println("<br><br>Selet Birthdate : <input type='date' name=dob />");
-		pw.println("<br><br><input type='submit' value='ADD' />");
-		pw.println("</form></body></html>");
+
+		pw.println("<form method='POST'>");
+		pw.println("<center><h1>BIRTHDAY</h1>");
+		pw.println("<br/>Firstname : <input type='text' name='fname' />");
+		pw.println("<br/><br/>Lastname : <input type='text' name='lname' />");
+		pw.println("<br/><br/>Date : <input type='date' name='Date' />");
+		pw.println("<br/><br/><input type='submit'  name='Submit' />");
+		pw.println("</form></center></body></html>");
+
+		pw.close();
+
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+
 		response.setContentType("text/html");
 		PrintWriter pw = response.getWriter();
+		pw.println("<html><body><table border='1'>");
+		pw.println("<center><h1>BIRTHDAY Added Succesfully...!!!<h1><center>");
+		DAO dao = new DAO();
 		String fname = request.getParameter("fname");
 		String lname = request.getParameter("lname");
-		String dob = request.getParameter("dob");
-		DAO dao = new DAO();
-		dao.addBirthday(lname, fname, dob);
-		LocalDate today = LocalDate.now();
-		ResultSet rs = dao.getRows("select fname,lname,dob ,month(dob),day(dob) from birthdays");
-		pw.println("<html><body>");
+		String dob = request.getParameter("Date");
+		/*
+		 * java.util.Date date=null; try { date = new
+		 * SimpleDateFormat("dd-mm-yy").parse(dob); System.out.println("convert"+date);
+		 * } catch (ParseException e1) { // TODO Auto-generated catch block
+		 * e1.printStackTrace(); }
+		 */
+
+		dao.addBirthday(fname, lname, dob);
+		ResultSet rs = dao
+				.getRows("select * from birthday where month( date)>month(curdate())||day( date)>day(curdate());");
+
 		try {
 			while (rs.next()) {
-				String name1 = rs.getString(1);
-				String name2 = rs.getString(2);
-				String dob1 = rs.getString(3);
-				int month = rs.getInt(4);
-				int day = rs.getInt(5);
-				{
-					if (month > today.getMonthValue()) {
-						pw.println("<br><br> " + name1 + "&nbsp; " + name2 + "&nbsp; DOB(" + dob1
-								+ ") BIRTHDAY is comming soon ......");
-					} else if (month == today.getMonthValue() && day > today.getDayOfMonth()) {
-						pw.println(" <br><br> " + name1 + "&nbsp; " + name2 + "&nbsp; DOB(" + dob1
-								+ ") BIRTHDAY is comming soon ......");
-					}
-				}
+				System.out.println(rs.getString(1) + " ");
+				pw.println(" <tr><td>" + rs.getString(1) + "</td><td>" + rs.getString(2) + "</td><td>" + rs.getDate(3)
+						+ "</td></tr>");
+
 			}
 		} catch (SQLException e) {
+
 			e.printStackTrace();
 		}
-		pw.println("</body></html>");
+
+		pw.println("</table></center></body></center></html>");
 	}
+
 }
