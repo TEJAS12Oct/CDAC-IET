@@ -37,8 +37,29 @@ public class SignIn extends HttpServlet {
 
 	}
 
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		response.setContentType("text/html");
+		PrintWriter pw = response.getWriter();
+
+		pw.println("<html><body style=\"background-image:url('https://images.unsplash.com/photo-1577900258307"
+				+ "-26411733b430?ixlib=rb-1.2.1&ixid=MnwxMjA3fD"
+				+ "B8MHxzZWFyY2h8MTF8fHdyaXRlcnxlbnwwfHwwfHw%3D&w=1000&q=80');"
+				+ "background-repeat:no-repeat;background-attachment: fixed;background-size:cover;\"> ");
+		pw.println("<form  method='POST'>");
+		pw.println("<center><h1>LOGIN PAGE</h1>");
+		pw.println("<br/><b>Username : <b/><input type='text' name='name' />");
+		pw.println("<br/><br/><b>Password : </b><input type='text' name='pass' />");
+		pw.println("<br/><br/><input type='submit' name='show' name='Login' />");
+		pw.println("</form></center></body></html>");
+
+		pw.close();
+	}
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+
 		response.setContentType("text/html");
 		PrintWriter pw = response.getWriter();
 
@@ -54,11 +75,11 @@ public class SignIn extends HttpServlet {
 		} else {
 			pw.println("<h1>Login Failed...!!!</h1>");
 		}
-		pw.println("<form action= 'Home.html'>");
+		pw.println("<form action= 'Home' method='GET'>");
 		pw.println("<input type=\"submit\" name = \"HOME\" value=\" HOME \" />");
 		pw.println("</form></body></html> ");
 
 		pw.close();
-
 	}
+
 }
