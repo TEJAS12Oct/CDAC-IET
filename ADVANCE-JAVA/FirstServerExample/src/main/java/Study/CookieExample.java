@@ -10,24 +10,23 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 @WebServlet("/cookie")
 public class CookieExample extends HttpServlet {
-	
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		 
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
 		String color = request.getParameter("fav-col");
-		
-		Cookie c = new Cookie("fav",color);
+
+		Cookie c = new Cookie("fav", color);
 		response.addCookie(c);
 		response.setContentType("text/html");
 		PrintWriter pw = response.getWriter();
-		pw.println("<html><body bgcolor='"+color+"'><form action='First'>");
+		pw.println("<html><body bgcolor='" + color + "'><form action='First'>");
 		pw.println("<input type='submit' value='ok' /> </form></body></html>");
-		
-				}
+
+	}
 
 }
-
 
 // http://localhost:8080/App1/cookie?fav-col=red

@@ -51,11 +51,13 @@ public class SignIn extends HttpServlet {
 
 		if (h1.containsKey(name) && h1.containsValue(pass)) {
 			pw.println("<h1>Successfully Login...!!!</h1>");
-//			RequestDispatcher RD = request.getRequestDispatcher("Home.html");
-//			RD.forward(request, response);
+			// RequestDispatcher RD = request.getRequestDispatcher("Home.html");
+			// RD.forward(request, response);
 
 		} else {
 			pw.println("<h1>Login Failed...!!!</h1>");
+			// RequestDispatcher RD = request.getRequestDispatcher("SignIn.html");
+			// RD.forward(request, response);
 		}
 		pw.println("<form action= 'Home.html'>");
 		pw.println("<input type=\"submit\" name = \"HOME\" value=\" HOME \" />");
