@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -43,12 +44,11 @@ public class SignIn extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter pw = response.getWriter();
 
-		pw.println("<html><body style=\"background-image:url('https://images.unsplash.com/photo-1577900258307"
-				+ "-26411733b430?ixlib=rb-1.2.1&ixid=MnwxMjA3fD"
-				+ "B8MHxzZWFyY2h8MTF8fHdyaXRlcnxlbnwwfHwwfHw%3D&w=1000&q=80');"
+		pw.println("<html><body style=\"background-image:url('https://www.bird-wittenbergdental.com/"
+				+ "wp-content/uploads/2017/01/top" + "-line-management-login-background-1.jpg');"
 				+ "background-repeat:no-repeat;background-attachment: fixed;background-size:cover;\"> ");
 		pw.println("<form  method='POST'>");
-		pw.println("<center><h1>LOGIN PAGE</h1>");
+		pw.println("<center><br/><br/><br/><br/><br/><br/><br/><br/><h1>LOGIN PAGE</h1>");
 		pw.println("<br/><b>Username : <b/><input type='text' name='name' />");
 		pw.println("<br/><br/><b>Password : </b><input type='text' name='pass' />");
 		pw.println("<br/><br/><input type='submit' name='show' name='Login' />");
@@ -72,10 +72,12 @@ public class SignIn extends HttpServlet {
 
 		if (h1.containsKey(name) && h1.containsValue(pass)) {
 			pw.println("<h1>Successfully Login...!!!</h1>");
+//			RequestDispatcher RD = request.getRequestDispatcher("Home.html");
+//			RD.forward(request, response);
 		} else {
 			pw.println("<h1>Login Failed...!!!</h1>");
 		}
-		pw.println("<form action= 'Home' method='GET'>");
+		pw.println("<form action= 'Home.html' method='GET'>");
 		pw.println("<input type=\"submit\" name = \"HOME\" value=\" HOME \" />");
 		pw.println("</form></body></html> ");
 
