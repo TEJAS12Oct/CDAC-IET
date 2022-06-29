@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<bean id="msg" class="Study.Beans.MessageBean">
+		<property name="message" value="Hi from spring"></property>
+		<property name="senderName" value="Tejas"></property>
+		<property name="receiverAddress" ref="addr"></property>
+	</bean>
+
+	<bean id="addr" class="Study.Beans.AddressBean">
+		<property name="location" value="kothrud"></property>
+		<property name="city" value="pune"></property>
+		<property name="state" value="maharashtra"></property>
+		<property name="country" value="india"></property>
+		<property name="pin" value="123455677"></property>
+	</bean>
+
+
+</beans>
