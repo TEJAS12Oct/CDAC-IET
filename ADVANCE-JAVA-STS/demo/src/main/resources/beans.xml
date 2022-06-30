@@ -6,6 +6,8 @@
     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
 
+
+
 	<bean id="msg" class="Study.Beans.MessageBean">
 		<property name="message" value="Hi from spring"></property>
 		<property name="senderName" value="Tejas"></property>
