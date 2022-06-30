@@ -1,21 +1,35 @@
 package Study.Beans;
 
 public class MessageBean {
-	
-	private String message,senderName;
+
+	private String message, senderName;
 	private AddressBean receiverAddress;
-	
+
+	// Default Constructor
+	public MessageBean() {
+		System.out.println("Message Bean default constructor called --that means instance is created");
+	}
+
+	public MessageBean(AddressBean receiverAddress) {
+		System.out.println("Message bean Constructor With 1 Parameter");
+		message = "Have a Good Day";
+		senderName = "ShaktiMan";
+		this.receiverAddress = receiverAddress;
+	}
+
+	public MessageBean(String message, String senderName, AddressBean receiverAddress) {
+		System.out.println("message bean construcor with 3 parameters");
+		this.message = message;
+		this.senderName = senderName;
+		this.receiverAddress = receiverAddress;
+	}
+
 	public AddressBean getReceiverAddress() {
 		return receiverAddress;
 	}
-	
+
 	public void setReceiverAddress(AddressBean receiverAddress) {
 		this.receiverAddress = receiverAddress;
-	}
-	
-	public MessageBean()
-	{
-		System.out.println("Message Bean constructor called --that means instance is created");
 	}
 
 	public String getMessage() {
@@ -36,5 +50,4 @@ public class MessageBean {
 		this.senderName = senderName;
 	}
 
-	
 }

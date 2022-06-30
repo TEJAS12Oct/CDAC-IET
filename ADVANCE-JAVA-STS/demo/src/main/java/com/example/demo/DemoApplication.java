@@ -9,7 +9,8 @@ import java.util.Scanner;
 public class DemoApplication {
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
-
+		
+		//Load the driver class from jar to RAM
 		Class.forName("com.mysql.cj.jdbc.Driver");
 
 		String url = "jdbc:mysql://localhost:3306/ adv_java";

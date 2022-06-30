@@ -20,6 +20,12 @@ public class MyJavaConfig {
 		return bean;
 	}
 
+	@Bean(value = "msg2")
+	public MessageBean getMessageBean2() {
+		MessageBean bean = new MessageBean("THis is from config 2", "Nobita", getAddr());
+		return bean;
+	}
+
 	// WE register the bean with the container
 	@Bean(value = "addr")
 	public AddressBean getAddr() {
