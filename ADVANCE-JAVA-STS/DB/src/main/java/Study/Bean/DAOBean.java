@@ -23,6 +23,22 @@ public class DAOBean {
 	private DataSource ds;
 
 	public void showAllRecords() {
+
+		try {
+			Connection con = ds.getConnection();
+			PreparedStatement pstmt = con.prepareStatement("select * from product");
+			ResultSet rs = pstmt.executeQuery();
+			while (rs.next()) {
+				int id = rs.getInt(1);
+				String name = rs.getString(2);
+				int cost = rs.getInt(3);
+				System.out.println(id + " , " + name + " , " + cost);
+			}
+
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
 	}
 
 	public void insert(int pid, String Name, int cost) {

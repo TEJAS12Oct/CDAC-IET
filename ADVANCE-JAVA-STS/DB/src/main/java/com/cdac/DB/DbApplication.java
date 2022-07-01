@@ -13,17 +13,17 @@ public class DbApplication {
 		context.scan("Study.Bean", "com.cdac.config");
 		context.refresh();
 
-//		DAOBean bean = context.getBean(DAOBean.class);
+		DAOBean bean = context.getBean(DAOBean.class);
 //		bean.insert(2, "Laptop", 50000);
+		bean.showAllRecords();
 
-		DAOBeanUsingJDBCTemplate Bean1 = context.getBean(DAOBeanUsingJDBCTemplate.class);
+//		DAOBeanUsingJDBCTemplate Bean1 = context.getBean(DAOBeanUsingJDBCTemplate.class);
 //		Bean1.insert(3, "HeadPhones", 2500);
 
-		Bean1.getProducts().stream().forEach((p) -> {
-			System.out.println(p);
-		});
+//		Bean1.getProducts().stream().forEach((p) -> {
+//			System.out.println(p);
+//		});
 
-		
 	}
 
 }
