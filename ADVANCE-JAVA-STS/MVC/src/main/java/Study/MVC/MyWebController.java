@@ -14,26 +14,56 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class MyWebController {
+	/*
+	 * public MyWebController() { System.out.println("the controller is created"); }
+	 * 
+	 * @RequestMapping(value = "/Hello", method = RequestMethod.GET) public String
+	 * f1() { System.out.println("mapping function f1 is called"); return "Hello"; }
+	 * 
+	 * @GetMapping(value = "/welcome") public String f2(@RequestParam("uname")
+	 * String name) { System.out.println("server got " + name); return "Hi"; }
+	 * 
+	 * @GetMapping(value = "/input") public String f3() { return "input"; }
+	 * 
+	 * @PostMapping(value = "/showTable") public String f4(Model
+	 * model, @RequestParam int num) { ArrayList<String> al =
+	 * TableGen.getTable(num); model.addAttribute("list", al);
+	 * 
+	 * return "table"; }
+	 * 
+	 * // @GetMapping(value = "/showchars") // public String f5(Model
+	 * model, @RequestParam String line) { // ArrayList<String> al = new
+	 * ArrayList<String>(); // for (int i = 0; i < line.length(); i++) { //
+	 * al.add("" + line.charAt(i)); // } // model.addAttribute("list", al); // //
+	 * return "table"; // }
+	 * 
+	 * @GetMapping(value = "/showchars") public ModelAndView f5(ModelAndView
+	 * mv, @RequestParam String line) { ArrayList<String> al = new
+	 * ArrayList<String>(); for (int i = 0; i < line.length(); i++) { al.add("" +
+	 * line.charAt(i)); }
+	 * 
+	 * mv.addObject("list", al); mv.setViewName("table"); return mv; }
+	 */
 
 	public MyWebController() {
 		System.out.println("the controller is created");
 	}
 
-	@RequestMapping(value = "/Hello", method = RequestMethod.GET)
+	@RequestMapping(value = "/hello", method = RequestMethod.GET)
 	public String f1() {
 		System.out.println("mapping function f1 is called");
-		return "Hello";
+		return "hello";
 	}
 
 	@GetMapping(value = "/welcome")
 	public String f2(@RequestParam("uname") String name) {
 		System.out.println("server got " + name);
-		return "Hi";
+		return "hi";
 	}
 
 	@GetMapping(value = "/input")
 	public String f3() {
-		return "input";
+		return "input.jsp";
 	}
 
 	@PostMapping(value = "/showTable")
@@ -41,19 +71,8 @@ public class MyWebController {
 		ArrayList<String> al = TableGen.getTable(num);
 		model.addAttribute("list", al);
 
-		return "table";
+		return "table.jsp";
 	}
-
-//	@GetMapping(value = "/showchars")
-//	public String f5(Model model, @RequestParam String line) {
-//		ArrayList<String> al = new ArrayList<String>();
-//		for (int i = 0; i < line.length(); i++) {
-//			al.add("" + line.charAt(i));
-//		}
-//		model.addAttribute("list", al);
-//
-//		return "table";
-//	}
 
 	@GetMapping(value = "/showchars")
 	public ModelAndView f5(ModelAndView mv, @RequestParam String line) {
@@ -63,8 +82,15 @@ public class MyWebController {
 		}
 
 		mv.addObject("list", al);
-		mv.setViewName("table");
+		mv.setViewName("test.html");
 		return mv;
+	}
+
+	@GetMapping("/thex")
+	public String thex(Model m, @RequestParam String uname, @RequestParam String pass) {
+		User u = new User(uname, pass);
+		m.addAttribute("user", u);
+		return "test2.html";
 	}
 
 }

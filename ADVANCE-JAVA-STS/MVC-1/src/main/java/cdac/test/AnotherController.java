@@ -1,10 +1,12 @@
 package cdac.test;
 
+import org.springframework.stereotype.Controller;
+
+@Controller
 public class AnotherController {
-	
 
-	AnotherController() {
-		System.out.println("Deafult AnotherController Constructor Is called...!!!");
+	public AnotherController()
+	{
+		System.out.println("another controller created");
 	}
-
 }

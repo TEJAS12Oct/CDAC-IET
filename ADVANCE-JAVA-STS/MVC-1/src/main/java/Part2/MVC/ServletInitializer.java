@@ -1,4 +1,4 @@
-package Part2.MVC;
+package part2.mvc;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
