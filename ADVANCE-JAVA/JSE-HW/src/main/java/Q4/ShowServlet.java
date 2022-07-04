@@ -12,6 +12,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 //we use WebServlet annotation instead of web.xml 
+//First Genrate War File
+//Then First Run A ShowServlett Program
+//http://localhost:8080/App1/show2
+
 @WebServlet("/show2")
 public class ShowServlet extends HttpServlet {
 

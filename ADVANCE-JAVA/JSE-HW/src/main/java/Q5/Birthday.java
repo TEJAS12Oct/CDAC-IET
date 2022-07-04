@@ -14,6 +14,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
+//First Genrate War File
+//Then First Run A ShowServlett Program
+//http://localhost:8080/App1/Birthday
 @WebServlet("/Birthday")
 public class Birthday extends HttpServlet {
 

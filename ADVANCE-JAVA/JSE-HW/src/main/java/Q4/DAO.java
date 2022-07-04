@@ -7,6 +7,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+//First Genrate War File
+//Then First Run A ShowServlett Program
+//http://localhost:8080/App1/show2
 public class DAO {
 	public Connection myGetConnection() {
 

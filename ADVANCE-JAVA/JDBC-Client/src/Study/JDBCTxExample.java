@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+// Direct Run
 public class JDBCTxExample {
 
 	public static void main(String[] args) throws SQLException {

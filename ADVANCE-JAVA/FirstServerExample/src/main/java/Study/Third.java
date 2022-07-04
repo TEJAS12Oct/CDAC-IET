@@ -29,3 +29,5 @@ public class Third extends HttpServlet {
 	}
 
 }
+// check web.xml
+// http://localhost:8080/App1/Third

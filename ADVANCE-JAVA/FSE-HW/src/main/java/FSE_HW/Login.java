@@ -42,3 +42,6 @@ public class Login extends HttpServlet {
 	}
 
 }
+// check Web.xml
+// Check WEB-INF Using War file Run Login.html
+// http:localhost:8080/App1/Login.html

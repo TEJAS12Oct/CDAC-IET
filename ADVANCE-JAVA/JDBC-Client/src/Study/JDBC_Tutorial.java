@@ -10,6 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+// Direct Run
 public class JDBC_Tutorial {
 
 	public static void main(String[] args) throws SQLException, IOException {

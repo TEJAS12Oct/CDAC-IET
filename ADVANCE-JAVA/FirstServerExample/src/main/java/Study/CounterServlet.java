@@ -45,3 +45,6 @@ public class CounterServlet extends HttpServlet {
 	}
 
 }
+
+// Export war file Generate
+// http://localhost:8080/App1/CounterServlet

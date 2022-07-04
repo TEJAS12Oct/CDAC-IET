@@ -29,3 +29,7 @@ public class InputServlet extends HttpServlet {
 		
 	}
 }
+
+//if u can  run InputServlet seprately => goto web.xml and check url name => 
+//http://localhost:8080/App1/Input 
+// Page go to  on SecondServlet and Show  Output

@@ -1,7 +1,7 @@
 package Study;
 
 import java.sql.ResultSet;
-
+// Direct Run
 public class Client2 {
 
 	public static void main(String[] args) {
@@ -31,7 +31,7 @@ public class Client2 {
 		dao.CallHistoredProc();
 		
 		System.out.println("\nName Procedure :");
-		dao.CallNameProc(5);
+		dao.CallNameProc(5); // 5 No Foruct Name Display In Product Table
 	}
 
 }

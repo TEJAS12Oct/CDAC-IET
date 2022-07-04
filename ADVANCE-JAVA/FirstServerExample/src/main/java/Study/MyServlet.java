@@ -40,3 +40,8 @@ public class MyServlet extends HttpServlet {
 	}
 
 }
+// It is Connected to CookieExample 
+// First Run CookieExample Using war file then after tab on "ok" then page go on MyServlet
+// OR
+// if u can  run MyServlet seprately => goto web.xml and check url name => 
+// http://localhost:8080/App1/First

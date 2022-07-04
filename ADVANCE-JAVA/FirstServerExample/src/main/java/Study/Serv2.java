@@ -28,14 +28,17 @@ public class Serv2 extends HttpServlet {
 
 		ServletContext sc = super.getServletContext();
 
-		RequestDispatcher rd = sc.getRequestDispatcher("/Serv3");
-		c++;
-		request.setAttribute("counter", c);
-//		rd.include(request, response);
-		rd.forward(request, response);
-		
+//		RequestDispatcher rd = sc.getRequestDispatcher("/Serv3");
+//		c++;
+//		request.setAttribute("counter", c);
+////		rd.include(request, response);
+//		rd.forward(request, response);
+//		
 		response.getWriter().append(" Returnning from serv2");
 
 	}
 
 }
+// for  serv2 run comment 31  to 36
+// Flow ==>   serv1=>serv2=>serv3
+// for serv3 run uncomment 31 to 36

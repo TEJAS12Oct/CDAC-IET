@@ -25,11 +25,11 @@ public class DBController {
 		template.update("insert into birthday (Fname , Lname, DOB) values(?,?,?)", Fname, Lname, DOB);
 		System.out.println("Add Succesfully...!!!");
 
-		List<Birthday> list = template.query("select id from  birthday where Fname ", (rs, rownum) -> {
+		List<Birthday> list = template.query("select id from  birthday where FNAme='" + Fname +"' ", (rs, rownum) -> {
 			return new Birthday(rs.getInt(1));
 		});
 		mv.addObject("al", list);
-		mv.setViewName("Input");
+		mv.setViewName("Table");
 		return mv;
 
 	}

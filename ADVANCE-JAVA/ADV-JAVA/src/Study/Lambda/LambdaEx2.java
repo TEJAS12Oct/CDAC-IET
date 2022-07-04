@@ -18,8 +18,8 @@ public class LambdaEx2 {
 
 		};
 
-//		TreeSet<Student> TS = new TreeSet<Student>(CMP);
-		TreeSet<Student> TS = new TreeSet<Student>();
+//		TreeSet<Student> TS = new TreeSet<Student>(CMP);  // Roll No  Wise Sorting
+		TreeSet<Student> TS = new TreeSet<Student>(); // Name wise Sorting
 		TS.add(new Student(1, "TEJAS"));
 		TS.add(new Student(9, "RAM"));
 		TS.add(new Student(30, "KRISHNA"));

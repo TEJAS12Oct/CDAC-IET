@@ -124,7 +124,7 @@ public class DAO {
 		}
 	}
 	
-//	create  procedure getName(In pid int ,OUT pname varchar(100) )
+//	   create  procedure getName(In pid int ,OUT pname varchar(100) )
 //    -> begin
 //    -> select name into pname from product where id=pid;
 //    -> end $

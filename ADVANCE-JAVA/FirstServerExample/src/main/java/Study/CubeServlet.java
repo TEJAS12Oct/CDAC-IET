@@ -37,3 +37,5 @@ public class CubeServlet extends HttpServlet {
 	}
 
 }
+// Export war file Generate
+// http://localhost:8080/App1/CubeServlet

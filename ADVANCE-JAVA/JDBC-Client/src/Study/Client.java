@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
-
+// direct run
 public class Client {
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {

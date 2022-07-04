@@ -4,7 +4,7 @@ public class VarArgsExample {
 
 	public static void main(String[] args) {
 		sum(10, 20, 30, 40);
-		holidays("June", 26, 24, 2);
+		holidays("June", 2, 24, 26);
 	}
 
 	static void sum(int... nums) {
