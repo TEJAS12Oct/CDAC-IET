@@ -11,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class MyController {
 
+//	http://localhost:8080/ex1?name=abc
 	@GetMapping("/ex1")
 	public String f1(Model m,@RequestParam String name)
 	{
@@ -23,7 +24,7 @@ public class MyController {
 	}
 	
 	
-	
+// http://localhost:8080/showchars?line=Tejas Jawale
 	@GetMapping(value="/showchars")
 	public ModelAndView f5(ModelAndView mv,@RequestParam String line)
 	{
@@ -38,7 +39,7 @@ public class MyController {
 		return mv;
 	}
 	
-	
+// http://localhost:8080/tryif?num=49	
 	@GetMapping("/tryif")
 	public String f3(Model m,@RequestParam int num)
 	{
