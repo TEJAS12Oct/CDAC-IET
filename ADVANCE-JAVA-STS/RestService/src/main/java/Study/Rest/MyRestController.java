@@ -1,5 +1,6 @@
 package Study.Rest;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -57,31 +58,36 @@ public class MyRestController {
 		return "welcome  " + U.getUname() + " from " + U.getCity();
 	}
 // http://localhost:8080/primary/welcome => In Postman => select get
-	
+
 	@GetMapping("/User")
 	public User f9(@RequestBody User u) {
 
-		User u1=new User();
+		User u1 = new User();
 		u1.setUname("Ganesh");
 		return u1;
 	}
 // http://localhost:8080/primary/User => In Postman => select get
-	
+
 	@GetMapping("/getUser1")
-	public java.util.ArrayList<User>  f9()
-	{
-		java.util.ArrayList<User> al =new java.util.ArrayList<User>();
-	
-		User u1=new User();
+	public java.util.ArrayList<User> f9() {
+		java.util.ArrayList<User> al = new java.util.ArrayList<User>();
+
+		User u1 = new User();
 		u1.setUname("Mayur");
 		u1.setCity("BARAMATI");
-		User u2=new User();
+		User u2 = new User();
 		u2.setUname("Sayali");
 		u2.setCity("Nashik");
-				al.add(u1);
-				al.add(u2);
+		al.add(u1);
+		al.add(u2);
 		return al;
 	}
 // http://localhost:8080/primary/getUser1 => In Postman => select get
-	
+
+	@GetMapping("/helloRE")
+	public ResponseEntity<Integer> F10() {
+//      ResponseEntity<Integer> RE = ResponseEntity.ok(100);		
+		ResponseEntity<Integer> RE = ResponseEntity.status(210).body(100);
+		return RE;
+	}
 }
