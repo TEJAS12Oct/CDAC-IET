@@ -77,7 +77,7 @@ public class HolidayUser {
 				int id = SC.nextInt();
 				System.out.println("Enter Holiday Name ");
 				String Name = SC.next();
-				System.out.println("Enter Holiday Date ");
+				System.out.println("Enter Holiday Date "); // Date Format => 2022-10-12
 				String dt = SC.next();
 
 				java.sql.Date date = Date.valueOf(dt);

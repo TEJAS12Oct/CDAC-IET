@@ -13,16 +13,16 @@ public class JavRestClientApplication {
 
 		RestTemplate rs = new RestTemplate();
 
-//		String url = "http://localhost:8080/primary/Get";
-//		String responsevalue = rs.getForObject(url, String.class);
-//		System.out.println("The Rest API sent This : " + responsevalue);
-//
+		String url = "http://localhost:8080/primary/Get";
+		String responsevalue = rs.getForObject(url, String.class);
+		System.out.println("The Rest API sent This : " + responsevalue);
+
 //		url = "http://localhost:8080/primary/Post";
 //		String responsevalue1 = rs.postForObject(url, null, String.class);
 //		System.out.println("The Post Result is : " + responsevalue1);
 
-		ResponseEntity RE = rs.getForEntity("http://localhost:8080/primary/helloRE", String.class);
-		System.out.println(RE.getBody() + "  " + RE.getStatusCodeValue());
+//		ResponseEntity RE = rs.getForEntity("http://localhost:8080/primary/helloRE", String.class);
+//		System.out.println(RE.getBody() + "  " + RE.getStatusCodeValue());
 
 //		rs.put("http://localhost:8080/primary/Put", null);
 
