@@ -30,6 +30,7 @@ public class MyRestControllerUser {
 //	"uname":"Tejas",
 //	"pass":"1234"
 //}
+// check  in postman => status => 404=bad request , 200= ok
 	@PostMapping("login")
 	public ResponseEntity<Integer> loginUser(@RequestBody UserEntity u) {
 		ResponseEntity<Integer> res = null;
