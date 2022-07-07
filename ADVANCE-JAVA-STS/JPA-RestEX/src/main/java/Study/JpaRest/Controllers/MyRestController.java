@@ -1,5 +1,7 @@
 package Study.JpaRest.Controllers;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,6 +22,15 @@ public class MyRestController {
 	public String insertProduct(@PathVariable int id, @PathVariable String name, @PathVariable int cost) {
 		ProductEntity obj = new ProductEntity(id, name, cost);
 		repo.save(obj);
+//		repo.count();
+//		repo.delete(obj);
+//		repo.deleteAll();
+//		repo.findAll();
+		Optional<ProductEntity> obj2 = repo.findById(1);
+		if (obj2.isPresent()) {
+			ProductEntity p = obj2.get();
+			// ........Process it Here
+		}
 		return "insert done";
 
 	}
