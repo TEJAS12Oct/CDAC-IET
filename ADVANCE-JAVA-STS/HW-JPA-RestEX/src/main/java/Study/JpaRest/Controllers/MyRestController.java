@@ -27,6 +27,7 @@ public class MyRestController {
 	@Autowired
 	MyRepository repo;
 
+// http://localhost:8080/jpaex/show	
 	@GetMapping("/show")
 	public List<CourseEntity> ShowCourse() {
 		CourseEntity obj = new CourseEntity();
@@ -35,6 +36,7 @@ public class MyRestController {
 
 	}
 
+// http://localhost:8080/jpaex/change/B.Tech/Tejas  =>Put Course  Name is Already Present
 	@PutMapping("/change/{courseName}/{facultyName}")
 	public ResponseEntity<List<CourseEntity>> change(@PathVariable String courseName,
 			@PathVariable String facultyName) {
@@ -46,6 +48,7 @@ public class MyRestController {
 		return new ResponseEntity<>(list, HttpStatus.OK);
 	}
 
+// http://localhost:8080/jpaex/add => write in body
 	@PostMapping("/add")
 	public String AddCourse(@RequestBody CourseEntity CE) {
 		CourseEntity obj = new CourseEntity(CE.getID(), CE.getCourseName(), CE.getCourseDescription(),
@@ -63,6 +66,7 @@ public class MyRestController {
 //	    "facultyName":"Santosh"
 //	}
 
+//	http://localhost:8080/jpaex/delete/3
 	@DeleteMapping("/delete/{id}")
 	public String DeleteCourse(@PathVariable int id) {
 		CourseEntity obj = new CourseEntity(id);

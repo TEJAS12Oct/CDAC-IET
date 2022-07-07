@@ -25,6 +25,11 @@ public class MyRestControllerUser {
 	@Autowired
 	MyRepositoryUser repo;
 
+// http://localhost:8080/jpa/Login => write in body
+//	{
+//	"uname":"Tejas",
+//	"pass":"1234"
+//}
 	@PostMapping("login")
 	public ResponseEntity<Integer> loginUser(@RequestBody UserEntity u) {
 		ResponseEntity<Integer> res = null;
@@ -38,6 +43,7 @@ public class MyRestControllerUser {
 
 	}
 
+//  http://localhost:8080/jpa/user
 	@GetMapping(value = "/user")
 	public String showUser() {
 		ArrayList<String> a1 = new ArrayList<String>();
@@ -49,6 +55,7 @@ public class MyRestControllerUser {
 		return str;
 	}
 
+// http://localhost:8080/jpa/change/1234/5678 =>change password all user
 	@PutMapping("/change/{pass}/{newpass}")
 	public ResponseEntity<List<UserEntity>> change(@PathVariable String pass, @PathVariable String newpass) {
 		List<UserEntity> list = repo.findBypass(pass);
@@ -59,6 +66,7 @@ public class MyRestControllerUser {
 		return new ResponseEntity<>(list, HttpStatus.OK);
 	}
 
+// http://localhost:8080/jpa/delete/Tejas/1234	
 	@PostMapping("/delete/{uname}/{pass}")
 	public String DeletePASS(@PathVariable String uname, @PathVariable String pass) {
 
