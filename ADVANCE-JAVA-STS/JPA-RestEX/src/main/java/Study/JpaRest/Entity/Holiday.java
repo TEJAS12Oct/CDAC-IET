@@ -1,30 +1,31 @@
 package study.jparest.entity;
 
+import java.sql.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Table;
+
+
 
 @Entity
-@Table(name="product2")
-public class ProductEntity {
-	
+public class Holiday {
+
 	@Id
-	@Column(name="product_id")
+	@Column
 	private int id;
-	@Column(name="product_name")
-	private String name;
-	@Column(name="product_cost")
-	private int cost;
+	@Column
+	private String  name;
+	@Column
+	private Date date;
+	
+	public Holiday() {}
 
-	public ProductEntity()
-	{}
-
-	public ProductEntity(int id, String name, int cost) {
+	public Holiday(int id, String name, Date date) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.cost = cost;
+		this.date = date;
 	}
 
 	public int getId() {
@@ -43,15 +44,13 @@ public class ProductEntity {
 		this.name = name;
 	}
 
-	public int getCost() {
-		return cost;
+	public Date getDate() {
+		return date;
 	}
 
-	public void setCost(int cost) {
-		this.cost = cost;
+	public void setDate(Date date) {
+		this.date = date;
 	}
-	
-	
 	
 	
 	
