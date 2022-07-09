@@ -1,4 +1,5 @@
-<%@page import="Study.Dao.DAO" isErrorPage="false" errorPage="myerror.jsp" %>
+<%@page import="Study.Dao.DAO" isErrorPage="false"
+	errorPage="myerror.jsp"%>
 
 <!DOCTYPE html>
 <html>
@@ -8,18 +9,12 @@
 </head>
 <body>
 
-<%@ include file="Logo.jsp" %>
+	<%@ include file="Logo.jsp"%>
 	<form>
 
-		Enter ID :
-		<input type="number" name="id" /><br/>
-		Enter Name :
-		<input type="text" name="name" /><br/>
-		
-		Enter Cost :
-		<input type="number" name="cost" /><br/>
-		
-		<input type="submit" value="add"/>
+		Enter ID : <input type="number" name="id" /><br /> Enter Name : <input
+			type="text" name="name" /><br /> Enter Cost : <input type="number"
+			name="cost" /><br /> <input type="submit" value="add" />
 	</form>
 	<%
 	String id = request.getParameter("id");
@@ -36,3 +31,7 @@
 	%>
 </body>
 </html>
+
+<!--  First war file generated using export 
+then Browser Put http://localhost:8080/App1/AddProduct.jsp
+ -->

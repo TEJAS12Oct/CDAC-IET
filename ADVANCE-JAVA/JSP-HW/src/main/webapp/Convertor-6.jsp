@@ -25,3 +25,8 @@
 
 
 </html>
+<!--
+First war file generated using export 
+then Browser Put http://localhost:8080/App1/Convertor.jsp
+then Page go on Result.jsp 
+ -->

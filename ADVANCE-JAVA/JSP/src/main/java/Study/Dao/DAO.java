@@ -9,6 +9,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Types;
 
+
+// First war file generated using export , 
+// then Browser Put http://localhost:8080/App1/AddProduct.jsp
 public class DAO {
 
 	public Connection myGetConnection() {

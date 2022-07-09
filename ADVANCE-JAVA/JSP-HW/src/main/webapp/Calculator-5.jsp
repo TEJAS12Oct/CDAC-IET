@@ -8,7 +8,7 @@
 </head>
 
 
-<body >
+<body>
 	<center>
 		<fieldset>
 			<form action='Output.jsp' method="post">
@@ -37,3 +37,9 @@
 
 
 </html>
+
+<!--
+First war file generated using export 
+then Browser Put http://localhost:8080/App1/Calculator.jsp 
+thne page go on  Output.jsp
+ -->
