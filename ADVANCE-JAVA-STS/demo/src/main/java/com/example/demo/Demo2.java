@@ -7,7 +7,7 @@ import Study.Beans.MessageBean;
 public class Demo2 {
 
 	public static void main(String[] args) {
-		// SPRING CONTAINER is INITIATED --- iit will read bean.xml
+		// SPRING CONTAINER is INITIATED --- it will read bean.xml
 		// it will find bean info
 		// it will create bean object
 		// it set bean properties

@@ -12,8 +12,8 @@ public class Demo4 {
 
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(MyJavaConfig.class);
 
-		// MessageBean bean1 = context.getBean("msg",MessageBean.class);
-		MessageBean bean1 = context.getBean("msg2", MessageBean.class);
+		MessageBean bean1 = context.getBean("msg",MessageBean.class);
+		//MessageBean bean1 = context.getBean("msg2", MessageBean.class);
 
 		System.out.println(bean1.getMessage() + "  " + bean1.getSenderName());
 		System.out.println("Address : " + bean1.getReceiverAddress().getCity());

@@ -12,7 +12,7 @@ public class demo6 {
 
 //		MessageBean bean = context.getBean("msg2", MessageBean.class);
 //		System.out.println(bean.getMessage() + " , " + bean.getSenderName() + " , " + bean.getReceiverAddress().getCity());
-
+//
 //		MessageBean bean1 = context.getBean("msg3", MessageBean.class);
 //		System.out.println(bean1.getMessage() + " , " + bean1.getSenderName() + " , " + bean1.getReceiverAddress().getCity());
 

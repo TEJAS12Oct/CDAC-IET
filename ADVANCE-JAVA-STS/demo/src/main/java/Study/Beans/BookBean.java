@@ -26,7 +26,7 @@ public class BookBean {
 		super();
 		this.name = name;
 		this.cost = cost;
-		System.out.println("Beook Bean Cionstructor called with 2 Parameter");
+		System.out.println("Beook Bean Constructor called with 2 Parameter");
 	}
 
 	// Container will have to use this constructor to create BookBean

@@ -18,3 +18,5 @@ public class Demo3 {
 	}
 
 }
+// To show error => MessageBean bean = context.getBean(MessageBean.class); 
+// Not wtite "msg" in Round Bracket 
