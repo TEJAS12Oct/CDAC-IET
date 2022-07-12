@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import study.jparest.entity.User1;
+import study.jparest.entity.User;
 import study.jparest.entity.UserProfile;
 import study.jparest.repositary.UserProfileRepo;
 import study.jparest.repositary.UserRepo;
@@ -29,13 +29,13 @@ public class OneToOneController {
 		up.setLastName(ln);
 		up.setEmail("pra@123");
 		
-		User1 u = new User1();
+		User u = new User();
 		u.setPassword(pass);
 		u.setUserName(uname);
 		
 		System.out.println("Before saving "+u.getUserId());
 		
-		User1 savedUser = urepo.save(u);
+		User savedUser = urepo.save(u);
 		
 		System.out.println("After saving "+savedUser.getUserId());
 		
@@ -53,13 +53,13 @@ public class OneToOneController {
 		up.setLastName(ln);
 		up.setEmail("pra@123");
 		
-		User1 u = new User1();
+		User u = new User();
 		u.setPassword(pass);
 		u.setUserName(uname);
 		up.setUser(u);
 		u.setProfile(up);
 		
-		User1 savedUser = urepo.save(u);
+		User savedUser = urepo.save(u);
 	
 	}
 	
@@ -67,7 +67,7 @@ public class OneToOneController {
 	@DeleteMapping("/rem/{id}")
 	public void removeUser(@PathVariable int id)
 	{
-		User1 u = urepo.findById(id).get();
+		User u = urepo.findById(id).get();
 		System.out.println("AFter fetching User --"+u.getUserName()+"  profile:"+u.getProfile().getFirstName());
 		urepo.delete(u);
 	}

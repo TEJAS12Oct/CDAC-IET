@@ -1,0 +1,35 @@
+<html>
+    <body>
+
+        <label for="Check">Checkbox: </label>
+        <input type = "checkbox" id = "Check" onclick="f1()" />
+
+        <p id="text" style="display:none">
+
+           <b>Twinkle Twinkle Little Star...
+            How I wonder What you are???</b> 
+
+        </p>
+
+        <script>
+
+        function f1(){
+                  
+            var checkbox= document.getElementById("Check");
+            
+            var text = document.getElementById("text");
+        
+            if(checkbox.checked == true)
+            {
+                text.style.display = "block";
+            }
+            else
+            {
+                text.style.display = "none";
+            }
+        
+        }
+
+        </script>
+    </body>
+</html>

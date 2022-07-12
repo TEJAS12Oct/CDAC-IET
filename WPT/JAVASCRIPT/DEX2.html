@@ -1,0 +1,22 @@
+<html>
+    <script>
+        function f1()
+        {
+            console.log("F1 is Called")
+            var  options = ""
+            for(var i=1;i<=120;i++)
+            {
+                options= options + "<option>" +i+"</option>"
+
+            }
+            document.getElementById("sel1").innerHTML= options;
+        }
+    </script>
+    <body>
+        <select id="sel1">
+
+        </select>
+
+        <button onclick="f1()">OK</button>
+    </body>
+</html>

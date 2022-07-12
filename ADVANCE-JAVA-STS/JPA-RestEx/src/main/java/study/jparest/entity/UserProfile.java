@@ -25,14 +25,14 @@ public class UserProfile {
 
 	
 	@OneToOne
-	private User1 user;
+	private User user;
 	
-	public User1 getUser() {
+	public User getUser() {
 		return user;
 	}
 	
 	
-	public void setUser(User1 user) {
+	public void setUser(User user) {
 		this.user = user;
 	}
 	

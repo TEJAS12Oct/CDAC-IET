@@ -1,0 +1,42 @@
+<html>
+<head>
+
+    <script>
+
+        function country()
+        {
+            var options=""
+            var arr=["India","China","England","Australia","South Africa","America","Afghanistan","Columbia","Pakistan","New Zealand","Shrilanka","nNpal","Malesia","Russia"];
+            for(var i = 0; i<arr.length;i++)
+            {
+                options+="<option value="+arr[i]+">"+arr[i]+"</option>"
+            }
+            document.getElementById("sel1").innerHTML = options;
+        }
+</script>
+
+<script>
+
+    function states()
+    {
+        var options=""
+        var arr=["Maharashtra","Goa","Kerala","Gujrat","Bihar","Arunachal Pradesh","Karnataka","Telangana","Delhi","Punjab","Haryana","West Bengal","Aasam","Chattisgarh","Andhra Pradesh"];
+        for(var i = 0; i<arr.length;i++)
+        {
+            options+="<option value="+arr[i]+">"+arr[i]+"</option>"
+        }
+        document.getElementById("sel1").innerHTML = options;
+    }
+</script>
+
+</head>
+<body></body>
+<select id="sel1">
+</select>
+
+A<input type="radio" onclick="country()" name="click" />
+B<input type="radio" onclick="states()" name="click" />
+
+</body>
+
+</html>
