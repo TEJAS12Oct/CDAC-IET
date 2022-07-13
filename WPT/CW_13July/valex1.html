@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script>
+            function validate()
+            {
+                var user = document.getElementById("ip1").value;
+                // validation criteria --- length should be < 9
+                if(user.length() > 9)
+                    return true;
+                else 
+                    return false;
+            }
+        </script>
+    </head>
+
+    <body>
+        <form onsubmit="return validate();">
+            Enter Uname : <input type="text" id="ip1" name="uname" />  <br/>
+            <input type="submit" value="ok" />
+        </form>
+    </body>
+</html>    
