@@ -29,14 +29,14 @@ let obj ={
 
 }
 
-//console.log(obj.name,obj.age,obj.show)
-//obj.show();
+console.log(obj.name,obj.age,obj.show)
+obj.show();
 obj.changeName("qqq")
-//obj.show()
+obj.show()
 
 obj.profession='plumber'
-//console.log(obj.name,obj.age,obj.show,obj.profession)
-//console.log(obj)
+console.log(obj.name,obj.age,obj.show,obj.profession)
+console.log(obj)
 
 obj.age=300   //setter is called automatically 
 console.log(obj.age)  //getter is called automatically

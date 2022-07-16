@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <script>
+        function week() {
+
+            const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            var dat = document.getElementById("date1").value;
+            const d = new Date(dat);
+            let day = weekday[d.getDay()];
+            document.getElementById("date2").innerHTML = d.getDate()+"/"+(d.getMonth()+1)+"/"+d.getFullYear()
+            document.getElementById("day").innerHTML = day;
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <form id="date" onsubmit="return week()">
+        <input type="date" id="date1" onchange="week()">
+        <input type="submit" value="ok">
+        <p id="date2"></p>
+        <h2 id="day"></h2>
+    </form>
+    
+</body>
+
+</html>
