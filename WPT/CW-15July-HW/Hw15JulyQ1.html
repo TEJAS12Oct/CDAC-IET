@@ -1,0 +1,50 @@
+<!-- 1.Write a Javascript  mylib.js [Hint include this js file using <script src=....  >  ]
+    create a class Product using ES6 class keyword
+    the product has a name,desc and cost properties
+    the product has a show method that shows all properties
+
+Write an html that has 3 textfields to accept name desc and cost
+when user clicks a save button create a product object using values from textfields and add it to an array 
+    show the array in a table format below -->
+    <html>  
+        
+        <script type="text/javascript" src="mylib.js">
+        </script>
+        <script>
+        var arr=new Array();
+        function f1()
+        {
+            var name=document.getElementById("pname").value;
+            var desc=document.getElementById("pdesc").value;
+            var cost=parseInt(document.getElementById("pcost").value);
+            let p1=new Product(name,desc,cost);
+            console.log(p1);
+            arr.push(p1);
+            var str="";
+            str +="<tr><th>name</th><th>Description</th><th>Cost</th></tr>"
+
+            for(var i=0;i<arr.length;i++)
+            {
+                str+="<tr><td>"+arr[i].pname+"</td><td>"+arr[i].pdesc+"</td><td>"+arr[i].pcost+"</td></tr>"
+            }
+            document.getElementById("tb").innerHTML=str;
+        }
+        
+        </script>  
+        
+        </head>  
+        <body>  
+            <center>
+                Enter Product name:<input type="text" id="pname">
+                <br/><br/>
+                Enter Description:<input type="text" id="pdesc">
+                <br/><br/>
+                Enter Cost:<input type="number" id="pcost">
+                <br/><br/>
+                <input type="submit" value="submit" onclick="f1()"/>
+                <table id="tb" border="2">
+                </table>
+
+            </center>
+        </body>  
+        </html>  
