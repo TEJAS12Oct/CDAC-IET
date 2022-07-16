@@ -1,0 +1,116 @@
+<!--. Write an html that has a text field that accepts a uname and a password to be registered
+	write a function validateuname()  to validate uname - must not be blank, size > 8 , must not have spaces in between
+	write a function validatepwd() to validate pwd - must not be blank , must be >8 less than 15, must not have spaces in between, must have at least one digit, one special char ( _,- ,#,$ ) , one upper case char, one lower case char , first char must not be digit or special char
+
+	only if the values are valid the OK button should submit to next page , else it should not be submitted
+-->
+<html>
+    <head>
+        <title></title>
+        <style>
+             body span
+            {
+                color:red;
+                
+            }
+           fieldset
+           {
+            border:10px;
+           }
+            .button {
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button5 {border-radius: 50%;}
+    
+        </style>
+        <script>
+            function validateuname()
+            {
+                var name=document.getElementById("ip1").value
+                 console.log(name,"nusername");
+                    var n=name.charAt(0);
+                    var len=name.trim().length
+                    console.log(len)
+               if(len>8 && !(name.includes(' ')))
+                {
+                    document.getElementById("id2").innerHTML=""
+                    console.log("valid...")
+                    return true;
+                }
+                else
+                {
+                    document.getElementById("id2").innerHTML=`<br/>Invalid username...
+                    should be 8 digits must not blank<br/>
+                    1.One Digit<br/>
+                    2.One special character<br/>
+                    3.no space<br/>
+                    4. one capital letter`
+                    return false;
+                }
+              
+            }
+            function validatepwd()
+            {
+                var pass=document.getElementById("ip2").value
+                var pa=pass.trim();
+                var crt=/^[a-zA-Z0-9]/
+                var regex=/[#$&_-]/;
+                
+                if((pa.length>8 && pa.length<15 ) && (pa.match(regex)) &&  !(pa.includes(' ')) && pa.match(/\d+/)
+                 && !(/\d+/.test(pa.charAt(0))||regex.test(pa.charAt(0))))
+                   {
+                    document.getElementById("id1").innerHTML=""
+                    console.log("valid...")
+                    return true;
+                   }
+                   else
+                   {          
+                   document.getElementById("id1").innerHTML="invalid password..first digit should not digit , special symbol ,space "
+                   return false;
+                   }
+            }
+            function valid()
+            {
+                if(validateuname()&& validatepwd())
+                {
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body align="center">
+        <center>
+        <fieldset style="height: fit-content; width: fit-content;border: '2';border-style:outset">
+         <form onsubmit="return valid()">
+            <h1>
+        UserName:<input type="text" name="uname" id="ip1" oninput="validateuname()">
+    </h1>
+    <fieldset  style="height: fit-content; width: fit-content;">
+        <span id="id2"></span>
+    </fieldset>
+    <h1>
+       Password:<input type="password" name="pass" id="ip2" oninput="validatepwd()">
+    </h1>
+    <fieldset  style="height: fit-content; width: fit-content;">
+       <span id="id1"></span>
+    </fieldset>
+       <br/>
+    
+        <button class="button button5">LOGIN</button>
+    </form>
+</fieldset>
+</center>
+    </body>
+</html>
