@@ -31,24 +31,37 @@ class Person
 
 }
 
-// let p1 = new Person("ppp",12)
-// console.log(p1)
-// p1.age=122
-// console.log(p1.age)
+let p1 = new Person("ppp",12)
+console.log(p1)
+p1.age=122
+console.log(p1.age)
 
-class student extends Person 
+
+
+class Student extends Person
 {
-    constructor(name,age,roll)
+    constructor(n,a,roll)
     {
-        super(name,age)
-        this.roll=roll
+        super(n,a)
+        this.roll = roll
     }
 
     studentInfo()
     {
-        console.log(this.name ,this.age,this.roll)
+        console.log(this.name,this.age,this.roll)
     }
+
+    static temp=10
+    static display()
+    {
+        console.log(Student.temp)
+    }
+
+
+
 }
 
-let stud = new student("AAA",21,3)
-console.log(stud)
+let stud = new Student("yyy",12,1)
+console.log(stud,typeof(stud))
+
+Student.display()
