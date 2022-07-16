@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+   <style>
+
+   .estyle
+   {
+       color: brown;
+       font-style: italic;
+   }
+</style>
+  <script>
+
+     function validateName()
+      {
+          var name= document.getElementById("n2").value;
+         console.log("validate called")
+          //validate criteria ---lenght shoud be >8
+           if(name=="")
+           {
+               alert("field should not be empty")
+           }
+         else if(name.length>8)
+          { 
+             
+              //alert("good password is strong")
+              document.getElementById("error").innerHTML="ok"
+              return true;
+          }
+        else
+        {
+            document.getElementById("error").innerHTML="length should be greater than 8"
+          return false;
+        }
+      }
+
+      function validate()
+      {
+          var user= document.getElementById("n1").value;
+         console.log("validate called")
+          //validate criteria ---lenght shoud be >8
+           if(user=="")
+           {
+               alert("field should not be empty")
+           }
+         else if(user.length>8)
+          {
+              //alert("good password is strong")
+              document.getElementById("error").innerHTML="ok"
+              return true;
+          }
+        else
+        {
+            document.getElementById("error").innerHTML="length should be greater than 8"
+          return false;
+        }
+      }
+
+
+
+   </script>
+
+
+
+<body>
+    <form  onsubmit=" return  validateName() "onsubmit=" return validate() " >
+   Enter Name : <input type="text" id="n2" name="nem"   oninput=" return  validateName() " /><br/> <br/>
+   Enter Password : <input type="text" id="n1" name="nam" oninput=" return validate() " /><br/> <br/>
+    <input type="submit" value="ok"/>
+    <p id="error" class="estyle"></p>
+   
+</form>
+</body>
+</html>

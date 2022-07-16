@@ -1,0 +1,22 @@
+<html>
+<head>
+    <lable>Enter Text:</lable>
+    <input type="text"  name="firstname" id="ip1"/>
+    <button onclick="f1()">add</button>
+    <table border='2'><tr><td>No.</td><td>Entry</td></tr></table>
+    <span id="sel1"></span>
+
+</head>
+<body>
+
+<script>
+    function f1()
+    {
+        var str=""
+        var val =document.getElementById("ip1").value;
+        str +="<table border='2'><tr><td>1</td><td>"+val+"</td></tr></table>"
+        document.getElementById("sel1").innerHTML=str;
+    }
+</script>
+</body>
+</html>
