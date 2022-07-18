@@ -1,0 +1,6 @@
+
+read -p "enter folder path" folder
+
+echo "the no. of files in folder are"
+
+ls | wc -w
