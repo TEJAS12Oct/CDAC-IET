@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <script src="jquery-3.6.0.min.js"></script>
+
+    </head>
+    <style>
+        .para
+        {
+            color:blue;
+        }
+    </style>
+
+<script>
+        $(document).ready(function(){
+          
+        $("#b1").click(function(){
+            
+            let s = $("#t1").val();
+            console.log(s)
+           // $("#p1").text(s.toUpperCase())
+           // $("#p1").html(s.toUpperCase())
+
+            //show bold text for all p 
+           // $("p").html(s.toUpperCase())
+
+
+          // $(".para").text(s.toUpperCase())
+          $("p.para").text(s.toUpperCase())
+          
+        });  //end of b1 click
+
+
+        
+    });//end of ready callback and read call
+        </script>
+        </head>
+        <body>
+        Enter Name<input type="text" id="t1" />
+        <br>
+        <p id="p1" ></p>
+
+        <p class="para">TEST</p>
+        <p ></p>
+        <p ></p>
+        <p ></p>
+
+        <span class="para">default text</span>
+        <button id="b1" >Click me </button>
+        </body>
+    </html>
