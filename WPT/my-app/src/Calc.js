@@ -8,11 +8,11 @@ import React from 'react';
      //let op='+';
      if(op=='+')
 return(<h1> {props.arr[0]} plus {props.arr[1]}  :{props.arr[0]+ props.arr[1]}</h1>)
-if(op=='-')
+if(op==='-')
 return(<h1> {props.arr[0]} Minus {props.arr[1]} :{props.arr[0] - props.arr[1]}</h1>)
-if(op=='*')
+if(op==='*')
 return(<h1> {props.arr[0]} Multiply {props.arr[1]} :{props.arr[0]* props.arr[1]}</h1>)
-if(op=='/')
+if(op==='/')
 return(<h1>{props.arr[0]} Divide {props.arr[1]} :{ props.arr[1]/ props.arr[0]}</h1>)
          
 
