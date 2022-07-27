@@ -1,0 +1,8 @@
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\HelloWorldApp\MathApp\bin\Debug\MathApp.exe.config
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\HelloWorldApp\MathApp\bin\Debug\MathApp.exe
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\HelloWorldApp\MathApp\bin\Debug\MathApp.pdb
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\HelloWorldApp\MathApp\obj\Debug\MathApp.csproj.AssemblyReference.cache
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\HelloWorldApp\MathApp\obj\Debug\MathApp.csproj.SuggestedBindingRedirects.cache
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\HelloWorldApp\MathApp\obj\Debug\MathApp.csproj.CoreCompileInputs.cache
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\HelloWorldApp\MathApp\obj\Debug\MathApp.exe
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\HelloWorldApp\MathApp\obj\Debug\MathApp.pdb

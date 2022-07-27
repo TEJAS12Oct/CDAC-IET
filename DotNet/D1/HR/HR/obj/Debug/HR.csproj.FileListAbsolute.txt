@@ -1,0 +1,8 @@
+F:\IET\CODING\DotNet\HR\HR\bin\Debug\HR.exe.config
+F:\IET\CODING\DotNet\HR\HR\bin\Debug\HR.exe
+F:\IET\CODING\DotNet\HR\HR\bin\Debug\HR.pdb
+F:\IET\CODING\DotNet\HR\HR\obj\Debug\HR.csproj.AssemblyReference.cache
+F:\IET\CODING\DotNet\HR\HR\obj\Debug\HR.csproj.SuggestedBindingRedirects.cache
+F:\IET\CODING\DotNet\HR\HR\obj\Debug\HR.csproj.CoreCompileInputs.cache
+F:\IET\CODING\DotNet\HR\HR\obj\Debug\HR.exe
+F:\IET\CODING\DotNet\HR\HR\obj\Debug\HR.pdb

@@ -1,0 +1,12 @@
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_2\ECommerce\HR\bin\Debug\HR.dll
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_2\ECommerce\HR\bin\Debug\HR.pdb
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_2\ECommerce\HR\obj\Debug\HR.csproj.AssemblyReference.cache
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_2\ECommerce\HR\obj\Debug\HR.csproj.CoreCompileInputs.cache
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_2\ECommerce\HR\obj\Debug\HR.dll
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_2\ECommerce\HR\obj\Debug\HR.pdb
+F:\IET\CODING\DotNet\D2\ECommerce\HR\bin\Debug\HR.dll
+F:\IET\CODING\DotNet\D2\ECommerce\HR\bin\Debug\HR.pdb
+F:\IET\CODING\DotNet\D2\ECommerce\HR\obj\Debug\HR.csproj.AssemblyReference.cache
+F:\IET\CODING\DotNet\D2\ECommerce\HR\obj\Debug\HR.csproj.CoreCompileInputs.cache
+F:\IET\CODING\DotNet\D2\ECommerce\HR\obj\Debug\HR.dll
+F:\IET\CODING\DotNet\D2\ECommerce\HR\obj\Debug\HR.pdb
