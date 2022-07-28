@@ -1,0 +1,6 @@
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_3\ECommerce\OrderProcessing\bin\Debug\OrderProcessing.dll
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_3\ECommerce\OrderProcessing\bin\Debug\OrderProcessing.pdb
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_3\ECommerce\OrderProcessing\obj\Debug\OrderProcessing.csproj.AssemblyReference.cache
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_3\ECommerce\OrderProcessing\obj\Debug\OrderProcessing.csproj.CoreCompileInputs.cache
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_3\ECommerce\OrderProcessing\obj\Debug\OrderProcessing.dll
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_3\ECommerce\OrderProcessing\obj\Debug\OrderProcessing.pdb

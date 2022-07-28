@@ -1,0 +1,12 @@
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_3\ECommerce\Utility\bin\Debug\Utility.dll
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_3\ECommerce\Utility\bin\Debug\Utility.pdb
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_3\ECommerce\Utility\obj\Debug\Utility.csproj.AssemblyReference.cache
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_3\ECommerce\Utility\obj\Debug\Utility.csproj.CoreCompileInputs.cache
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_3\ECommerce\Utility\obj\Debug\Utility.dll
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_3\ECommerce\Utility\obj\Debug\Utility.pdb
+F:\IET\CODING\DotNet\D3\ECommerce\Utility\bin\Debug\Utility.dll
+F:\IET\CODING\DotNet\D3\ECommerce\Utility\bin\Debug\Utility.pdb
+F:\IET\CODING\DotNet\D3\ECommerce\Utility\obj\Debug\Utility.csproj.AssemblyReference.cache
+F:\IET\CODING\DotNet\D3\ECommerce\Utility\obj\Debug\Utility.csproj.CoreCompileInputs.cache
+F:\IET\CODING\DotNet\D3\ECommerce\Utility\obj\Debug\Utility.dll
+F:\IET\CODING\DotNet\D3\ECommerce\Utility\obj\Debug\Utility.pdb

@@ -1,0 +1,12 @@
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_3\ECommerce\Catalog\obj\Debug\Catalog.csproj.AssemblyReference.cache
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_3\ECommerce\Catalog\obj\Debug\Catalog.csproj.CoreCompileInputs.cache
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_3\ECommerce\Catalog\bin\Debug\Catalog.dll
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_3\ECommerce\Catalog\bin\Debug\Catalog.pdb
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_3\ECommerce\Catalog\obj\Debug\Catalog.dll
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_3\ECommerce\Catalog\obj\Debug\Catalog.pdb
+F:\IET\CODING\DotNet\D3\ECommerce\Catalog\bin\Debug\Catalog.dll
+F:\IET\CODING\DotNet\D3\ECommerce\Catalog\bin\Debug\Catalog.pdb
+F:\IET\CODING\DotNet\D3\ECommerce\Catalog\obj\Debug\Catalog.csproj.AssemblyReference.cache
+F:\IET\CODING\DotNet\D3\ECommerce\Catalog\obj\Debug\Catalog.csproj.CoreCompileInputs.cache
+F:\IET\CODING\DotNet\D3\ECommerce\Catalog\obj\Debug\Catalog.dll
+F:\IET\CODING\DotNet\D3\ECommerce\Catalog\obj\Debug\Catalog.pdb
