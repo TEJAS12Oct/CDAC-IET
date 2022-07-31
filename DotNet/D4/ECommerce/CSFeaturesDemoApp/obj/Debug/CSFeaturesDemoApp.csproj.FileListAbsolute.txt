@@ -1,0 +1,8 @@
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_4\ECommerce\CSFeaturesDemoApp\bin\Debug\CSFeaturesDemoApp.exe.config
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_4\ECommerce\CSFeaturesDemoApp\bin\Debug\CSFeaturesDemoApp.exe
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_4\ECommerce\CSFeaturesDemoApp\bin\Debug\CSFeaturesDemoApp.pdb
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_4\ECommerce\CSFeaturesDemoApp\obj\Debug\CSFeaturesDemoApp.csproj.AssemblyReference.cache
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_4\ECommerce\CSFeaturesDemoApp\obj\Debug\CSFeaturesDemoApp.csproj.SuggestedBindingRedirects.cache
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_4\ECommerce\CSFeaturesDemoApp\obj\Debug\CSFeaturesDemoApp.csproj.CoreCompileInputs.cache
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_4\ECommerce\CSFeaturesDemoApp\obj\Debug\CSFeaturesDemoApp.exe
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_4\ECommerce\CSFeaturesDemoApp\obj\Debug\CSFeaturesDemoApp.pdb
