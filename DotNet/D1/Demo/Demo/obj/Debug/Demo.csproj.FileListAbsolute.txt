@@ -1,0 +1,8 @@
+F:\IET\CODING\DotNet\D1\Demo\Demo\bin\Debug\Demo.exe.config
+F:\IET\CODING\DotNet\D1\Demo\Demo\bin\Debug\Demo.exe
+F:\IET\CODING\DotNet\D1\Demo\Demo\bin\Debug\Demo.pdb
+F:\IET\CODING\DotNet\D1\Demo\Demo\obj\Debug\Demo.csproj.AssemblyReference.cache
+F:\IET\CODING\DotNet\D1\Demo\Demo\obj\Debug\Demo.csproj.SuggestedBindingRedirects.cache
+F:\IET\CODING\DotNet\D1\Demo\Demo\obj\Debug\Demo.csproj.CoreCompileInputs.cache
+F:\IET\CODING\DotNet\D1\Demo\Demo\obj\Debug\Demo.exe
+F:\IET\CODING\DotNet\D1\Demo\Demo\obj\Debug\Demo.pdb
