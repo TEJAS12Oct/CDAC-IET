@@ -1,0 +1,38 @@
+<html>
+    <head>
+        
+    </head>
+
+    <body>
+        <center>
+            Enter Number for table : <input type="text" id="id" value="" placeholder="Enter Number"><br /><br />
+            <button onclick="f1()">Generate Table</button><br /><br />
+           
+            <table border="2" style="background-color: white;color: black ;" id="op1">
+            </table>
+        </center>
+
+        <script>
+            function f1()
+            {
+                var num =(document.getElementById("id").value);
+
+                var number = parseInt(num);
+                console.log(number)
+
+                var table = document.getElementById("op1");
+                var str =""
+
+                str += "<tr><th>Table of "+number+"</th></tr>" 
+                    for(var i=1;i<=10;i++)
+                    {
+                        str+="<tr><td>"+number+" x " +i+" = "+number*i+"</td></tr>"
+                    }
+
+
+                    table = table.innerHTML =str
+                
+            }
+        </script>
+    </body>
+</html>

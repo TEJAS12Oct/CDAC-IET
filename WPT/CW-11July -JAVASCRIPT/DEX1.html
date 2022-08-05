@@ -1,0 +1,29 @@
+<html>
+
+ 
+    <body>
+        <input type="text"  id="ip1" value="Enter Name" />
+        <button  onclick="f1()">Ok</button>
+        <br/>
+        <span id="sp1">
+            
+        </span>
+    
+
+        <script>
+
+          function f1()
+          {   
+            var val = document.getElementById("ip1").value;
+            alert("The Text In TextFeild Is " +val)
+            
+            var Element=  document.getElementById("sp1");
+            //Element.innerText = "<b>Hello & Welcome To DOM Manipulation</b>"
+            Element.innerHTML = "<b>Hello & Welcome " + val + " To DOM Manipulation</b>"
+          }
+         
+           </script>  
+    </body>
+</html>
+
+

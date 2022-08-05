@@ -1,7 +1,7 @@
 var x = 10
 
 var x = 20  //double declaration is not a problem in var
-console.log("x-",x)
+console.log("x=",x)
 
 let y=10
 //let y=20  //double declaration is not allowed 
@@ -16,7 +16,7 @@ var t1 = 40
 //let t2=100
 
 const pi = 3.14;
-pi=100
+//pi=100
 console.log(pi)
 
 

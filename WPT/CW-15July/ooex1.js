@@ -9,7 +9,10 @@ let obj ={
         {
             this._age=a;
         }
-        else {console.log("wrong age")}
+        else 
+        {
+            console.log("wrong age")
+        }
     },
 
     get age(){

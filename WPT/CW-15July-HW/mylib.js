@@ -1,5 +1,3 @@
-
-
 // 1.Write a Javascript  mylib.js [Hint include this js file using <script src=....  >  ]
 //     create a class Product using ES6 class keyword
 //     the product has a name,desc and cost properties
@@ -7,7 +5,7 @@
 
 // Write an html that has 3 textfields to accept name desc and cost
 // when user clicks a save button create a product object using values from textfields and add it to an array 
-//     show the array in a table format below
+//  show the array in a table format below
 
 class Product
 {
