@@ -58,7 +58,7 @@ C:\> mysql --host=localhost --port=3306 --user=root --password=ROOT [database_na
 
 36. alter table Emp add column [column Name] [data Type]; => add column
 37. select * from Emp;
-38. alter table Emp  drop column[ column Name] [data type]; => delete column
+38. alter table Emp  drop column[ column Name] ; => delete column
 39. select * from Emp;
 40. alter table emp modify ename varchar(20); => size modify
 41. alter table emp modify city varchar(20) default 'Baroda'; 
