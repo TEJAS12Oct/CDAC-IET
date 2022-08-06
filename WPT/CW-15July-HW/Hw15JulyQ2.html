@@ -1,0 +1,35 @@
+<!-- Write an HTML that has textfields for first name and lastname
+	the names cannot be blank, the names cannot have numbers
+	the first letter of fname and lname must be capital 
+	the remaining letters must be small case
+    [HINT use html validations and regExp  ] -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <style>
+            input:invalid{
+                border: red solid 3px;
+                background-color: red;
+            }
+            input:valid{
+                border: rgb(60, 212, 60) solid 3px;
+                background-color:lawngreen;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <pre>
+            <h1>Check Names </h1>
+            Enter First Name:<input type="text" id="fname" pattern="^[A-Z][a-z]+" required />
+            <br/>
+            <p id="fnameError"></p>
+            Enter last Name:<input type="text" id="lname" pattern="^[A-Z][a-z]+" required />
+            <br/>
+            <p id="lnameError"></p>
+
+
+        </pre>
+        </center>
+    </body>
+    </html>

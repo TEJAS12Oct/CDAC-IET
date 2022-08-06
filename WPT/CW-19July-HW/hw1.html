@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script>
+      $(document).ready(() => {
+        $("#post").click(() => {
+          let pid = $("#pid").val();
+          let uname = $("#name").val();
+          let cost = $("#cost").val();
+          let dataobj = {};
+          dataobj.id = pid;
+          dataobj.name = uname;
+          dataobj.cost = cost;
+
+          let settings = {
+            url: "http://localhost:8080/insert",
+            method: "POST",
+            async: true,
+
+            data: JSON.stringify(dataobj),
+            contentType: "application/JSON",
+            success: (response) => {
+              console.log("data created new id is :", response);
+            },
+          };
+          $.ajax(settings);
+        }); //end of click
+      }); //end of ready
+
+      $(document).ready(() => {
+        $("#show").click(() => {
+          let settings = {
+            url: "http://localhost:8080/get",
+            method: "GET",
+            async: true,
+            success: (response) => {
+              console.log(response);
+              let str = "<ol>";
+              let names = response.map((user) => {
+                return user.name;
+              });
+              for (var i = 0; i < names.length; i++) {
+                str += `<li>${names[i]}</li>`;
+              }
+              str += "</ol>";
+              $("#d1").html(str);
+            },
+          };
+          $.ajax(settings);
+        }); //end of click
+      }); //end of ready
+    </script>
+  </head>
+  <body>
+    <input type="number" id="pid" />
+    <input type="text" id="name" />
+    <input type="number" id="cost" />
+    <button id="post">POST DATA TO SERVER</button>
+    <button id="show">Show DATA</button>
+
+    <div id="d1"></div>
+  </body>
+</html>
