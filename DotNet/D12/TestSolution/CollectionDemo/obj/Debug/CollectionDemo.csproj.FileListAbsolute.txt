@@ -1,0 +1,8 @@
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_12\TestSolution\CollectionDemo\bin\Debug\CollectionDemo.exe.config
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_12\TestSolution\CollectionDemo\bin\Debug\CollectionDemo.exe
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_12\TestSolution\CollectionDemo\bin\Debug\CollectionDemo.pdb
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_12\TestSolution\CollectionDemo\obj\Debug\CollectionDemo.csproj.AssemblyReference.cache
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_12\TestSolution\CollectionDemo\obj\Debug\CollectionDemo.csproj.SuggestedBindingRedirects.cache
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_12\TestSolution\CollectionDemo\obj\Debug\CollectionDemo.csproj.CoreCompileInputs.cache
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_12\TestSolution\CollectionDemo\obj\Debug\CollectionDemo.exe
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_12\TestSolution\CollectionDemo\obj\Debug\CollectionDemo.pdb
