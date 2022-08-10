@@ -1,0 +1,15 @@
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_13\HelloWorldApp\bin\Debug\net6.0\HelloWorldApp.exe
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_13\HelloWorldApp\bin\Debug\net6.0\HelloWorldApp.deps.json
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_13\HelloWorldApp\bin\Debug\net6.0\HelloWorldApp.runtimeconfig.json
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_13\HelloWorldApp\bin\Debug\net6.0\HelloWorldApp.dll
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_13\HelloWorldApp\bin\Debug\net6.0\HelloWorldApp.pdb
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_13\HelloWorldApp\obj\Debug\net6.0\HelloWorldApp.csproj.AssemblyReference.cache
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_13\HelloWorldApp\obj\Debug\net6.0\HelloWorldApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_13\HelloWorldApp\obj\Debug\net6.0\HelloWorldApp.AssemblyInfoInputs.cache
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_13\HelloWorldApp\obj\Debug\net6.0\HelloWorldApp.AssemblyInfo.cs
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_13\HelloWorldApp\obj\Debug\net6.0\HelloWorldApp.csproj.CoreCompileInputs.cache
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_13\HelloWorldApp\obj\Debug\net6.0\HelloWorldApp.dll
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_13\HelloWorldApp\obj\Debug\net6.0\refint\HelloWorldApp.dll
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_13\HelloWorldApp\obj\Debug\net6.0\HelloWorldApp.pdb
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_13\HelloWorldApp\obj\Debug\net6.0\HelloWorldApp.genruntimeconfig.cache
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_13\HelloWorldApp\obj\Debug\net6.0\ref\HelloWorldApp.dll

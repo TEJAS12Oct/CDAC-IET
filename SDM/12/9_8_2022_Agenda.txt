@@ -1,0 +1,247 @@
+SDM:
+	Software Testing
+
+
+
+		Software Development Engg.------------Developer---------Dev
+						Create Solution
+						Create Project
+						Build Project
+						Debug project 
+
+
+		Software Operations Engg.------------IT Pro
+					      System Administrator
+					      Operations Engg.------Ops
+					      Infrastrcure managment
+							Installation
+							Software Updates
+							Regular Backup
+							Maintaining Logs of System
+							Monitoring Applications
+						
+
+
+		SDLC: Spiral Model
+		Framework:SCRUM
+		Owner:Scrum Master:
+			Maintain Agile Methodology Practices while Software Development going on
+
+		Scrum Team:
+			   Designers, Developers, Tester, IT Pro,etc.
+
+		Software:
+			Project is defined:
+
+			set of user stories are retrieved.
+			
+
+
+		DevOps Engineer--------------------------
+				act as a bridge between Development Team and Operations Team
+				Linux -------------------basic linux commands
+							 basics of Shellscripting
+							 basics of Operating System fundamental
+							 Basics of Networking
+
+				 Subscription Based Services
+							 Pay as You Go
+							 OnDemand Serives
+
+				Cloud -------------------Cloud Computing Basics
+								IAAS, PAAS, SAAS
+							 Public Cloud: GCP (Google Cloud Platform)
+								       AWS (Amazon Web Services)
+								       Azure (Microsoft Azure)
+							 Private Cloud:
+									Infrastrure, Platform, services are managed by same organization
+
+							 Hybrid Cloud:
+									Public Cloud + Private Cloud
+
+							 How to use Public Cloud services
+							Virtualization
+							 Creating and managing Virtual Servers ( EC2 instance)
+							 Setting Security Group------firewall settings
+											inbound rules
+											outbound rules
+
+							virtulaization vs. Containerization
+
+				Containerization-------
+							Docker Hub------------Centralized Repository of predefined container images
+							Docker----------------Conainer Engine---------set of commands
+							Container images------binary file-------------sudo docker images
+							Container instances---are application under executions in process
+												  ---sudo docker ps
+
+			       Tools:
+					Docker
+					Github
+					Jira
+					Git Client
+
+							
+				Container Orchestration------
+
+				Accoring to Agile Methodology
+				user Stories:
+		
+	CD/CI:
+					continous Delivery/Continous Integration
+
+			Continous Delivery:
+			  1.Continous Planning and Design according Srint Backlog User Story Selection.
+							System Analyst, Quality Assurance,
+							Domain Experts------UML, DFD
+			  2.Continous addition or modification of Source Code----Developer and IDE Tool, Git Repos
+														Source Control tools
+			  3.Continous Build of Project---------------------Develoers and Build Tools
+			  4.Continous Testing of build created-------------Software Tester
+			  5.Continous Release of shippable product---------Release  Managers
+													
+
+			Continous Integration:
+
+			   1.Continous creation of deployable image of software
+				Setup program
+				Installer Program ( Package Deployment Software)
+				Docker tool for building container images
+			  2.Continous Operations management using System Tools
+				Event Viewer
+				Logs Monitor
+				Server Configuration
+				continous Backup and Restore for data   as  well as software by System Administration
+
+			  3.Continous Monitoring Tool
+
+	FullStack Engg.
+
+								
+____________________________________________________________________________________________________________________________________________________________________
+
+
+4.Continous Testing of build created-------------Software Tester
+
+
+	Software Engg.
+	Software Development---------------------------------------------------SDLC
+										   planning----Design---Development---Testing--
+										   Deployment-----maintainance
+
+	Software Testing---------------------------booming a lot---------------STLC
+
+
+	Software Testing:
+				Zero Defect product (
+
+
+
+
+STLC Phases:
+
+1.Requirement Analysis
+	Activities:
+		.Identify types of tests to be performed.
+		Gather details about testing priorities and focus.
+		Identify test environment details where testing is supposed to be carried out. 
+		Automation Testing is really required
+	outcome:
+		RTM document(Requirements Traceability Martrix)
+		Report for Automation testing need
+								
+2.Test Planning
+	Activities:
+		1.Preparation of test plan/strategy document for various types of testing
+		2.Test tool selection
+		3.Test effort estimation
+		4.Resource planning and determining roles and responsibilities.
+		5.Training requirement
+	 outcome:
+		 Test plan / startegy Document
+		 Estimation 
+		
+3.Test case development
+	Activities:
+		1.Create test cases, automation scripts (if applicable)
+		2.Review and baseline test cases and scripts
+		3.Create test data (If Test Environment is available)
+	outcome:
+		Testcase
+		Test data
+						
+			
+4.Test Environment setup
+	  Activity
+		1.Understand the required architecture, environment set-up and prepare hardware 
+		   							  and software requirement list for the Test Environment.
+		2.Setup Enviornment and as well test data
+		3.Test Exeuction pre Acitivities.
+	outcome:
+		report of readiness of enivornment Check List
+		Test Result;
+						
+5.Test Execution:
+	Activities:
+		1.Execute tests as per plan
+		2.Document test results, and log defects for failed cases
+		3.Map defects to test cases in RTM
+		4.Retest the Defect fixes
+		5.Track the defects to closure				
+	outcome:
+		test execution status
+						
+6.Test Cycle closure
+	Activities:
+		1.Evaluate cycle completion criteria based on Time, Test coverage, Cost,Software,Critical Business Objectives, Quality
+		2.Prepare test metrics based on the above parameters.
+		3.Document the learning out of the project
+		4.Prepare Test closure report
+		5.Qualitative and quantitative reporting of quality of the work product to the customer.
+		6.Test result analysis to find out the defect distribution by type and severity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

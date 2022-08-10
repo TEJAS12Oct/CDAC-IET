@@ -1,0 +1,17 @@
+@using Onlineshopping.Models;
+@{
+    ViewData["Title"] = "Details Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Flower Details</h1>
+    <hr/>
+   @{
+     Product product=(Product) ViewData["product"];
+
+        <p>Id:@product.Id</p>
+        <p>Title:@product.Title</p>
+        <p>Description:@product.Description</p>
+   }
+   <p> Id:</p>
+</div>
