@@ -1,0 +1,6 @@
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_14\TestSolution\MathLib\bin\Debug\MathLib.dll
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_14\TestSolution\MathLib\bin\Debug\MathLib.pdb
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_14\TestSolution\MathLib\obj\Debug\MathLib.csproj.AssemblyReference.cache
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_14\TestSolution\MathLib\obj\Debug\MathLib.csproj.CoreCompileInputs.cache
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_14\TestSolution\MathLib\obj\Debug\MathLib.dll
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_14\TestSolution\MathLib\obj\Debug\MathLib.pdb

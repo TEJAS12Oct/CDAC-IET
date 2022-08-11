@@ -1,0 +1,10 @@
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_14\TestSolution\SeleniumAutomationApp\bin\Debug\SeleniumAutomationApp.exe.config
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_14\TestSolution\SeleniumAutomationApp\bin\Debug\SeleniumAutomationApp.exe
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_14\TestSolution\SeleniumAutomationApp\bin\Debug\SeleniumAutomationApp.pdb
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_14\TestSolution\SeleniumAutomationApp\bin\Debug\WebDriver.dll
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_14\TestSolution\SeleniumAutomationApp\obj\Debug\SeleniumAutomationApp.csproj.AssemblyReference.cache
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_14\TestSolution\SeleniumAutomationApp\obj\Debug\SeleniumAutomationApp.csproj.SuggestedBindingRedirects.cache
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_14\TestSolution\SeleniumAutomationApp\obj\Debug\SeleniumAutomationApp.csproj.CoreCompileInputs.cache
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_14\TestSolution\SeleniumAutomationApp\obj\Debug\SeleniumAutomationApp.csproj.CopyComplete
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_14\TestSolution\SeleniumAutomationApp\obj\Debug\SeleniumAutomationApp.exe
+D:\RaviT\DAC\PGDAC\DAC\IET_March22\Dotnet\Day_14\TestSolution\SeleniumAutomationApp\obj\Debug\SeleniumAutomationApp.pdb

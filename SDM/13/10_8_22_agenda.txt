@@ -1,0 +1,466 @@
+
+Agenda:
+
+	Software Testing
+	Test Plan
+	Test Case
+	Mannual testing
+	Test Driven Development Approach
+	Automation Testing
+	Unit Testing
+	Using Testing Framework
+	Programming lang. Support and IDT Tool Support
+	Selenium
+	Selenium IDE
+	Selenium WebDriver
+
+	
+Software Testing:
+
+
+  Revision:
+	 Donet Core Solution
+	 installing and using .net cli command
+	 Building and Running  .net core Application.
+	 Dependecies in .net core
+	 Creating web application using asp.net core Template
+	 Using MVC Architecture for building Web  Based Applications
+
+
+         SDM:
+	 Revision of SDM
+	 DevOps
+	 CD/CI
+	 Role of Software Developer, Operations Engg., DevOps Engg.
+	 Tools used during DevOps cycle
+	
+	 Todays application Development is completely based Agile methodologies
+	 SDLC
+
+	 STLC
+	 VModel
+	 Importance of Software Testing in Solution Creation Point of View
+
+
+	IT Profession:
+		Development-----------------------Developers
+		Testing---------------------------Testers
+		Analysis and Design---------------Business Analyst, System Analyst
+		System Administration-------------System Administrators
+							Server Administrators
+							Cloud Administrators
+							DBA (Database Administrators)
+
+	 
+	Testing---------------------------Testers
+	Software Development-------SRS-------
+						Functional Requirement
+						NonFunctionall Requierment
+
+	Software Testing
+		Test Plan Document
+				 Test Strategy
+				 Objective of Testing
+				 Schedule
+				 Estimation
+				 Deliverables
+				 Resources
+
+
+		 AUT(Application Under Test)-- Executable
+
+
+	ECommerce Solution:
+
+		
+	AUT(Application Under Test)
+	
+		Online Shopping Application 	
+		
+		IIS Web Server:
+			      Virtual Directory-------mapped with Physical directory
+								bin/Debug/Ecommmerce.dll 
+				 				/DAL.dll
+				 				/BLL.dll
+				 				web.config
+				 				static resource
+								html,
+								javascript
+								css
+								Images
+			      Application pool--------is assigned to virtual Directory
+
+		Database Server:
+				MySQL DB server
+				Sample database provided 
+		Browser:	
+			Chrome, Microsoft Edge, Safari Firefox,etc.
+		
+		
+		
+Before starting Software Testing Process
+
+Seven Steps  for creating Test Plan Document
+
+1.Analyze the Product (Online Shopping Application)*****************************************************************************************
+
+  	Functional Requirements of Online Shopping Application
+	NonFunctional Requirements of Online Shopping Application
+	Constraints for Online Shopping Application
+
+
+
+Document:System Requirement Specification Document
+
+Title:System Reqruiement Spefication for Online Shopping Portal
+
+Team:
+	Direct Customer, Indirect Customer,Architect, Business Analyst
+	Quality Assurance Team,
+	System Analyst
+
+Objective (Purpose):
+	The online shopping System for products Web Applictaion is intended to  provide complete solution
+	for vendors, Consumers as well as internal users (Staff)  through  a single Gateway using 
+	internet. It will enable vendors to setp up online shops, customers to browse through virtual shop
+	and purchase products online without visiting the shop physically.
+
+Scope:
+	This System allows Shoppers to maintain thier products for adding or removing from catalog based on
+	their availablity.Customer will be able to  review orders history and may able to cancel order within
+	24 hours , order place.
+	The System  will be able to show live Bussion Operation statistics trends through Customized dashboard
+	for stakeholders.
+
+Definitions:
+	OSS: Online Shopping System
+	QA:  Quality Assurance
+	Portal: Peronalized Online Web Application
+	MIS: Management Information System
+	CRM: Customer Relation Managment
+	BI:  Business Intelligence
+	Dashboard: Personalized information presented using  BI techniques such grid, score card, graph
+
+Requirements:
+
+Functional Requirements:
+
+	Any annonymous User will be able to view different products avaialble for sale.
+	Any User will be able select product to view from categories avaialble. 
+        Registered shoppers will be able promote thier product for sale by adding  products to the product catalog maintained by System.
+	Staff will be able to approve or reject request for adding or removing products from product catalog by shoppers. 
+	Staff will be to track and maintain stock of products available for sale. 
+	Staff will be able to raise reqests for product updatation from product inventory.
+	
+	Shopper will be able request to add new product to product catalog maintained by system.  
+        Sales Team will be able to approve or reject request  raised by shopper for adding or removing products from product catalog.
+	Shopper will be able to update  product details which have been already added to product catalog. 
+	Shoppers, sales team will be informed well in advaned about low stock  or out of stock of products in product catalog.
+	Product listing will be provided based their category, sale, quantity, likes, recommendations.
+ 
+         Consumer will be able to  add or remove products from shopping cart. 
+         System will maintain shopping cart for each consumer to maintain list of items selected. 
+	 Consumer will be able view all items from shopping cart. 
+	 Shopping Cart will present product details, number of items of product selected by consumer with price and total. 
+         Consumer will be able procees for Order placement.
+		  
+         Registered Customer will be able place an order with the help of Shopping cart maintained by system. 
+         Registered Customer will be able to cancel placed order within 24 hours. 
+         Registered customer get orders history. 
+         Registered customer can get details of order from orderes been placed. 
+		
+	 Sales team will be able get details of orders of a particular Customer. 
+	 Sales team  will be able to cancel , reject or approve orders been placed by consumer due to some policies of Business.
+	 BOD will be able to get summary of orders been placed , rejected from Oroder PRocessing of System. 
+         BOD will get Business insight by observing  daily operations  with the of getting orders information.
+		
+   	 Consumer will be provided options for payment such as through internet banking  or  UPI  or Online payment option.
+ 	 Consumer will asked to submit their payment related information.Consumer will be redirected to payment gateway for secure payment transaction.
+	 On successful payment processing using payment gateway system will notify consumer about transaction and order placement
+	 status.
+
+         Customer will be able track order status. Customer will be able track deliver using unique dispatcher id presented.
+	 Customer will be able accept or return delivery based on quality received.
+	 Delivery person will be able get delivery details sothat he / she can deliver product to customer end.
+	 Delivery person will be able to change the status of product delivered.
+	 Delivery vendor will be ablt to  list all product delivery to be done by their staff.
+	 Sales team will be able to monitor shipment  done by their vendors.
+	 Sales team will be able to track product delivery for particular customer.
+	
+         Customer will able to submit feedback about product they recived. Customer will able to  get details about product orders placed.
+	 Customer will be cancel his placed order within 24 hours. Customer will be able to update his/ her personal information. 
+	 Customer  will be to manage his profile maintained by system. Customer will be able change his credentails if required. 
+	 Customer will be notified about order status, delivery status through  SMS, Email communication.
+	 Customer will get complete information about his orders, likes, comments, details through a dashboard.
+	 Customer will be able to update his payment related information.
+
+	 System will present dashboard for Customers, Vendors, Suppliers as well as BOD.
+	 Dashboard will provide information using graph, score cards, key perfomance indicators as well Grid data prestation.
+	 BOD will be informed about bussiness operations through reports.
+	 Sales team will be able to monitor daily online shopping business activities using thier personalized dashboard.
+	 Customer will be able get thier purchase realted infomation using Customer Dashboard.
+	 Shopper will be able track thier product sale being done through online shopping portal/
+	 System and Technical team ( IT Opertaions team) will be able monitor system operations by monitoring logs maintained.
+               
+NonFunctional Requirement:
+
+	Security
+		Registered Customer will allowed to place an order.	
+		Each stakeholder will be to access system  through authentication process. Who are you ?
+		System will provide access to  the content , operations using Role based security (Authorization) (Permissions based on Role)
+		Using SSL in all transactions  which will be performed stakeholder. It would protect confidential information shared by system to 
+		stake holder of Shared by stakeholder to system.
+		System will automatically log of  all stakeholder after some time due to inactiveness.
+		System will block operations for inactive  stakeholder and would redirect for authentication.
+		System  will internally maintain secure communiction channel between Servers ( Web Servers, App Servers, databse Server)
+		Sensitive data will be always encrypted across communcation.
+		User proper firewall to protect servers from out side fishing, velnerable attacks.
+
+
+	Reliability
+		The system will backup business data on regular basis and recover in short time duration to keep system operational
+		Continous updates are matained , continous Adminstration is done to keep system operational.
+		During peak hours system will maintain same user experaince by managing load balacning .
+
+	Availability
+		 uptime:   24* 7  available
+		 99.999%
+	
+	Maintainability:
+		A Commercial database software will be used to maintain System data Persistence.
+		A readymade Web Server will be installed to host online shopping portal (Web Site) to management server capabilities.
+		IT operations team will easily monitor and configure System using Adminstrative tools provided by Servers.
+		Separate enviornment will be maintained for system for isolation in  production, testing, and development.
+
+	Portablility:
+			PDA: Portable Device Application
+		  System will provide portable User Interface ( HTML, CSS, JS) through  users will be able to access online shopping portal.
+		  System can be deployed to single server, multi server, to any OS, Cloud (Azure or AWS or GCP)
+
+	Accessibility:
+		only registered customer will be able to place an order after authentication.
+		Sales team can reject or approve  orders, shopper requests  based on role  provided.
+		BOD team will be able to view daily, weekly, monthly, annual businss Growth throgh customized dashboard.
+		Shoppers will be able to see their product sale graph
+
+	Durability:
+		  System will retain customer  shopping cart for 15 minutes  even though customer loose internet connection and join again.
+		  System will maintain wishlist for customer . customer  will be able to add products from wishlist  and add to shopping cart whenever needed.
+		  System will implement backup and recovery for retaining stake holders data, bussiness operation data and business data over time.
+
+	Efficiency:
+		on Festival season, maximum number of users  will place order, view products  with same response time.
+		System will be able to manage all transactions with isolation.
+
+	Modularity:
+		 System will designed and developed using reusable, independent or dependent business senarios in the form of modules.
+		 These modules will be loosely coupled and highly cohesive.
+		 System will contain CRM , Inventory , shopping cart, order processing, payment processing, Delivery module, membership and Roles managment 
+		 modules.
+	
+	Scalability:
+		System will be able  to  provide  consistent user exeprience to stake holder as well as vistors irrespective of load.
+
+	Safety:
+		
+		online shopping portal will be secure from malicious attack, fishing.
+		online shoppping portal functionalilites are protected from outside with prper firewall configuration.
+		online shopping portal will be always kept updated with latest anit virus software.
+		Bussiness data will be backed up periodically to ensure safty of data using increamental back up strategy.
+		Role based security will be applied for Application data and operations accessibility.
+				
+
+	Use Case Diagram:  ( UML)
+		Object Oriented Analyis and Design Notation: UML--------Unified Modeling language
+
+		
+		Who will use the Website ?  Actors
+		What it is used for ?     Online shopping Product purchase, Product Sales, Product Promotion, Inventory managment , etc.
+	        How it is going to be operational ? Infrastructure, Platform needed to get ONline Shopping Application Operational
+		What are the software / Hardware required to make it operational
+ 
+
+2.Design Test Strategy:  ***************************************************************************************************************************************
+		Test Strategy Document:
+		This document is normally designed by Test manager
+	
+
+
+Responsibilities of a Test Manager / Lead
+
+Understand the testing effort by analyzing the requirements of project.
+Estimate and obtain management support for the time, resources and budget required to perform the testing.
+Organize the testing kick-off meeting
+Define the Strategy
+Build a testing team of professionals with appropriate skills, attitudes and motivation.
+Identify Training requirements and forward it to the Project Manager (Technical and Soft skills).
+Develop the test plan for the tasks, dependencies and participants required to mitigate the risks to system quality and obtain stakeholder support for this plan.
+Arrange the Hardware and software requirement for the Test Setup.
+Assign task to all Testing Team members and ensure that all of them have sufficient work in the project.
+Ensure content and structure of all Testing documents / artifacts is documented and maintained.
+Document, implement, monitor, and enforce all processes for testing as per standards defined by the organization.
+Check / Review the Test Cases documents.
+Keep track of the new requirements / change in requirements of the Project.
+Escalate the issues about project requirements (Software, Hardware, Resources) to Project Manager / Sr. Test Manager.
+Organize the status meetings and send the Status Report (Daily, Weekly etc.) to the Client
+Attend the regular client call and discuss the weekly status with the client.
+Communication with the Client (If required).
+Act as the single point of contact between Development and Testers.
+Track and prepare the report of testing activities like test testing results, test case coverage, required resources, defects discovered and their status, performance baselines etc.
+Review various reports prepared by Test engineers.
+Ensure the timely delivery of different testing milestones.
+Prepares / updates the metrics dashboard at the end of a phase or at the completion of project.
+
+Test Strategy Online Shopping Application
+
+	Coverage:
+		Consumer interested for searching Product  through Product Catalog
+		Consumers would be allowed to maintain Shopping Cart
+		Online payments will be handled using Secure Transaction
+		Order placed by customer will be able to track using Shipment Status
+		Secure , Authorized access to Online Shopping Services
+		etc.
+
+
+
+3.Define Test Objective:
+		
+	 List all software features ( functionalities, performance, GUI, Legacy Application integration,etc.)
+		
+
+4.Define Test Criteria:	
+	 Identify Test senarios
+         Identify Test Case
+	 Access Product Catalog Gallery
+	 Get Product Details of selected Product Title
+	 Add selected Product Item to Shopping Cart
+	 etc.
+
+
+5.Resource Planning:
+	 Test cases
+	 AUT access as user, consumer, staff, Manager, BOD, Suppliers (binaries)
+	 Test Enviornment for hosting ONline shopping sothat testers will be able test Online shopping application.
+		Hardware , Operating System, Web SErver, Database SErvers,
+		Testing Tools:
+				Browsers,
+				Test Simultions Softwares
+	Scheule
+	Testers,
+	Training for skill needed by Testers
+
+
+
+6.Plan Test Enviornment
+
+		WEbservers, Application Servers, Database Servers
+		dummy Data for running application agains test cased defined.
+
+7.Schedule & Estimation
+
+8.Determine Test Delivarables:
+	Test results
+	Test Reports
+	Defect Tracking Reports
+
+	
+	
+		
+Test Plan::::::::::::::::::::::::::::::::::::::::::::::::::::::: Created and maintained by Test manager.
+
+
+
+
+
+Test Case::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Use Case:----------OOAD UML
+	defined module of a system
+		Product Catalog--------Collective functionality as one unit
+									Product list----------------------------------------------------------Test Case
+								        Product Details-------------------------------------------------------Test Case
+									New Product Addition--------------------------------------------------Test Case
+									Updating exting Product Details
+									Removing product from catalog due to stock unavailable
+		Shopping Cart
+		Membership & Roles Management--------------------------
+									new User Registration
+									Updating User Profile
+									Validte User Credential-----------------------------------------------Test Case
+									Role assignment to User
+									Setting permissions level for particular Role
+									Adding or Removing Roles for registerd user.
+									
+		OrderProcessing
+		Shipment ( Delivery)
+		Customer Relationship management
+
+
+
+Examples of Test Cases:
+1.Check result on entering valid user ID and Password
+2.Check result on entering invalid user id and Password.
+3.Check response when user ID is empty & Login button is perssed.
+etc.
+
+
+
+Basic Testing:
+		1.Mannual Testing------------------------Human being test software-----------------Best Testing  mannual Testing
+		2.Automation Testing:--------------------Programs , tools test  software
+
+
+Amazon company:
+
+TCO: Total Cost of Ownership
+
+
+Kaizen:--------------------------Continous Improvement
+TQM:Total Quality Management
+
+TDD ( Test Driven Development)
+
+Define User STories:
+		for user stories Define Test Cases
+		For test Cases write unit Tests
+		Give Unit Test to Developers
+		Ask Developers to write code which will pass those unit Test
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
