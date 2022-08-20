@@ -2,7 +2,7 @@ var express = require('express')
 var router = express.Router();
 
 // direct go on postman and run
-//localhost:8080/math/table/2
+// localhost:8080/maths/table/2
 router.get("/table/:number", function (req, res) {
     var num = req.params.number
     res.send("table of " + num)
@@ -26,7 +26,7 @@ router.post("/doJob", function (req, res) {
     res.send(n1 + op + n2 + "=" + result)
 })
 
-// localhost:8080/math/square
+// localhost:8080/maths/square
 // in postman body
 // {
 //     "num":3

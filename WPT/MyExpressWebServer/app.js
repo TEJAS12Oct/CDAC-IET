@@ -14,7 +14,7 @@ app.get('/data', (request, response) => {
 });
 
 // Run => node app.js
-// on chrome => http://localhost:5000/greet/Tejas
+// on chrome => http://localhost:8080/greet/Tejas
 app.get('/greet/:uname', (req, res) => {
 
   let user1 = req.params.uname
@@ -29,7 +29,8 @@ app.get('/first', (request, response) => {
     response.render('first');
   });
 */
-
+// Run => node app.js
+// on chrome => http://localhost:8080/addbook
 app.get('/addBook', (request, response) => {
   response.render('addBook');
 });
@@ -87,6 +88,6 @@ app.use('/book', bookroutes);
 var mathroutes = require('./routemodule2.js');
 app.use('/maths', mathroutes);
 
-app.listen(5000, () => {
-  console.log('App is listening on port 5000');
+app.listen(8080, () => {
+  console.log('App is listening on port 8080');
 });

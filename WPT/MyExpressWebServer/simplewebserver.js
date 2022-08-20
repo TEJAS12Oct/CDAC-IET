@@ -10,7 +10,7 @@ app.use(express.json());
 app.use('/book', bookroutes);
 
 var mathroutes = require('./routemodule2.js');
-app.use('/math', mathroutes);
+app.use('/maths', mathroutes);
 
 app.get('/', (request, response) => {
   return response.send('Welcome to the express web server');
@@ -18,14 +18,14 @@ app.get('/', (request, response) => {
 
 //server runs continuously waiting for request on port 8080
 // Run => node simplewebserver.js
-// on Chrome => localhost:3000
-app.listen(3000, () => {
-  console.log('App is listening on port 3000');
+// on Chrome => localhost:8080
+app.listen(8080, () => {
+  console.log('App is listening on port 8080');
 });
 
 //one more request mapping
 // Run => node simplewebserver.js
-// on Chrome => localhost:3000/data
+// on Chrome => localhost:8080/data
 app.get('/data', (req, resp) => {
   return resp.send({ "name": "Tejas", "gender": "Male" });
 });

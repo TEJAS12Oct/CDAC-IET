@@ -3,11 +3,13 @@ var express = require('express');
 var app = express();
 
 // on the request to root (localhost:3000/)
+// node server.js
+// go to chrome run= localhost:8080
 app.get('/', function (req, res) {
     res.send('<b>My</b> MY  express http server');
 });
 
-// On localhost:3000/welcome
+// On localhost:8080/welcome
 app.get('/welcome', function (req, res) {
     res.send('<b>Hello</b> welcome to my http server made with express');
 });
@@ -17,7 +19,7 @@ app.use(function(req, res, next) {
     res.status(404).send("Sorry, that route doesn't exist. Have a nice day :)");
 });
 
-// start the server in the port 3000 !
-app.listen(3000, function () {
-    console.log('Example app listening on port 3000.');
+// start the server in the port 8080 !
+app.listen(8080, function () {
+    console.log('Example app listening on port 8080.');
 });
