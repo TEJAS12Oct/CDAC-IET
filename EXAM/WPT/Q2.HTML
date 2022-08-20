@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    
+<title>Change Text</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#text").change(function () {
+                $("#CHANGE").html($("#text").val());
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    Change "Tejas Jawale" To Given Input<br><br>
+    Enter Name :
+    <input id="text"></input>
+    <p id="CHANGE">Tejas Jawale</p>
+</body>
+
+</html>
+

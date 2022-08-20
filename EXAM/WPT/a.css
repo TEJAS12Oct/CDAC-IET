@@ -1,0 +1,11 @@
+body {
+    background-color: yellow;
+}
+
+.background
+{
+    background-color: red;
+    border-color: black;
+    border-radius: 2ex;
+    border-style: solid ;
+}

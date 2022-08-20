@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>
+        HELLO
+    </title>
+    <link rel="stylesheet" href="./a.css" type="text/css"> <!-- Using External CSS-->
+</head>
+<script>
+
+    function date() {
+        let date = new Date(document.getElementById("date").value);
+        console.log(date)
+        document.getElementById("DATE").innerText = date.getDate()
+            + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
+    }
+
+    function list() {
+        let str = "";
+        let list = ["SUGAR", "TEA", "MILK", "BUTTER", "BISCUTES", "RICE", "WHEAT", "MAGGIE", "SOAP", "SHAMPOO"]
+
+        for (var i = 0; i < list.length; i++) {
+            str = str + "<li>" + list[i] + "</li>"
+        }
+        console.log(str)
+        document.getElementById("LIST").innerHTML = str;
+    }
+</script>
+
+<body>
+
+    <label for="start">Start date:</label>
+    <input id="date" type="date" placeholder="dd-mm-yyyy" min="2020-01-01" max="2023-01-01" onblur="date()" required />
+
+    <h3 class="background">ORDER LIST OF 10 PRODUCT</h3>
+    <button onclick="list()">SHOW LIST</button>
+
+    <p id="DATE"></p>
+    <ol id="LIST"></ol>
+</body>
+
+</html>
