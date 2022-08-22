@@ -1,0 +1,20 @@
+﻿@using Question1.Models;
+
+@{
+    ViewBag.Title = "Data";
+}
+
+<h2>Details</h2>
+@{
+    Presenter m = this.Model;
+}
+
+<ul>
+    <li>@m.Topic</li>
+    <li>@m.Description</li>
+    <li>@m.Faculty</li>
+    <li>@m.Location</li>
+</ul>
+<a href="~/faculty/update/@m.Id">Update</a>
+
+

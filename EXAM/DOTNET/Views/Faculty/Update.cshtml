@@ -1,0 +1,39 @@
+﻿@using Question1.Models;
+
+@{
+    ViewBag.Title = "Update";
+}
+
+@{ Presenter work = this.Model;}
+<h2>Update Workshop Detail</h2>
+<form method="post" action="/faculty/update">
+
+
+    <table>
+        <tr>
+            <td>Id:</td>
+            <td><input type="text" name="name" value="@work.Id" readonly /></td>
+        </tr>
+        <tr>
+            <td>Topic:</td>
+            <td><input type="text" name="topic" value="@work.Topic" /></td>
+        </tr>
+        <tr>
+            <td>Topic Desc:</td>
+            <td><input type="text" name="topicd" value="@work.Description" /></td>
+        </tr>
+        <tr>
+            <td>Faculty Name:</td>
+            <td><input type="text" name="presenter" value="@work.Faculty" /></td>
+        </tr>
+        <tr>
+            <td>Location:</td>
+            <td><input type="text" name="location" value="@work.Location" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" /></td>
+        </tr>
+    </table>
+</form>
+
