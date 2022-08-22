@@ -17,10 +17,10 @@ namespace Question1.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult Data(int id)
+        public ActionResult Data(int Id)
         {
             List<Presenter> list = DataManagar.getData();
-            Presenter model = list.Find((e) => (e.Id == id));
+            Presenter model = list.Find((e) => (e.Id == Id));
             return View(model);
         }
     }

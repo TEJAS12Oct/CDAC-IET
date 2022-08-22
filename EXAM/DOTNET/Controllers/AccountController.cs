@@ -22,12 +22,11 @@ namespace Question1.Controllers
         {
             if (username == "Tejas@gmail.com" && password == "Tejas")
             {
-                //this.Session[username] = username;
-                //this.Response.Cookies.Add(new HttpCookie("token", username));
                 FormsAuthentication.SetAuthCookie(username, false);
                 return Redirect(returnURL ?? Url.Action("Index", "Home"));
             }
             return View();
         }
+
     }
 }

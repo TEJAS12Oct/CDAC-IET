@@ -19,15 +19,15 @@ namespace Question1.Controllers
         }
 
         [HttpPost]
-        public ActionResult Insert(string topic, string topicd, string presenter, string location)
+        public ActionResult Insert(string Topic, string Description, string Faculty, string Location)
         {
-            if (topic.Equals(null) && topicd.Equals(null) && presenter.Equals(null) && location.Equals(null))
+            if (Topic.Equals(null) && Description.Equals(null) && Faculty.Equals(null) && Location.Equals(null))
             {
                 return View();
             }
             else
             {
-                DataManagar.Insert(topic, topicd, presenter, location);
+                DataManagar.Insert(Topic, Description, Faculty, Location);
                 return RedirectToAction("Index", "Home");
             }
         }
@@ -40,20 +40,19 @@ namespace Question1.Controllers
         }
 
         [HttpPost]
-        public ActionResult Update(int id,string topic, string topicd, string presenter, string location)
+        public ActionResult Update(string Topic, string Description, string Faculty, string Location)
         {
-            if (topic.Equals(null) && topicd.Equals(null) && presenter.Equals(null) && location.Equals(null))
+            if (Topic.Equals(null) && Description.Equals(null) && Faculty.Equals(null) && Location.Equals(null))
             {
                 return View();
             }
             else
             {
                 Presenter model = new Presenter();
-                model.Id = id;
-                model.Topic = topic;
-                model.Description = topicd;
-                model.Faculty = presenter;
-                model.Location = location;
+                model.Topic = Topic;
+                model.Description = Description;
+                model.Faculty = Faculty;
+                model.Location = Location;
                 DataManagar.Update(model);
                 return RedirectToAction("Index", "Home");
             }
