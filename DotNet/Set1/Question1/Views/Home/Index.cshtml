@@ -1,0 +1,16 @@
+﻿@using Question1.Models;
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    @{ List<Presenter> list = this.ViewBag.list;}
+    <h1>List of Trainnings</h1>
+    <ol>
+        @{ foreach (Presenter w in list)
+            {
+                <li><a href="/Home/Data/@w.Id">@w.Topic</a></li>
+            }
+        }
+    </ol>
+</div>
