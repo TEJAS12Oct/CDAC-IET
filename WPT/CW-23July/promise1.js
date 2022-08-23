@@ -24,7 +24,7 @@ function main() {
 
 main();
 
-// // Run = nodde promise1.js
+// // Run = node promise1.js
 
 
 

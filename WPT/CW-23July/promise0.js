@@ -17,4 +17,4 @@ let x = new Promise( (resolve,reject)=>{
 x.then(resolvedVal=>{console.log("Eureka !!! your score is ",resolvedVal)} )
 x.catch(rejectedVal=>{console.log("Oh !!! you failed ",rejectedVal)} )
 
-// Run = nodde promise0.js
+// Run = node promise0.js
