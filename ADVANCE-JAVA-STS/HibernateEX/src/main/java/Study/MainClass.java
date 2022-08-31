@@ -16,6 +16,7 @@ public class MainClass {
 	static Session session = null;
 
 	public static void main(String[] args) {
+
 		// WE CONFIGURE THE HIBERNATE ORM
 		SessionFactory sessionFactory = null;
 		// READ the XML
@@ -33,18 +34,17 @@ public class MainClass {
 
 		// ACQUIRE THE SESSION (interface between javacode and hibernate
 		session = sessionFactory.openSession();
-
-//		insertEx();
+		insertEx();
 //		updateEx();
 //		DeletetEx();
-		selectEx();
+//		selectEx();
 
 	}
 
 	public static void insertEx() {
 		// TRANSIENT STATE
-		StudentEntity obj = new StudentEntity(3, 69, "Pankaj", "Desai");
-		obj.setFirstName("Tushar"); // this is not in sync obj state in table
+		StudentEntity obj = new StudentEntity(1, 49, "Tejas", "Jawale");
+//		obj.setFirstName("Tushar"); // this is not in sync obj state in table
 		Transaction tx = session.beginTransaction();
 		session.save(obj);
 		// NOW THE OBJECT IN PERSISTENT STATE

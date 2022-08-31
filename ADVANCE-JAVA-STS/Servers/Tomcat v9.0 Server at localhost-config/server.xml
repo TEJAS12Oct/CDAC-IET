@@ -17,7 +17,7 @@
 --><!-- Note:  A "Server" is not itself a "Container", so you may not
      define subcomponents such as "Valves" at this level.
      Documentation at /docs/config/server.html
- --><Server port="-1" shutdown="SHUTDOWN">
+ --><Server port="0" shutdown="SHUTDOWN">
   <Listener className="org.apache.catalina.startup.VersionLoggerListener"/>
   <!-- Security listener. Documentation at /docs/config/listeners.html
   <Listener className="org.apache.catalina.security.SecurityListener" />
@@ -152,7 +152,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="MVC" path="/MVC" reloadable="true" source="org.eclipse.jst.jee.server:MVC"/><Context docBase="MVC-1" path="/MVC-1" reloadable="true" source="org.eclipse.jst.jee.server:MVC-1"/><Context docBase="HW-JPA-RestEX" path="/MyJpaRest" reloadable="true" source="org.eclipse.jst.jee.server:HW-JPA-RestEX"/><Context docBase="HW-RestService" path="/RestEx" reloadable="true" source="org.eclipse.jst.jee.server:HW-RestService"/><Context docBase="RestService" path="/ex1" reloadable="true" source="org.eclipse.jst.jee.server:RestService"/><Context docBase="JavaRestClient" path="/Study.RestClient" reloadable="true" source="org.eclipse.jst.jee.server:JavaRestClient"/><Context docBase="HW-MVC" path="/MVC" reloadable="true" source="org.eclipse.jst.jee.server:HW-MVC"/><Context docBase="HW-MVC1" path="/MVC" reloadable="true" source="org.eclipse.jst.jee.server:HW-MVC1"/><Context docBase="AOPExample" path="/AOPExample" reloadable="true" source="org.eclipse.jst.jee.server:AOPExample"/><Context docBase="ThymeLeafEx" path="/ThymeLeafEx" reloadable="true" source="org.eclipse.jst.jee.server:ThymeLeafEx"/><Context docBase="JPA-RestEx" path="/JPA-RestEx" reloadable="true" source="org.eclipse.jst.jee.server:JPA-RestEx"/></Host>
+      </Host>
     </Engine>
   </Service>
 </Server>

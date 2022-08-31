@@ -14,7 +14,7 @@ public class DbApplication {
 		context.refresh();
 
 		DAOBean bean = context.getBean(DAOBean.class);
-//		bean.insert(2, "Laptop", 50000);
+		bean.insert(3, "Laptop", 50000);
 		bean.showAllRecords();
 
 //		DAOBeanUsingJDBCTemplate Bean1 = context.getBean(DAOBeanUsingJDBCTemplate.class);

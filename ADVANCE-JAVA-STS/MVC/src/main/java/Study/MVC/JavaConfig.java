@@ -1,5 +1,4 @@
 package Study.MVC;
-
 import javax.sql.DataSource;
 
 import org.springframework.context.annotation.Bean;
@@ -25,9 +24,9 @@ public class JavaConfig {
 	{
 		DriverManagerDataSource obj = new DriverManagerDataSource();
 		obj.setDriverClassName("com.mysql.cj.jdbc.Driver");
-		obj.setUrl("jdbc:mysql://localhost:3306/adv_java");
+		obj.setUrl("jdbc:mysql://localhost:3306/ietmar22");
 		obj.setUsername("root");
-		obj.setPassword("Sajet@1299");
+		obj.setPassword("123456789");
 		
 		return obj;
 	}
