@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+	<!-- This bean user setter and default constructor -->
+	<bean id="msg" class="Study.Beans.MessageBean" scope="prototype">
+		<property name="message" value="Hi from spring"></property>
+		<property name="senderName" value="Tejas"></property>
+		<property name="receiverAddress" ref="addr"></property>
+	</bean>
+
+	<!-- This bean user DI With Parameterized constructor -->
+	<bean id="msg2" class="Study.Beans.MessageBean" lazy-init="true">
+		<constructor-arg value="Good Morning"></constructor-arg>
+		<constructor-arg value="Power Rangers"></constructor-arg>
+		<constructor-arg ref="addr"></constructor-arg>
+	</bean>
+
+	<!-- This bean user DI With One Parameterized constructor -->
+	<bean id="msg3" class="Study.Beans.MessageBean">
+		<constructor-arg ref="addr"></constructor-arg>
+	</bean>
+
+	<!-- This bean user DI With One Parameterized constructor -->
+	<bean id="msg4" class="Study.Beans.MessageBean" autowire="byName">
+	</bean>
+
+	<bean id="addr" class="Study.Beans.AddressBean" lazy-init="true">
+		<property name="location" value="DGP NAGAR"></property>
+		<property name="city" value="Nashik"></property>
+		<property name="state" value="maharashtra"></property>
+		<property name="country" value="india"></property>
+		<property name="pin" value="422010"></property>
+	</bean>
+
+	<bean id="receiverAddress" class="Study.Beans.AddressBean" lazy-init="true">
+		<property name="location" value="Wakad"></property>
+		<property name="city" value="pune"></property>
+		<property name="state" value="maharashtra"></property>
+		<property name="country" value="india"></property>
+		<property name="pin" value="564321"></property>
+	</bean>
+
+
+</beans>
