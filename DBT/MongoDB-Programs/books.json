@@ -1,4 +1,0 @@
-{"_id":{"$oid":"62903d8f0c4d30f244255889"},"Title":"JAVA C.R.","Author":"Tejas"}
-{"_id":{"$oid":"62903e1b0c4d30f24425588a"},"Title":"MySQL","Author":"Sayali","Price":1200.0}
-{"_id":{"$oid":"629040a60c4d30f24425588c"},"Title":"SHAM CHI AAI","Author":"Pandurang Sadashiv Sane","Phone":[1.234567E+06,7.654321E+06],"EmailID":["ABC@gmail.com","DEF@gamil.com"],"Cost":{"Currency":"$","Price":1300.0}}
-{"_id":{"$oid":"629045ba7ac955025a0dd16d"},"Title":"hBase","ISBN":"BVC321","Cost":{"Currency":"Rs.","Price":1300.0},"Author":[{"Name":"Ram","City":"Pune"},{"Name":"SHAM","City":"Nashik","Phone":12345.0}]}
