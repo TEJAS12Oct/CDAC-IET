@@ -14,6 +14,7 @@ public class EvenOdd {
 			System.out.println(num + " is even");
 		else
 			System.out.println(num + " is odd");
+		reader.close();
 
 	}
 
