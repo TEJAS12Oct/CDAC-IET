@@ -10,6 +10,9 @@ public class DuplicateElement {
 				if (arr[i] == arr[j]) {
 					System.out.println(arr[j]);
 				}
+				else {
+					System.out.println(arr[i]);
+				}
 			}
 		}
 	}

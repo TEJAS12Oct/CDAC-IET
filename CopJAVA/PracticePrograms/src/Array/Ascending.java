@@ -9,6 +9,7 @@ public class Ascending {
 			System.out.print(arr[i] + " ");
 		}
 		System.out.println();
+		System.out.println();
 		int temp = 0;
 		for (int i = 0; i < arr.length; i++) {
 			for (int j = i + 1; j < arr.length; j++) {
@@ -24,6 +25,7 @@ public class Ascending {
 		for (int i = 0; i < arr.length; i++) {
 			System.out.print(arr[i] + " ");
 		}
+		System.out.println();
 		System.out.println();
 		System.out.println("3rd Largest Element : " + arr[arr.length - 3]);
 		System.out.println("3rd Smallest Element : " + arr[2]);
