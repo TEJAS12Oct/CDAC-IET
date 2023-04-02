@@ -1,0 +1,11 @@
+INDEX VERSION 1.4+F:\C-DAC JOURNEY\IET\CODING\ADV-JAVA-STS\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3646749522.index
+3008372506.index
+957301999.index
+589313074.index
+932694913.index
+3871235449.index
+2829987036.index
+3887735924.index
+1559208043.index
+130049657.index
