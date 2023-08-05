@@ -8,7 +8,6 @@ data level abstraction: selection of fields required for solution of given probl
 
 Abstract class - 
 
-
  Person obj = new Student();
  obj.talk();
 
